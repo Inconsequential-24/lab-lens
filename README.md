@@ -72,6 +72,17 @@ Run the API (the package lives in `src/` and is not pip-installed, hence `--app-
 uvicorn --app-dir src lablens.api.app:app
 ```
 
+See the whole ADK workflow graph and step through a run in `adk web` (uses the live Gemini key
+in `.env`):
+
+```sh
+adk web adk_apps
+```
+
+Open the address it prints, choose `lablens_workflow`, and send
+`{"path": "data/reports/source/D02.pdf"}`. The graph button next to the app name shows every node,
+including the two ML nodes, `normalize_names` and `pattern_model`.
+
 ## Tests and evals
 
 ```sh

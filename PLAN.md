@@ -220,7 +220,7 @@ ADK 2.0 is the runtime of the whole pipeline, not an add-on. The diagram above i
 | "critical goes to the urgent template", "safety failure goes to retry or fallback" | Router nodes that return a route, with a dict of route to next node |
 | `render_en` and `render_hi` in parallel | Fan-out and fan-in edges (exact syntax confirmed by the spike) |
 | Retries on extract and render | ADK retry configuration on the node, not hand-written loops. Broad `except` blocks are not used inside nodes, so ADK can see failures and retry. |
-| Demo and debugging | `adk web`, which shows the graph and each node's input and output |
+| Demo and debugging | `adk web adk_apps` (app `lablens_workflow`), which shows the graph and each node's input and output; confirmed on the full workflow on 2026-11-21 |
 | Serving | FastAPI calls the workflow through ADK's `Runner`; the API wraps it with rate limits, caps and consent checks (sections 6 and 10) |
 
 **What ADK needs:** `pip install google-adk` (open source, no account) and one Gemini API key
