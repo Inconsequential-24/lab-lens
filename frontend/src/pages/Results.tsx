@@ -1,7 +1,8 @@
-import { useContext, useState } from "react";
+import { Fragment, useContext, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getReport, type FlaggedTest, type ReportResult } from "../api/client";
-import { consent, LangContext, useT, type Key, type Lang } from "../i18n";
+import SaveBox from "../components/SaveBox";
+import { LangContext, useT, type Key, type Lang } from "../i18n";
 
 export default function Results({ reportId, real }: { reportId: string; real: boolean }) {
   const t = useT();
@@ -67,9 +68,11 @@ function ResultView({ r, real }: { r: ReportResult; real: boolean }) {
             </tr></thead>
             <tbody>
               {r.tests.map((x, i) => {
-                const verify = (x.test_id && lowConf.has(x.test_id)) || x.confidence < 0.8;
+                const verify = (x.test_id && lowConf.has(x.test_id)) || x.confidence < 0.8 || x.flag === "unknown";
+                const warns = x.warnings ?? [];
                 return (
-                  <tr key={i} id={rowId(i)} tabIndex={-1} className={x.is_critical ? "crit" : ""}>
+                  <Fragment key={i}>
+                  <tr id={rowId(i)} tabIndex={-1} className={`${x.is_critical ? "crit" : ""}${warns.length ? " has-warn" : ""}`} aria-describedby={warns.length ? `${rowId(i)}-w` : undefined}>
                     <th scope="row">{testLabel(x)}{verify && <span className="verify">{t("verify")}</span>}</th>
                     <td>{x.value.comparator !== "=" ? x.value.comparator : ""}{x.value.raw || "—"}</td>
                     <td>{x.unit ?? x.unit_raw ?? "—"}</td>
@@ -80,10 +83,17 @@ function ResultView({ r, real }: { r: ReportResult; real: boolean }) {
                       <details>
                         <summary>{t("evidence_page")} {x.page}</summary>
                         <code>{x.source_span}</code>
-                        {x.warnings && x.warnings.length > 0 && <p className="fine">{x.warnings.join(", ")}</p>}
                       </details>
                     </td>
                   </tr>
+                  {warns.length > 0 && (
+                    <tr className={`row-warn${x.is_critical ? " crit" : ""}`}>
+                      <td colSpan={7} id={`${rowId(i)}-w`}>
+                        <div className="row-warn-inner">{warns.map((w, j) => <p key={j}><strong>{t("row_note")}:</strong> {w}</p>)}</div>
+                      </td>
+                    </tr>
+                  )}
+                  </Fragment>
                 );
               })}
             </tbody>
@@ -106,8 +116,9 @@ function ResultView({ r, real }: { r: ReportResult; real: boolean }) {
             {ex.statements.map((s) => (
               <li key={s.claim_id}>{s.text}{" "}
                 {s.cites.filter((c) => c.kind === "test" && byTestId.has(c.id)).map((c) => (
-                  <a key={c.id} className="cite" href={`#${rowId(byTestId.get(c.id)!)}`} onClick={(e) => { e.preventDefault(); document.getElementById(rowId(byTestId.get(c.id)!))?.focus(); }}>[{c.id}]</a>
+                  <Fragment key={c.id}>{" "}<a className="cite" href={`#${rowId(byTestId.get(c.id)!)}`} onClick={(e) => { e.preventDefault(); document.getElementById(rowId(byTestId.get(c.id)!))?.focus(); }}>{testLabel(r.tests[byTestId.get(c.id)!])}</a></Fragment>
                 ))}
+                {s.cites.some((c) => c.kind === "glossary") && <span className="gloss-tag">{t("about_test")}</span>}
               </li>
             ))}
           </ul>
@@ -118,7 +129,7 @@ function ResultView({ r, real }: { r: ReportResult; real: boolean }) {
       <ListSection title={t("patterns")} items={r.patterns} />
       <ListSection title={t("warnings")} items={r.warnings} />
       <ListSection title={t("unrecognised")} items={r.unrecognised_tests} />
-      {real && <SaveBox />}
+      {real && <SaveBox r={r} />}
     </>
   );
 }
@@ -126,21 +137,4 @@ function ResultView({ r, real }: { r: ReportResult; real: boolean }) {
 function ListSection({ title, items }: { title: string; items: string[] }) {
   if (!items.length) return null;
   return <section className="card"><h2 className="label">{title}</h2><ul>{items.map((s, i) => <li key={i}>{s}</li>)}</ul></section>;
-}
-
-function SaveBox() {
-  // PLAN section 10: unticked by default; saving needs sign-in (milestone 12).
-  const t = useT();
-  const { lang } = useContext(LangContext);
-  const [checked, setChecked] = useState(false);
-  const c = consent[lang];
-  return (
-    <section className="card consent" lang={lang}>
-      <label className="confirm">
-        <input type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)} />
-        <span><strong>{c.title}</strong><br />{c.body}</span>
-      </label>
-      {checked && <p className="notice" role="status">{t("save_sign_in")}</p>}
-    </section>
-  );
 }

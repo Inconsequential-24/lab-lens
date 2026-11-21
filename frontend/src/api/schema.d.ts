@@ -185,7 +185,7 @@ export interface components {
              * @description Stable machine-readable code.
              * @enum {string}
              */
-            reason: "unsupported_file_type" | "file_too_large" | "too_many_pages" | "zero_pages" | "encrypted_pdf" | "corrupted_file" | "not_a_lab_report" | "invalid_language" | "invalid_report_type" | "consent_required" | "report_date_required" | "report_date_invalid" | "report_date_in_future" | "report_date_too_old" | "invalid_overlap_choice" | "auth_required" | "real_upload_not_enabled" | "not_found" | "already_saved" | "overlap" | "no_tests_extracted" | "rate_limited" | "daily_cap_reached" | "provider_unavailable" | "invalid_message" | "not_implemented";
+            reason: "unsupported_file_type" | "file_too_large" | "too_many_pages" | "zero_pages" | "encrypted_pdf" | "corrupted_file" | "not_a_lab_report" | "invalid_language" | "invalid_report_type" | "consent_required" | "report_date_required" | "report_date_invalid" | "report_date_in_future" | "report_date_too_old" | "invalid_overlap_choice" | "invalid_test_id" | "auth_required" | "real_upload_not_enabled" | "not_found" | "already_saved" | "overlap" | "no_tests_extracted" | "rate_limited" | "daily_cap_reached" | "provider_unavailable" | "invalid_message" | "not_implemented";
             message: string;
             details?: {
                 [key: string]: unknown;
@@ -316,7 +316,7 @@ export interface components {
             saved_at: string;
         };
         UploadRequest: {
-            /** @description PDF, PNG or JPG (checked by content), max 5 MB, max 10 pages. */
+            /** @description PDF, PNG or JPG (checked by content), max 10 MB, max 10 pages. */
             file: string;
             /**
              * @default both

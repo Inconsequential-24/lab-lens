@@ -1,0 +1,2109 @@
+{
+ "D01": {
+  "report_id": "D01",
+  "status": "complete",
+  "report_date": "2026-09-05",
+  "panels": [
+   "cbc"
+  ],
+  "tests": [
+   {
+    "raw_name": "Hemoglobin",
+    "test_id": "HB",
+    "panel": "cbc",
+    "value": {
+     "raw": "13.0",
+     "number": 13.0,
+     "comparator": "="
+    },
+    "unit_raw": "g/dL",
+    "unit": "g/dL",
+    "ref": {
+     "raw": "12.0 - 15.0",
+     "low": 12.0,
+     "high": 15.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Hemoglobin 13.0 g/dL 12.0 - 15.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Total RBC Count",
+    "test_id": "RBC",
+    "panel": "cbc",
+    "value": {
+     "raw": "4.50",
+     "number": 4.5,
+     "comparator": "="
+    },
+    "unit_raw": "10^6/µL",
+    "unit": "10^6/µL",
+    "ref": {
+     "raw": "3.80 - 4.80",
+     "low": 3.8,
+     "high": 4.8,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Total RBC Count 4.50 10^6/µL 3.80 - 4.80",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Packed Cell Volume (PCV)",
+    "test_id": "PCV",
+    "panel": "cbc",
+    "value": {
+     "raw": "43.0",
+     "number": 43.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "36.0 - 46.0",
+     "low": 36.0,
+     "high": 46.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Packed Cell Volume (PCV) 43.0 % 36.0 - 46.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "MCV",
+    "test_id": "MCV",
+    "panel": "cbc",
+    "value": {
+     "raw": "93.3",
+     "number": 93.3,
+     "comparator": "="
+    },
+    "unit_raw": "fL",
+    "unit": "fL",
+    "ref": {
+     "raw": "83.0 - 101.0",
+     "low": 83.0,
+     "high": 101.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "MCV 93.3 fL 83.0 - 101.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "MCH",
+    "test_id": "MCH",
+    "panel": "cbc",
+    "value": {
+     "raw": "29.3",
+     "number": 29.3,
+     "comparator": "="
+    },
+    "unit_raw": "pg",
+    "unit": "pg",
+    "ref": {
+     "raw": "27.0 - 32.0",
+     "low": 27.0,
+     "high": 32.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "MCH 29.3 pg 27.0 - 32.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "MCHC",
+    "test_id": "MCHC",
+    "panel": "cbc",
+    "value": {
+     "raw": "33.7",
+     "number": 33.7,
+     "comparator": "="
+    },
+    "unit_raw": "g/dL",
+    "unit": "g/dL",
+    "ref": {
+     "raw": "31.5 - 34.5",
+     "low": 31.5,
+     "high": 34.5,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "MCHC 33.7 g/dL 31.5 - 34.5",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "RDW-CV",
+    "test_id": "RDW",
+    "panel": "cbc",
+    "value": {
+     "raw": "12.8",
+     "number": 12.8,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "11.6 - 14.0",
+     "low": 11.6,
+     "high": 14.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "RDW-CV 12.8 % 11.6 - 14.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Total Leucocyte Count (TLC)",
+    "test_id": "WBC",
+    "panel": "cbc",
+    "value": {
+     "raw": "6.67",
+     "number": 6.67,
+     "comparator": "="
+    },
+    "unit_raw": "10^3/µL",
+    "unit": "10^3/µL",
+    "ref": {
+     "raw": "4.00 - 10.00",
+     "low": 4.0,
+     "high": 10.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Total Leucocyte Count (TLC) 6.67 10^3/µL 4.00 - 10.00",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Neutrophils",
+    "test_id": "NEUT",
+    "panel": "cbc",
+    "value": {
+     "raw": "60",
+     "number": 60.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "40 - 80",
+     "low": 40.0,
+     "high": 80.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Neutrophils 60 % 40 - 80",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Lymphocytes",
+    "test_id": "LYMPH",
+    "panel": "cbc",
+    "value": {
+     "raw": "33",
+     "number": 33.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "20 - 40",
+     "low": 20.0,
+     "high": 40.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Lymphocytes 33 % 20 - 40",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Monocytes",
+    "test_id": "MONO",
+    "panel": "cbc",
+    "value": {
+     "raw": "6",
+     "number": 6.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "2 - 10",
+     "low": 2.0,
+     "high": 10.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Monocytes 6 % 2 - 10",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Eosinophils",
+    "test_id": "EOS",
+    "panel": "cbc",
+    "value": {
+     "raw": "1",
+     "number": 1.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "1 - 6",
+     "low": 1.0,
+     "high": 6.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Eosinophils 1 % 1 - 6",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Basophils",
+    "test_id": "BASO",
+    "panel": "cbc",
+    "value": {
+     "raw": "0",
+     "number": 0.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "0 - 2",
+     "low": 0.0,
+     "high": 2.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Basophils 0 % 0 - 2",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Platelet Count",
+    "test_id": "PLT",
+    "panel": "cbc",
+    "value": {
+     "raw": "332",
+     "number": 332.0,
+     "comparator": "="
+    },
+    "unit_raw": "10^3/µL",
+    "unit": "10^3/µL",
+    "ref": {
+     "raw": "150 - 410",
+     "low": 150.0,
+     "high": 410.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Platelet Count 332 10^3/µL 150 - 410",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   }
+  ],
+  "unrecognised_tests": [],
+  "lab_remarks": [],
+  "patterns": [],
+  "explanations": [
+   {
+    "language": "en",
+    "source": "template_fallback",
+    "urgent_message": null,
+    "summary": "I went through your report. All results are within the ranges printed on your report.",
+    "statements": [
+     {
+      "claim_id": "c1",
+      "text": "I went through your report. All results are within the ranges printed on your report.",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "BASO"
+       },
+       {
+        "kind": "test",
+        "id": "EOS"
+       },
+       {
+        "kind": "test",
+        "id": "HB"
+       },
+       {
+        "kind": "test",
+        "id": "LYMPH"
+       },
+       {
+        "kind": "test",
+        "id": "MCH"
+       },
+       {
+        "kind": "test",
+        "id": "MCHC"
+       },
+       {
+        "kind": "test",
+        "id": "MCV"
+       },
+       {
+        "kind": "test",
+        "id": "MONO"
+       },
+       {
+        "kind": "test",
+        "id": "NEUT"
+       },
+       {
+        "kind": "test",
+        "id": "PCV"
+       },
+       {
+        "kind": "test",
+        "id": "PLT"
+       },
+       {
+        "kind": "test",
+        "id": "RBC"
+       },
+       {
+        "kind": "test",
+        "id": "RDW"
+       },
+       {
+        "kind": "test",
+        "id": "WBC"
+       }
+      ]
+     }
+    ],
+    "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+   },
+   {
+    "language": "hi",
+    "source": "template_fallback",
+    "urgent_message": null,
+    "summary": "मैंने आपकी रिपोर्ट देखी। सभी परिणाम आपकी रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+    "statements": [
+     {
+      "claim_id": "c1",
+      "text": "मैंने आपकी रिपोर्ट देखी। सभी परिणाम आपकी रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "BASO"
+       },
+       {
+        "kind": "test",
+        "id": "EOS"
+       },
+       {
+        "kind": "test",
+        "id": "HB"
+       },
+       {
+        "kind": "test",
+        "id": "LYMPH"
+       },
+       {
+        "kind": "test",
+        "id": "MCH"
+       },
+       {
+        "kind": "test",
+        "id": "MCHC"
+       },
+       {
+        "kind": "test",
+        "id": "MCV"
+       },
+       {
+        "kind": "test",
+        "id": "MONO"
+       },
+       {
+        "kind": "test",
+        "id": "NEUT"
+       },
+       {
+        "kind": "test",
+        "id": "PCV"
+       },
+       {
+        "kind": "test",
+        "id": "PLT"
+       },
+       {
+        "kind": "test",
+        "id": "RBC"
+       },
+       {
+        "kind": "test",
+        "id": "RDW"
+       },
+       {
+        "kind": "test",
+        "id": "WBC"
+       }
+      ]
+     }
+    ],
+    "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+   }
+  ],
+  "recommendation": {
+   "next_step": "no_action",
+   "package_id": null,
+   "urgency": "none",
+   "reason_test_ids": [],
+   "rule_id": "R6_normal",
+   "note": null
+  },
+  "low_confidence_tests": [],
+  "warnings": [],
+  "metrics": {
+   "latency_ms": {
+    "total": 5400.0
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_cached": 0,
+   "cost_inr": 0.0,
+   "retries": 0,
+   "model_versions": {}
+  }
+ },
+ "D05": {
+  "report_id": "D05",
+  "status": "complete",
+  "report_date": "2026-09-16",
+  "panels": [
+   "lipid"
+  ],
+  "tests": [
+   {
+    "raw_name": "Total Cholesterol",
+    "test_id": "TC",
+    "panel": "lipid",
+    "value": {
+     "raw": "182",
+     "number": 182.0,
+     "comparator": "="
+    },
+    "unit_raw": "mg/dL",
+    "unit": "mg/dL",
+    "ref": {
+     "raw": "< 200",
+     "low": null,
+     "high": 200.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Total Cholesterol 182 mg/dL < 200",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Triglycerides",
+    "test_id": "TG",
+    "panel": "lipid",
+    "value": {
+     "raw": "158",
+     "number": 158.0,
+     "comparator": "="
+    },
+    "unit_raw": "mg/dL",
+    "unit": "mg/dL",
+    "ref": {
+     "raw": "< 150",
+     "low": null,
+     "high": 150.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Triglycerides 158 mg/dL < 150",
+    "confidence": 0.97,
+    "flag": "high",
+    "severity": "mild",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "HDL Cholesterol",
+    "test_id": "HDL",
+    "panel": "lipid",
+    "value": {
+     "raw": "56",
+     "number": 56.0,
+     "comparator": "="
+    },
+    "unit_raw": "mg/dL",
+    "unit": "mg/dL",
+    "ref": {
+     "raw": "> 50",
+     "low": 50.0,
+     "high": null,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "HDL Cholesterol 56 mg/dL > 50",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "LDL Cholesterol - Direct",
+    "test_id": "LDL",
+    "panel": "lipid",
+    "value": {
+     "raw": "96",
+     "number": 96.0,
+     "comparator": "="
+    },
+    "unit_raw": "mg/dL",
+    "unit": "mg/dL",
+    "ref": {
+     "raw": "< 100",
+     "low": null,
+     "high": 100.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "LDL Cholesterol - Direct 96 mg/dL < 100",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "VLDL Cholesterol",
+    "test_id": "VLDL",
+    "panel": "lipid",
+    "value": {
+     "raw": "31.6",
+     "number": 31.6,
+     "comparator": "="
+    },
+    "unit_raw": "mg/dL",
+    "unit": "mg/dL",
+    "ref": {
+     "raw": "5.0 - 40.0",
+     "low": 5.0,
+     "high": 40.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "VLDL Cholesterol 31.6 mg/dL 5.0 - 40.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Non-HDL Cholesterol",
+    "test_id": "NONHDL",
+    "panel": "lipid",
+    "value": {
+     "raw": "126",
+     "number": 126.0,
+     "comparator": "="
+    },
+    "unit_raw": "mg/dL",
+    "unit": "mg/dL",
+    "ref": {
+     "raw": "< 130",
+     "low": null,
+     "high": 130.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Non-HDL Cholesterol 126 mg/dL < 130",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "TC / HDL Ratio",
+    "test_id": "TC_HDL",
+    "panel": "lipid",
+    "value": {
+     "raw": "3.2",
+     "number": 3.2,
+     "comparator": "="
+    },
+    "unit_raw": "Ratio",
+    "unit": "Ratio",
+    "ref": {
+     "raw": "3.0 - 5.0",
+     "low": 3.0,
+     "high": 5.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "TC / HDL Ratio 3.2 Ratio 3.0 - 5.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   }
+  ],
+  "unrecognised_tests": [],
+  "lab_remarks": [],
+  "patterns": [],
+  "explanations": [
+   {
+    "language": "en",
+    "source": "template_fallback",
+    "urgent_message": null,
+    "summary": "I went through your report. Some results are outside the ranges printed on it.",
+    "statements": [
+     {
+      "claim_id": "c1",
+      "text": "Your Triglycerides is 158 mg/dL, above the upper limit of 150 mg/dL printed on your report.",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "TG"
+       }
+      ]
+     },
+     {
+      "claim_id": "c2",
+      "text": "Triglycerides are a type of fat in your blood that your body uses for energy. Doctors check them, often with cholesterol, to understand heart and blood vessel health. A higher value can be affected by many things, so your doctor can explain what it means for you.",
+      "cites": [
+       {
+        "kind": "glossary",
+        "id": "TG.measures"
+       },
+       {
+        "kind": "glossary",
+        "id": "TG.high"
+       }
+      ]
+     },
+     {
+      "claim_id": "c3",
+      "text": "Your other results are within the ranges printed on your report.",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "HDL"
+       },
+       {
+        "kind": "test",
+        "id": "LDL"
+       },
+       {
+        "kind": "test",
+        "id": "NONHDL"
+       },
+       {
+        "kind": "test",
+        "id": "TC"
+       },
+       {
+        "kind": "test",
+        "id": "TC_HDL"
+       },
+       {
+        "kind": "test",
+        "id": "VLDL"
+       }
+      ]
+     },
+     {
+      "claim_id": "c4",
+      "text": "A follow-up test package may help: Lipid follow-up package.",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "TG"
+       }
+      ]
+     }
+    ],
+    "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+   },
+   {
+    "language": "hi",
+    "source": "template_fallback",
+    "urgent_message": null,
+    "summary": "मैंने आपकी रिपोर्ट देखी। कुछ परिणाम रिपोर्ट पर छपी सीमाओं से बाहर हैं।",
+    "statements": [
+     {
+      "claim_id": "c1",
+      "text": "आपका ट्राइग्लिसराइड (Triglycerides) 158 mg/dL है, जो आपकी रिपोर्ट पर छपी अधिकतम सीमा 150 mg/dL से अधिक है।",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "TG"
+       }
+      ]
+     },
+     {
+      "claim_id": "c2",
+      "text": "ट्राइग्लिसराइड (Triglycerides) खून में मौजूद एक प्रकार की वसा है, जिसे शरीर ऊर्जा के लिए इस्तेमाल करता है। डॉक्टर इसे अक्सर कोलेस्ट्रॉल के साथ, दिल और रक्त वाहिकाओं की सेहत समझने के लिए देखते हैं। यह मान कई बातों से अधिक हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।",
+      "cites": [
+       {
+        "kind": "glossary",
+        "id": "TG.measures"
+       },
+       {
+        "kind": "glossary",
+        "id": "TG.high"
+       }
+      ]
+     },
+     {
+      "claim_id": "c3",
+      "text": "आपके बाकी परिणाम आपकी रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "HDL"
+       },
+       {
+        "kind": "test",
+        "id": "LDL"
+       },
+       {
+        "kind": "test",
+        "id": "NONHDL"
+       },
+       {
+        "kind": "test",
+        "id": "TC"
+       },
+       {
+        "kind": "test",
+        "id": "TC_HDL"
+       },
+       {
+        "kind": "test",
+        "id": "VLDL"
+       }
+      ]
+     },
+     {
+      "claim_id": "c4",
+      "text": "एक फ़ॉलो-अप जाँच पैकेज मददगार हो सकता है: Lipid follow-up package।",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "TG"
+       }
+      ]
+     }
+    ],
+    "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+   }
+  ],
+  "recommendation": {
+   "next_step": "follow_up_test_package",
+   "package_id": "lipid_followup_package",
+   "urgency": "routine",
+   "reason_test_ids": [
+    "TG"
+   ],
+   "rule_id": "R3_package",
+   "note": null
+  },
+  "low_confidence_tests": [],
+  "warnings": [],
+  "metrics": {
+   "latency_ms": {
+    "total": 5400.0
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_cached": 0,
+   "cost_inr": 0.0,
+   "retries": 0,
+   "model_versions": {}
+  }
+ },
+ "D03": {
+  "report_id": "D03",
+  "status": "complete",
+  "report_date": "2026-10-11",
+  "panels": [
+   "cbc"
+  ],
+  "tests": [
+   {
+    "raw_name": "HEMOGLOBIN",
+    "test_id": "HB",
+    "panel": "cbc",
+    "value": {
+     "raw": "15.7",
+     "number": 15.7,
+     "comparator": "="
+    },
+    "unit_raw": "g/dL",
+    "unit": "g/dL",
+    "ref": {
+     "raw": "13.0 - 17.0",
+     "low": 13.0,
+     "high": 17.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "HEMOGLOBIN 15.7 g/dL 13.0 - 17.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "TOTAL RBC COUNT",
+    "test_id": "RBC",
+    "panel": "cbc",
+    "value": {
+     "raw": "4.98",
+     "number": 4.98,
+     "comparator": "="
+    },
+    "unit_raw": "10^6/µL",
+    "unit": "10^6/µL",
+    "ref": {
+     "raw": "4.50 - 5.50",
+     "low": 4.5,
+     "high": 5.5,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "TOTAL RBC COUNT 4.98 10^6/µL 4.50 - 5.50",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "PACKED CELL VOLUME (PCV)",
+    "test_id": "PCV",
+    "panel": "cbc",
+    "value": {
+     "raw": "42.6",
+     "number": 42.6,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "40.0 - 50.0",
+     "low": 40.0,
+     "high": 50.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "PACKED CELL VOLUME (PCV) 42.6 % 40.0 - 50.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "MCV",
+    "test_id": "MCV",
+    "panel": "cbc",
+    "value": {
+     "raw": "97.1",
+     "number": 97.1,
+     "comparator": "="
+    },
+    "unit_raw": "fL",
+    "unit": "fL",
+    "ref": {
+     "raw": "83.0 - 101.0",
+     "low": 83.0,
+     "high": 101.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "MCV 97.1 fL 83.0 - 101.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "MCH",
+    "test_id": "MCH",
+    "panel": "cbc",
+    "value": {
+     "raw": "30.0",
+     "number": 30.0,
+     "comparator": "="
+    },
+    "unit_raw": "pg",
+    "unit": "pg",
+    "ref": {
+     "raw": "27.0 - 32.0",
+     "low": 27.0,
+     "high": 32.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "MCH 30.0 pg 27.0 - 32.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "MCHC",
+    "test_id": "MCHC",
+    "panel": "cbc",
+    "value": {
+     "raw": "32.5",
+     "number": 32.5,
+     "comparator": "="
+    },
+    "unit_raw": "g/dL",
+    "unit": "g/dL",
+    "ref": {
+     "raw": "31.5 - 34.5",
+     "low": 31.5,
+     "high": 34.5,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "MCHC 32.5 g/dL 31.5 - 34.5",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "RDW-CV",
+    "test_id": "RDW",
+    "panel": "cbc",
+    "value": {
+     "raw": "13.4",
+     "number": 13.4,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "11.6 - 14.0",
+     "low": 11.6,
+     "high": 14.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "RDW-CV 13.4 % 11.6 - 14.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "test_id": "WBC",
+    "panel": "cbc",
+    "value": {
+     "raw": "1.8",
+     "number": 1.8,
+     "comparator": "="
+    },
+    "unit_raw": "10^3/µL",
+    "unit": "10^3/µL",
+    "ref": {
+     "raw": "1.5 - 10.0",
+     "low": 1.5,
+     "high": 10.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "TOTAL LEUCOCYTE COUNT (TLC) 1.8 10^3/µL 1.5 - 10.0",
+    "confidence": 0.97,
+    "flag": "low",
+    "severity": "critical",
+    "is_critical": true,
+    "flag_disagrees_with_printed": false,
+    "warnings": [
+     "Your report's printed range calls this normal or does not give one, but it is past the safety limit we use. Please contact your doctor."
+    ]
+   },
+   {
+    "raw_name": "NEUTROPHILS",
+    "test_id": "NEUT",
+    "panel": "cbc",
+    "value": {
+     "raw": "63",
+     "number": 63.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "40 - 80",
+     "low": 40.0,
+     "high": 80.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "NEUTROPHILS 63 % 40 - 80",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "LYMPHOCYTES",
+    "test_id": "LYMPH",
+    "panel": "cbc",
+    "value": {
+     "raw": "29",
+     "number": 29.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "20 - 40",
+     "low": 20.0,
+     "high": 40.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "LYMPHOCYTES 29 % 20 - 40",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "MONOCYTES",
+    "test_id": "MONO",
+    "panel": "cbc",
+    "value": {
+     "raw": "4",
+     "number": 4.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "2 - 10",
+     "low": 2.0,
+     "high": 10.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "MONOCYTES 4 % 2 - 10",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "EOSINOPHILS",
+    "test_id": "EOS",
+    "panel": "cbc",
+    "value": {
+     "raw": "3",
+     "number": 3.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "1 - 6",
+     "low": 1.0,
+     "high": 6.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "EOSINOPHILS 3 % 1 - 6",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "BASOPHILS",
+    "test_id": "BASO",
+    "panel": "cbc",
+    "value": {
+     "raw": "1",
+     "number": 1.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "0 - 2",
+     "low": 0.0,
+     "high": 2.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "BASOPHILS 1 % 0 - 2",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "PLATELET COUNT",
+    "test_id": "PLT",
+    "panel": "cbc",
+    "value": {
+     "raw": "14",
+     "number": 14.0,
+     "comparator": "="
+    },
+    "unit_raw": "10^3/µL",
+    "unit": "10^3/µL",
+    "ref": {
+     "raw": "150 - 410",
+     "low": 150.0,
+     "high": 410.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "PLATELET COUNT 14 10^3/µL 150 - 410",
+    "confidence": 0.97,
+    "flag": "low",
+    "severity": "critical",
+    "is_critical": true,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   }
+  ],
+  "unrecognised_tests": [],
+  "lab_remarks": [],
+  "patterns": [],
+  "explanations": [
+   {
+    "language": "en",
+    "source": "template_fallback",
+    "urgent_message": "URGENT: Your report shows a result that needs prompt medical attention: Total Leucocyte Count (TLC) 1.8 10^3/µL, Platelet Count 14 10^3/µL. Please contact a doctor or the lab now. Do not wait for a routine appointment.",
+    "summary": "I went through your report. One or more results need urgent attention.",
+    "statements": [
+     {
+      "claim_id": "c1",
+      "text": "Your Total Leucocyte Count (TLC) is 1.8 10^3/µL. This is very low: it is past the safety limit we use for urgent results, whatever range your report prints.",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "WBC"
+       }
+      ]
+     },
+     {
+      "claim_id": "c2",
+      "text": "White blood cells are part of your body's defence system. This count tells how many of them are in a small amount of blood, and doctors check it as part of a routine look at your blood. A lower value can be affected by many things, so your doctor can explain what it means for you.",
+      "cites": [
+       {
+        "kind": "glossary",
+        "id": "WBC.measures"
+       },
+       {
+        "kind": "glossary",
+        "id": "WBC.low"
+       }
+      ]
+     },
+     {
+      "claim_id": "c3",
+      "text": "Your Platelet Count is 14 10^3/µL, below the range of 150 to 410 10^3/µL printed on your report.",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "PLT"
+       }
+      ]
+     },
+     {
+      "claim_id": "c4",
+      "text": "Platelets are tiny cells in your blood that help it clot and stop bleeding after a cut. Doctors check the platelet count as part of a routine look at your blood. A lower value can be affected by many things, so your doctor can explain what it means for you.",
+      "cites": [
+       {
+        "kind": "glossary",
+        "id": "PLT.measures"
+       },
+       {
+        "kind": "glossary",
+        "id": "PLT.low"
+       }
+      ]
+     },
+     {
+      "claim_id": "c5",
+      "text": "Your other results are within the ranges printed on your report.",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "BASO"
+       },
+       {
+        "kind": "test",
+        "id": "EOS"
+       },
+       {
+        "kind": "test",
+        "id": "HB"
+       },
+       {
+        "kind": "test",
+        "id": "LYMPH"
+       },
+       {
+        "kind": "test",
+        "id": "MCH"
+       },
+       {
+        "kind": "test",
+        "id": "MCHC"
+       },
+       {
+        "kind": "test",
+        "id": "MCV"
+       },
+       {
+        "kind": "test",
+        "id": "MONO"
+       },
+       {
+        "kind": "test",
+        "id": "NEUT"
+       },
+       {
+        "kind": "test",
+        "id": "PCV"
+       },
+       {
+        "kind": "test",
+        "id": "RBC"
+       },
+       {
+        "kind": "test",
+        "id": "RDW"
+       }
+      ]
+     },
+     {
+      "claim_id": "c6",
+      "text": "Please contact a doctor or the lab now about these results.",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "PLT"
+       },
+       {
+        "kind": "test",
+        "id": "WBC"
+       }
+      ]
+     }
+    ],
+    "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+   },
+   {
+    "language": "hi",
+    "source": "template_fallback",
+    "urgent_message": "तुरंत ध्यान दें: आपकी रिपोर्ट में ऐसा परिणाम है जिस पर तुरंत डॉक्टर से बात करनी चाहिए: श्वेत रक्त कोशिकाओं की संख्या (Total Leucocyte Count (TLC)) 1.8 10^3/µL, प्लेटलेट (Platelet Count) 14 10^3/µL। कृपया अभी डॉक्टर या लैब से संपर्क करें। रूटीन अपॉइंटमेंट का इंतज़ार न करें।",
+    "summary": "मैंने आपकी रिपोर्ट देखी। एक या अधिक परिणामों पर तुरंत ध्यान देना ज़रूरी है।",
+    "statements": [
+     {
+      "claim_id": "c1",
+      "text": "आपका श्वेत रक्त कोशिकाओं की संख्या (Total Leucocyte Count (TLC)) 1.8 10^3/µL है। यह बहुत कम है: यह उस सुरक्षा सीमा से आगे है जिसे हम तुरंत ध्यान देने वाले परिणामों के लिए उपयोग करते हैं।",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "WBC"
+       }
+      ]
+     },
+     {
+      "claim_id": "c2",
+      "text": "श्वेत रक्त कोशिकाएँ (WBC) शरीर की रक्षा प्रणाली का हिस्सा हैं। यह गिनती बताती है कि खून की थोड़ी-सी मात्रा में ये कितनी हैं, और डॉक्टर इसे खून की नियमित जाँच के हिस्से के रूप में देखते हैं। यह मान कई बातों से कम हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।",
+      "cites": [
+       {
+        "kind": "glossary",
+        "id": "WBC.measures"
+       },
+       {
+        "kind": "glossary",
+        "id": "WBC.low"
+       }
+      ]
+     },
+     {
+      "claim_id": "c3",
+      "text": "आपका प्लेटलेट (Platelet Count) 14 10^3/µL है, जो आपकी रिपोर्ट पर छपी सीमा 150 से 410 10^3/µL से कम है।",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "PLT"
+       }
+      ]
+     },
+     {
+      "claim_id": "c4",
+      "text": "प्लेटलेट (Platelets) खून में मौजूद बहुत छोटी कोशिकाएँ हैं, जो चोट लगने पर खून का थक्का बनाकर खून बहना रोकने में मदद करती हैं। डॉक्टर इनकी गिनती खून की नियमित जाँच के हिस्से के रूप में देखते हैं। यह मान कई बातों से कम हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।",
+      "cites": [
+       {
+        "kind": "glossary",
+        "id": "PLT.measures"
+       },
+       {
+        "kind": "glossary",
+        "id": "PLT.low"
+       }
+      ]
+     },
+     {
+      "claim_id": "c5",
+      "text": "आपके बाकी परिणाम आपकी रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "BASO"
+       },
+       {
+        "kind": "test",
+        "id": "EOS"
+       },
+       {
+        "kind": "test",
+        "id": "HB"
+       },
+       {
+        "kind": "test",
+        "id": "LYMPH"
+       },
+       {
+        "kind": "test",
+        "id": "MCH"
+       },
+       {
+        "kind": "test",
+        "id": "MCHC"
+       },
+       {
+        "kind": "test",
+        "id": "MCV"
+       },
+       {
+        "kind": "test",
+        "id": "MONO"
+       },
+       {
+        "kind": "test",
+        "id": "NEUT"
+       },
+       {
+        "kind": "test",
+        "id": "PCV"
+       },
+       {
+        "kind": "test",
+        "id": "RBC"
+       },
+       {
+        "kind": "test",
+        "id": "RDW"
+       }
+      ]
+     },
+     {
+      "claim_id": "c6",
+      "text": "कृपया इन परिणामों के बारे में अभी डॉक्टर या लैब से संपर्क करें।",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "PLT"
+       },
+       {
+        "kind": "test",
+        "id": "WBC"
+       }
+      ]
+     }
+    ],
+    "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+   }
+  ],
+  "recommendation": {
+   "next_step": "doctor_consult",
+   "package_id": null,
+   "urgency": "urgent",
+   "reason_test_ids": [
+    "PLT",
+    "WBC"
+   ],
+   "rule_id": "R1_critical",
+   "note": null
+  },
+  "low_confidence_tests": [],
+  "warnings": [],
+  "metrics": {
+   "latency_ms": {
+    "total": 5400.0
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_cached": 0,
+   "cost_inr": 0.0,
+   "retries": 0,
+   "model_versions": {}
+  }
+ },
+ "D16": {
+  "report_id": "D16",
+  "status": "partial",
+  "report_date": "2026-09-05",
+  "panels": [
+   "cbc"
+  ],
+  "tests": [
+   {
+    "raw_name": "Hemoglobin",
+    "test_id": "HB",
+    "panel": "cbc",
+    "value": {
+     "raw": "13.0",
+     "number": 13.0,
+     "comparator": "="
+    },
+    "unit_raw": "mg/mL",
+    "unit": "mg/mL",
+    "ref": {
+     "raw": "12.0 - 15.0",
+     "low": 12.0,
+     "high": 15.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Hemoglobin 13.0 mg/mL 12.0 - 15.0",
+    "confidence": 0.97,
+    "flag": "unknown",
+    "severity": "unknown",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": [
+     "unit not recognised: please verify"
+    ]
+   },
+   {
+    "raw_name": "Total RBC Count",
+    "test_id": "RBC",
+    "panel": "cbc",
+    "value": {
+     "raw": "4.50",
+     "number": 4.5,
+     "comparator": "="
+    },
+    "unit_raw": "10^6/µL",
+    "unit": "10^6/µL",
+    "ref": {
+     "raw": "3.80 - 4.80",
+     "low": 3.8,
+     "high": 4.8,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Total RBC Count 4.50 10^6/µL 3.80 - 4.80",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Packed Cell Volume (PCV)",
+    "test_id": "PCV",
+    "panel": "cbc",
+    "value": {
+     "raw": "43.0",
+     "number": 43.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "36.0 - 46.0",
+     "low": 36.0,
+     "high": 46.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Packed Cell Volume (PCV) 43.0 % 36.0 - 46.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "MCV",
+    "test_id": "MCV",
+    "panel": "cbc",
+    "value": {
+     "raw": "93.3",
+     "number": 93.3,
+     "comparator": "="
+    },
+    "unit_raw": "fL",
+    "unit": "fL",
+    "ref": {
+     "raw": "83.0 - 101.0",
+     "low": 83.0,
+     "high": 101.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "MCV 93.3 fL 83.0 - 101.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "MCH",
+    "test_id": "MCH",
+    "panel": "cbc",
+    "value": {
+     "raw": "29.3",
+     "number": 29.3,
+     "comparator": "="
+    },
+    "unit_raw": "pg",
+    "unit": "pg",
+    "ref": {
+     "raw": "27.0 - 32.0",
+     "low": 27.0,
+     "high": 32.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "MCH 29.3 pg 27.0 - 32.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "MCHC",
+    "test_id": "MCHC",
+    "panel": "cbc",
+    "value": {
+     "raw": "33.7",
+     "number": 33.7,
+     "comparator": "="
+    },
+    "unit_raw": "g/dL",
+    "unit": "g/dL",
+    "ref": {
+     "raw": "31.5 - 34.5",
+     "low": 31.5,
+     "high": 34.5,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "MCHC 33.7 g/dL 31.5 - 34.5",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "RDW-CV",
+    "test_id": "RDW",
+    "panel": "cbc",
+    "value": {
+     "raw": "12.8",
+     "number": 12.8,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "11.6 - 14.0",
+     "low": 11.6,
+     "high": 14.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "RDW-CV 12.8 % 11.6 - 14.0",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Total Leucocyte Count (TLC)",
+    "test_id": "WBC",
+    "panel": "cbc",
+    "value": {
+     "raw": "6.67",
+     "number": 6.67,
+     "comparator": "="
+    },
+    "unit_raw": "10^3/µL",
+    "unit": "10^3/µL",
+    "ref": {
+     "raw": "4.00 - 10.00",
+     "low": 4.0,
+     "high": 10.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Total Leucocyte Count (TLC) 6.67 10^3/µL 4.00 - 10.00",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Neutrophils",
+    "test_id": "NEUT",
+    "panel": "cbc",
+    "value": {
+     "raw": "60",
+     "number": 60.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "40 - 80",
+     "low": 40.0,
+     "high": 80.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Neutrophils 60 % 40 - 80",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Lymphocytes",
+    "test_id": "LYMPH",
+    "panel": "cbc",
+    "value": {
+     "raw": "33",
+     "number": 33.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "20 - 40",
+     "low": 20.0,
+     "high": 40.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Lymphocytes 33 % 20 - 40",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Monocytes",
+    "test_id": "MONO",
+    "panel": "cbc",
+    "value": {
+     "raw": "6",
+     "number": 6.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "2 - 10",
+     "low": 2.0,
+     "high": 10.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Monocytes 6 % 2 - 10",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Eosinophils",
+    "test_id": "EOS",
+    "panel": "cbc",
+    "value": {
+     "raw": "1",
+     "number": 1.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "1 - 6",
+     "low": 1.0,
+     "high": 6.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Eosinophils 1 % 1 - 6",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Basophils",
+    "test_id": "BASO",
+    "panel": "cbc",
+    "value": {
+     "raw": "0",
+     "number": 0.0,
+     "comparator": "="
+    },
+    "unit_raw": "%",
+    "unit": "%",
+    "ref": {
+     "raw": "0 - 2",
+     "low": 0.0,
+     "high": 2.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Basophils 0 % 0 - 2",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   },
+   {
+    "raw_name": "Platelet Count",
+    "test_id": "PLT",
+    "panel": "cbc",
+    "value": {
+     "raw": "332",
+     "number": 332.0,
+     "comparator": "="
+    },
+    "unit_raw": "10^3/µL",
+    "unit": "10^3/µL",
+    "ref": {
+     "raw": "150 - 410",
+     "low": 150.0,
+     "high": 410.0,
+     "source": "report"
+    },
+    "printed_flag": null,
+    "remark": null,
+    "page": 1,
+    "source_span": "Platelet Count 332 10^3/µL 150 - 410",
+    "confidence": 0.97,
+    "flag": "normal",
+    "severity": "normal",
+    "is_critical": false,
+    "flag_disagrees_with_printed": false,
+    "warnings": []
+   }
+  ],
+  "unrecognised_tests": [
+   "ESR (Westergren)"
+  ],
+  "lab_remarks": [],
+  "patterns": [],
+  "explanations": [
+   {
+    "language": "en",
+    "source": "template_fallback",
+    "urgent_message": null,
+    "summary": "I went through your report. All results are within the ranges printed on your report.",
+    "statements": [
+     {
+      "claim_id": "c1",
+      "text": "Please verify your Hemoglobin result with the lab; we could not compare it with a range.",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "HB"
+       }
+      ]
+     }
+    ],
+    "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+   },
+   {
+    "language": "hi",
+    "source": "template_fallback",
+    "urgent_message": null,
+    "summary": "मैंने आपकी रिपोर्ट देखी। सभी परिणाम आपकी रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+    "statements": [
+     {
+      "claim_id": "c1",
+      "text": "कृपया अपने हीमोग्लोबिन (Hemoglobin) परिणाम की लैब से पुष्टि करें; हम इसे किसी सीमा से नहीं मिला पाए।",
+      "cites": [
+       {
+        "kind": "test",
+        "id": "HB"
+       }
+      ]
+     }
+    ],
+    "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+   }
+  ],
+  "recommendation": {
+   "next_step": "no_action",
+   "package_id": null,
+   "urgency": "none",
+   "reason_test_ids": [
+    "HB"
+   ],
+   "rule_id": "R5_verify",
+   "note": "please verify"
+  },
+  "low_confidence_tests": [],
+  "warnings": [
+   "Hemoglobin: unit not recognised: please verify"
+  ],
+  "metrics": {
+   "latency_ms": {
+    "total": 5400.0
+   },
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_cached": 0,
+   "cost_inr": 0.0,
+   "retries": 0,
+   "model_versions": {}
+  }
+ }
+}
