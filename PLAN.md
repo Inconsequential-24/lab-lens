@@ -112,8 +112,8 @@ Two properties hold on every path, including failures:
 | Node | Type | Responsibility |
 |---|---|---|
 | `extract` | LLM (vision/text) | Read report into the `ExtractedTest` schema |
-| `validate` | Function | Pydantic validation, unit check, plausibility check, extraction confidence |
-| `normalize_names` | ML (small classifier or embedding matcher) | Map "HGB", "Hb", "Haemoglobin" to one canonical test ID |
+| `validate` | Function | Pydantic validation, unit check, plausibility check, extraction confidence (below 0.7 → "please verify") |
+| `normalize_names` | ML (small classifier or embedding matcher) | Map "HGB", "Hb", "Haemoglobin" to one canonical test ID. Order: `panels.yaml` aliases (trusted), then the trained matcher, then the LLM's own guess; the last two always mark the row "please verify" |
 | `flag_engine` | Function | Compare value to the report's own reference range; assign flag and severity; check critical list |
 | `pattern_model` | ML | Detect co-occurring abnormalities for the doctor note, with no condition names |
 | `glossary_lookup` | Function | Fetch curated, reviewed per-test text (what it measures, general non-diagnostic reasons) |
@@ -156,13 +156,15 @@ the 15 source reports only, never on the eval cases (section 7).
 
 **Next step: a deterministic decision table, evaluated top to bottom, first match wins**
 
-| Condition | next_step | urgency |
-|---|---|---|
-| any critical | doctor_consult | urgent |
-| any marked, or 3+ abnormal tests | doctor_consult | soon |
-| a defined pattern matches a package in `packages.yaml` | follow_up_test_package | routine |
-| any mild | doctor_consult | routine |
-| any row unreadable, or range missing with no fallback range, and all else normal | no_action, with a "please verify" note | none |
+| Rule | Condition | next_step | urgency |
+|---|---|---|---|
+| R1_critical | any critical | doctor_consult | urgent |
+| R2_marked | any marked, or 3+ abnormal tests | doctor_consult | soon |
+| R3_package | a defined pattern matches a package in `packages.yaml`, and no printed-only flag | follow_up_test_package | routine |
+| R4_mild | any mild | doctor_consult | routine |
+| R4_printed_flag | printed flag abnormal, computed flag normal | doctor_consult, with "please confirm with the lab" | routine |
+| R5_verify | any row unreadable, unit not recognised, or range missing with no fallback range, and all else normal | no_action, with a "please verify" note | none |
+| R6_normal | all normal | no_action | none |
 
 Notes on the table: tests with no reference range at all (eAG) are informational and never
 trigger the "please verify" row. When a printed flag says abnormal but the value is in range,
@@ -238,6 +240,11 @@ usable in Agent instructions as `{key}`; `Runner`/`InMemoryRunner(node=workflow)
 `adk web` discovers the workflow from `root_agent`. Token usage is on
 `event.usage_metadata` (`prompt_token_count`, `candidates_token_count`,
 `thoughts_token_count`); a one-row call used 93 in / 41 out / 0 thinking tokens.
+**Found while building (milestone 5):** ADK strips `None` values from node outputs, which
+breaks required-nullable fields, so nodes after `extract` hand data over through `ctx.state`
+as JSON. An `Agent`'s typed output arrives in the `output_key` state delta, not in
+`event.output`. `extract` is a function node that runs the `Agent` through a nested `Runner`,
+so the response cache and budget guard can wrap each call.
 **Still to confirm:** running `Runner` inside FastAPI (milestone 11).
 
 ### 4.2 Frontend
@@ -422,7 +429,7 @@ FastAPI. JSON in, JSON out. No accounts for the demo itself; Google sign-in only
 saved history (sections 4.3 and 10).
 
 Because the deployed link is public and every call spends LLM budget, the demo has:
-- a per-IP rate limit (e.g. 5 reports per hour) and a global daily spend cap; past the cap the
+- a per-IP rate limit (e.g. 5 reports per hour) and a global daily spend cap (₹50 per day, `LABLENS_DAILY_CAP_INR`); past the cap the
   API serves only cached sample reports and says so;
 - input limits: 5 MB, 10 pages, PDF/PNG/JPG checked by content not extension, encrypted PDFs
   rejected with a clear message;
@@ -488,7 +495,9 @@ Status codes:
   from the template fallback. `warnings` says what and why.
 - `400`: unsupported or encrypted file, too large, or not a lab report (with a reason code).
 - `422`: no test could be extracted at all after retries.
-- `429`: rate limit or daily cap reached.
+- `429`: rate limit reached.
+- `503 daily_cap_reached`: the public demo's daily spend cap is used up (cached sample reports
+  are still served).
 - `503`: model provider unavailable **and** nothing could be extracted.
 
 A critical value is never dropped: if any critical value was extracted, the response is a `200`
@@ -580,6 +589,19 @@ tuning.
 **Baselines in the results table**
 - Rule engine vs. trained model for flags (shows why rules are the source of truth).
 - Name normalization: dictionary lookup vs. trained matcher.
+
+**ML findings so far (milestone 8, `evals/results_ml.json`), to state plainly in the README:**
+- The name matcher does not earn its place on accuracy. On 395 held-out names it mostly
+  declines to answer, and it maps 7 to the wrong test, where the dictionary maps none
+  wrongly. It is kept only as a fallback for unseen names, and every row it maps is marked
+  "please verify". The 7 wrong mappings are its safety cost.
+- The flag model misses 18 of 62 critical values on held-out rows. This is the measured
+  reason critical values are decided by rules only ("code decides"); it goes in the deck.
+- The 30 eval cases hold only 2 critical result rows, so critical recall on them (2 of 2,
+  95% interval 34-100%) cannot be shown reliably. Critical recall is measured on a separate
+  generated critical-value set instead (below).
+- All labels come from the project's own generators and rule engine, so every ML number is
+  optimistic. The README repeats this next to the numbers.
 
 **One documented change from the evals:** the first full run is expected to expose a failure
 (candidates: Hindi output dropping units, unit confusion such as mg/dL vs mmol/L, or the
