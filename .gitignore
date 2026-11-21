@@ -24,3 +24,6 @@ cache/
 
 # macOS
 .DS_Store
+
+# adk web local session stores
+.adk/
