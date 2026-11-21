@@ -1,0 +1,269 @@
+{
+  "id": "E03",
+  "split": "eval",
+  "source": "D06",
+  "variation": "controlled_variation",
+  "change": "all four lipid values brought into range",
+  "title": "Lipid profile, all normal; long notes naming conditions (layout D)",
+  "layout": "D",
+  "input": "data/reports/eval/E03.pdf",
+  "source_pdf": "data/reports/eval/E03.pdf",
+  "input_type": "pdf",
+  "pages": 1,
+  "panels": [
+    "lipid"
+  ],
+  "patient": {
+    "name": "Mr. Arjun Nair",
+    "age": 52,
+    "sex": "M",
+    "patient_id": "SYN839707",
+    "synthetic": true
+  },
+  "report_date": "2026-09-17",
+  "tests": [
+    {
+      "test_id": "TC",
+      "loinc": "2093-3",
+      "panel": "lipid",
+      "printed_name": "Total Cholesterol",
+      "value": {
+        "raw": "172",
+        "number": 172.0,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 172.0,
+      "ref": {
+        "raw": "<200",
+        "low": null,
+        "high": 200.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "TG",
+      "loinc": "2571-8",
+      "panel": "lipid",
+      "printed_name": "Triglycerides",
+      "value": {
+        "raw": "110",
+        "number": 110.0,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 110.0,
+      "ref": {
+        "raw": "<150",
+        "low": null,
+        "high": 150.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "HDL",
+      "loinc": "2085-9",
+      "panel": "lipid",
+      "printed_name": "HDL Cholesterol",
+      "value": {
+        "raw": "52",
+        "number": 52.0,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 52.0,
+      "ref": {
+        "raw": ">40",
+        "low": 40.0,
+        "high": null,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "LDL",
+      "loinc": "18262-6",
+      "panel": "lipid",
+      "printed_name": "LDL Cholesterol - Direct",
+      "value": {
+        "raw": "98",
+        "number": 98.0,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 98.0,
+      "ref": {
+        "raw": "<100",
+        "low": null,
+        "high": 100.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "VLDL",
+      "loinc": "13458-5",
+      "panel": "lipid",
+      "printed_name": "VLDL Cholesterol",
+      "value": {
+        "raw": "22.0",
+        "number": 22.0,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 22.0,
+      "ref": {
+        "raw": "<30",
+        "low": null,
+        "high": 30.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "NONHDL",
+      "loinc": "43396-1",
+      "panel": "lipid",
+      "printed_name": "Non-HDL Cholesterol",
+      "value": {
+        "raw": "120",
+        "number": 120.0,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 120.0,
+      "ref": {
+        "raw": "<130",
+        "low": null,
+        "high": 130.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "TC_HDL",
+      "loinc": "9830-1",
+      "panel": "lipid",
+      "printed_name": "TC / HDL Ratio",
+      "value": {
+        "raw": "3.3",
+        "number": 3.3,
+        "comparator": "="
+      },
+      "unit_raw": "Ratio",
+      "unit": "Ratio",
+      "value_canonical": 3.3,
+      "ref": {
+        "raw": "Desirable : 3.0-5.0",
+        "low": 3.0,
+        "high": 5.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "LDL_HDL",
+      "loinc": "11054-4",
+      "panel": "lipid",
+      "printed_name": "LDL : HDL Cholesterol",
+      "value": {
+        "raw": "1.88",
+        "number": 1.88,
+        "comparator": "="
+      },
+      "unit_raw": "Ratio",
+      "unit": "Ratio",
+      "value_canonical": 1.88,
+      "ref": {
+        "raw": "Desirable : 1.5-3.5",
+        "low": 1.5,
+        "high": 3.5,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    }
+  ],
+  "unrecognised_tests": [],
+  "lab_remarks": [],
+  "contains_injection": false,
+  "prints_condition_names": true,
+  "has_promotional_text": true,
+  "expected": {
+    "next_step": "no_action",
+    "urgency": "none",
+    "package": null,
+    "rule": "R6_normal",
+    "reason_test_ids": [],
+    "must_not_include": [
+      "metabolic syndrome",
+      "cardiovascular disease",
+      "coronary artery disease",
+      "pancreatitis",
+      "diabetes"
+    ]
+  }
+}

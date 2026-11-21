@@ -1,0 +1,427 @@
+# Reference data for the synthetic report generator and the flag engine.
+#
+# Ranges are typical adult ranges of the kind printed on Indian lab reports. They are
+# DEMONSTRATION values for synthetic data, not clinical guidance, and have not been reviewed
+# by a clinician. LOINC codes are the common codes for each test and still need a check
+# against loinc.org (or against reference/nidaankosha_stats.json once derived).
+#
+# ref: {all: [low, high]} or {M: [...], F: [...]}; null means a one-sided range.
+# critical: thresholds at or beyond which the value is treated as critical (inclusive).
+#           Only set where a widely used critical-value threshold exists; "source: demo" marks
+#           values chosen for this demo that need clinical review.
+# derived: how the value is computed from other tests, when the lab calculates it.
+
+version: "2026-11-20"
+
+panels:
+  cbc:
+    title: COMPLETE BLOOD COUNT
+    department: HAEMATOLOGY
+    sample: Whole Blood - EDTA
+    tests: [HB, RBC, PCV, MCV, MCH, MCHC, RDW, WBC, NEUT, LYMPH, MONO, EOS, BASO, PLT]
+  lipid:
+    title: LIPID PROFILE
+    department: BIOCHEMISTRY
+    sample: Serum
+    tests: [TC, TG, HDL, LDL, VLDL, NONHDL, TC_HDL]
+  hba1c:
+    title: GLYCOSYLATED HAEMOGLOBIN (HbA1c)
+    department: BIOCHEMISTRY
+    sample: Whole Blood - EDTA
+    tests: [HBA1C, EAG]
+  thyroid:
+    title: THYROID PROFILE - TOTAL
+    department: IMMUNOASSAY
+    sample: Serum
+    tests: [T3, T4, TSH]
+  lft:
+    title: LIVER FUNCTION TEST
+    department: BIOCHEMISTRY
+    sample: Serum
+    tests: [TBIL, DBIL, IBIL, ALT, AST, ALP, GGT, TP, ALB, GLOB, AG]
+
+tests:
+  # ---------------- CBC ----------------
+  HB:
+    name: Hemoglobin
+    aliases: [Haemoglobin, Hemoglobin (Hb), HGB, Hb]
+    loinc: "718-7"
+    unit: g/dL
+    decimals: 1
+    ref: {M: [13.0, 17.0], F: [12.0, 15.0]}
+    critical: {low: 7.0, high: 20.0}
+    plausible: [2.0, 25.0]
+    method: Photometric
+  RBC:
+    name: Total RBC Count
+    aliases: [RBC Count, Red Blood Cell Count, Erythrocyte Count]
+    loinc: "789-8"
+    unit: 10^6/µL
+    decimals: 2
+    ref: {M: [4.5, 5.5], F: [3.8, 4.8]}
+    plausible: [1.0, 8.0]
+    method: Electrical Impedance
+  PCV:
+    name: Packed Cell Volume (PCV)
+    aliases: [Hematocrit, Haematocrit (HCT), PCV, HCT]
+    loinc: "4544-3"
+    unit: "%"
+    decimals: 1
+    ref: {M: [40.0, 50.0], F: [36.0, 46.0]}
+    plausible: [10.0, 70.0]
+    method: Calculated
+  MCV:
+    name: MCV
+    aliases: [Mean Corpuscular Volume, Mean Corpuscular Volume (MCV)]
+    loinc: "787-2"
+    unit: fL
+    decimals: 1
+    ref: {all: [83.0, 101.0]}
+    plausible: [50.0, 130.0]
+    method: Calculated
+  MCH:
+    name: MCH
+    aliases: [Mean Corpuscular Hemoglobin, Mean Corpuscular Hb (MCH)]
+    loinc: "785-6"
+    unit: pg
+    decimals: 1
+    ref: {all: [27.0, 32.0]}
+    plausible: [15.0, 45.0]
+    method: Calculated
+  MCHC:
+    name: MCHC
+    aliases: [Mean Corpuscular Hb Concentration, Mean Corp. Hb Conc. (MCHC)]
+    loinc: "786-4"
+    unit: g/dL
+    decimals: 1
+    ref: {all: [31.5, 34.5]}
+    plausible: [25.0, 40.0]
+    method: Calculated
+  RDW:
+    name: RDW-CV
+    aliases: [Red Cell Distribution Width, RDW]
+    loinc: "788-0"
+    unit: "%"
+    decimals: 1
+    ref: {all: [11.6, 14.0]}
+    plausible: [9.0, 30.0]
+    method: Calculated
+  WBC:
+    name: Total Leucocyte Count (TLC)
+    aliases: [WBC Count, Total WBC Count, TLC, White Blood Cell Count]
+    loinc: "6690-2"
+    unit: 10^3/µL
+    decimals: 2
+    ref: {all: [4.0, 10.0]}
+    critical: {low: 2.0, high: 30.0}
+    plausible: [0.5, 100.0]
+    method: Flow Cytometry
+  NEUT:
+    name: Neutrophils
+    aliases: [Neutrophil %, Polymorphs]
+    loinc: "770-8"
+    unit: "%"
+    decimals: 0
+    ref: {all: [40, 80]}
+    plausible: [0, 100]
+    method: Flow Cytometry
+  LYMPH:
+    name: Lymphocytes
+    aliases: [Lymphocyte %]
+    loinc: "736-9"
+    unit: "%"
+    decimals: 0
+    ref: {all: [20, 40]}
+    plausible: [0, 100]
+    method: Flow Cytometry
+  MONO:
+    name: Monocytes
+    aliases: [Monocyte %]
+    loinc: "5905-5"
+    unit: "%"
+    decimals: 0
+    ref: {all: [2, 10]}
+    plausible: [0, 100]
+    method: Flow Cytometry
+  EOS:
+    name: Eosinophils
+    aliases: [Eosinophil %]
+    loinc: "713-8"
+    unit: "%"
+    decimals: 0
+    ref: {all: [1, 6]}
+    plausible: [0, 100]
+    method: Flow Cytometry
+  BASO:
+    name: Basophils
+    aliases: [Basophil %]
+    loinc: "706-2"
+    unit: "%"
+    decimals: 0
+    ref: {all: [0, 2]}
+    plausible: [0, 100]
+    method: Flow Cytometry
+  PLT:
+    name: Platelet Count
+    aliases: [Platelets, PLT, Platelet Count (PLT)]
+    loinc: "777-3"
+    unit: 10^3/µL
+    decimals: 0
+    ref: {all: [150, 410]}
+    critical: {low: 20, high: 1000}
+    plausible: [1, 2000]
+    method: Electrical Impedance
+
+  # ---------------- Lipid ----------------
+  TC:
+    name: Total Cholesterol
+    aliases: [Cholesterol - Total, Serum Cholesterol, CHOLESTEROL TOTAL]
+    loinc: "2093-3"
+    unit: mg/dL
+    decimals: 0
+    ref: {all: [null, 200]}
+    plausible: [50, 600]
+    method: Enzymatic (CHOD-PAP)
+  TG:
+    name: Triglycerides
+    aliases: [Serum Triglycerides, TRIGLYCERIDES, TG]
+    loinc: "2571-8"
+    unit: mg/dL
+    decimals: 0
+    ref: {all: [null, 150]}
+    plausible: [20, 3000]
+    method: Enzymatic (GPO-PAP)
+  HDL:
+    name: HDL Cholesterol
+    aliases: [HDL Cholesterol - Direct, High Density Lipoprotein, HDL-C]
+    loinc: "2085-9"
+    unit: mg/dL
+    decimals: 0
+    ref: {M: [40, null], F: [50, null]}
+    plausible: [5, 150]
+    method: Direct Enzymatic
+  LDL:
+    name: LDL Cholesterol - Direct
+    aliases: [LDL Cholesterol, Low Density Lipoprotein, LDL-C]
+    loinc: "18262-6"
+    unit: mg/dL
+    decimals: 0
+    ref: {all: [null, 100]}
+    plausible: [10, 400]
+    method: Direct Measure
+  VLDL:
+    name: VLDL Cholesterol
+    aliases: [VLDL, Very Low Density Lipoprotein]
+    loinc: "13458-5"
+    unit: mg/dL
+    decimals: 1
+    ref: {all: [5, 40]}
+    plausible: [1, 600]
+    method: Calculated
+    derived: "TG / 5"
+  NONHDL:
+    name: Non-HDL Cholesterol
+    aliases: [NON-HDL CHOLESTEROL, Non HDL Cholesterol]
+    loinc: "43396-1"
+    unit: mg/dL
+    decimals: 0
+    ref: {all: [null, 130]}
+    plausible: [10, 600]
+    method: Calculated
+    derived: "TC - HDL"
+  TC_HDL:
+    name: TC / HDL Ratio
+    aliases: [Total Cholesterol/HDL Ratio, CHOL/HDL Ratio]
+    loinc: "9830-1"
+    unit: Ratio
+    decimals: 1
+    ref: {all: [3.0, 5.0]}
+    plausible: [1.0, 30.0]
+    method: Calculated
+    derived: "TC / HDL"
+
+  LDL_HDL:
+    name: "LDL : HDL Cholesterol"
+    aliases: [LDL/HDL Ratio, LDL-C/HDL-C Ratio]
+    loinc: "11054-4"
+    unit: Ratio
+    decimals: 2
+    ref: {all: [1.5, 3.5]}
+    plausible: [0.1, 20.0]
+    method: Calculated
+    derived: "LDL / HDL"
+    optional: true   # printed only by some labs (layout D)
+
+  # ---------------- HbA1c ----------------
+  HBA1C:
+    name: Glycosylated Hemoglobin (HbA1c)
+    aliases: [HbA1c, Glycated Haemoglobin, Hemoglobin A1c]
+    loinc: "4548-4"
+    unit: "%"
+    decimals: 1
+    ref: {all: [4.0, 5.6]}
+    plausible: [3.0, 20.0]
+    method: HPLC
+  EAG:
+    name: Estimated Average Glucose (eAG)
+    aliases: [Mean Blood Glucose, eAG]
+    loinc: "27353-2"
+    unit: mg/dL
+    decimals: 1
+    ref: {all: [null, null]}
+    plausible: [50, 500]
+    method: Calculated
+    derived: "28.7 * HBA1C - 46.7"
+
+  # ---------------- Thyroid ----------------
+  T3:
+    name: Total T3 (Triiodothyronine)
+    aliases: [T3 - Total, Triiodothyronine (T3), TOTAL TRIIODOTHYRONINE]
+    loinc: "3053-6"
+    unit: ng/mL
+    decimals: 2
+    ref: {all: [0.80, 2.00]}
+    plausible: [0.1, 8.0]
+    method: CLIA
+    alt_units:
+      ng/dL: {factor: 100, decimals: 0}
+  T4:
+    name: Total T4 (Thyroxine)
+    aliases: [T4 - Total, Thyroxine (T4), TOTAL THYROXINE]
+    loinc: "3026-2"
+    unit: µg/dL
+    decimals: 2
+    ref: {all: [5.10, 14.10]}
+    plausible: [0.5, 30.0]
+    method: CLIA
+  TSH:
+    name: TSH (Thyroid Stimulating Hormone)
+    aliases: [TSH - Ultrasensitive, Thyroid Stimulating Hormone, TSH 3rd Generation]
+    loinc: "3016-3"
+    unit: µIU/mL
+    decimals: 3
+    ref: {all: [0.270, 4.200]}
+    plausible: [0.001, 150.0]
+    method: CLIA
+
+  # ---------------- LFT ----------------
+  TBIL:
+    name: Bilirubin - Total
+    aliases: [Total Bilirubin, Serum Bilirubin (Total), BILIRUBIN TOTAL]
+    loinc: "1975-2"
+    unit: mg/dL
+    decimals: 2
+    ref: {all: [0.30, 1.20]}
+    critical: {high: 15.0, source: demo}
+    plausible: [0.05, 40.0]
+    method: Diazo
+  DBIL:
+    name: Bilirubin - Direct
+    aliases: [Direct Bilirubin, Conjugated Bilirubin, BILIRUBIN DIRECT]
+    loinc: "1968-7"
+    unit: mg/dL
+    decimals: 2
+    ref: {all: [null, 0.20]}
+    plausible: [0.01, 30.0]
+    method: Diazo
+  IBIL:
+    name: Bilirubin - Indirect
+    aliases: [Indirect Bilirubin, Unconjugated Bilirubin]
+    loinc: "1971-1"
+    unit: mg/dL
+    decimals: 2
+    ref: {all: [0.20, 1.00]}
+    plausible: [0.01, 30.0]
+    method: Calculated
+    derived: "TBIL - DBIL"
+  ALT:
+    name: SGPT (ALT)
+    aliases: [Alanine Aminotransferase, ALT (SGPT), SGPT]
+    loinc: "1742-6"
+    unit: U/L
+    decimals: 0
+    ref: {M: [null, 50], F: [null, 35]}
+    critical: {high: 1000, source: demo}
+    plausible: [2, 5000]
+    method: IFCC without P5P
+  AST:
+    name: SGOT (AST)
+    aliases: [Aspartate Aminotransferase, AST (SGOT), SGOT]
+    loinc: "1920-8"
+    unit: U/L
+    decimals: 0
+    ref: {M: [null, 50], F: [null, 35]}
+    critical: {high: 1000, source: demo}
+    plausible: [2, 5000]
+    method: IFCC without P5P
+  ALP:
+    name: Alkaline Phosphatase
+    aliases: [ALP, Serum Alkaline Phosphatase]
+    loinc: "6768-6"
+    unit: U/L
+    decimals: 0
+    ref: {all: [30, 120]}
+    plausible: [5, 2000]
+    method: IFCC (AMP buffer)
+  AST_ALT:
+    name: "AST:ALT Ratio"
+    aliases: [SGOT/SGPT Ratio, AST/ALT Ratio, De Ritis Ratio]
+    loinc: "1916-6"
+    unit: ""
+    decimals: 2
+    ref: {all: [null, 1.00]}
+    plausible: [0.05, 10.0]
+    method: Calculated
+    derived: "AST / ALT"
+    optional: true   # printed only by some labs (layout D)
+  GGT:
+    name: Gamma GT (GGTP)
+    aliases: [Gamma Glutamyl Transferase, GGT]
+    loinc: "2324-2"
+    unit: U/L
+    decimals: 0
+    ref: {M: [null, 55], F: [null, 38]}
+    plausible: [2, 3000]
+    method: IFCC
+  TP:
+    name: Total Protein
+    aliases: [Serum Protein - Total, Protein Total]
+    loinc: "2885-2"
+    unit: g/dL
+    decimals: 2
+    ref: {all: [6.40, 8.30]}
+    plausible: [2.0, 12.0]
+    method: Biuret
+  ALB:
+    name: Albumin
+    aliases: [Serum Albumin, ALBUMIN]
+    loinc: "1751-7"
+    unit: g/dL
+    decimals: 2
+    ref: {all: [3.50, 5.20]}
+    plausible: [1.0, 7.0]
+    method: BCG
+  GLOB:
+    name: Globulin
+    aliases: [Serum Globulin, GLOBULIN]
+    loinc: "10834-0"
+    unit: g/dL
+    decimals: 2
+    ref: {all: [2.00, 3.50]}
+    plausible: [0.5, 8.0]
+    method: Calculated
+    derived: "TP - ALB"
+  AG:
+    name: A/G Ratio
+    aliases: [Albumin/Globulin Ratio, A : G Ratio]
+    loinc: "1759-0"
+    unit: Ratio
+    decimals: 2
+    ref: {all: [1.00, 2.10]}
+    plausible: [0.1, 5.0]
+    method: Calculated
+    derived: "ALB / GLOB"
+
+# Tests the pipeline does not support. Used to make "unrecognised test" cases.
+unsupported_tests:
+  VITB12: {name: Vitamin B12, unit: pg/mL, decimals: 0, ref: {all: [211, 911]}, method: CLIA}

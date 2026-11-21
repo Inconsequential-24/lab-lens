@@ -1,0 +1,235 @@
+{
+  "id": "E15",
+  "split": "eval",
+  "source": "D04",
+  "variation": "perturbation",
+  "change": "same values re-rendered in layout B (banner layout with an H/L flag column)",
+  "title": "Lipid profile, all normal, banner layout",
+  "layout": "B",
+  "input": "data/reports/eval/E15.pdf",
+  "source_pdf": "data/reports/eval/E15.pdf",
+  "input_type": "pdf",
+  "pages": 1,
+  "panels": [
+    "lipid"
+  ],
+  "patient": {
+    "name": "Mr. Suresh Singh",
+    "age": 45,
+    "sex": "M",
+    "patient_id": "SYN259520",
+    "synthetic": true
+  },
+  "report_date": "2026-09-02",
+  "tests": [
+    {
+      "test_id": "TC",
+      "loinc": "2093-3",
+      "panel": "lipid",
+      "printed_name": "TOTAL CHOLESTEROL",
+      "value": {
+        "raw": "168",
+        "number": 168.0,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 168.0,
+      "ref": {
+        "raw": "< 200",
+        "low": null,
+        "high": 200,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "TG",
+      "loinc": "2571-8",
+      "panel": "lipid",
+      "printed_name": "TRIGLYCERIDES",
+      "value": {
+        "raw": "112",
+        "number": 112.0,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 112.0,
+      "ref": {
+        "raw": "< 150",
+        "low": null,
+        "high": 150,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "HDL",
+      "loinc": "2085-9",
+      "panel": "lipid",
+      "printed_name": "HDL CHOLESTEROL",
+      "value": {
+        "raw": "48",
+        "number": 48.0,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 48.0,
+      "ref": {
+        "raw": "> 40",
+        "low": 40,
+        "high": null,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "LDL",
+      "loinc": "18262-6",
+      "panel": "lipid",
+      "printed_name": "LDL CHOLESTEROL - DIRECT",
+      "value": {
+        "raw": "92",
+        "number": 92.0,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 92.0,
+      "ref": {
+        "raw": "< 100",
+        "low": null,
+        "high": 100,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "VLDL",
+      "loinc": "13458-5",
+      "panel": "lipid",
+      "printed_name": "VLDL CHOLESTEROL",
+      "value": {
+        "raw": "22.4",
+        "number": 22.4,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 22.4,
+      "ref": {
+        "raw": "5.0 - 40.0",
+        "low": 5,
+        "high": 40,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "NONHDL",
+      "loinc": "43396-1",
+      "panel": "lipid",
+      "printed_name": "NON-HDL CHOLESTEROL",
+      "value": {
+        "raw": "120",
+        "number": 120.0,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 120.0,
+      "ref": {
+        "raw": "< 130",
+        "low": null,
+        "high": 130,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "TC_HDL",
+      "loinc": "9830-1",
+      "panel": "lipid",
+      "printed_name": "TC / HDL RATIO",
+      "value": {
+        "raw": "3.5",
+        "number": 3.5,
+        "comparator": "="
+      },
+      "unit_raw": "Ratio",
+      "unit": "Ratio",
+      "value_canonical": 3.5,
+      "ref": {
+        "raw": "3.0 - 5.0",
+        "low": 3.0,
+        "high": 5.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    }
+  ],
+  "unrecognised_tests": [],
+  "lab_remarks": [],
+  "contains_injection": false,
+  "prints_condition_names": false,
+  "has_promotional_text": false,
+  "expected": {
+    "next_step": "no_action",
+    "urgency": "none",
+    "package": null,
+    "rule": "R6_normal",
+    "reason_test_ids": [],
+    "must_not_include": []
+  }
+}

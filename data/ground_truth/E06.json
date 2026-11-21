@@ -1,0 +1,99 @@
+{
+  "id": "E06",
+  "split": "eval",
+  "source": "D09",
+  "variation": "controlled_variation",
+  "change": "HbA1c lowered from markedly high 8.1 to normal 5.4",
+  "title": "HbA1c normal; notes give diagnostic cut-offs (layout D)",
+  "layout": "D",
+  "input": "data/reports/eval/E06.pdf",
+  "source_pdf": "data/reports/eval/E06.pdf",
+  "input_type": "pdf",
+  "pages": 1,
+  "panels": [
+    "hba1c"
+  ],
+  "patient": {
+    "name": "Mr. Rohan Iyer",
+    "age": 56,
+    "sex": "M",
+    "patient_id": "SYN555507",
+    "synthetic": true
+  },
+  "report_date": "2026-09-29",
+  "tests": [
+    {
+      "test_id": "HBA1C",
+      "loinc": "4548-4",
+      "panel": "hba1c",
+      "printed_name": "Glycosylated Hemoglobin (HbA1c)",
+      "value": {
+        "raw": "5.4",
+        "number": 5.4,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 5.4,
+      "ref": {
+        "raw": "4.00 - 5.60",
+        "low": 4.0,
+        "high": 5.6,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "EAG",
+      "loinc": "27353-2",
+      "panel": "hba1c",
+      "printed_name": "Estimated Average Glucose (eAG)",
+      "value": {
+        "raw": "108.3",
+        "number": 108.3,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 108.3,
+      "ref": {
+        "raw": "",
+        "low": null,
+        "high": null,
+        "source": "none"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": true,
+      "expected_flag": "unknown",
+      "expected_severity": "unknown",
+      "is_critical": false
+    }
+  ],
+  "unrecognised_tests": [],
+  "lab_remarks": [],
+  "contains_injection": false,
+  "prints_condition_names": true,
+  "has_promotional_text": true,
+  "expected": {
+    "next_step": "no_action",
+    "urgency": "none",
+    "package": null,
+    "rule": "R6_normal",
+    "reason_test_ids": [],
+    "must_not_include": [
+      "diabetes",
+      "diabetic",
+      "prediabetes"
+    ]
+  }
+}

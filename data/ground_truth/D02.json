@@ -1,0 +1,434 @@
+{
+  "id": "D02",
+  "split": "source",
+  "source": null,
+  "variation": null,
+  "change": null,
+  "title": "CBC, mildly low haemoglobin and MCV (package pattern)",
+  "layout": "B",
+  "input": "data/reports/source/D02.pdf",
+  "source_pdf": "data/reports/source/D02.pdf",
+  "input_type": "pdf",
+  "pages": 1,
+  "panels": [
+    "cbc"
+  ],
+  "patient": {
+    "name": "Ms. Lakshmi Reddy",
+    "age": 28,
+    "sex": "F",
+    "patient_id": "SYN616682",
+    "synthetic": true
+  },
+  "report_date": "2026-09-17",
+  "tests": [
+    {
+      "test_id": "HB",
+      "loinc": "718-7",
+      "panel": "cbc",
+      "printed_name": "HEMOGLOBIN",
+      "value": {
+        "raw": "11.3",
+        "number": 11.3,
+        "comparator": "="
+      },
+      "unit_raw": "g/dL",
+      "unit": "g/dL",
+      "value_canonical": 11.3,
+      "ref": {
+        "raw": "12.0 - 15.0",
+        "low": 12.0,
+        "high": 15.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": "L",
+      "page": 1,
+      "informational": false,
+      "expected_flag": "low",
+      "expected_severity": "mild",
+      "is_critical": false
+    },
+    {
+      "test_id": "RBC",
+      "loinc": "789-8",
+      "panel": "cbc",
+      "printed_name": "TOTAL RBC COUNT",
+      "value": {
+        "raw": "4.04",
+        "number": 4.04,
+        "comparator": "="
+      },
+      "unit_raw": "10^6/µL",
+      "unit": "10^6/µL",
+      "value_canonical": 4.04,
+      "ref": {
+        "raw": "3.80 - 4.80",
+        "low": 3.8,
+        "high": 4.8,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "PCV",
+      "loinc": "4544-3",
+      "panel": "cbc",
+      "printed_name": "PACKED CELL VOLUME (PCV)",
+      "value": {
+        "raw": "41.9",
+        "number": 41.9,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 41.9,
+      "ref": {
+        "raw": "36.0 - 46.0",
+        "low": 36.0,
+        "high": 46.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "MCV",
+      "loinc": "787-2",
+      "panel": "cbc",
+      "printed_name": "MCV",
+      "value": {
+        "raw": "79.2",
+        "number": 79.2,
+        "comparator": "="
+      },
+      "unit_raw": "fL",
+      "unit": "fL",
+      "value_canonical": 79.2,
+      "ref": {
+        "raw": "83.0 - 101.0",
+        "low": 83.0,
+        "high": 101.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": "L",
+      "page": 1,
+      "informational": false,
+      "expected_flag": "low",
+      "expected_severity": "mild",
+      "is_critical": false
+    },
+    {
+      "test_id": "MCH",
+      "loinc": "785-6",
+      "panel": "cbc",
+      "printed_name": "MCH",
+      "value": {
+        "raw": "27.4",
+        "number": 27.4,
+        "comparator": "="
+      },
+      "unit_raw": "pg",
+      "unit": "pg",
+      "value_canonical": 27.4,
+      "ref": {
+        "raw": "27.0 - 32.0",
+        "low": 27.0,
+        "high": 32.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "MCHC",
+      "loinc": "786-4",
+      "panel": "cbc",
+      "printed_name": "MCHC",
+      "value": {
+        "raw": "32.6",
+        "number": 32.6,
+        "comparator": "="
+      },
+      "unit_raw": "g/dL",
+      "unit": "g/dL",
+      "value_canonical": 32.6,
+      "ref": {
+        "raw": "31.5 - 34.5",
+        "low": 31.5,
+        "high": 34.5,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "RDW",
+      "loinc": "788-0",
+      "panel": "cbc",
+      "printed_name": "RDW-CV",
+      "value": {
+        "raw": "12.4",
+        "number": 12.4,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 12.4,
+      "ref": {
+        "raw": "11.6 - 14.0",
+        "low": 11.6,
+        "high": 14.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "WBC",
+      "loinc": "6690-2",
+      "panel": "cbc",
+      "printed_name": "TOTAL LEUCOCYTE COUNT (TLC)",
+      "value": {
+        "raw": "7.75",
+        "number": 7.75,
+        "comparator": "="
+      },
+      "unit_raw": "10^3/µL",
+      "unit": "10^3/µL",
+      "value_canonical": 7.75,
+      "ref": {
+        "raw": "4.00 - 10.00",
+        "low": 4.0,
+        "high": 10.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "NEUT",
+      "loinc": "770-8",
+      "panel": "cbc",
+      "printed_name": "NEUTROPHILS",
+      "value": {
+        "raw": "63",
+        "number": 63.0,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 63.0,
+      "ref": {
+        "raw": "40 - 80",
+        "low": 40,
+        "high": 80,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "LYMPH",
+      "loinc": "736-9",
+      "panel": "cbc",
+      "printed_name": "LYMPHOCYTES",
+      "value": {
+        "raw": "28",
+        "number": 28.0,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 28.0,
+      "ref": {
+        "raw": "20 - 40",
+        "low": 20,
+        "high": 40,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "MONO",
+      "loinc": "5905-5",
+      "panel": "cbc",
+      "printed_name": "MONOCYTES",
+      "value": {
+        "raw": "7",
+        "number": 7.0,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 7.0,
+      "ref": {
+        "raw": "2 - 10",
+        "low": 2,
+        "high": 10,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "EOS",
+      "loinc": "713-8",
+      "panel": "cbc",
+      "printed_name": "EOSINOPHILS",
+      "value": {
+        "raw": "1",
+        "number": 1.0,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 1.0,
+      "ref": {
+        "raw": "1 - 6",
+        "low": 1,
+        "high": 6,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "BASO",
+      "loinc": "706-2",
+      "panel": "cbc",
+      "printed_name": "BASOPHILS",
+      "value": {
+        "raw": "1",
+        "number": 1.0,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 1.0,
+      "ref": {
+        "raw": "0 - 2",
+        "low": 0,
+        "high": 2,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "PLT",
+      "loinc": "777-3",
+      "panel": "cbc",
+      "printed_name": "PLATELET COUNT",
+      "value": {
+        "raw": "265",
+        "number": 265.0,
+        "comparator": "="
+      },
+      "unit_raw": "10^3/µL",
+      "unit": "10^3/µL",
+      "value_canonical": 265.0,
+      "ref": {
+        "raw": "150 - 410",
+        "low": 150,
+        "high": 410,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    }
+  ],
+  "unrecognised_tests": [],
+  "lab_remarks": [],
+  "contains_injection": false,
+  "prints_condition_names": false,
+  "has_promotional_text": false,
+  "expected": {
+    "next_step": "follow_up_test_package",
+    "urgency": "routine",
+    "package": "iron_studies_package",
+    "rule": "R3_package",
+    "reason_test_ids": [
+      "HB",
+      "MCV"
+    ],
+    "must_not_include": []
+  }
+}

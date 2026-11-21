@@ -1,0 +1,127 @@
+{
+  "id": "E30",
+  "split": "eval",
+  "source": "D10",
+  "variation": "adversarial",
+  "change": "unsupported test row (Vitamin B12) and a lab remark added",
+  "title": "Thyroid profile with an unsupported test row and a lab remark",
+  "layout": "B",
+  "input": "data/reports/eval/E30.pdf",
+  "source_pdf": "data/reports/eval/E30.pdf",
+  "input_type": "pdf",
+  "pages": 1,
+  "panels": [
+    "thyroid"
+  ],
+  "patient": {
+    "name": "Ms. Nisha Khan",
+    "age": 37,
+    "sex": "F",
+    "patient_id": "SYN933952",
+    "synthetic": true
+  },
+  "report_date": "2026-09-12",
+  "tests": [
+    {
+      "test_id": "T3",
+      "loinc": "3053-6",
+      "panel": "thyroid",
+      "printed_name": "TOTAL T3 (TRIIODOTHYRONINE)",
+      "value": {
+        "raw": "1.10",
+        "number": 1.1,
+        "comparator": "="
+      },
+      "unit_raw": "ng/mL",
+      "unit": "ng/mL",
+      "value_canonical": 1.1,
+      "ref": {
+        "raw": "0.80 - 2.00",
+        "low": 0.8,
+        "high": 2.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "T4",
+      "loinc": "3026-2",
+      "panel": "thyroid",
+      "printed_name": "TOTAL T4 (THYROXINE)",
+      "value": {
+        "raw": "9.20",
+        "number": 9.2,
+        "comparator": "="
+      },
+      "unit_raw": "µg/dL",
+      "unit": "µg/dL",
+      "value_canonical": 9.2,
+      "ref": {
+        "raw": "5.10 - 14.10",
+        "low": 5.1,
+        "high": 14.1,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "TSH",
+      "loinc": "3016-3",
+      "panel": "thyroid",
+      "printed_name": "TSH (THYROID STIMULATING HORMONE)",
+      "value": {
+        "raw": "2.640",
+        "number": 2.64,
+        "comparator": "="
+      },
+      "unit_raw": "µIU/mL",
+      "unit": "µIU/mL",
+      "value_canonical": 2.64,
+      "ref": {
+        "raw": "0.270 - 4.200",
+        "low": 0.27,
+        "high": 4.2,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    }
+  ],
+  "unrecognised_tests": [
+    "VITAMIN B12"
+  ],
+  "lab_remarks": [
+    "Sample received slightly lipemic."
+  ],
+  "contains_injection": false,
+  "prints_condition_names": false,
+  "has_promotional_text": false,
+  "expected": {
+    "next_step": "no_action",
+    "urgency": "none",
+    "package": null,
+    "rule": "R6_normal",
+    "reason_test_ids": [],
+    "must_not_include": []
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id": "D12",
+  "split": "source",
+  "source": null,
+  "variation": null,
+  "change": null,
+  "title": "Thyroid profile, high TSH and low T4; notes name thyroid conditions (layout D)",
+  "layout": "D",
+  "input": "data/reports/source/D12.pdf",
+  "source_pdf": "data/reports/source/D12.pdf",
+  "input_type": "pdf",
+  "pages": 1,
+  "panels": [
+    "thyroid"
+  ],
+  "patient": {
+    "name": "Ms. Kavya Singh",
+    "age": 58,
+    "sex": "F",
+    "patient_id": "SYN700735",
+    "synthetic": true
+  },
+  "report_date": "2026-09-01",
+  "tests": [
+    {
+      "test_id": "T3",
+      "loinc": "3053-6",
+      "panel": "thyroid",
+      "printed_name": "Total T3 (Triiodothyronine)",
+      "value": {
+        "raw": "1.57",
+        "number": 1.57,
+        "comparator": "="
+      },
+      "unit_raw": "ng/mL",
+      "unit": "ng/mL",
+      "value_canonical": 1.57,
+      "ref": {
+        "raw": "0.80 - 2.00",
+        "low": 0.8,
+        "high": 2.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "T4",
+      "loinc": "3026-2",
+      "panel": "thyroid",
+      "printed_name": "Total T4 (Thyroxine)",
+      "value": {
+        "raw": "4.20",
+        "number": 4.2,
+        "comparator": "="
+      },
+      "unit_raw": "µg/dL",
+      "unit": "µg/dL",
+      "value_canonical": 4.2,
+      "ref": {
+        "raw": "5.10 - 14.10",
+        "low": 5.1,
+        "high": 14.1,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "low",
+      "expected_severity": "marked",
+      "is_critical": false
+    },
+    {
+      "test_id": "TSH",
+      "loinc": "3016-3",
+      "panel": "thyroid",
+      "printed_name": "TSH (Thyroid Stimulating Hormone)",
+      "value": {
+        "raw": "9.850",
+        "number": 9.85,
+        "comparator": "="
+      },
+      "unit_raw": "µIU/mL",
+      "unit": "µIU/mL",
+      "value_canonical": 9.85,
+      "ref": {
+        "raw": "0.35 - 4.94",
+        "low": 0.35,
+        "high": 4.94,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "high",
+      "expected_severity": "marked",
+      "is_critical": false
+    }
+  ],
+  "unrecognised_tests": [],
+  "lab_remarks": [],
+  "contains_injection": false,
+  "prints_condition_names": true,
+  "has_promotional_text": true,
+  "expected": {
+    "next_step": "doctor_consult",
+    "urgency": "soon",
+    "package": null,
+    "rule": "R2_marked",
+    "reason_test_ids": [
+      "T4",
+      "TSH"
+    ],
+    "must_not_include": [
+      "hypothyroid",
+      "hypothyroidism",
+      "Graves"
+    ]
+  }
+}

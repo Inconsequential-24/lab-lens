@@ -1,0 +1,32 @@
+# Fixed catalog of follow-up test packages (PLAN.md section 4, decision table rule R3).
+# A package is suggested only when every abnormal result is mild, all abnormal tests are in
+# `allowed_abnormal`, and the `requires` pattern matches. Package names never name a condition.
+
+version: "2026-11-20"
+
+packages:
+  iron_studies_package:
+    label: Iron studies package
+    includes: [Serum Iron, TIBC, Ferritin, Transferrin Saturation]
+    requires_all: [{test: HB, flag: low}, {test: MCV, flag: low}]
+    allowed_abnormal: [HB, RBC, PCV, MCV, MCH, MCHC, RDW]
+  lipid_followup_package:
+    label: Lipid follow-up package
+    includes: [Repeat Lipid Profile (fasting), Apolipoprotein B]
+    requires_any: [{test: TC, flag: high}, {test: LDL, flag: high}, {test: TG, flag: high}]
+    allowed_abnormal: [TC, TG, LDL, VLDL, NONHDL, TC_HDL]
+  blood_sugar_followup_package:
+    label: Blood sugar follow-up package
+    includes: [Fasting Plasma Glucose, Repeat HbA1c after 3 months]
+    requires_any: [{test: HBA1C, flag: high}]
+    allowed_abnormal: [HBA1C, EAG]
+  thyroid_followup_package:
+    label: Thyroid follow-up package
+    includes: [Repeat TSH, Free T4]
+    requires_any: [{test: TSH, flag: high}, {test: TSH, flag: low}]
+    allowed_abnormal: [TSH]
+  liver_followup_package:
+    label: Liver follow-up package
+    includes: [Repeat Liver Function Test]
+    requires_any: [{test: ALT, flag: high}, {test: AST, flag: high}, {test: GGT, flag: high}]
+    allowed_abnormal: [ALT, AST, GGT]

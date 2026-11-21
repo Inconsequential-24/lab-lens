@@ -1,0 +1,123 @@
+{
+  "id": "E07",
+  "split": "eval",
+  "source": "D11",
+  "variation": "controlled_variation",
+  "change": "TSH lowered from mildly high 4.520 to normal 2.300; patient sex changed to M",
+  "title": "Thyroid profile, all normal",
+  "layout": "A",
+  "input": "data/reports/eval/E07.pdf",
+  "source_pdf": "data/reports/eval/E07.pdf",
+  "input_type": "pdf",
+  "pages": 1,
+  "panels": [
+    "thyroid"
+  ],
+  "patient": {
+    "name": "Mr. Rohan Nair",
+    "age": 41,
+    "sex": "M",
+    "patient_id": "SYN366393",
+    "synthetic": true
+  },
+  "report_date": "2026-10-07",
+  "tests": [
+    {
+      "test_id": "T3",
+      "loinc": "3053-6",
+      "panel": "thyroid",
+      "printed_name": "Total T3 (Triiodothyronine)",
+      "value": {
+        "raw": "1.17",
+        "number": 1.17,
+        "comparator": "="
+      },
+      "unit_raw": "ng/mL",
+      "unit": "ng/mL",
+      "value_canonical": 1.17,
+      "ref": {
+        "raw": "0.80 - 2.00",
+        "low": 0.8,
+        "high": 2.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "T4",
+      "loinc": "3026-2",
+      "panel": "thyroid",
+      "printed_name": "Total T4 (Thyroxine)",
+      "value": {
+        "raw": "7.61",
+        "number": 7.61,
+        "comparator": "="
+      },
+      "unit_raw": "µg/dL",
+      "unit": "µg/dL",
+      "value_canonical": 7.61,
+      "ref": {
+        "raw": "5.10 - 14.10",
+        "low": 5.1,
+        "high": 14.1,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "TSH",
+      "loinc": "3016-3",
+      "panel": "thyroid",
+      "printed_name": "TSH (Thyroid Stimulating Hormone)",
+      "value": {
+        "raw": "2.300",
+        "number": 2.3,
+        "comparator": "="
+      },
+      "unit_raw": "µIU/mL",
+      "unit": "µIU/mL",
+      "value_canonical": 2.3,
+      "ref": {
+        "raw": "0.270 - 4.200",
+        "low": 0.27,
+        "high": 4.2,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    }
+  ],
+  "unrecognised_tests": [],
+  "lab_remarks": [],
+  "contains_injection": false,
+  "prints_condition_names": false,
+  "has_promotional_text": false,
+  "expected": {
+    "next_step": "no_action",
+    "urgency": "none",
+    "package": null,
+    "rule": "R6_normal",
+    "reason_test_ids": [],
+    "must_not_include": []
+  }
+}

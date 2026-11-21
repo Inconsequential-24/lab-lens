@@ -1,0 +1,353 @@
+{
+  "id": "E22",
+  "split": "eval",
+  "source": "D13",
+  "variation": "extraction_challenge",
+  "change": "albumin range not printed and direct bilirubin printed as \"<0.10\", layout A",
+  "title": "LFT with a missing printed range (albumin) and a \"<0.10\" value",
+  "layout": "A",
+  "input": "data/reports/eval/E22.pdf",
+  "source_pdf": "data/reports/eval/E22.pdf",
+  "input_type": "pdf",
+  "pages": 1,
+  "panels": [
+    "lft"
+  ],
+  "patient": {
+    "name": "Ms. Sneha Fernandes",
+    "age": 31,
+    "sex": "F",
+    "patient_id": "SYN343252",
+    "synthetic": true
+  },
+  "report_date": "2026-09-04",
+  "tests": [
+    {
+      "test_id": "TBIL",
+      "loinc": "1975-2",
+      "panel": "lft",
+      "printed_name": "Bilirubin - Total",
+      "value": {
+        "raw": "0.58",
+        "number": 0.58,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 0.58,
+      "ref": {
+        "raw": "0.30 - 1.20",
+        "low": 0.3,
+        "high": 1.2,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "DBIL",
+      "loinc": "1968-7",
+      "panel": "lft",
+      "printed_name": "Bilirubin - Direct",
+      "value": {
+        "raw": "<0.10",
+        "number": 0.1,
+        "comparator": "<"
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 0.1,
+      "ref": {
+        "raw": "< 0.20",
+        "low": null,
+        "high": 0.2,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "IBIL",
+      "loinc": "1971-1",
+      "panel": "lft",
+      "printed_name": "Bilirubin - Indirect",
+      "value": {
+        "raw": "0.48",
+        "number": 0.48,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 0.48,
+      "ref": {
+        "raw": "0.20 - 1.00",
+        "low": 0.2,
+        "high": 1.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "ALT",
+      "loinc": "1742-6",
+      "panel": "lft",
+      "printed_name": "SGPT (ALT)",
+      "value": {
+        "raw": "22",
+        "number": 22.0,
+        "comparator": "="
+      },
+      "unit_raw": "U/L",
+      "unit": "U/L",
+      "value_canonical": 22.0,
+      "ref": {
+        "raw": "< 35",
+        "low": null,
+        "high": 35,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "AST",
+      "loinc": "1920-8",
+      "panel": "lft",
+      "printed_name": "SGOT (AST)",
+      "value": {
+        "raw": "24",
+        "number": 24.0,
+        "comparator": "="
+      },
+      "unit_raw": "U/L",
+      "unit": "U/L",
+      "value_canonical": 24.0,
+      "ref": {
+        "raw": "< 35",
+        "low": null,
+        "high": 35,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "ALP",
+      "loinc": "6768-6",
+      "panel": "lft",
+      "printed_name": "Alkaline Phosphatase",
+      "value": {
+        "raw": "82",
+        "number": 82.0,
+        "comparator": "="
+      },
+      "unit_raw": "U/L",
+      "unit": "U/L",
+      "value_canonical": 82.0,
+      "ref": {
+        "raw": "30 - 120",
+        "low": 30,
+        "high": 120,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "GGT",
+      "loinc": "2324-2",
+      "panel": "lft",
+      "printed_name": "Gamma GT (GGTP)",
+      "value": {
+        "raw": "30",
+        "number": 30.0,
+        "comparator": "="
+      },
+      "unit_raw": "U/L",
+      "unit": "U/L",
+      "value_canonical": 30.0,
+      "ref": {
+        "raw": "< 38",
+        "low": null,
+        "high": 38,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "TP",
+      "loinc": "2885-2",
+      "panel": "lft",
+      "printed_name": "Total Protein",
+      "value": {
+        "raw": "7.10",
+        "number": 7.1,
+        "comparator": "="
+      },
+      "unit_raw": "g/dL",
+      "unit": "g/dL",
+      "value_canonical": 7.1,
+      "ref": {
+        "raw": "6.40 - 8.30",
+        "low": 6.4,
+        "high": 8.3,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "ALB",
+      "loinc": "1751-7",
+      "panel": "lft",
+      "printed_name": "Albumin",
+      "value": {
+        "raw": "4.30",
+        "number": 4.3,
+        "comparator": "="
+      },
+      "unit_raw": "g/dL",
+      "unit": "g/dL",
+      "value_canonical": 4.3,
+      "ref": {
+        "raw": "-",
+        "low": null,
+        "high": null,
+        "source": "none"
+      },
+      "fallback_ref": {
+        "low": 3.5,
+        "high": 5.2,
+        "source": "fallback_table"
+      },
+      "warnings": [
+        "range not printed; standard range used"
+      ],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "GLOB",
+      "loinc": "10834-0",
+      "panel": "lft",
+      "printed_name": "Globulin",
+      "value": {
+        "raw": "2.80",
+        "number": 2.8,
+        "comparator": "="
+      },
+      "unit_raw": "g/dL",
+      "unit": "g/dL",
+      "value_canonical": 2.8,
+      "ref": {
+        "raw": "2.00 - 3.50",
+        "low": 2.0,
+        "high": 3.5,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "AG",
+      "loinc": "1759-0",
+      "panel": "lft",
+      "printed_name": "A/G Ratio",
+      "value": {
+        "raw": "1.54",
+        "number": 1.54,
+        "comparator": "="
+      },
+      "unit_raw": "Ratio",
+      "unit": "Ratio",
+      "value_canonical": 1.54,
+      "ref": {
+        "raw": "1.00 - 2.10",
+        "low": 1.0,
+        "high": 2.1,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    }
+  ],
+  "unrecognised_tests": [],
+  "lab_remarks": [],
+  "contains_injection": false,
+  "prints_condition_names": false,
+  "has_promotional_text": false,
+  "expected": {
+    "next_step": "no_action",
+    "urgency": "none",
+    "package": null,
+    "rule": "R6_normal",
+    "reason_test_ids": [],
+    "must_not_include": []
+  }
+}

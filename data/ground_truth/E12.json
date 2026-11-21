@@ -1,0 +1,778 @@
+{
+  "id": "E12",
+  "split": "eval",
+  "source": "D14",
+  "variation": "perturbation",
+  "change": "second panel (CBC) added so the report runs over several pages (layout D)",
+  "title": "Two panels over several pages with long notes (CBC and LFT), mildly high ALT (layout D)",
+  "layout": "D",
+  "input": "data/reports/eval/E12.pdf",
+  "source_pdf": "data/reports/eval/E12.pdf",
+  "input_type": "pdf",
+  "pages": 2,
+  "panels": [
+    "cbc",
+    "lft"
+  ],
+  "patient": {
+    "name": "Ms. Ritu Nair",
+    "age": 52,
+    "sex": "F",
+    "patient_id": "SYN550255",
+    "synthetic": true
+  },
+  "report_date": "2026-10-08",
+  "tests": [
+    {
+      "test_id": "HB",
+      "loinc": "718-7",
+      "panel": "cbc",
+      "printed_name": "Hemoglobin",
+      "value": {
+        "raw": "12.7",
+        "number": 12.7,
+        "comparator": "="
+      },
+      "unit_raw": "g/dL",
+      "unit": "g/dL",
+      "value_canonical": 12.7,
+      "ref": {
+        "raw": "12.0 - 15.0",
+        "low": 12.0,
+        "high": 15.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "RBC",
+      "loinc": "789-8",
+      "panel": "cbc",
+      "printed_name": "Total RBC Count",
+      "value": {
+        "raw": "4.32",
+        "number": 4.32,
+        "comparator": "="
+      },
+      "unit_raw": "10^6/µL",
+      "unit": "10^6/µL",
+      "value_canonical": 4.32,
+      "ref": {
+        "raw": "3.80 - 4.80",
+        "low": 3.8,
+        "high": 4.8,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "PCV",
+      "loinc": "4544-3",
+      "panel": "cbc",
+      "printed_name": "Packed Cell Volume (PCV)",
+      "value": {
+        "raw": "39.6",
+        "number": 39.6,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 39.6,
+      "ref": {
+        "raw": "36.0 - 46.0",
+        "low": 36.0,
+        "high": 46.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "MCV",
+      "loinc": "787-2",
+      "panel": "cbc",
+      "printed_name": "MCV",
+      "value": {
+        "raw": "93.2",
+        "number": 93.2,
+        "comparator": "="
+      },
+      "unit_raw": "fL",
+      "unit": "fL",
+      "value_canonical": 93.2,
+      "ref": {
+        "raw": "83.0 - 101.0",
+        "low": 83.0,
+        "high": 101.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "MCH",
+      "loinc": "785-6",
+      "panel": "cbc",
+      "printed_name": "MCH",
+      "value": {
+        "raw": "29.1",
+        "number": 29.1,
+        "comparator": "="
+      },
+      "unit_raw": "pg",
+      "unit": "pg",
+      "value_canonical": 29.1,
+      "ref": {
+        "raw": "27.0 - 32.0",
+        "low": 27.0,
+        "high": 32.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "MCHC",
+      "loinc": "786-4",
+      "panel": "cbc",
+      "printed_name": "MCHC",
+      "value": {
+        "raw": "33.1",
+        "number": 33.1,
+        "comparator": "="
+      },
+      "unit_raw": "g/dL",
+      "unit": "g/dL",
+      "value_canonical": 33.1,
+      "ref": {
+        "raw": "31.5 - 34.5",
+        "low": 31.5,
+        "high": 34.5,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "RDW",
+      "loinc": "788-0",
+      "panel": "cbc",
+      "printed_name": "RDW-CV",
+      "value": {
+        "raw": "12.2",
+        "number": 12.2,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 12.2,
+      "ref": {
+        "raw": "11.6 - 14.0",
+        "low": 11.6,
+        "high": 14.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "WBC",
+      "loinc": "6690-2",
+      "panel": "cbc",
+      "printed_name": "Total Leucocyte Count (TLC)",
+      "value": {
+        "raw": "6.01",
+        "number": 6.01,
+        "comparator": "="
+      },
+      "unit_raw": "10^3/µL",
+      "unit": "10^3/µL",
+      "value_canonical": 6.01,
+      "ref": {
+        "raw": "4.00 - 10.00",
+        "low": 4.0,
+        "high": 10.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "NEUT",
+      "loinc": "770-8",
+      "panel": "cbc",
+      "printed_name": "Neutrophils",
+      "value": {
+        "raw": "56",
+        "number": 56.0,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 56.0,
+      "ref": {
+        "raw": "40 - 80",
+        "low": 40,
+        "high": 80,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "LYMPH",
+      "loinc": "736-9",
+      "panel": "cbc",
+      "printed_name": "Lymphocytes",
+      "value": {
+        "raw": "37",
+        "number": 37.0,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 37.0,
+      "ref": {
+        "raw": "20 - 40",
+        "low": 20,
+        "high": 40,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "MONO",
+      "loinc": "5905-5",
+      "panel": "cbc",
+      "printed_name": "Monocytes",
+      "value": {
+        "raw": "4",
+        "number": 4.0,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 4.0,
+      "ref": {
+        "raw": "2 - 10",
+        "low": 2,
+        "high": 10,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "EOS",
+      "loinc": "713-8",
+      "panel": "cbc",
+      "printed_name": "Eosinophils",
+      "value": {
+        "raw": "3",
+        "number": 3.0,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 3.0,
+      "ref": {
+        "raw": "1-6",
+        "low": 1.0,
+        "high": 6.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "BASO",
+      "loinc": "706-2",
+      "panel": "cbc",
+      "printed_name": "Basophils",
+      "value": {
+        "raw": "0",
+        "number": 0.0,
+        "comparator": "="
+      },
+      "unit_raw": "%",
+      "unit": "%",
+      "value_canonical": 0.0,
+      "ref": {
+        "raw": "0-2",
+        "low": 0.0,
+        "high": 2.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "PLT",
+      "loinc": "777-3",
+      "panel": "cbc",
+      "printed_name": "Platelet Count",
+      "value": {
+        "raw": "324",
+        "number": 324.0,
+        "comparator": "="
+      },
+      "unit_raw": "10^3/µL",
+      "unit": "10^3/µL",
+      "value_canonical": 324.0,
+      "ref": {
+        "raw": "150 - 410",
+        "low": 150,
+        "high": 410,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "TBIL",
+      "loinc": "1975-2",
+      "panel": "lft",
+      "printed_name": "Bilirubin - Total",
+      "value": {
+        "raw": "0.65",
+        "number": 0.65,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 0.65,
+      "ref": {
+        "raw": "0.30 - 1.20",
+        "low": 0.3,
+        "high": 1.2,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "DBIL",
+      "loinc": "1968-7",
+      "panel": "lft",
+      "printed_name": "Bilirubin - Direct",
+      "value": {
+        "raw": "0.12",
+        "number": 0.12,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 0.12,
+      "ref": {
+        "raw": "<0.30",
+        "low": null,
+        "high": 0.3,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "IBIL",
+      "loinc": "1971-1",
+      "panel": "lft",
+      "printed_name": "Bilirubin - Indirect",
+      "value": {
+        "raw": "0.53",
+        "number": 0.53,
+        "comparator": "="
+      },
+      "unit_raw": "mg/dL",
+      "unit": "mg/dL",
+      "value_canonical": 0.53,
+      "ref": {
+        "raw": "<1.10",
+        "low": null,
+        "high": 1.1,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "ALT",
+      "loinc": "1742-6",
+      "panel": "lft",
+      "printed_name": "SGPT (ALT)",
+      "value": {
+        "raw": "38",
+        "number": 38.0,
+        "comparator": "="
+      },
+      "unit_raw": "U/L",
+      "unit": "U/L",
+      "value_canonical": 38.0,
+      "ref": {
+        "raw": "0 - 35",
+        "low": 0.0,
+        "high": 35.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 1,
+      "informational": false,
+      "expected_flag": "high",
+      "expected_severity": "mild",
+      "is_critical": false
+    },
+    {
+      "test_id": "AST",
+      "loinc": "1920-8",
+      "panel": "lft",
+      "printed_name": "SGOT (AST)",
+      "value": {
+        "raw": "25",
+        "number": 25.0,
+        "comparator": "="
+      },
+      "unit_raw": "U/L",
+      "unit": "U/L",
+      "value_canonical": 25.0,
+      "ref": {
+        "raw": "0 - 32",
+        "low": 0.0,
+        "high": 32.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 2,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "AST_ALT",
+      "loinc": "1916-6",
+      "panel": "lft",
+      "printed_name": "AST:ALT Ratio",
+      "value": {
+        "raw": "0.66",
+        "number": 0.66,
+        "comparator": "="
+      },
+      "unit_raw": "",
+      "unit": "",
+      "value_canonical": 0.66,
+      "ref": {
+        "raw": "<1.00",
+        "low": null,
+        "high": 1.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 2,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "ALP",
+      "loinc": "6768-6",
+      "panel": "lft",
+      "printed_name": "Alkaline Phosphatase",
+      "value": {
+        "raw": "80",
+        "number": 80.0,
+        "comparator": "="
+      },
+      "unit_raw": "U/L",
+      "unit": "U/L",
+      "value_canonical": 80.0,
+      "ref": {
+        "raw": "30.00 - 120.00",
+        "low": 30.0,
+        "high": 120.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 2,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "GGT",
+      "loinc": "2324-2",
+      "panel": "lft",
+      "printed_name": "Gamma GT (GGTP)",
+      "value": {
+        "raw": "24",
+        "number": 24.0,
+        "comparator": "="
+      },
+      "unit_raw": "U/L",
+      "unit": "U/L",
+      "value_canonical": 24.0,
+      "ref": {
+        "raw": "0 - 38",
+        "low": 0.0,
+        "high": 38.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 2,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "TP",
+      "loinc": "2885-2",
+      "panel": "lft",
+      "printed_name": "Total Protein",
+      "value": {
+        "raw": "7.00",
+        "number": 7.0,
+        "comparator": "="
+      },
+      "unit_raw": "g/dL",
+      "unit": "g/dL",
+      "value_canonical": 7.0,
+      "ref": {
+        "raw": "6.00 - 8.30",
+        "low": 6.0,
+        "high": 8.3,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 2,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "ALB",
+      "loinc": "1751-7",
+      "panel": "lft",
+      "printed_name": "Albumin",
+      "value": {
+        "raw": "4.20",
+        "number": 4.2,
+        "comparator": "="
+      },
+      "unit_raw": "g/dL",
+      "unit": "g/dL",
+      "value_canonical": 4.2,
+      "ref": {
+        "raw": "3.50 - 5.00",
+        "low": 3.5,
+        "high": 5.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 2,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "GLOB",
+      "loinc": "10834-0",
+      "panel": "lft",
+      "printed_name": "Globulin",
+      "value": {
+        "raw": "2.80",
+        "number": 2.8,
+        "comparator": "="
+      },
+      "unit_raw": "g/dL",
+      "unit": "g/dL",
+      "value_canonical": 2.8,
+      "ref": {
+        "raw": "2.0-3.5",
+        "low": 2.0,
+        "high": 3.5,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 2,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    },
+    {
+      "test_id": "AG",
+      "loinc": "1759-0",
+      "panel": "lft",
+      "printed_name": "A/G Ratio",
+      "value": {
+        "raw": "1.50",
+        "number": 1.5,
+        "comparator": "="
+      },
+      "unit_raw": "Ratio",
+      "unit": "Ratio",
+      "value_canonical": 1.5,
+      "ref": {
+        "raw": "0.90 - 2.00",
+        "low": 0.9,
+        "high": 2.0,
+        "source": "report"
+      },
+      "fallback_ref": null,
+      "warnings": [],
+      "printed_flag": null,
+      "page": 2,
+      "informational": false,
+      "expected_flag": "normal",
+      "expected_severity": "normal",
+      "is_critical": false
+    }
+  ],
+  "unrecognised_tests": [],
+  "lab_remarks": [],
+  "contains_injection": false,
+  "prints_condition_names": true,
+  "has_promotional_text": true,
+  "expected": {
+    "next_step": "follow_up_test_package",
+    "urgency": "routine",
+    "package": "liver_followup_package",
+    "rule": "R3_package",
+    "reason_test_ids": [
+      "ALT"
+    ],
+    "must_not_include": [
+      "fatty liver",
+      "NAFLD",
+      "hepatitis",
+      "anaemia",
+      "anemia",
+      "leukemia",
+      "thalassemia"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+# DEMO VALUES - not clinically validated. Extra printed-unit conversions not covered by
+# panels.yaml `alt_units`. Same convention as alt_units: printed = canonical * factor,
+# so canonical = printed / factor. `equivalent` lists spellings of the canonical unit.
+version: 1
+tests:
+  PLT:
+    equivalent: ["10^3/ul", "x10^3/ul", "10³/ul", "thou/ul", "10^9/l", "thou/cumm", "10^3/cumm"]
+    alt_units:
+      lakhs/cumm: {factor: 0.01}
+      lakh/cumm: {factor: 0.01}
+      /cumm: {factor: 1000}
+      cells/cumm: {factor: 1000}
+      /ul: {factor: 1000}

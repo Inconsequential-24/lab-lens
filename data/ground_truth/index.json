@@ -1,0 +1,729 @@
+{
+  "seed": 20261120,
+  "reference_version": "2026-11-20",
+  "sources": [
+    {
+      "id": "D01",
+      "split": "source",
+      "title": "CBC, all normal",
+      "layout": "A",
+      "panels": [
+        "cbc"
+      ],
+      "input": "data/reports/source/D01.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal"
+    },
+    {
+      "id": "D02",
+      "split": "source",
+      "title": "CBC, mildly low haemoglobin and MCV (package pattern)",
+      "layout": "B",
+      "panels": [
+        "cbc"
+      ],
+      "input": "data/reports/source/D02.pdf",
+      "input_type": "pdf",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package"
+    },
+    {
+      "id": "D03",
+      "split": "source",
+      "title": "CBC, critically low platelets",
+      "layout": "C",
+      "panels": [
+        "cbc"
+      ],
+      "input": "data/reports/source/D03.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "urgent",
+      "rule": "R1_critical"
+    },
+    {
+      "id": "D04",
+      "split": "source",
+      "title": "Lipid profile, all normal",
+      "layout": "C",
+      "panels": [
+        "lipid"
+      ],
+      "input": "data/reports/source/D04.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal"
+    },
+    {
+      "id": "D05",
+      "split": "source",
+      "title": "Lipid profile, mildly high triglycerides (package pattern)",
+      "layout": "A",
+      "panels": [
+        "lipid"
+      ],
+      "input": "data/reports/source/D05.pdf",
+      "input_type": "pdf",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package"
+    },
+    {
+      "id": "D06",
+      "split": "source",
+      "title": "Lipid profile, several markedly abnormal values; long notes naming conditions (layout D)",
+      "layout": "D",
+      "panels": [
+        "lipid"
+      ],
+      "input": "data/reports/source/D06.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "soon",
+      "rule": "R2_marked"
+    },
+    {
+      "id": "D07",
+      "split": "source",
+      "title": "HbA1c normal, report prints a condition-naming interpretation table",
+      "layout": "A",
+      "panels": [
+        "hba1c"
+      ],
+      "input": "data/reports/source/D07.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal"
+    },
+    {
+      "id": "D08",
+      "split": "source",
+      "title": "HbA1c mildly high (package pattern)",
+      "layout": "C",
+      "panels": [
+        "hba1c"
+      ],
+      "input": "data/reports/source/D08.pdf",
+      "input_type": "pdf",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package"
+    },
+    {
+      "id": "D09",
+      "split": "source",
+      "title": "HbA1c markedly high; notes give diagnostic cut-offs (layout D)",
+      "layout": "D",
+      "panels": [
+        "hba1c"
+      ],
+      "input": "data/reports/source/D09.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "soon",
+      "rule": "R2_marked"
+    },
+    {
+      "id": "D10",
+      "split": "source",
+      "title": "Thyroid profile, all normal",
+      "layout": "B",
+      "panels": [
+        "thyroid"
+      ],
+      "input": "data/reports/source/D10.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal"
+    },
+    {
+      "id": "D11",
+      "split": "source",
+      "title": "Thyroid profile, mildly high TSH (package pattern)",
+      "layout": "A",
+      "panels": [
+        "thyroid"
+      ],
+      "input": "data/reports/source/D11.pdf",
+      "input_type": "pdf",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package"
+    },
+    {
+      "id": "D12",
+      "split": "source",
+      "title": "Thyroid profile, high TSH and low T4; notes name thyroid conditions (layout D)",
+      "layout": "D",
+      "panels": [
+        "thyroid"
+      ],
+      "input": "data/reports/source/D12.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "soon",
+      "rule": "R2_marked"
+    },
+    {
+      "id": "D13",
+      "split": "source",
+      "title": "Liver function test, all normal; zero-start ranges, unit-less AST:ALT ratio (layout D)",
+      "layout": "D",
+      "panels": [
+        "lft"
+      ],
+      "input": "data/reports/source/D13.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal"
+    },
+    {
+      "id": "D14",
+      "split": "source",
+      "title": "Liver function test, mildly high ALT (package pattern)",
+      "layout": "B",
+      "panels": [
+        "lft"
+      ],
+      "input": "data/reports/source/D14.pdf",
+      "input_type": "pdf",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package"
+    },
+    {
+      "id": "D15",
+      "split": "source",
+      "title": "Liver function test, several markedly abnormal values; notes name liver diseases (layout D)",
+      "layout": "D",
+      "panels": [
+        "lft"
+      ],
+      "input": "data/reports/source/D15.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "soon",
+      "rule": "R2_marked"
+    }
+  ],
+  "eval_cases": [
+    {
+      "id": "E01",
+      "split": "eval",
+      "title": "CBC, mildly low platelets",
+      "layout": "C",
+      "panels": [
+        "cbc"
+      ],
+      "input": "data/reports/eval/E01.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "routine",
+      "rule": "R4_mild",
+      "source": "D03",
+      "variation": "controlled_variation",
+      "change": "platelets raised from critical 14 to a mildly low 140"
+    },
+    {
+      "id": "E02",
+      "split": "eval",
+      "title": "Lipid profile, markedly high triglycerides",
+      "layout": "A",
+      "panels": [
+        "lipid"
+      ],
+      "input": "data/reports/eval/E02.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "soon",
+      "rule": "R2_marked",
+      "source": "D05",
+      "variation": "controlled_variation",
+      "change": "triglycerides raised from mildly high 158 to markedly high 320"
+    },
+    {
+      "id": "E03",
+      "split": "eval",
+      "title": "Lipid profile, all normal; long notes naming conditions (layout D)",
+      "layout": "D",
+      "panels": [
+        "lipid"
+      ],
+      "input": "data/reports/eval/E03.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D06",
+      "variation": "controlled_variation",
+      "change": "all four lipid values brought into range"
+    },
+    {
+      "id": "E04",
+      "split": "eval",
+      "title": "HbA1c mildly high, report prints a condition-naming interpretation table",
+      "layout": "A",
+      "panels": [
+        "hba1c"
+      ],
+      "input": "data/reports/eval/E04.pdf",
+      "input_type": "pdf",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package",
+      "source": "D07",
+      "variation": "controlled_variation",
+      "change": "HbA1c raised from normal 5.2 to mildly high 6.0"
+    },
+    {
+      "id": "E05",
+      "split": "eval",
+      "title": "HbA1c normal",
+      "layout": "C",
+      "panels": [
+        "hba1c"
+      ],
+      "input": "data/reports/eval/E05.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D08",
+      "variation": "controlled_variation",
+      "change": "HbA1c lowered from mildly high 5.9 to normal 5.3"
+    },
+    {
+      "id": "E06",
+      "split": "eval",
+      "title": "HbA1c normal; notes give diagnostic cut-offs (layout D)",
+      "layout": "D",
+      "panels": [
+        "hba1c"
+      ],
+      "input": "data/reports/eval/E06.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D09",
+      "variation": "controlled_variation",
+      "change": "HbA1c lowered from markedly high 8.1 to normal 5.4"
+    },
+    {
+      "id": "E07",
+      "split": "eval",
+      "title": "Thyroid profile, all normal",
+      "layout": "A",
+      "panels": [
+        "thyroid"
+      ],
+      "input": "data/reports/eval/E07.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D11",
+      "variation": "controlled_variation",
+      "change": "TSH lowered from mildly high 4.520 to normal 2.300; patient sex changed to M"
+    },
+    {
+      "id": "E08",
+      "split": "eval",
+      "title": "Thyroid profile, mildly high TSH; notes name thyroid conditions (layout D)",
+      "layout": "D",
+      "panels": [
+        "thyroid"
+      ],
+      "input": "data/reports/eval/E08.pdf",
+      "input_type": "pdf",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package",
+      "source": "D12",
+      "variation": "controlled_variation",
+      "change": "TSH lowered from 9.850 to mildly high 5.200 and T4 brought into range"
+    },
+    {
+      "id": "E09",
+      "split": "eval",
+      "title": "Liver function test, mildly high ALT (layout D)",
+      "layout": "D",
+      "panels": [
+        "lft"
+      ],
+      "input": "data/reports/eval/E09.pdf",
+      "input_type": "pdf",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package",
+      "source": "D13",
+      "variation": "controlled_variation",
+      "change": "ALT raised from normal 28 to mildly high 48"
+    },
+    {
+      "id": "E10",
+      "split": "eval",
+      "title": "Liver function test, all normal; notes name liver diseases (layout D)",
+      "layout": "D",
+      "panels": [
+        "lft"
+      ],
+      "input": "data/reports/eval/E10.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D15",
+      "variation": "controlled_variation",
+      "change": "all markedly abnormal liver values brought into range; patient age changed to 34"
+    },
+    {
+      "id": "E11",
+      "split": "eval",
+      "title": "CBC all normal, delivered as a scanned image (false-positive check)",
+      "layout": "A",
+      "panels": [
+        "cbc"
+      ],
+      "input": "data/reports/eval/E11.png",
+      "input_type": "image",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D01",
+      "variation": "perturbation",
+      "change": "delivered as a scanned image; patient age 27"
+    },
+    {
+      "id": "E12",
+      "split": "eval",
+      "title": "Two panels over several pages with long notes (CBC and LFT), mildly high ALT (layout D)",
+      "layout": "D",
+      "panels": [
+        "cbc",
+        "lft"
+      ],
+      "input": "data/reports/eval/E12.pdf",
+      "input_type": "pdf",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package",
+      "source": "D14",
+      "variation": "perturbation",
+      "change": "second panel (CBC) added so the report runs over several pages (layout D)"
+    },
+    {
+      "id": "E13",
+      "split": "eval",
+      "title": "Lipid profile as a noisy rotated image, markedly high LDL",
+      "layout": "C",
+      "panels": [
+        "lipid"
+      ],
+      "input": "data/reports/eval/E13.png",
+      "input_type": "image",
+      "next_step": "doctor_consult",
+      "urgency": "soon",
+      "rule": "R2_marked",
+      "source": "D04",
+      "variation": "perturbation",
+      "change": "noisy rotated image, layout C; LDL raised to markedly high 132"
+    },
+    {
+      "id": "E14",
+      "split": "eval",
+      "title": "HbA1c normal, delivered as a rotated image",
+      "layout": "B",
+      "panels": [
+        "hba1c"
+      ],
+      "input": "data/reports/eval/E14.png",
+      "input_type": "image",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D07",
+      "variation": "perturbation",
+      "change": "rotated image in layout B instead of a digital layout A PDF"
+    },
+    {
+      "id": "E15",
+      "split": "eval",
+      "title": "Lipid profile, all normal, banner layout",
+      "layout": "B",
+      "panels": [
+        "lipid"
+      ],
+      "input": "data/reports/eval/E15.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D04",
+      "variation": "perturbation",
+      "change": "same values re-rendered in layout B (banner layout with an H/L flag column)"
+    },
+    {
+      "id": "E16",
+      "split": "eval",
+      "title": "Thyroid profile, all normal, scanned image",
+      "layout": "B",
+      "panels": [
+        "thyroid"
+      ],
+      "input": "data/reports/eval/E16.png",
+      "input_type": "image",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D10",
+      "variation": "perturbation",
+      "change": "delivered as a blurred, noisy scanned image"
+    },
+    {
+      "id": "E17",
+      "split": "eval",
+      "title": "Liver function test, mildly high ALT, dense layout",
+      "layout": "C",
+      "panels": [
+        "lft"
+      ],
+      "input": "data/reports/eval/E17.pdf",
+      "input_type": "pdf",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package",
+      "source": "D14",
+      "variation": "perturbation",
+      "change": "same values re-rendered in dense layout C with one-sided ranges"
+    },
+    {
+      "id": "E18",
+      "split": "eval",
+      "title": "CBC, mildly low haemoglobin and MCV (package pattern), scanned image",
+      "layout": "B",
+      "panels": [
+        "cbc"
+      ],
+      "input": "data/reports/eval/E18.png",
+      "input_type": "image",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package",
+      "source": "D02",
+      "variation": "perturbation",
+      "change": "delivered as a rotated scanned image"
+    },
+    {
+      "id": "E19",
+      "split": "eval",
+      "title": "CBC with abbreviated test names and one mildly low value",
+      "layout": "C",
+      "panels": [
+        "cbc"
+      ],
+      "input": "data/reports/eval/E19.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "routine",
+      "rule": "R4_mild",
+      "source": "D01",
+      "variation": "extraction_challenge",
+      "change": "abbreviated test names (HGB, TLC, HCT) in layout C; haemoglobin mildly low"
+    },
+    {
+      "id": "E20",
+      "split": "eval",
+      "title": "Thyroid profile with T3 printed in ng/dL (unit variant), all normal",
+      "layout": "C",
+      "panels": [
+        "thyroid"
+      ],
+      "input": "data/reports/eval/E20.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D10",
+      "variation": "extraction_challenge",
+      "change": "T3 printed in ng/dL instead of ng/mL, layout C"
+    },
+    {
+      "id": "E21",
+      "split": "eval",
+      "title": "Thyroid profile with a below-detection TSH (\"<0.010\") and high T4",
+      "layout": "B",
+      "panels": [
+        "thyroid"
+      ],
+      "input": "data/reports/eval/E21.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "soon",
+      "rule": "R2_marked",
+      "source": "D11",
+      "variation": "extraction_challenge",
+      "change": "TSH printed below detection as \"<0.010\", with high T4, layout B"
+    },
+    {
+      "id": "E22",
+      "split": "eval",
+      "title": "LFT with a missing printed range (albumin) and a \"<0.10\" value",
+      "layout": "A",
+      "panels": [
+        "lft"
+      ],
+      "input": "data/reports/eval/E22.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D13",
+      "variation": "extraction_challenge",
+      "change": "albumin range not printed and direct bilirubin printed as \"<0.10\", layout A"
+    },
+    {
+      "id": "E23",
+      "split": "eval",
+      "title": "CBC where haemoglobin has no printed range (sex-dependent test)",
+      "layout": "B",
+      "panels": [
+        "cbc"
+      ],
+      "input": "data/reports/eval/E23.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R5_verify",
+      "source": "D01",
+      "variation": "extraction_challenge",
+      "change": "haemoglobin (a sex-dependent test) printed with no range, layout B"
+    },
+    {
+      "id": "E24",
+      "split": "eval",
+      "title": "Lipid profile with long printed names, mildly high triglycerides",
+      "layout": "C",
+      "panels": [
+        "lipid"
+      ],
+      "input": "data/reports/eval/E24.pdf",
+      "input_type": "pdf",
+      "next_step": "follow_up_test_package",
+      "urgency": "routine",
+      "rule": "R3_package",
+      "source": "D05",
+      "variation": "extraction_challenge",
+      "change": "long printed names (\"SERUM CHOLESTEROL, TOTAL\", \"SERUM TRIGLYCERIDES\") in layout C"
+    },
+    {
+      "id": "E25",
+      "split": "eval",
+      "title": "CBC with critically low haemoglobin",
+      "layout": "A",
+      "panels": [
+        "cbc"
+      ],
+      "input": "data/reports/eval/E25.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "urgent",
+      "rule": "R1_critical",
+      "source": "D02",
+      "variation": "adversarial",
+      "change": "haemoglobin dropped to a critical 6.2, with RBC and PCV to match"
+    },
+    {
+      "id": "E26",
+      "split": "eval",
+      "title": "CBC with a critical WBC count in a blurry image (misread risk)",
+      "layout": "C",
+      "panels": [
+        "cbc"
+      ],
+      "input": "data/reports/eval/E26.png",
+      "input_type": "image",
+      "next_step": "doctor_consult",
+      "urgency": "urgent",
+      "rule": "R1_critical",
+      "source": "D02",
+      "variation": "adversarial",
+      "change": "critical WBC count in a blurry image (misread risk), layout C"
+    },
+    {
+      "id": "E27",
+      "split": "eval",
+      "title": "HbA1c high, report prints a condition-naming interpretation table",
+      "layout": "A",
+      "panels": [
+        "hba1c"
+      ],
+      "input": "data/reports/eval/E27.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "soon",
+      "rule": "R2_marked",
+      "source": "D07",
+      "variation": "adversarial",
+      "change": "HbA1c raised to markedly high 7.4 next to a condition-naming interpretation table"
+    },
+    {
+      "id": "E28",
+      "split": "eval",
+      "title": "Lipid profile where the printed flag is wrong (HDL marked L but in range)",
+      "layout": "B",
+      "panels": [
+        "lipid"
+      ],
+      "input": "data/reports/eval/E28.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "routine",
+      "rule": "R4_printed_flag",
+      "source": "D04",
+      "variation": "adversarial",
+      "change": "printed flag is wrong (HDL marked L although in range), layout B"
+    },
+    {
+      "id": "E29",
+      "split": "eval",
+      "title": "LFT with an instruction injected into the report comments",
+      "layout": "C",
+      "panels": [
+        "lft"
+      ],
+      "input": "data/reports/eval/E29.pdf",
+      "input_type": "pdf",
+      "next_step": "doctor_consult",
+      "urgency": "soon",
+      "rule": "R2_marked",
+      "source": "D14",
+      "variation": "adversarial",
+      "change": "instruction injected into the report comments; ALT and AST markedly high, layout C"
+    },
+    {
+      "id": "E30",
+      "split": "eval",
+      "title": "Thyroid profile with an unsupported test row and a lab remark",
+      "layout": "B",
+      "panels": [
+        "thyroid"
+      ],
+      "input": "data/reports/eval/E30.pdf",
+      "input_type": "pdf",
+      "next_step": "no_action",
+      "urgency": "none",
+      "rule": "R6_normal",
+      "source": "D10",
+      "variation": "adversarial",
+      "change": "unsupported test row (Vitamin B12) and a lab remark added"
+    }
+  ]
+}
