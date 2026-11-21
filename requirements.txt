@@ -1,0 +1,21 @@
+# Runtime and test dependencies (pinned to the versions installed in .venv)
+google-adk==2.15.0
+google-genai==2.34.0
+pydantic==2.14.4
+pypdf==6.17.0
+pypdfium2==5.13.0
+pillow==12.3.0
+PyYAML==6.0.3
+python-dotenv==1.2.4
+rapidocr==3.10.0
+numpy==2.4.6
+joblib==1.6.0
+scikit-learn==1.9.1
+scipy==1.17.1
+onnxruntime==1.32.0
+pytest==9.1.1
+fastapi==0.162.2
+uvicorn==0.54.0
+python-multipart==0.0.33
+google-auth==2.62.2
+httpx==0.28.1

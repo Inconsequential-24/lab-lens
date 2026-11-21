@@ -47,10 +47,24 @@ def test_severity_zero_bound_uses_width_or_marked():
 
 def test_critical_independent_of_printed_range():
     # Printed range is absurdly wide, but Hb 6.5 is still critical.
+    # The flag follows the breached safety limit, never "normal" next to an urgent banner.
     t = flag_test(make("HB", "6.5", 6.5, 5.0, 17.0))
-    assert t.flag is Flag.NORMAL and t.is_critical and t.severity is Severity.CRITICAL
+    assert t.flag is Flag.LOW and t.is_critical and t.severity is Severity.CRITICAL
+    assert any("past the safety limit" in w for w in t.warnings)
     assert is_critical(5.0, "<", {"low": 7.0})
     assert not is_critical(25.0, "<", {"high": 20.0})
+
+
+def test_critical_without_printed_range_shows_direction_not_unknown():
+    t = flag_test(make("HB", "6.0", 6.0, None, None))
+    assert t.flag is Flag.LOW and t.is_critical
+    assert any("past the safety limit" in w for w in t.warnings)
+
+
+def test_critical_already_low_gets_no_override_note():
+    t = flag_test(make("HB", "6.0", 6.0, 12.0, 15.5))
+    assert t.flag is Flag.LOW and t.is_critical
+    assert not any("past the safety limit" in w for w in t.warnings)
 
 
 def test_labelled_range_parsed_bounds_flag():

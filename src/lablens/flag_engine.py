@@ -44,6 +44,8 @@ def is_critical(number: float | None, comparator: str, critical: dict | None) ->
 
 UNIT_WARNING = "unit not recognised: please verify"
 FALLBACK_WARNING = "range not printed; standard range used"
+CRITICAL_OVERRIDE_WARNING = ("Your report's printed range calls this normal or does not give one, "
+                             "but it is past the safety limit we use. Please contact your doctor.")
 
 
 def _norm_unit(u: str | None) -> str:
@@ -111,7 +113,14 @@ def flag_test(test: ExtractedTest, criticals: dict[str, dict] | None = None) -> 
             num = canon
             warnings.append(FALLBACK_WARNING)
         flag = compute_flag(num, comp, ref.low, ref.high)
-        crit = is_critical(canon, comp, criticals.get(test.test_id or ""))
+        crit_spec = criticals.get(test.test_id or "")
+        crit = is_critical(canon, comp, crit_spec)
+        if crit:  # the breached safety limit decides the direction, never the printed range
+            lo = (crit_spec or {}).get("low")
+            crit_flag = Flag.LOW if lo is not None and canon <= lo else Flag.HIGH
+            if flag is not crit_flag:
+                warnings.append(CRITICAL_OVERRIDE_WARNING)
+            flag = crit_flag
     else:  # never silently normal: UNKNOWN routes to R5_verify
         flag, crit = Flag.UNKNOWN, False
         warnings.append(UNIT_WARNING)

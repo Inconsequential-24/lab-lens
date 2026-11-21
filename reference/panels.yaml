@@ -413,7 +413,7 @@ tests:
     derived: "TP - ALB"
   AG:
     name: A/G Ratio
-    aliases: [Albumin/Globulin Ratio, A : G Ratio]
+    aliases: [Albumin/Globulin Ratio, "A : G Ratio"]
     loinc: "1759-0"
     unit: Ratio
     decimals: 2

@@ -1,0 +1,77 @@
+# Rules for safety_check (PLAN.md section 4, "Safety rules").
+#
+# DEMO LIST, MODEL-WRITTEN, not clinician-reviewed; Hindi entries need fluent-reader review.
+# English phrases match case-insensitively at a word start ("diagnos" also matches
+# "diagnosis"). Hindi phrases match as whole words; a trailing "*" makes a Hindi entry a
+# word-start prefix ("घट*" matches "घटा", "घटकर"). Applied to summary, urgent_message and
+# statements, never to the fixed disclaimer. banned_patterns are regexes (same scope).
+
+version: "2026-11-21"
+
+banned:
+  diagnostic:
+    en: ["you have", "this means you", "you are suffering", "you suffer", "diagnos",
+         "suggestive of", "indicative of", "indicates that you", "consistent with",
+         "sign of", "signs of", "you are healthy", "nothing to worry", "no need to worry",
+         "don't worry", "do not worry", "you are fine", "perfectly normal",
+         "you may have", "you might have", "you could have", "points to", "point to",
+         "likely", "could be", "suggest", "indicates", "indicating", "due to", "caused by",
+         "causes", "because of", "as a result of", "linked to"]
+    hi: ["आपको है", "आपको यह बीमारी", "बीमारी है", "इसका मतलब है कि आप", "निदान", "संकेत है",
+         "संकेत हो", "संकेत करता", "संकेत करती", "संकेत मिलता", "के कारण", "की वजह से",
+         "की ओर इशारा", "दर्शाता है कि", "दर्शाती है कि", "लगता है कि आप", "शायद",
+         "आप स्वस्थ हैं", "चिंता की कोई बात नहीं", "चिंता न करें", "घबराने की बात नहीं"]
+  conditions:
+    en: ["anemia", "anaemia", "diabetes", "diabetic", "prediabet", "hypothyroid",
+         "hyperthyroid", "thyroiditis", "jaundice", "hepatitis", "fatty liver", "cirrhosis",
+         "liver disease", "kidney disease", "heart disease", "cancer", "leukemia",
+         "leukaemia", "lymphoma", "infection", "dengue", "malaria", "thalassemia",
+         "thalassaemia", "polycythemia", "polycythaemia", "thrombocytopenia",
+         "leukopenia", "neutropenia", "dyslipidemia", "hyperlipidemia",
+         "hypercholesterolemia", "deficiency", "disorder", "syndrome"]
+    hi: ["एनीमिया", "खून की कमी", "मधुमेह", "डायबिटीज", "डायबिटीज़", "प्रीडायबिटीज",
+         "शुगर की बीमारी", "पीलिया", "हेपेटाइटिस", "फैटी लिवर", "सिरोसिस", "कैंसर",
+         "संक्रमण", "इन्फेक्शन", "डेंगू", "मलेरिया", "थैलेसीमिया", "थायरॉइड रोग",
+         "थायरॉइड की बीमारी", "लिवर की बीमारी", "किडनी की बीमारी", "दिल की बीमारी"]
+  treatment:
+    en: ["medicine", "medication", "tablet", "pill", "dose", "dosage", "supplement",
+         "prescri", "treatment", "treat ", "insulin", "metformin", "statin", "antibiotic",
+         "iron tablets", "take iron", "mg daily", "twice a day", "once a day"]
+    hi: ["दवा", "दवाई", "गोली", "खुराक", "इलाज", "उपचार", "सप्लीमेंट", "इंसुलिन",
+         "दिन में दो बार", "दिन में एक बार"]
+  symptoms:
+    en: ["symptom", "tired", "fatigue", "weakness", "dizz", "pain", "you may feel",
+         "you might feel"]
+    hi: ["लक्षण", "थकान", "कमज़ोरी", "कमजोरी", "चक्कर", "दर्द", "आप महसूस"]
+
+banned_patterns:
+  en: []
+  hi: ["आपको[^।.]*हो\\s*सकत"]   # "you may have ..." (आपको ... हो सकता/सकती है)
+
+# Direction words: a statement may only use them for the cited tests with that flag
+# (glossary citations never supply a flag). A statement using direction words may cite tests
+# of one direction only. In the summary they must match a test named in the same sentence.
+direction:
+  low:
+    en: ["low", "lower", "less", "below", "decreased", "reduced", "dropped", "fallen",
+         "fell", "under the"]
+    hi: ["कम", "नीचे", "घट*", "न्यून"]
+  high:
+    en: ["high", "higher", "above", "elevated", "raised", "increased", "over the"]
+    hi: ["अधिक", "ज़्यादा", "ज्यादा", "ऊपर", "बढ़*", "बढ*"]
+  # Out of range without a direction: needs at least one low/high test in scope.
+  abnormal:
+    en: ["outside the range", "out of range", "outside range", "abnormal"]
+    hi: ["बाहर", "असामान्य"]
+  # Reassurance words: not allowed in a statement that cites a low/high test.
+  normal:
+    en: ["within", "normal", "fine", "healthy", "okay"]
+    hi: ["भीतर", "सामान्य", "ठीक"]
+  # Fixed phrases removed before direction checks ("one or more" is not "high").
+  ignore:
+    en: ["one or more"]
+    hi: ["एक या अधिक"]
+  # Negators: any negated direction/reassurance phrase on an abnormal test fails.
+  negation:
+    en: ["not", "no", "never", "isn't", "aren't", "wasn't", "n't"]
+    hi: ["नहीं", "न"]

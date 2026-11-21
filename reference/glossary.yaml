@@ -1,0 +1,292 @@
+# Plain-language glossary used by glossary_lookup and template_fallback (PLAN.md section 4).
+#
+# DEMO TEXT, MODEL-WRITTEN. Not reviewed by a clinician. The Hindi text needs review by a
+# fluent Hindi reader before any real use. Text is deliberately neutral: it says what a test
+# measures and, for low/high, only that many things can affect it. No condition names, no
+# causes linked to symptoms, no treatment or medication. Direction words in low/high text must
+# stay consistent with the flag (safety_check checks them).
+
+version: "2026-11-21"
+
+defaults:
+  low: &low
+    en: "A lower value can be affected by many things, so your doctor can explain what it means for you."
+    hi: "यह मान कई बातों से कम हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।"
+  high: &high
+    en: "A higher value can be affected by many things, so your doctor can explain what it means for you."
+    hi: "यह मान कई बातों से अधिक हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।"
+
+tests:
+  HB:
+    name_hi: "हीमोग्लोबिन"
+    measures:
+      en: "This test measures the protein in red blood cells that carries oxygen."
+      hi: "यह जाँच लाल रक्त कोशिकाओं में मौजूद वह प्रोटीन जो ऑक्सीजन ले जाता है मापती है।"
+    low: *low
+    high: *high
+  RBC:
+    name_hi: "लाल रक्त कोशिकाओं की संख्या"
+    measures:
+      en: "This test measures the number of red blood cells in a sample of blood."
+      hi: "यह जाँच खून के एक नमूने में लाल रक्त कोशिकाओं की संख्या मापती है।"
+    low: *low
+    high: *high
+  PCV:
+    name_hi: "पीसीवी"
+    measures:
+      en: "This test measures the share of blood volume made up of red blood cells."
+      hi: "यह जाँच खून की मात्रा का वह हिस्सा जो लाल रक्त कोशिकाओं से बना है मापती है।"
+    low: *low
+    high: *high
+  MCV:
+    name_hi: "एमसीवी"
+    measures:
+      en: "This test measures the average size of red blood cells."
+      hi: "यह जाँच लाल रक्त कोशिकाओं का औसत आकार मापती है।"
+    low: *low
+    high: *high
+  MCH:
+    name_hi: "एमसीएच"
+    measures:
+      en: "This test measures the average amount of hemoglobin in each red blood cell."
+      hi: "यह जाँच हर लाल रक्त कोशिका में हीमोग्लोबिन की औसत मात्रा मापती है।"
+    low: *low
+    high: *high
+  MCHC:
+    name_hi: "एमसीएचसी"
+    measures:
+      en: "This test measures how concentrated hemoglobin is inside red blood cells."
+      hi: "यह जाँच लाल रक्त कोशिकाओं के अंदर हीमोग्लोबिन की सघनता मापती है।"
+    low: *low
+    high: *high
+  RDW:
+    name_hi: "आरडीडब्ल्यू"
+    measures:
+      en: "This test measures how much red blood cells vary in size."
+      hi: "यह जाँच लाल रक्त कोशिकाओं के आकार में कितना अंतर है मापती है।"
+    low: *low
+    high: *high
+  WBC:
+    name_hi: "श्वेत रक्त कोशिकाओं की संख्या"
+    measures:
+      en: "This test measures the number of white blood cells, which are part of the immune system."
+      hi: "यह जाँच श्वेत रक्त कोशिकाओं की संख्या, जो शरीर की रक्षा प्रणाली का हिस्सा हैं मापती है।"
+    low: *low
+    high: *high
+  NEUT:
+    name_hi: "न्यूट्रोफिल"
+    measures:
+      en: "This test measures the share of white blood cells that are neutrophils."
+      hi: "यह जाँच श्वेत रक्त कोशिकाओं में न्यूट्रोफिल का हिस्सा मापती है।"
+    low: *low
+    high: *high
+  LYMPH:
+    name_hi: "लिम्फोसाइट"
+    measures:
+      en: "This test measures the share of white blood cells that are lymphocytes."
+      hi: "यह जाँच श्वेत रक्त कोशिकाओं में लिम्फोसाइट का हिस्सा मापती है।"
+    low: *low
+    high: *high
+  MONO:
+    name_hi: "मोनोसाइट"
+    measures:
+      en: "This test measures the share of white blood cells that are monocytes."
+      hi: "यह जाँच श्वेत रक्त कोशिकाओं में मोनोसाइट का हिस्सा मापती है।"
+    low: *low
+    high: *high
+  EOS:
+    name_hi: "इओसिनोफिल"
+    measures:
+      en: "This test measures the share of white blood cells that are eosinophils."
+      hi: "यह जाँच श्वेत रक्त कोशिकाओं में इओसिनोफिल का हिस्सा मापती है।"
+    low: *low
+    high: *high
+  BASO:
+    name_hi: "बेसोफिल"
+    measures:
+      en: "This test measures the share of white blood cells that are basophils."
+      hi: "यह जाँच श्वेत रक्त कोशिकाओं में बेसोफिल का हिस्सा मापती है।"
+    low: *low
+    high: *high
+  PLT:
+    name_hi: "प्लेटलेट"
+    measures:
+      en: "This test measures the number of platelets, small cells that help blood clot."
+      hi: "यह जाँच प्लेटलेट की संख्या, छोटी कोशिकाएँ जो खून का थक्का बनने में मदद करती हैं मापती है।"
+    low: *low
+    high: *high
+  TC:
+    name_hi: "कुल कोलेस्ट्रॉल"
+    measures:
+      en: "This test measures the total amount of cholesterol, a type of fat, in the blood."
+      hi: "यह जाँच खून में कोलेस्ट्रॉल (एक प्रकार की वसा) की कुल मात्रा मापती है।"
+    low: *low
+    high: *high
+  TG:
+    name_hi: "ट्राइग्लिसराइड"
+    measures:
+      en: "This test measures the amount of triglycerides, a type of fat, in the blood."
+      hi: "यह जाँच खून में ट्राइग्लिसराइड (एक प्रकार की वसा) की मात्रा मापती है।"
+    low: *low
+    high: *high
+  HDL:
+    name_hi: "एचडीएल कोलेस्ट्रॉल"
+    measures:
+      en: "This test measures the amount of HDL cholesterol in the blood."
+      hi: "यह जाँच खून में एचडीएल कोलेस्ट्रॉल की मात्रा मापती है।"
+    low: *low
+    high: *high
+  LDL:
+    name_hi: "एलडीएल कोलेस्ट्रॉल"
+    measures:
+      en: "This test measures the amount of LDL cholesterol in the blood."
+      hi: "यह जाँच खून में एलडीएल कोलेस्ट्रॉल की मात्रा मापती है।"
+    low: *low
+    high: *high
+  VLDL:
+    name_hi: "वीएलडीएल कोलेस्ट्रॉल"
+    measures:
+      en: "This test measures the amount of VLDL cholesterol in the blood."
+      hi: "यह जाँच खून में वीएलडीएल कोलेस्ट्रॉल की मात्रा मापती है।"
+    low: *low
+    high: *high
+  NONHDL:
+    name_hi: "नॉन-एचडीएल कोलेस्ट्रॉल"
+    measures:
+      en: "This test measures total cholesterol minus HDL cholesterol."
+      hi: "यह जाँच कुल कोलेस्ट्रॉल में से एचडीएल कोलेस्ट्रॉल निकालने पर बची मात्रा मापती है।"
+    low: *low
+    high: *high
+  TC_HDL:
+    name_hi: "टीसी/एचडीएल अनुपात"
+    measures:
+      en: "This test measures total cholesterol divided by HDL cholesterol."
+      hi: "यह जाँच कुल कोलेस्ट्रॉल और एचडीएल कोलेस्ट्रॉल का अनुपात मापती है।"
+    low: *low
+    high: *high
+  LDL_HDL:
+    name_hi: "एलडीएल/एचडीएल अनुपात"
+    measures:
+      en: "This test measures LDL cholesterol divided by HDL cholesterol."
+      hi: "यह जाँच एलडीएल कोलेस्ट्रॉल और एचडीएल कोलेस्ट्रॉल का अनुपात मापती है।"
+    low: *low
+    high: *high
+  HBA1C:
+    name_hi: "एचबीए1सी"
+    measures:
+      en: "This test measures the share of hemoglobin with sugar attached, which reflects average blood sugar over about the past three months."
+      hi: "यह जाँच हीमोग्लोबिन का वह हिस्सा जिससे शुगर जुड़ी होती है; यह पिछले लगभग तीन महीनों की औसत ब्लड शुगर दिखाता है मापती है।"
+    low: *low
+    high: *high
+  EAG:
+    name_hi: "अनुमानित औसत ग्लूकोज़"
+    measures:
+      en: "This test measures an average blood sugar level calculated from HbA1c."
+      hi: "यह जाँच एचबीए1सी से निकाला गया औसत ब्लड शुगर स्तर मापती है।"
+    low: *low
+    high: *high
+  T3:
+    name_hi: "टी3"
+    measures:
+      en: "This test measures the amount of the thyroid hormone T3 in the blood."
+      hi: "यह जाँच खून में थायरॉइड हार्मोन टी3 की मात्रा मापती है।"
+    low: *low
+    high: *high
+  T4:
+    name_hi: "टी4"
+    measures:
+      en: "This test measures the amount of the thyroid hormone T4 in the blood."
+      hi: "यह जाँच खून में थायरॉइड हार्मोन टी4 की मात्रा मापती है।"
+    low: *low
+    high: *high
+  TSH:
+    name_hi: "टीएसएच"
+    measures:
+      en: "This test measures the hormone that signals the thyroid gland to make its hormones."
+      hi: "यह जाँच वह हार्मोन जो थायरॉइड ग्रंथि को हार्मोन बनाने का संकेत देता है मापती है।"
+    low: *low
+    high: *high
+  TBIL:
+    name_hi: "कुल बिलीरुबिन"
+    measures:
+      en: "This test measures the total amount of bilirubin, a yellow substance made when red blood cells break down."
+      hi: "यह जाँच बिलीरुबिन की कुल मात्रा; यह पीला पदार्थ लाल रक्त कोशिकाओं के टूटने पर बनता है मापती है।"
+    low: *low
+    high: *high
+  DBIL:
+    name_hi: "डायरेक्ट बिलीरुबिन"
+    measures:
+      en: "This test measures the part of bilirubin that has been processed by the liver."
+      hi: "यह जाँच बिलीरुबिन का वह हिस्सा जिसे लिवर प्रोसेस कर चुका है मापती है।"
+    low: *low
+    high: *high
+  IBIL:
+    name_hi: "इनडायरेक्ट बिलीरुबिन"
+    measures:
+      en: "This test measures the part of bilirubin not yet processed by the liver."
+      hi: "यह जाँच बिलीरुबिन का वह हिस्सा जिसे लिवर ने अभी प्रोसेस नहीं किया है मापती है।"
+    low: *low
+    high: *high
+  ALT:
+    name_hi: "एसजीपीटी"
+    measures:
+      en: "This test measures the level of ALT, an enzyme found mainly in the liver."
+      hi: "यह जाँच एएलटी का स्तर; यह एंजाइम मुख्य रूप से लिवर में पाया जाता है मापती है।"
+    low: *low
+    high: *high
+  AST:
+    name_hi: "एसजीओटी"
+    measures:
+      en: "This test measures the level of AST, an enzyme found in the liver and other tissues."
+      hi: "यह जाँच एएसटी का स्तर; यह एंजाइम लिवर और शरीर के दूसरे ऊतकों में पाया जाता है मापती है।"
+    low: *low
+    high: *high
+  ALP:
+    name_hi: "एल्कलाइन फॉस्फेटेज़"
+    measures:
+      en: "This test measures the level of ALP, an enzyme found in the liver, bones and other tissues."
+      hi: "यह जाँच एएलपी का स्तर; यह एंजाइम लिवर, हड्डियों और दूसरे ऊतकों में पाया जाता है मापती है।"
+    low: *low
+    high: *high
+  AST_ALT:
+    name_hi: "एएसटी:एएलटी अनुपात"
+    measures:
+      en: "This test measures the AST level divided by the ALT level."
+      hi: "यह जाँच एएसटी और एएलटी के स्तर का अनुपात मापती है।"
+    low: *low
+    high: *high
+  GGT:
+    name_hi: "गामा जीटी"
+    measures:
+      en: "This test measures the level of GGT, an enzyme found mainly in the liver."
+      hi: "यह जाँच जीजीटी का स्तर; यह एंजाइम मुख्य रूप से लिवर में पाया जाता है मापती है।"
+    low: *low
+    high: *high
+  TP:
+    name_hi: "कुल प्रोटीन"
+    measures:
+      en: "This test measures the total amount of protein in the blood."
+      hi: "यह जाँच खून में प्रोटीन की कुल मात्रा मापती है।"
+    low: *low
+    high: *high
+  ALB:
+    name_hi: "एल्ब्यूमिन"
+    measures:
+      en: "This test measures the amount of albumin, the main protein in blood."
+      hi: "यह जाँच एल्ब्यूमिन की मात्रा, जो खून का मुख्य प्रोटीन है मापती है।"
+    low: *low
+    high: *high
+  GLOB:
+    name_hi: "ग्लोब्युलिन"
+    measures:
+      en: "This test measures the amount of globulin proteins in the blood."
+      hi: "यह जाँच खून में ग्लोब्युलिन प्रोटीन की मात्रा मापती है।"
+    low: *low
+    high: *high
+  AG:
+    name_hi: "ए/जी अनुपात"
+    measures:
+      en: "This test measures albumin divided by globulin."
+      hi: "यह जाँच एल्ब्यूमिन और ग्लोब्युलिन का अनुपात मापती है।"
+    low: *low
+    high: *high

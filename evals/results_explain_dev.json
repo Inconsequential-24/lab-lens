@@ -1,0 +1,3694 @@
+{
+ "summary": {
+  "reports": 15,
+  "rejected": 0,
+  "errors": 0,
+  "safety_pass_rate_llm": 0.9333333333333333,
+  "fallback_rate": 0.06666666666666667,
+  "total_retries": 2,
+  "avg_tokens_per_call": {
+   "extract": {
+    "calls": 5,
+    "tokens_in": 1367,
+    "tokens_out": 1400,
+    "tokens_thinking": 0,
+    "tokens_cached": 0
+   },
+   "plan_statements": {
+    "calls": 6,
+    "tokens_in": 1822,
+    "tokens_out": 650,
+    "tokens_thinking": 0,
+    "tokens_cached": 0
+   },
+   "render_en": {
+    "calls": 6,
+    "tokens_in": 1410,
+    "tokens_out": 318,
+    "tokens_thinking": 0,
+    "tokens_cached": 0
+   },
+   "render_hi": {
+    "calls": 6,
+    "tokens_in": 1451,
+    "tokens_out": 356,
+    "tokens_thinking": 0,
+    "tokens_cached": 0
+   }
+  },
+  "spent_inr_this_run": 2.8035,
+  "cache": "on (extract may be warm)"
+ },
+ "per_report": [
+  {
+   "report": "D01",
+   "wall_ms": 1449,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "plan_statements": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_en": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_hi": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    }
+   },
+   "latency_ms": {
+    "extract": 3,
+    "plan_statements": 19,
+    "render_en": 1,
+    "render_hi": 0,
+    "safety_check": 9
+   },
+   "cost_inr": 0.0,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I went through your report. All results are within the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "All results are within the ranges printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "BASO"
+        },
+        {
+         "kind": "test",
+         "id": "EOS"
+        },
+        {
+         "kind": "test",
+         "id": "HB"
+        },
+        {
+         "kind": "test",
+         "id": "LYMPH"
+        },
+        {
+         "kind": "test",
+         "id": "MCH"
+        },
+        {
+         "kind": "test",
+         "id": "MCHC"
+        },
+        {
+         "kind": "test",
+         "id": "MCV"
+        },
+        {
+         "kind": "test",
+         "id": "MONO"
+        },
+        {
+         "kind": "test",
+         "id": "NEUT"
+        },
+        {
+         "kind": "test",
+         "id": "PCV"
+        },
+        {
+         "kind": "test",
+         "id": "PLT"
+        },
+        {
+         "kind": "test",
+         "id": "RBC"
+        },
+        {
+         "kind": "test",
+         "id": "RDW"
+        },
+        {
+         "kind": "test",
+         "id": "WBC"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। सभी परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "सभी परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "BASO"
+        },
+        {
+         "kind": "test",
+         "id": "EOS"
+        },
+        {
+         "kind": "test",
+         "id": "HB"
+        },
+        {
+         "kind": "test",
+         "id": "LYMPH"
+        },
+        {
+         "kind": "test",
+         "id": "MCH"
+        },
+        {
+         "kind": "test",
+         "id": "MCHC"
+        },
+        {
+         "kind": "test",
+         "id": "MCV"
+        },
+        {
+         "kind": "test",
+         "id": "MONO"
+        },
+        {
+         "kind": "test",
+         "id": "NEUT"
+        },
+        {
+         "kind": "test",
+         "id": "PCV"
+        },
+        {
+         "kind": "test",
+         "id": "PLT"
+        },
+        {
+         "kind": "test",
+         "id": "RBC"
+        },
+        {
+         "kind": "test",
+         "id": "RDW"
+        },
+        {
+         "kind": "test",
+         "id": "WBC"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D02",
+   "wall_ms": 63,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "plan_statements": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_en": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_hi": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    }
+   },
+   "latency_ms": {
+    "extract": 1,
+    "plan_statements": 1,
+    "render_en": 1,
+    "render_hi": 1,
+    "safety_check": 6
+   },
+   "cost_inr": 0.0,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I have reviewed your report. Some of your results are outside the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "Your Hemoglobin value is 11.3 g/dL, which is below the reference range of 12.0 - 15.0 g/dL.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HB"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "This test measures the protein in red blood cells that carries oxygen, and a lower value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "HB.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "HB.low"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "Your MCV value is 79.2 fL, which is below the reference range of 83.0 - 101.0 fL.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "MCV"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "This test measures the average size of red blood cells, and a lower value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "MCV.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "MCV.low"
+        }
+       ]
+      },
+      {
+       "claim_id": "c5",
+       "text": "The other results are within the ranges printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "BASO"
+        },
+        {
+         "kind": "test",
+         "id": "EOS"
+        },
+        {
+         "kind": "test",
+         "id": "LYMPH"
+        },
+        {
+         "kind": "test",
+         "id": "MCH"
+        },
+        {
+         "kind": "test",
+         "id": "MCHC"
+        },
+        {
+         "kind": "test",
+         "id": "MONO"
+        },
+        {
+         "kind": "test",
+         "id": "NEUT"
+        },
+        {
+         "kind": "test",
+         "id": "PCV"
+        },
+        {
+         "kind": "test",
+         "id": "PLT"
+        },
+        {
+         "kind": "test",
+         "id": "RBC"
+        },
+        {
+         "kind": "test",
+         "id": "RDW"
+        },
+        {
+         "kind": "test",
+         "id": "WBC"
+        }
+       ]
+      },
+      {
+       "claim_id": "c6",
+       "text": "Please discuss the Iron studies package with your doctor at a routine visit.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HB"
+        },
+        {
+         "kind": "test",
+         "id": "MCV"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। कुछ परिणाम रिपोर्ट पर छपी सीमाओं से बाहर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "हीमोग्लोबिन (Hemoglobin) का मान 11.3 g/dL है, जो 12.0 - 15.0 g/dL की संदर्भ सीमा से कम है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HB"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "यह टेस्ट लाल रक्त कोशिकाओं में उस प्रोटीन को मापता है जो ऑक्सीजन ले जाता है, और एक कम मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "HB.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "HB.low"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "एमसीवी (MCV) का मान 79.2 fL है, जो 83.0 - 101.0 fL की संदर्भ सीमा से कम है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "MCV"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "यह टेस्ट लाल रक्त कोशिकाओं के औसत आकार को मापता है, और एक कम मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "MCV.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "MCV.low"
+        }
+       ]
+      },
+      {
+       "claim_id": "c5",
+       "text": "अन्य परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "BASO"
+        },
+        {
+         "kind": "test",
+         "id": "EOS"
+        },
+        {
+         "kind": "test",
+         "id": "LYMPH"
+        },
+        {
+         "kind": "test",
+         "id": "MCH"
+        },
+        {
+         "kind": "test",
+         "id": "MCHC"
+        },
+        {
+         "kind": "test",
+         "id": "MONO"
+        },
+        {
+         "kind": "test",
+         "id": "NEUT"
+        },
+        {
+         "kind": "test",
+         "id": "PCV"
+        },
+        {
+         "kind": "test",
+         "id": "PLT"
+        },
+        {
+         "kind": "test",
+         "id": "RBC"
+        },
+        {
+         "kind": "test",
+         "id": "RDW"
+        },
+        {
+         "kind": "test",
+         "id": "WBC"
+        }
+       ]
+      },
+      {
+       "claim_id": "c6",
+       "text": "कृपया नियमित विजिट पर अपने डॉक्टर के साथ आयरन स्टडीज पैकेज पर चर्चा करें।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HB"
+        },
+        {
+         "kind": "test",
+         "id": "MCV"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D03",
+   "wall_ms": 53,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "plan_statements": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_en": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_hi": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    }
+   },
+   "latency_ms": {
+    "extract": 1,
+    "plan_statements": 1,
+    "render_en": 0,
+    "render_hi": 1,
+    "safety_check": 4
+   },
+   "cost_inr": 0.0,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": "URGENT: Your report shows a result that needs prompt medical attention: Platelet Count 14 10^3/µL. Please contact a doctor or the lab now. Do not wait for a routine appointment.",
+     "summary": "I went through your report. Some results are outside the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "Your Platelet Count is 14 10^3/µL, which is below the reference range of 150 - 410 10^3/µL.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "PLT"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "This test measures the number of platelets, small cells that help blood clot, and a lower value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "PLT.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "PLT.low"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "The other results are within the ranges printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "BASO"
+        },
+        {
+         "kind": "test",
+         "id": "EOS"
+        },
+        {
+         "kind": "test",
+         "id": "HB"
+        },
+        {
+         "kind": "test",
+         "id": "LYMPH"
+        },
+        {
+         "kind": "test",
+         "id": "MCH"
+        },
+        {
+         "kind": "test",
+         "id": "MCHC"
+        },
+        {
+         "kind": "test",
+         "id": "MCV"
+        },
+        {
+         "kind": "test",
+         "id": "MONO"
+        },
+        {
+         "kind": "test",
+         "id": "NEUT"
+        },
+        {
+         "kind": "test",
+         "id": "PCV"
+        },
+        {
+         "kind": "test",
+         "id": "RBC"
+        },
+        {
+         "kind": "test",
+         "id": "RDW"
+        },
+        {
+         "kind": "test",
+         "id": "WBC"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "Please contact a doctor now regarding the Platelet Count.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "PLT"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": "तुरंत ध्यान दें: आपकी रिपोर्ट में ऐसा परिणाम है जिस पर तुरंत डॉक्टर से बात करनी चाहिए: प्लेटलेट (Platelet Count) 14 10^3/µL। कृपया अभी डॉक्टर या लैब से संपर्क करें। रूटीन अपॉइंटमेंट का इंतज़ार न करें।",
+     "summary": "मैंने आपकी रिपोर्ट देखी है। कुछ परिणाम रिपोर्ट पर छपी सीमाओं से बाहर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "प्लेटलेट (Platelet Count) 14 10^3/µL है, जो 150 - 410 10^3/µL की संदर्भ सीमा से नीचे है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "PLT"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "यह टेस्ट प्लेटलेट्स की संख्या मापता है, जो छोटी कोशिकाएं हैं और रक्त का थक्का जमने में मदद करती हैं, और एक कम मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "PLT.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "PLT.low"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "अन्य परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "BASO"
+        },
+        {
+         "kind": "test",
+         "id": "EOS"
+        },
+        {
+         "kind": "test",
+         "id": "HB"
+        },
+        {
+         "kind": "test",
+         "id": "LYMPH"
+        },
+        {
+         "kind": "test",
+         "id": "MCH"
+        },
+        {
+         "kind": "test",
+         "id": "MCHC"
+        },
+        {
+         "kind": "test",
+         "id": "MCV"
+        },
+        {
+         "kind": "test",
+         "id": "MONO"
+        },
+        {
+         "kind": "test",
+         "id": "NEUT"
+        },
+        {
+         "kind": "test",
+         "id": "PCV"
+        },
+        {
+         "kind": "test",
+         "id": "RBC"
+        },
+        {
+         "kind": "test",
+         "id": "RDW"
+        },
+        {
+         "kind": "test",
+         "id": "WBC"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "कृपया प्लेटलेट (Platelet Count) के संबंध में अभी किसी डॉक्टर से संपर्क करें।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "PLT"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D04",
+   "wall_ms": 72,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "plan_statements": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_en": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_hi": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    }
+   },
+   "latency_ms": {
+    "extract": 2,
+    "plan_statements": 1,
+    "render_en": 1,
+    "render_hi": 0,
+    "safety_check": 3
+   },
+   "cost_inr": 0.0,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I went through your report. All results are within the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "All results are within the ranges printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HDL"
+        },
+        {
+         "kind": "test",
+         "id": "LDL"
+        },
+        {
+         "kind": "test",
+         "id": "NONHDL"
+        },
+        {
+         "kind": "test",
+         "id": "TC"
+        },
+        {
+         "kind": "test",
+         "id": "TC_HDL"
+        },
+        {
+         "kind": "test",
+         "id": "TG"
+        },
+        {
+         "kind": "test",
+         "id": "VLDL"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। सभी परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "सभी परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HDL"
+        },
+        {
+         "kind": "test",
+         "id": "LDL"
+        },
+        {
+         "kind": "test",
+         "id": "NONHDL"
+        },
+        {
+         "kind": "test",
+         "id": "TC"
+        },
+        {
+         "kind": "test",
+         "id": "TC_HDL"
+        },
+        {
+         "kind": "test",
+         "id": "TG"
+        },
+        {
+         "kind": "test",
+         "id": "VLDL"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D05",
+   "wall_ms": 59,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "plan_statements": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_en": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_hi": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    }
+   },
+   "latency_ms": {
+    "extract": 1,
+    "plan_statements": 1,
+    "render_en": 1,
+    "render_hi": 0,
+    "safety_check": 4
+   },
+   "cost_inr": 0.0,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I have reviewed your report. Some results are outside the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "Your Total Cholesterol (TC) result for Triglycerides is 158 mg/dL, which is above the reference range of < 150 mg/dL.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TG"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "This test measures the amount of triglycerides, a type of fat, in the blood, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TG.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TG.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "The other results are within the ranges printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HDL"
+        },
+        {
+         "kind": "test",
+         "id": "LDL"
+        },
+        {
+         "kind": "test",
+         "id": "NONHDL"
+        },
+        {
+         "kind": "test",
+         "id": "TC"
+        },
+        {
+         "kind": "test",
+         "id": "TC_HDL"
+        },
+        {
+         "kind": "test",
+         "id": "VLDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "Please discuss the Lipid follow-up package with your doctor at a routine visit.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TG"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। कुछ परिणाम रिपोर्ट पर छपी सीमाओं से बाहर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "ट्राइग्लिसराइड (Triglycerides) का मान 158 mg/dL है, जो < 150 mg/dL की संदर्भ सीमा से अधिक है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TG"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "यह परीक्षण रक्त में ट्राइग्लिसराइड (Triglycerides), जो एक प्रकार का वसा है, की मात्रा को मापता है, और एक अधिक मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TG.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TG.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "अन्य परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HDL"
+        },
+        {
+         "kind": "test",
+         "id": "LDL"
+        },
+        {
+         "kind": "test",
+         "id": "NONHDL"
+        },
+        {
+         "kind": "test",
+         "id": "TC"
+        },
+        {
+         "kind": "test",
+         "id": "TC_HDL"
+        },
+        {
+         "kind": "test",
+         "id": "VLDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "कृपया नियमित मुलाकात के दौरान अपने डॉक्टर के साथ लिपिड फॉलो-अप पैकेज पर चर्चा करें।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TG"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D06",
+   "wall_ms": 101,
+   "status": "partial",
+   "explanation_source": [
+    "template_fallback"
+   ],
+   "safety_pass_llm": false,
+   "fallback_used": true,
+   "fallback_reason": "safety_check failed after render retries (wrong_direction)",
+   "retries": 2,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 3
+   },
+   "safety_failures_per_round": [
+    [
+     "render:hi:wrong_direction"
+    ],
+    [
+     "render:hi:wrong_direction"
+    ],
+    [
+     "render:hi:wrong_direction"
+    ]
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "plan_statements": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_en": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_hi": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 3,
+     "cost_inr": 0.0
+    }
+   },
+   "latency_ms": {
+    "extract": 1,
+    "plan_statements": 1,
+    "render_en": 1,
+    "render_hi": 2,
+    "safety_check": 34
+   },
+   "cost_inr": 0.0,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "template_fallback",
+     "urgent_message": null,
+     "summary": "I went through your report. Some results are outside the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "Your Total Cholesterol is 248 mg/dL, above the upper limit of 200 mg/dL printed on your report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TC"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "This test measures the total amount of cholesterol, a type of fat, in the blood. A higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TC.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TC.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "Your Triglycerides is 190 mg/dL, above the upper limit of 150 mg/dL printed on your report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TG"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "This test measures the amount of triglycerides, a type of fat, in the blood. A higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TG.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TG.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c5",
+       "text": "Your HDL Cholesterol is 34 mg/dL, below the lower limit of 40 mg/dL printed on your report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c6",
+       "text": "This test measures the amount of HDL cholesterol in the blood. A lower value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "HDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "HDL.low"
+        }
+       ]
+      },
+      {
+       "claim_id": "c7",
+       "text": "Your LDL Cholesterol - Direct is 168 mg/dL, above the upper limit of 100 mg/dL printed on your report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "LDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c8",
+       "text": "This test measures the amount of LDL cholesterol in the blood. A higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "LDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "LDL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c9",
+       "text": "Your VLDL Cholesterol is 38.0 mg/dL, above the upper limit of 30 mg/dL printed on your report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "VLDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c10",
+       "text": "This test measures the amount of VLDL cholesterol in the blood. A higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "VLDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "VLDL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c11",
+       "text": "Your Non-HDL Cholesterol is 214 mg/dL, above the upper limit of 130 mg/dL printed on your report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "NONHDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c12",
+       "text": "This test measures total cholesterol minus HDL cholesterol. A higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "NONHDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "NONHDL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c13",
+       "text": "Your TC / HDL Ratio is 7.3 Ratio, above the range of 3 to 5 Ratio printed on your report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TC_HDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c14",
+       "text": "This test measures total cholesterol divided by HDL cholesterol. A higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TC_HDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TC_HDL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c15",
+       "text": "Your LDL : HDL Cholesterol is 4.94 Ratio, above the range of 1.5 to 3.5 Ratio printed on your report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "LDL_HDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c16",
+       "text": "This test measures LDL cholesterol divided by HDL cholesterol. A higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "LDL_HDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "LDL_HDL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c17",
+       "text": "It is worth discussing these results with a doctor soon.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HDL"
+        },
+        {
+         "kind": "test",
+         "id": "LDL"
+        },
+        {
+         "kind": "test",
+         "id": "LDL_HDL"
+        },
+        {
+         "kind": "test",
+         "id": "NONHDL"
+        },
+        {
+         "kind": "test",
+         "id": "TC"
+        },
+        {
+         "kind": "test",
+         "id": "TC_HDL"
+        },
+        {
+         "kind": "test",
+         "id": "TG"
+        },
+        {
+         "kind": "test",
+         "id": "VLDL"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "template_fallback",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी। कुछ परिणाम रिपोर्ट पर छपी सीमाओं से बाहर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "आपका कुल कोलेस्ट्रॉल (Total Cholesterol) 248 mg/dL है, जो आपकी रिपोर्ट पर छपी अधिकतम सीमा 200 mg/dL से अधिक है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TC"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "यह जाँच खून में कोलेस्ट्रॉल (एक प्रकार की वसा) की कुल मात्रा मापती है। यह मान कई बातों से अधिक हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TC.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TC.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "आपका ट्राइग्लिसराइड (Triglycerides) 190 mg/dL है, जो आपकी रिपोर्ट पर छपी अधिकतम सीमा 150 mg/dL से अधिक है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TG"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "यह जाँच खून में ट्राइग्लिसराइड (एक प्रकार की वसा) की मात्रा मापती है। यह मान कई बातों से अधिक हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TG.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TG.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c5",
+       "text": "आपका एचडीएल कोलेस्ट्रॉल (HDL Cholesterol) 34 mg/dL है, जो आपकी रिपोर्ट पर छपी न्यूनतम सीमा 40 mg/dL से कम है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c6",
+       "text": "यह जाँच खून में एचडीएल कोलेस्ट्रॉल की मात्रा मापती है। यह मान कई बातों से कम हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "HDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "HDL.low"
+        }
+       ]
+      },
+      {
+       "claim_id": "c7",
+       "text": "आपका एलडीएल कोलेस्ट्रॉल (LDL Cholesterol - Direct) 168 mg/dL है, जो आपकी रिपोर्ट पर छपी अधिकतम सीमा 100 mg/dL से अधिक है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "LDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c8",
+       "text": "यह जाँच खून में एलडीएल कोलेस्ट्रॉल की मात्रा मापती है। यह मान कई बातों से अधिक हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "LDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "LDL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c9",
+       "text": "आपका वीएलडीएल कोलेस्ट्रॉल (VLDL Cholesterol) 38.0 mg/dL है, जो आपकी रिपोर्ट पर छपी अधिकतम सीमा 30 mg/dL से अधिक है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "VLDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c10",
+       "text": "यह जाँच खून में वीएलडीएल कोलेस्ट्रॉल की मात्रा मापती है। यह मान कई बातों से अधिक हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "VLDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "VLDL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c11",
+       "text": "आपका नॉन-एचडीएल कोलेस्ट्रॉल (Non-HDL Cholesterol) 214 mg/dL है, जो आपकी रिपोर्ट पर छपी अधिकतम सीमा 130 mg/dL से अधिक है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "NONHDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c12",
+       "text": "यह जाँच कुल कोलेस्ट्रॉल में से एचडीएल कोलेस्ट्रॉल निकालने पर बची मात्रा मापती है। यह मान कई बातों से अधिक हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "NONHDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "NONHDL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c13",
+       "text": "आपका टीसी/एचडीएल अनुपात (TC / HDL Ratio) 7.3 Ratio है, जो आपकी रिपोर्ट पर छपी सीमा 3 से 5 Ratio से अधिक है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TC_HDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c14",
+       "text": "यह जाँच कुल कोलेस्ट्रॉल और एचडीएल कोलेस्ट्रॉल का अनुपात मापती है। यह मान कई बातों से अधिक हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TC_HDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TC_HDL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c15",
+       "text": "आपका एलडीएल/एचडीएल अनुपात (LDL : HDL Cholesterol) 4.94 Ratio है, जो आपकी रिपोर्ट पर छपी सीमा 1.5 से 3.5 Ratio से अधिक है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "LDL_HDL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c16",
+       "text": "यह जाँच एलडीएल कोलेस्ट्रॉल और एचडीएल कोलेस्ट्रॉल का अनुपात मापती है। यह मान कई बातों से अधिक हो सकता है, इसलिए आपके डॉक्टर बता सकते हैं कि आपके लिए इसका क्या अर्थ है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "LDL_HDL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "LDL_HDL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c17",
+       "text": "इन परिणामों के बारे में जल्द ही डॉक्टर से बात करना अच्छा रहेगा।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HDL"
+        },
+        {
+         "kind": "test",
+         "id": "LDL"
+        },
+        {
+         "kind": "test",
+         "id": "LDL_HDL"
+        },
+        {
+         "kind": "test",
+         "id": "NONHDL"
+        },
+        {
+         "kind": "test",
+         "id": "TC"
+        },
+        {
+         "kind": "test",
+         "id": "TC_HDL"
+        },
+        {
+         "kind": "test",
+         "id": "TG"
+        },
+        {
+         "kind": "test",
+         "id": "VLDL"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D07",
+   "wall_ms": 169,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "plan_statements": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_en": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_hi": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    }
+   },
+   "latency_ms": {
+    "extract": 1,
+    "plan_statements": 0,
+    "render_en": 1,
+    "render_hi": 0,
+    "safety_check": 2
+   },
+   "cost_inr": 0.0,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I went through your report. All results are within the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "All results are within the ranges printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HBA1C"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। सभी परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "सभी परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HBA1C"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D08",
+   "wall_ms": 60,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "plan_statements": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_en": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_hi": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    }
+   },
+   "latency_ms": {
+    "extract": 1,
+    "plan_statements": 1,
+    "render_en": 0,
+    "render_hi": 0,
+    "safety_check": 3
+   },
+   "cost_inr": 0.0,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I have reviewed your report. Some results are outside the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "Your Glycosylated Hemoglobin (HbA1c) value is 5.9 %, which is above the reference range of 4.0 - 5.6 %.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HBA1C"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "This test measures the share of hemoglobin with sugar attached, which reflects average blood sugar over about the past three months, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "HBA1C.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "HBA1C.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "Please discuss the Blood sugar follow-up package with your doctor at a routine visit.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HBA1C"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। कुछ परिणाम रिपोर्ट पर छपी सीमाओं से बाहर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "एचबीए1सी (Glycosylated Hemoglobin (HbA1c)) का मान 5.9 % है, जो 4.0 - 5.6 % की संदर्भ सीमा से ऊपर है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HBA1C"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "यह परीक्षण हीमोग्लोबिन के उस हिस्से को मापता है जिससे शुगर जुड़ी होती है, जो लगभग पिछले तीन महीनों में औसत ब्लड शुगर को दर्शाता है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "HBA1C.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "HBA1C.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "कृपया नियमित मुलाकात के दौरान अपने डॉक्टर के साथ ब्लड शुगर फॉलो-अप पैकेज पर चर्चा करें।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HBA1C"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D09",
+   "wall_ms": 65,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "plan_statements": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_en": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "render_hi": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    }
+   },
+   "latency_ms": {
+    "extract": 2,
+    "plan_statements": 1,
+    "render_en": 0,
+    "render_hi": 0,
+    "safety_check": 5
+   },
+   "cost_inr": 0.0,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I went through your report. Some results are outside the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "Your Glycosylated Hemoglobin (HbA1c) value is 8.1 %, which is above the reference range of 4.00 - 5.60 %.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HBA1C"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "This test measures the share of hemoglobin with sugar attached, which reflects average blood sugar over about the past three months, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "HBA1C.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "HBA1C.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "Please discuss the Glycosylated Hemoglobin (HbA1c) result with a doctor soon.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HBA1C"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। कुछ परिणाम रिपोर्ट पर छपी सीमाओं से बाहर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "एचबीए1सी (Glycosylated Hemoglobin (HbA1c)) का मान 8.1 % है, जो 4.00 - 5.60 % की संदर्भ सीमा से अधिक है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HBA1C"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "यह परीक्षण हीमोग्लोबिन के उस हिस्से को मापता है जिससे शुगर जुड़ी होती है, जो लगभग पिछले तीन महीनों में औसत ब्लड शुगर को दर्शाता है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "HBA1C.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "HBA1C.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "कृपया एचबीए1सी (Glycosylated Hemoglobin (HbA1c)) परिणाम पर जल्द ही डॉक्टर से चर्चा करें।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "HBA1C"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D10",
+   "wall_ms": 6996,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 0,
+     "tokens_out": 0,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 0,
+     "cache_hits": 1,
+     "cost_inr": 0.0
+    },
+    "plan_statements": {
+     "tokens_in": 1459,
+     "tokens_out": 125,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.049702500000000004
+    },
+    "render_en": {
+     "tokens_in": 1169,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0354825
+    },
+    "render_hi": {
+     "tokens_in": 1180,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.036000000000000004
+    }
+   },
+   "latency_ms": {
+    "extract": 1,
+    "plan_statements": 3110,
+    "render_en": 3814,
+    "render_hi": 2944,
+    "safety_check": 3
+   },
+   "cost_inr": 0.1212,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I went through your report. All results are within the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "All results are within the ranges printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "T3"
+        },
+        {
+         "kind": "test",
+         "id": "T4"
+        },
+        {
+         "kind": "test",
+         "id": "TSH"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। सभी परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "सभी परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "T3"
+        },
+        {
+         "kind": "test",
+         "id": "T4"
+        },
+        {
+         "kind": "test",
+         "id": "TSH"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D11",
+   "wall_ms": 10418,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 1185,
+     "tokens_out": 612,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.1092825
+    },
+    "plan_statements": {
+     "tokens_in": 1657,
+     "tokens_out": 401,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0914175
+    },
+    "render_en": {
+     "tokens_in": 1312,
+     "tokens_out": 239,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06178500000000001
+    },
+    "render_hi": {
+     "tokens_in": 1319,
+     "tokens_out": 261,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0649125
+    }
+   },
+   "latency_ms": {
+    "extract": 2164,
+    "plan_statements": 2954,
+    "render_en": 5233,
+    "render_hi": 2251,
+    "safety_check": 4
+   },
+   "cost_inr": 0.3274,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I went through your report. Some results are outside the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "Your TSH (Thyroid Stimulating Hormone) value is 4.520 µIU/mL, which is above the reference range of 0.270 - 4.200 µIU/mL.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TSH"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "This test measures the hormone that signals the thyroid gland to make its hormones, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TSH.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TSH.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "The other results are within the ranges printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "T3"
+        },
+        {
+         "kind": "test",
+         "id": "T4"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "Please discuss the Thyroid follow-up package with your doctor at a routine visit.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TSH"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। कुछ परिणाम रिपोर्ट में दी गई सीमाओं से बाहर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "टीएसएच (TSH (Thyroid Stimulating Hormone)) का मान 4.520 µIU/mL है, जो 0.270 - 4.200 µIU/mL की संदर्भ सीमा से अधिक है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TSH"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "यह परीक्षण उस हार्मोन को मापता है जो थायरॉइड ग्रंथि को अपने हार्मोन बनाने का संकेत देता है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TSH.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TSH.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "अन्य परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "T3"
+        },
+        {
+         "kind": "test",
+         "id": "T4"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "कृपया नियमित मुलाकात के दौरान अपने डॉक्टर के साथ थायरॉइड फॉलो-अप पैकेज पर चर्चा करें।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TSH"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D12",
+   "wall_ms": 11094,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 1320,
+     "tokens_out": 598,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.11043
+    },
+    "plan_statements": {
+     "tokens_in": 1844,
+     "tokens_out": 614,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.12438
+    },
+    "render_en": {
+     "tokens_in": 1410,
+     "tokens_out": 359,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.08019
+    },
+    "render_hi": {
+     "tokens_in": 1421,
+     "tokens_out": 385,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0839475
+    }
+   },
+   "latency_ms": {
+    "extract": 2127,
+    "plan_statements": 3127,
+    "render_en": 5763,
+    "render_hi": 2249,
+    "safety_check": 6
+   },
+   "cost_inr": 0.3989,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I have reviewed your report. Some of your results are outside the ranges listed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "Your Total T4 (Thyroxine) value is 4.20 µg/dL, which is below the reference range of 5.10 - 14.10 µg/dL.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "T4"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "This test measures the amount of the thyroid hormone T4 in the blood, and a lower value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "T4.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "T4.low"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "Your TSH (Thyroid Stimulating Hormone) value is 9.850 µIU/mL, which is above the reference range of 0.35 - 4.94 µIU/mL.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TSH"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "This test measures the hormone that signals the thyroid gland to make its hormones, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TSH.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TSH.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c5",
+       "text": "The other result is within the range printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "T3"
+        }
+       ]
+      },
+      {
+       "claim_id": "c6",
+       "text": "Please discuss these results with a doctor soon.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "T4"
+        },
+        {
+         "kind": "test",
+         "id": "TSH"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। कुछ परिणाम रिपोर्ट पर छपी सीमाओं से बाहर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "टी4 (Total T4 (Thyroxine)) का मान 4.20 µg/dL है, जो 5.10 - 14.10 µg/dL की संदर्भ सीमा से नीचे है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "T4"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "यह परीक्षण रक्त में थायरॉइड हार्मोन टी4 की मात्रा को मापता है, और एक कम मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि इसका आपके लिए क्या अर्थ है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "T4.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "T4.low"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "टीएसएच (TSH (Thyroid Stimulating Hormone)) का मान 9.850 µIU/mL है, जो 0.35 - 4.94 µIU/mL की संदर्भ सीमा से ऊपर है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TSH"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "यह परीक्षण उस हार्मोन को मापता है जो थायरॉइड ग्रंथि को अपने हार्मोन बनाने का संकेत देता है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि इसका आपके लिए क्या अर्थ है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TSH.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TSH.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c5",
+       "text": "अन्य परिणाम रिपोर्ट पर छपी सीमा के भीतर है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "T3"
+        }
+       ]
+      },
+      {
+       "claim_id": "c6",
+       "text": "कृपया इन परिणामों पर जल्द ही डॉक्टर से चर्चा करें।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "T4"
+        },
+        {
+         "kind": "test",
+         "id": "TSH"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D13",
+   "wall_ms": 10669,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 1552,
+     "tokens_out": 2038,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.31005
+    },
+    "plan_statements": {
+     "tokens_in": 1485,
+     "tokens_out": 327,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0775575
+    },
+    "render_en": {
+     "tokens_in": 1240,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.03708
+    },
+    "render_hi": {
+     "tokens_in": 1314,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.039015
+    }
+   },
+   "latency_ms": {
+    "extract": 4669,
+    "plan_statements": 1950,
+    "render_en": 3979,
+    "render_hi": 3832,
+    "safety_check": 5
+   },
+   "cost_inr": 0.4637,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I went through your report. All results are within the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "All results are within the ranges printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "AG"
+        },
+        {
+         "kind": "test",
+         "id": "ALB"
+        },
+        {
+         "kind": "test",
+         "id": "ALP"
+        },
+        {
+         "kind": "test",
+         "id": "ALT"
+        },
+        {
+         "kind": "test",
+         "id": "AST"
+        },
+        {
+         "kind": "test",
+         "id": "AST_ALT"
+        },
+        {
+         "kind": "test",
+         "id": "DBIL"
+        },
+        {
+         "kind": "test",
+         "id": "GGT"
+        },
+        {
+         "kind": "test",
+         "id": "GLOB"
+        },
+        {
+         "kind": "test",
+         "id": "IBIL"
+        },
+        {
+         "kind": "test",
+         "id": "TBIL"
+        },
+        {
+         "kind": "test",
+         "id": "TP"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। सभी परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "सभी परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "AG"
+        },
+        {
+         "kind": "test",
+         "id": "ALB"
+        },
+        {
+         "kind": "test",
+         "id": "ALP"
+        },
+        {
+         "kind": "test",
+         "id": "ALT"
+        },
+        {
+         "kind": "test",
+         "id": "AST"
+        },
+        {
+         "kind": "test",
+         "id": "AST_ALT"
+        },
+        {
+         "kind": "test",
+         "id": "DBIL"
+        },
+        {
+         "kind": "test",
+         "id": "GGT"
+        },
+        {
+         "kind": "test",
+         "id": "GLOB"
+        },
+        {
+         "kind": "test",
+         "id": "IBIL"
+        },
+        {
+         "kind": "test",
+         "id": "TBIL"
+        },
+        {
+         "kind": "test",
+         "id": "TP"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D14",
+   "wall_ms": 22366,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 1227,
+     "tokens_out": 1906,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.2849175
+    },
+    "plan_statements": {
+     "tokens_in": 1672,
+     "tokens_out": 560,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.11322
+    },
+    "render_en": {
+     "tokens_in": 1355,
+     "tokens_out": 222,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.060457500000000004
+    },
+    "render_hi": {
+     "tokens_in": 1421,
+     "tokens_out": 245,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0650475
+    }
+   },
+   "latency_ms": {
+    "extract": 6025,
+    "plan_statements": 10822,
+    "render_en": 5433,
+    "render_hi": 4715,
+    "safety_check": 5
+   },
+   "cost_inr": 0.5236,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I have reviewed your report. Some results are outside the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "Your SGPT (ALT) level is 53 U/L, which is above the reference range of < 50 U/L.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "ALT"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "This test measures the level of ALT, an enzyme found mainly in the liver, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "ALT.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "ALT.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "The other results are within the ranges printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "AG"
+        },
+        {
+         "kind": "test",
+         "id": "ALB"
+        },
+        {
+         "kind": "test",
+         "id": "ALP"
+        },
+        {
+         "kind": "test",
+         "id": "AST"
+        },
+        {
+         "kind": "test",
+         "id": "DBIL"
+        },
+        {
+         "kind": "test",
+         "id": "GGT"
+        },
+        {
+         "kind": "test",
+         "id": "GLOB"
+        },
+        {
+         "kind": "test",
+         "id": "IBIL"
+        },
+        {
+         "kind": "test",
+         "id": "TBIL"
+        },
+        {
+         "kind": "test",
+         "id": "TP"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "Please discuss the Liver follow-up package with your doctor at a routine visit.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "ALT"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। इसमें कुछ परिणाम रिपोर्ट पर छपी सीमाओं से बाहर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "एसजीपीटी (SGPT (ALT)) का स्तर 53 U/L है, जो < 50 U/L की संदर्भ सीमा से अधिक है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "ALT"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "यह परीक्षण ALT के स्तर को मापता है, जो मुख्य रूप से लिवर में पाया जाने वाला एक एंजाइम है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि इसका आपके लिए क्या अर्थ है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "ALT.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "ALT.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "अन्य परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "AG"
+        },
+        {
+         "kind": "test",
+         "id": "ALB"
+        },
+        {
+         "kind": "test",
+         "id": "ALP"
+        },
+        {
+         "kind": "test",
+         "id": "AST"
+        },
+        {
+         "kind": "test",
+         "id": "DBIL"
+        },
+        {
+         "kind": "test",
+         "id": "GGT"
+        },
+        {
+         "kind": "test",
+         "id": "GLOB"
+        },
+        {
+         "kind": "test",
+         "id": "IBIL"
+        },
+        {
+         "kind": "test",
+         "id": "TBIL"
+        },
+        {
+         "kind": "test",
+         "id": "TP"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "कृपया नियमित मुलाकात के दौरान अपने डॉक्टर के साथ लिवर फॉलो-अप पैकेज पर चर्चा करें।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "ALT"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  },
+  {
+   "report": "D15",
+   "wall_ms": 17598,
+   "status": "complete",
+   "explanation_source": [
+    "llm"
+   ],
+   "safety_pass_llm": true,
+   "fallback_used": false,
+   "fallback_reason": null,
+   "retries": 0,
+   "plan_attempts": 1,
+   "render_attempts": {
+    "en": 1,
+    "hi": 1
+   },
+   "safety_failures_per_round": [
+    []
+   ],
+   "tokens": {
+    "extract": {
+     "tokens_in": 1550,
+     "tokens_out": 1846,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.284085
+    },
+    "plan_statements": {
+     "tokens_in": 2818,
+     "tokens_out": 1874,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.316395
+    },
+    "render_en": {
+     "tokens_in": 1975,
+     "tokens_out": 951,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.17282250000000002
+    },
+    "render_hi": {
+     "tokens_in": 2051,
+     "tokens_out": 1105,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.19532249999999998
+    }
+   },
+   "latency_ms": {
+    "extract": 4879,
+    "plan_statements": 6489,
+    "render_en": 5494,
+    "render_hi": 6144,
+    "safety_check": 12
+   },
+   "cost_inr": 0.9686,
+   "explanations": [
+    {
+     "language": "en",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "I have reviewed your report. Some of your results are outside the ranges printed on it.",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "Your Bilirubin - Total value is 3.40 mg/dL, which is above the reference range of 0.30 - 1.20 mg/dL.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TBIL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "This test measures the total amount of bilirubin, a yellow substance made when red blood cells break down, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TBIL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TBIL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "Your Bilirubin - Direct value is 1.90 mg/dL, which is above the reference range of <0.30 mg/dL.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "DBIL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "This test measures the part of bilirubin that has been processed by the liver, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "DBIL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "DBIL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c5",
+       "text": "Your Bilirubin - Indirect value is 1.50 mg/dL, which is above the reference range of <1.10 mg/dL.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "IBIL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c6",
+       "text": "This test measures the part of bilirubin not yet processed by the liver, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "IBIL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "IBIL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c7",
+       "text": "Your SGPT (ALT) value is 186 U/L, which is above the reference range of 0 - 45 U/L.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "ALT"
+        }
+       ]
+      },
+      {
+       "claim_id": "c8",
+       "text": "This test measures the level of ALT, an enzyme found mainly in the liver, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "ALT.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "ALT.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c9",
+       "text": "Your SGOT (AST) value is 142 U/L, which is above the reference range of 0 - 40 U/L.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "AST"
+        }
+       ]
+      },
+      {
+       "claim_id": "c10",
+       "text": "This test measures the level of AST, an enzyme found in the liver and other tissues, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "AST.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "AST.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c11",
+       "text": "Your Alkaline Phosphatase value is 210 U/L, which is above the reference range of 30.00 - 120.00 U/L.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "ALP"
+        }
+       ]
+      },
+      {
+       "claim_id": "c12",
+       "text": "This test measures the level of ALP, an enzyme found in the liver, bones and other tissues, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "ALP.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "ALP.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c13",
+       "text": "Your Gamma GT (GGTP) value is 160 U/L, which is above the reference range of 0 - 55 U/L.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "GGT"
+        }
+       ]
+      },
+      {
+       "claim_id": "c14",
+       "text": "This test measures the level of GGT, an enzyme found mainly in the liver, and a higher value can be affected by many things, so your doctor can explain what it means for you.",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "GGT.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "GGT.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c15",
+       "text": "The other results are within the ranges printed on the report.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "AG"
+        },
+        {
+         "kind": "test",
+         "id": "ALB"
+        },
+        {
+         "kind": "test",
+         "id": "AST_ALT"
+        },
+        {
+         "kind": "test",
+         "id": "GLOB"
+        },
+        {
+         "kind": "test",
+         "id": "TP"
+        }
+       ]
+      },
+      {
+       "claim_id": "c16",
+       "text": "Please discuss these results with your doctor soon.",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "ALP"
+        },
+        {
+         "kind": "test",
+         "id": "ALT"
+        },
+        {
+         "kind": "test",
+         "id": "AST"
+        },
+        {
+         "kind": "test",
+         "id": "DBIL"
+        },
+        {
+         "kind": "test",
+         "id": "GGT"
+        },
+        {
+         "kind": "test",
+         "id": "IBIL"
+        },
+        {
+         "kind": "test",
+         "id": "TBIL"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "This explains your report. It is not medical advice or a diagnosis."
+    },
+    {
+     "language": "hi",
+     "source": "llm",
+     "urgent_message": null,
+     "summary": "मैंने आपकी रिपोर्ट देखी है। कुछ परिणाम रिपोर्ट पर छपी सीमाओं से बाहर हैं।",
+     "statements": [
+      {
+       "claim_id": "c1",
+       "text": "कुल बिलीरुबिन (Bilirubin - Total) का मान 3.40 mg/dL है, जो 0.30 - 1.20 mg/dL की संदर्भ सीमा से ऊपर है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "TBIL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c2",
+       "text": "यह परीक्षण बिलीरुबिन की कुल मात्रा को मापता है, जो लाल रक्त कोशिकाओं के टूटने पर बनने वाला एक पीला पदार्थ है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "TBIL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "TBIL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c3",
+       "text": "डायरेक्ट बिलीरुबिन (Bilirubin - Direct) का मान 1.90 mg/dL है, जो <0.30 mg/dL की संदर्भ सीमा से ऊपर है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "DBIL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c4",
+       "text": "यह परीक्षण बिलीरुबिन के उस हिस्से को मापता है जिसे लिवर द्वारा संसाधित किया गया है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "DBIL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "DBIL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c5",
+       "text": "इनडायरेक्ट बिलीरुबिन (Bilirubin - Indirect) का मान 1.50 mg/dL है, जो <1.10 mg/dL की संदर्भ सीमा से ऊपर है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "IBIL"
+        }
+       ]
+      },
+      {
+       "claim_id": "c6",
+       "text": "यह परीक्षण बिलीरुबिन के उस हिस्से को मापता है जिसे अभी तक लिवर द्वारा संसाधित नहीं किया गया है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "IBIL.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "IBIL.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c7",
+       "text": "एसजीपीटी (SGPT (ALT)) का मान 186 U/L है, जो 0 - 45 U/L की संदर्भ सीमा से ऊपर है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "ALT"
+        }
+       ]
+      },
+      {
+       "claim_id": "c8",
+       "text": "यह परीक्षण ALT के स्तर को मापता है, जो मुख्य रूप से लिवर में पाया जाने वाला एक एंजाइम है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "ALT.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "ALT.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c9",
+       "text": "एसजीओटी (SGOT (AST)) का मान 142 U/L है, जो 0 - 40 U/L की संदर्भ सीमा से ऊपर है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "AST"
+        }
+       ]
+      },
+      {
+       "claim_id": "c10",
+       "text": "यह परीक्षण AST के स्तर को मापता है, जो लिवर और अन्य ऊतकों में पाया जाने वाला एक एंजाइम है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "AST.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "AST.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c11",
+       "text": "एल्कलाइन फॉस्फेटेज़ (Alkaline Phosphatase) का मान 210 U/L है, जो 30.00 - 120.00 U/L की संदर्भ सीमा से ऊपर है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "ALP"
+        }
+       ]
+      },
+      {
+       "claim_id": "c12",
+       "text": "यह परीक्षण ALP के स्तर को मापता है, जो लिवर, हड्डियों और अन्य ऊतकों में पाया जाने वाला एक एंजाइम है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "ALP.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "ALP.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c13",
+       "text": "गामा जीटी (Gamma GT (GGTP)) का मान 160 U/L है, जो 0 - 55 U/L की संदर्भ सीमा से ऊपर है।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "GGT"
+        }
+       ]
+      },
+      {
+       "claim_id": "c14",
+       "text": "यह परीक्षण GGT के स्तर को मापता है, जो मुख्य रूप से लिवर में पाया जाने वाला एक एंजाइम है, और एक उच्च मान कई चीजों से प्रभावित हो सकता है, इसलिए आपके डॉक्टर समझा सकते हैं कि यह आपके लिए क्या मायने रखता है।",
+       "cites": [
+        {
+         "kind": "glossary",
+         "id": "GGT.measures"
+        },
+        {
+         "kind": "glossary",
+         "id": "GGT.high"
+        }
+       ]
+      },
+      {
+       "claim_id": "c15",
+       "text": "अन्य परिणाम रिपोर्ट पर छपी सीमाओं के भीतर हैं।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "AG"
+        },
+        {
+         "kind": "test",
+         "id": "ALB"
+        },
+        {
+         "kind": "test",
+         "id": "AST_ALT"
+        },
+        {
+         "kind": "test",
+         "id": "GLOB"
+        },
+        {
+         "kind": "test",
+         "id": "TP"
+        }
+       ]
+      },
+      {
+       "claim_id": "c16",
+       "text": "कृपया इन परिणामों पर जल्द ही अपने डॉक्टर से चर्चा करें।",
+       "cites": [
+        {
+         "kind": "test",
+         "id": "ALP"
+        },
+        {
+         "kind": "test",
+         "id": "ALT"
+        },
+        {
+         "kind": "test",
+         "id": "AST"
+        },
+        {
+         "kind": "test",
+         "id": "DBIL"
+        },
+        {
+         "kind": "test",
+         "id": "GGT"
+        },
+        {
+         "kind": "test",
+         "id": "IBIL"
+        },
+        {
+         "kind": "test",
+         "id": "TBIL"
+        }
+       ]
+      }
+     ],
+     "disclaimer": "यह आपकी रिपोर्ट को समझाता है। यह चिकित्सा सलाह या निदान नहीं है।"
+    }
+   ]
+  }
+ ]
+}

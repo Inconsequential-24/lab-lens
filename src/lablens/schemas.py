@@ -132,3 +132,39 @@ class SavedReport(BaseModel):
     tests: list[FlaggedTest]
     consent_notice_version: str
     saved_at: datetime
+
+
+class ExtractedRow(BaseModel):
+    """One row as read by the `extract` LLM; validate turns it into ExtractedTest."""
+    raw_name: str
+    test_id_hint: str | None = None  # LLM's guess from the catalog; aliases win in validate
+    value_raw: str
+    value_number: float | None = None
+    comparator: Literal["=", "<", "<=", ">", ">="] = "="
+    unit_raw: str | None = None
+    ref_raw: str = ""
+    ref_low: float | None = None
+    ref_high: float | None = None
+    printed_flag: str | None = None
+    remark: str | None = None
+    page: int = 1
+    source_span: str = ""
+
+
+class Extraction(BaseModel):
+    """`extract` LLM output_schema."""
+    tests: list[ExtractedRow]
+    report_date: str | None = None  # ISO yyyy-mm-dd as read; parsed in validate
+    lab_remarks: list[str] = Field(default_factory=list)
+
+
+class ValidatedReport(BaseModel):
+    """`validate` output."""
+    tests: list[ExtractedTest]
+    report_date: date | None
+    panels: list[Panel]
+    unrecognised_tests: list[str]
+    lab_remarks: list[str]
+    low_confidence_tests: list[str]
+    dropped_rows: list[str]
+    warnings: list[str]

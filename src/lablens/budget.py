@@ -32,6 +32,12 @@ class BudgetGuard:
         with sqlite3.connect(self.path) as c:
             return c.execute("SELECT COALESCE(SUM(cost_inr), 0) FROM spend").fetchone()[0]
 
+    def spent_since(self, ts: float) -> float:
+        """Spend (including open reservations) logged at or after unix time `ts`."""
+        with sqlite3.connect(self.path) as c:
+            return c.execute("SELECT COALESCE(SUM(cost_inr), 0) FROM spend WHERE ts>=?",
+                             (ts,)).fetchone()[0]
+
     def allows(self, est_in: int, est_out: int, est_thinking: int = 0) -> bool:
         return self.spent_inr() + cost_inr(est_in, est_out, est_thinking) <= self.guard_inr
 
