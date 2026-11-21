@@ -1,0 +1,11 @@
+{
+  "type": "multi-output DecisionTree on per-test low/high indicators",
+  "n_train": 4015,
+  "labels": "packages.yaml requires_* patterns (rule-derived, circular)",
+  "split": "train seed SEED (4000 synthetic) + D*; held-out seed SEED+1 minus duplicates; E* final",
+  "model": "pattern_model",
+  "sklearn_version": "1.9.1",
+  "seed": 1234,
+  "size_bytes": 5098,
+  "sha256": "d0ce474e07863b7d4440bddbb49fe13bc6ba9bc4f522107b271d5fb68ba62caf"
+}

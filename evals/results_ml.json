@@ -1,0 +1,441 @@
+{
+  "normalize_names": {
+    "heldout": {
+      "model": {
+        "accuracy": {
+          "k": 87,
+          "n": 395,
+          "rate": 0.2203,
+          "ci95": [
+            0.1822,
+            0.2637
+          ]
+        },
+        "wrong_mapping": {
+          "k": 7,
+          "n": 395,
+          "rate": 0.0177,
+          "ci95": [
+            0.0086,
+            0.0361
+          ]
+        },
+        "unknown_wrong_mapping": {
+          "k": 0,
+          "n": 41,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0857
+          ]
+        },
+        "abstain": {
+          "k": 342,
+          "n": 395,
+          "rate": 0.8658,
+          "ci95": [
+            0.8287,
+            0.8959
+          ]
+        },
+        "macro_f1": 0.122
+      },
+      "hybrid_dict_then_model": {
+        "accuracy": {
+          "k": 92,
+          "n": 395,
+          "rate": 0.2329,
+          "ci95": [
+            0.1939,
+            0.277
+          ]
+        },
+        "wrong_mapping": {
+          "k": 7,
+          "n": 395,
+          "rate": 0.0177,
+          "ci95": [
+            0.0086,
+            0.0361
+          ]
+        },
+        "unknown_wrong_mapping": {
+          "k": 0,
+          "n": 41,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0857
+          ]
+        },
+        "abstain": {
+          "k": 337,
+          "n": 395,
+          "rate": 0.8532,
+          "ci95": [
+            0.8149,
+            0.8847
+          ]
+        },
+        "macro_f1": 0.1301
+      },
+      "baseline_dict_train_names": {
+        "accuracy": {
+          "k": 68,
+          "n": 395,
+          "rate": 0.1722,
+          "ci95": [
+            0.1381,
+            0.2125
+          ]
+        },
+        "wrong_mapping": {
+          "k": 0,
+          "n": 395,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0096
+          ]
+        },
+        "unknown_wrong_mapping": {
+          "k": 0,
+          "n": 41,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0857
+          ]
+        },
+        "abstain": {
+          "k": 368,
+          "n": 395,
+          "rate": 0.9316,
+          "ci95": [
+            0.9024,
+            0.9526
+          ]
+        },
+        "macro_f1": 0.0538
+      },
+      "baseline_dict_all_panels": {
+        "accuracy": {
+          "k": 139,
+          "n": 395,
+          "rate": 0.3519,
+          "ci95": [
+            0.3064,
+            0.4002
+          ]
+        },
+        "wrong_mapping": {
+          "k": 0,
+          "n": 395,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0096
+          ]
+        },
+        "unknown_wrong_mapping": {
+          "k": 0,
+          "n": 41,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0857
+          ]
+        },
+        "abstain": {
+          "k": 297,
+          "n": 395,
+          "rate": 0.7519,
+          "ci95": [
+            0.707,
+            0.7919
+          ]
+        },
+        "macro_f1": 0.249
+      }
+    },
+    "e_printed_names_plus_heldout_unknowns": {
+      "model": {
+        "accuracy": {
+          "k": 100,
+          "n": 102,
+          "rate": 0.9804,
+          "ci95": [
+            0.9313,
+            0.9946
+          ]
+        },
+        "wrong_mapping": {
+          "k": 0,
+          "n": 102,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0363
+          ]
+        },
+        "unknown_wrong_mapping": {
+          "k": 0,
+          "n": 25,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1332
+          ]
+        },
+        "abstain": {
+          "k": 27,
+          "n": 102,
+          "rate": 0.2647,
+          "ci95": [
+            0.1888,
+            0.3577
+          ]
+        },
+        "macro_f1": 0.989
+      },
+      "hybrid_dict_then_model": {
+        "accuracy": {
+          "k": 102,
+          "n": 102,
+          "rate": 1.0,
+          "ci95": [
+            0.9637,
+            1.0
+          ]
+        },
+        "wrong_mapping": {
+          "k": 0,
+          "n": 102,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0363
+          ]
+        },
+        "unknown_wrong_mapping": {
+          "k": 0,
+          "n": 25,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1332
+          ]
+        },
+        "abstain": {
+          "k": 25,
+          "n": 102,
+          "rate": 0.2451,
+          "ci95": [
+            0.1719,
+            0.3368
+          ]
+        },
+        "macro_f1": 1.0
+      },
+      "baseline_dict_all_panels": {
+        "accuracy": {
+          "k": 101,
+          "n": 102,
+          "rate": 0.9902,
+          "ci95": [
+            0.9465,
+            0.9983
+          ]
+        },
+        "wrong_mapping": {
+          "k": 0,
+          "n": 102,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0363
+          ]
+        },
+        "unknown_wrong_mapping": {
+          "k": 0,
+          "n": 25,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1332
+          ]
+        },
+        "abstain": {
+          "k": 26,
+          "n": 102,
+          "rate": 0.2549,
+          "ci95": [
+            0.1803,
+            0.3473
+          ]
+        },
+        "macro_f1": 0.9945
+      }
+    }
+  },
+  "pattern_model": {
+    "heldout": {
+      "model": {
+        "exact_match": {
+          "k": 575,
+          "n": 645,
+          "rate": 0.8915,
+          "ci95": [
+            0.8651,
+            0.9132
+          ]
+        },
+        "macro_f1": 0.9346,
+        "false_pattern": {
+          "k": 1,
+          "n": 3225,
+          "rate": 0.0003,
+          "ci95": [
+            0.0001,
+            0.0018
+          ]
+        }
+      },
+      "baseline_rule_R3": {
+        "exact_match": {
+          "k": 234,
+          "n": 645,
+          "rate": 0.3628,
+          "ci95": [
+            0.3266,
+            0.4006
+          ]
+        },
+        "macro_f1": 0.0204,
+        "false_pattern": {
+          "k": 0,
+          "n": 3225,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0012
+          ]
+        }
+      }
+    },
+    "e_cases": {
+      "model": {
+        "exact_match": {
+          "k": 27,
+          "n": 30,
+          "rate": 0.9,
+          "ci95": [
+            0.7438,
+            0.9654
+          ]
+        },
+        "macro_f1": 0.88,
+        "false_pattern": {
+          "k": 0,
+          "n": 150,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        }
+      },
+      "baseline_rule_R3": {
+        "exact_match": {
+          "k": 29,
+          "n": 30,
+          "rate": 0.9667,
+          "ci95": [
+            0.8333,
+            0.9941
+          ]
+        },
+        "macro_f1": 0.9333,
+        "false_pattern": {
+          "k": 0,
+          "n": 150,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        }
+      }
+    }
+  },
+  "flag_model": {
+    "heldout_tests": {
+      "model": {
+        "accuracy": {
+          "k": 1379,
+          "n": 2400,
+          "rate": 0.5746,
+          "ci95": [
+            0.5547,
+            0.5942
+          ]
+        },
+        "critical_recall": {
+          "k": 44,
+          "n": 62,
+          "rate": 0.7097,
+          "ci95": [
+            0.5871,
+            0.8078
+          ]
+        },
+        "macro_f1": 0.5774
+      },
+      "rules_flag_engine": "labels are flag_engine output (1.0 by construction)"
+    },
+    "e_cases_vs_expected_flag": {
+      "model": {
+        "accuracy": {
+          "k": 216,
+          "n": 243,
+          "rate": 0.8889,
+          "ci95": [
+            0.8432,
+            0.9225
+          ]
+        },
+        "critical_recall": {
+          "k": 2,
+          "n": 2,
+          "rate": 1.0,
+          "ci95": [
+            0.3424,
+            1.0
+          ]
+        },
+        "macro_f1": 0.7155
+      },
+      "rules_flag_engine": {
+        "accuracy": {
+          "k": 243,
+          "n": 243,
+          "rate": 1.0,
+          "ci95": [
+            0.9844,
+            1.0
+          ]
+        },
+        "critical_recall": {
+          "k": 2,
+          "n": 2,
+          "rate": 1.0,
+          "ci95": [
+            0.3424,
+            1.0
+          ]
+        },
+        "macro_f1": 1.0
+      }
+    }
+  }
+}

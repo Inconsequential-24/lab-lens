@@ -1,0 +1,14 @@
+{
+  "type": "char 2-4gram + word TF-IDF, nearest-neighbour cosine, abstain on low similarity or small margin",
+  "threshold": 0.88,
+  "margin": 0.0,
+  "n_train": 1193,
+  "n_dev": 387,
+  "n_heldout": 395,
+  "split": "train rules ('case', 'spacing', 'punct', 'typo', 'suffix'); held-out rules ('vowels', 'abbrev'); ~1/3 of aliases per test held out entirely; unknown names split dev/held-out; D* printed names in train; E* never used",
+  "model": "normalize_names",
+  "sklearn_version": "1.9.1",
+  "seed": 1234,
+  "size_bytes": 327003,
+  "sha256": "31658d2c55f16b98bcc0842b357df86965bd4cd8fed04a14f200ee878123a4ab"
+}
