@@ -1,0 +1,3202 @@
+{
+  "config": {
+    "k": 5,
+    "seed": 1234,
+    "n_var": 3,
+    "n_sets": 4000,
+    "n_per": 200,
+    "note": "separate from evals/results_ml.json; models retrained in memory; E* data used only in the eval sections"
+  },
+  "normalize_names": {
+    "cv": {
+      "by_test_id": {
+        "grouping": "GroupKFold, group = test_id; unknown names one group each (label None); held-out tests are out of vocabulary so expected answer = abstain",
+        "folds": [
+          {
+            "n_train": 1476,
+            "n_test": 371,
+            "threshold": 0.88,
+            "margin": 0.0,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1476,
+                  "n": 1476,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9974,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 1476,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0026
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 211,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0179
+                  ]
+                },
+                "abstain": {
+                  "k": 211,
+                  "n": 1476,
+                  "rate": 0.143,
+                  "ci95": [
+                    0.126,
+                    0.1617
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 360,
+                  "n": 371,
+                  "rate": 0.9704,
+                  "ci95": [
+                    0.9477,
+                    0.9834
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 11,
+                  "n": 371,
+                  "rate": 0.0296,
+                  "ci95": [
+                    0.0166,
+                    0.0523
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 11,
+                  "n": 371,
+                  "rate": 0.0296,
+                  "ci95": [
+                    0.0166,
+                    0.0523
+                  ]
+                },
+                "abstain": {
+                  "k": 360,
+                  "n": 371,
+                  "rate": 0.9704,
+                  "ci95": [
+                    0.9477,
+                    0.9834
+                  ]
+                },
+                "macro_f1": 0.2462
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 371,
+                  "n": 371,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9898,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 371,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0102
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 371,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0102
+                  ]
+                },
+                "abstain": {
+                  "k": 371,
+                  "n": 371,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9898,
+                    1.0
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "held_out_groups": [
+              "AG",
+              "AST_ALT",
+              "LDL",
+              "MCH",
+              "MCHC",
+              "RDW",
+              "TP",
+              "unk:Bleeding Time",
+              "unk:Blood Group",
+              "unk:CRP",
+              "unk:Fasting Plasma Glucose",
+              "unk:Free T3",
+              "unk:PSA Total",
+              "unk:Post Prandial Glucose",
+              "unk:Serum Creatinine",
+              "unk:Serum Sodium",
+              "unk:TIBC",
+              "unk:Troponin I",
+              "unk:Urine Protein"
+            ]
+          },
+          {
+            "n_train": 1477,
+            "n_test": 370,
+            "threshold": 0.84,
+            "margin": 0.0,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1476,
+                  "n": 1477,
+                  "rate": 0.9993,
+                  "ci95": [
+                    0.9962,
+                    0.9999
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 1,
+                  "n": 1477,
+                  "rate": 0.0007,
+                  "ci95": [
+                    0.0001,
+                    0.0038
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 1,
+                  "n": 230,
+                  "rate": 0.0043,
+                  "ci95": [
+                    0.0008,
+                    0.0242
+                  ]
+                },
+                "abstain": {
+                  "k": 229,
+                  "n": 1477,
+                  "rate": 0.155,
+                  "ci95": [
+                    0.1375,
+                    0.1744
+                  ]
+                },
+                "macro_f1": 0.9996
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 331,
+                  "n": 370,
+                  "rate": 0.8946,
+                  "ci95": [
+                    0.8591,
+                    0.9219
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 39,
+                  "n": 370,
+                  "rate": 0.1054,
+                  "ci95": [
+                    0.0781,
+                    0.1409
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 39,
+                  "n": 370,
+                  "rate": 0.1054,
+                  "ci95": [
+                    0.0781,
+                    0.1409
+                  ]
+                },
+                "abstain": {
+                  "k": 331,
+                  "n": 370,
+                  "rate": 0.8946,
+                  "ci95": [
+                    0.8591,
+                    0.9219
+                  ]
+                },
+                "macro_f1": 0.1889
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 370,
+                  "n": 370,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 370,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 370,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "abstain": {
+                  "k": 370,
+                  "n": 370,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "held_out_groups": [
+              "ALT",
+              "EOS",
+              "GLOB",
+              "MCV",
+              "NONHDL",
+              "TC",
+              "TC_HDL",
+              "WBC",
+              "unk:Amylase",
+              "unk:Clotting Time",
+              "unk:Ferritin",
+              "unk:Folic Acid",
+              "unk:INR",
+              "unk:LDH",
+              "unk:Potassium",
+              "unk:Prothrombin Time",
+              "unk:Pus Cells",
+              "unk:Vitamin D (25-OH)"
+            ]
+          },
+          {
+            "n_train": 1477,
+            "n_test": 370,
+            "threshold": 0.92,
+            "margin": 0.0,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1477,
+                  "n": 1477,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9974,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 1477,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0026
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 228,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0166
+                  ]
+                },
+                "abstain": {
+                  "k": 228,
+                  "n": 1477,
+                  "rate": 0.1544,
+                  "ci95": [
+                    0.1368,
+                    0.1737
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 370,
+                  "n": 370,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 370,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 370,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "abstain": {
+                  "k": 370,
+                  "n": 370,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "macro_f1": 1.0
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 370,
+                  "n": 370,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 370,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 370,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "abstain": {
+                  "k": 370,
+                  "n": 370,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "held_out_groups": [
+              "ALB",
+              "GGT",
+              "HB",
+              "MONO",
+              "PCV",
+              "PLT",
+              "RBC",
+              "TSH",
+              "unk:Apolipoprotein B",
+              "unk:C-Reactive Protein",
+              "unk:CPK",
+              "unk:Chloride",
+              "unk:Epithelial Cells",
+              "unk:Free T4",
+              "unk:Peripheral Smear",
+              "unk:Phosphorus",
+              "unk:Reticulocyte Count",
+              "unk:Transferrin Saturation"
+            ]
+          },
+          {
+            "n_train": 1479,
+            "n_test": 368,
+            "threshold": 0.9,
+            "margin": 0.18,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1448,
+                  "n": 1479,
+                  "rate": 0.979,
+                  "ci95": [
+                    0.9704,
+                    0.9852
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 1479,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0026
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 232,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0163
+                  ]
+                },
+                "abstain": {
+                  "k": 263,
+                  "n": 1479,
+                  "rate": 0.1778,
+                  "ci95": [
+                    0.1592,
+                    0.1981
+                  ]
+                },
+                "macro_f1": 0.984
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 368,
+                  "n": 368,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 368,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 368,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "abstain": {
+                  "k": 368,
+                  "n": 368,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "macro_f1": 1.0
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 368,
+                  "n": 368,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 368,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 368,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "abstain": {
+                  "k": 368,
+                  "n": 368,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "held_out_groups": [
+              "ALP",
+              "AST",
+              "DBIL",
+              "EAG",
+              "HDL",
+              "LYMPH",
+              "T3",
+              "TG",
+              "unk:Anti TPO",
+              "unk:Calcium",
+              "unk:ESR",
+              "unk:Insulin Fasting",
+              "unk:Ketone Bodies",
+              "unk:Lipase",
+              "unk:Serum Magnesium",
+              "unk:Specific Gravity",
+              "unk:Vitamin B12"
+            ]
+          },
+          {
+            "n_train": 1479,
+            "n_test": 368,
+            "threshold": 0.9,
+            "margin": 0.0,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1479,
+                  "n": 1479,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9974,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 1479,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0026
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 231,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0164
+                  ]
+                },
+                "abstain": {
+                  "k": 231,
+                  "n": 1479,
+                  "rate": 0.1562,
+                  "ci95": [
+                    0.1386,
+                    0.1756
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 342,
+                  "n": 368,
+                  "rate": 0.9293,
+                  "ci95": [
+                    0.8985,
+                    0.9513
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 26,
+                  "n": 368,
+                  "rate": 0.0707,
+                  "ci95": [
+                    0.0487,
+                    0.1015
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 26,
+                  "n": 368,
+                  "rate": 0.0707,
+                  "ci95": [
+                    0.0487,
+                    0.1015
+                  ]
+                },
+                "abstain": {
+                  "k": 342,
+                  "n": 368,
+                  "rate": 0.9293,
+                  "ci95": [
+                    0.8985,
+                    0.9513
+                  ]
+                },
+                "macro_f1": 0.2408
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 368,
+                  "n": 368,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 368,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 368,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0103
+                  ]
+                },
+                "abstain": {
+                  "k": 368,
+                  "n": 368,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9897,
+                    1.0
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "held_out_groups": [
+              "BASO",
+              "HBA1C",
+              "IBIL",
+              "LDL_HDL",
+              "NEUT",
+              "T4",
+              "TBIL",
+              "VLDL",
+              "unk:Absolute Neutrophil Count",
+              "unk:BUN",
+              "unk:Blood Urea",
+              "unk:Glucose Random",
+              "unk:HBsAg",
+              "unk:Microalbumin",
+              "unk:Serum Iron",
+              "unk:Uric Acid",
+              "unk:Urine Sugar"
+            ]
+          }
+        ],
+        "train": {
+          "model": {
+            "accuracy": {
+              "mean": 0.9957,
+              "std": 0.0083,
+              "pooled": {
+                "k": 7356,
+                "n": 7388,
+                "rate": 0.9957,
+                "ci95": [
+                  0.9939,
+                  0.9969
+                ]
+              }
+            },
+            "wrong_mapping": {
+              "mean": 0.0001,
+              "std": 0.0003,
+              "pooled": {
+                "k": 1,
+                "n": 7388,
+                "rate": 0.0001,
+                "ci95": [
+                  0.0,
+                  0.0008
+                ]
+              }
+            },
+            "unknown_wrong_mapping": {
+              "mean": 0.0009,
+              "std": 0.0017,
+              "pooled": {
+                "k": 1,
+                "n": 1132,
+                "rate": 0.0009,
+                "ci95": [
+                  0.0002,
+                  0.005
+                ]
+              }
+            },
+            "abstain": {
+              "mean": 0.1573,
+              "std": 0.0113,
+              "pooled": {
+                "k": 1162,
+                "n": 7388,
+                "rate": 0.1573,
+                "ci95": [
+                  0.1492,
+                  0.1658
+                ]
+              }
+            },
+            "macro_f1": {
+              "mean": 0.9967,
+              "std": 0.0064
+            }
+          }
+        },
+        "test": {
+          "model": {
+            "accuracy": {
+              "mean": 0.9589,
+              "std": 0.0413,
+              "pooled": {
+                "k": 1771,
+                "n": 1847,
+                "rate": 0.9589,
+                "ci95": [
+                  0.9488,
+                  0.967
+                ]
+              }
+            },
+            "wrong_mapping": {
+              "mean": 0.0411,
+              "std": 0.0413,
+              "pooled": {
+                "k": 76,
+                "n": 1847,
+                "rate": 0.0411,
+                "ci95": [
+                  0.033,
+                  0.0512
+                ]
+              }
+            },
+            "unknown_wrong_mapping": {
+              "mean": 0.0411,
+              "std": 0.0413,
+              "pooled": {
+                "k": 76,
+                "n": 1847,
+                "rate": 0.0411,
+                "ci95": [
+                  0.033,
+                  0.0512
+                ]
+              }
+            },
+            "abstain": {
+              "mean": 0.9589,
+              "std": 0.0413,
+              "pooled": {
+                "k": 1771,
+                "n": 1847,
+                "rate": 0.9589,
+                "ci95": [
+                  0.9488,
+                  0.967
+                ]
+              }
+            },
+            "macro_f1": {
+              "mean": 0.5352,
+              "std": 0.3801
+            }
+          },
+          "baseline_dict_train_fold": {
+            "accuracy": {
+              "mean": 1.0,
+              "std": 0.0,
+              "pooled": {
+                "k": 1847,
+                "n": 1847,
+                "rate": 1.0,
+                "ci95": [
+                  0.9979,
+                  1.0
+                ]
+              }
+            },
+            "wrong_mapping": {
+              "mean": 0.0,
+              "std": 0.0,
+              "pooled": {
+                "k": 0,
+                "n": 1847,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0021
+                ]
+              }
+            },
+            "unknown_wrong_mapping": {
+              "mean": 0.0,
+              "std": 0.0,
+              "pooled": {
+                "k": 0,
+                "n": 1847,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0021
+                ]
+              }
+            },
+            "abstain": {
+              "mean": 1.0,
+              "std": 0.0,
+              "pooled": {
+                "k": 1847,
+                "n": 1847,
+                "rate": 1.0,
+                "ci95": [
+                  0.9979,
+                  1.0
+                ]
+              }
+            },
+            "macro_f1": {
+              "mean": 1.0,
+              "std": 0.0
+            }
+          }
+        }
+      },
+      "by_rule": {
+        "grouping": "leave-one-rule-out over ['case', 'spacing', 'punct', 'typo', 'suffix', 'vowels', 'abbrev']; ['orig', 'gt_D'] always train",
+        "folds": [
+          {
+            "n_train": 1607,
+            "n_test": 240,
+            "threshold": 0.86,
+            "margin": 0.0,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1607,
+                  "n": 1607,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9976,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 1607,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0024
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 249,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0152
+                  ]
+                },
+                "abstain": {
+                  "k": 249,
+                  "n": 1607,
+                  "rate": 0.1549,
+                  "ci95": [
+                    0.1381,
+                    0.1735
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 240,
+                  "n": 240,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9842,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 240,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0158
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 34,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.1015
+                  ]
+                },
+                "abstain": {
+                  "k": 34,
+                  "n": 240,
+                  "rate": 0.1417,
+                  "ci95": [
+                    0.1032,
+                    0.1914
+                  ]
+                },
+                "macro_f1": 1.0
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 240,
+                  "n": 240,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9842,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 240,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0158
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 34,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.1015
+                  ]
+                },
+                "abstain": {
+                  "k": 34,
+                  "n": 240,
+                  "rate": 0.1417,
+                  "ci95": [
+                    0.1032,
+                    0.1914
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "held_out_groups": [
+              "case"
+            ]
+          },
+          {
+            "n_train": 1581,
+            "n_test": 266,
+            "threshold": 0.86,
+            "margin": 0.16,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1546,
+                  "n": 1581,
+                  "rate": 0.9779,
+                  "ci95": [
+                    0.9694,
+                    0.984
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 1581,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0024
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 243,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0156
+                  ]
+                },
+                "abstain": {
+                  "k": 278,
+                  "n": 1581,
+                  "rate": 0.1758,
+                  "ci95": [
+                    0.1579,
+                    0.1954
+                  ]
+                },
+                "macro_f1": 0.9843
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 215,
+                  "n": 266,
+                  "rate": 0.8083,
+                  "ci95": [
+                    0.7567,
+                    0.8511
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 266,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0142
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 40,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0876
+                  ]
+                },
+                "abstain": {
+                  "k": 91,
+                  "n": 266,
+                  "rate": 0.3421,
+                  "ci95": [
+                    0.2877,
+                    0.401
+                  ]
+                },
+                "macro_f1": 0.8697
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 266,
+                  "n": 266,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9858,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 266,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0142
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 40,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0876
+                  ]
+                },
+                "abstain": {
+                  "k": 40,
+                  "n": 266,
+                  "rate": 0.1504,
+                  "ci95": [
+                    0.1124,
+                    0.1983
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "held_out_groups": [
+              "spacing"
+            ]
+          },
+          {
+            "n_train": 1658,
+            "n_test": 189,
+            "threshold": 0.86,
+            "margin": 0.0,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1658,
+                  "n": 1658,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9977,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 1658,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0023
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 267,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0142
+                  ]
+                },
+                "abstain": {
+                  "k": 267,
+                  "n": 1658,
+                  "rate": 0.161,
+                  "ci95": [
+                    0.1441,
+                    0.1795
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 167,
+                  "n": 189,
+                  "rate": 0.8836,
+                  "ci95": [
+                    0.8301,
+                    0.9219
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 189,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0199
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 16,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.1936
+                  ]
+                },
+                "abstain": {
+                  "k": 38,
+                  "n": 189,
+                  "rate": 0.2011,
+                  "ci95": [
+                    0.1501,
+                    0.2639
+                  ]
+                },
+                "macro_f1": 0.9172
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 189,
+                  "n": 189,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9801,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 189,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0199
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 16,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.1936
+                  ]
+                },
+                "abstain": {
+                  "k": 16,
+                  "n": 189,
+                  "rate": 0.0847,
+                  "ci95": [
+                    0.0528,
+                    0.1331
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "held_out_groups": [
+              "punct"
+            ]
+          },
+          {
+            "n_train": 1465,
+            "n_test": 382,
+            "threshold": 0.86,
+            "margin": 0.0,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1465,
+                  "n": 1465,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9974,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 1465,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0026
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 241,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0157
+                  ]
+                },
+                "abstain": {
+                  "k": 241,
+                  "n": 1465,
+                  "rate": 0.1645,
+                  "ci95": [
+                    0.1464,
+                    0.1844
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 141,
+                  "n": 382,
+                  "rate": 0.3691,
+                  "ci95": [
+                    0.3222,
+                    0.4186
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 2,
+                  "n": 382,
+                  "rate": 0.0052,
+                  "ci95": [
+                    0.0014,
+                    0.0189
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 42,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0838
+                  ]
+                },
+                "abstain": {
+                  "k": 281,
+                  "n": 382,
+                  "rate": 0.7356,
+                  "ci95": [
+                    0.6892,
+                    0.7773
+                  ]
+                },
+                "macro_f1": 0.4097
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 76,
+                  "n": 382,
+                  "rate": 0.199,
+                  "ci95": [
+                    0.162,
+                    0.2419
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 382,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.01
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 42,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0838
+                  ]
+                },
+                "abstain": {
+                  "k": 348,
+                  "n": 382,
+                  "rate": 0.911,
+                  "ci95": [
+                    0.8782,
+                    0.9356
+                  ]
+                },
+                "macro_f1": 0.1552
+              }
+            },
+            "held_out_groups": [
+              "typo"
+            ]
+          },
+          {
+            "n_train": 1508,
+            "n_test": 339,
+            "threshold": 0.82,
+            "margin": 0.0,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1508,
+                  "n": 1508,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9975,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 1508,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0025
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 233,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0162
+                  ]
+                },
+                "abstain": {
+                  "k": 233,
+                  "n": 1508,
+                  "rate": 0.1545,
+                  "ci95": [
+                    0.1371,
+                    0.1736
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 282,
+                  "n": 339,
+                  "rate": 0.8319,
+                  "ci95": [
+                    0.7884,
+                    0.8679
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 3,
+                  "n": 339,
+                  "rate": 0.0088,
+                  "ci95": [
+                    0.003,
+                    0.0257
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 1,
+                  "n": 50,
+                  "rate": 0.02,
+                  "ci95": [
+                    0.0035,
+                    0.105
+                  ]
+                },
+                "abstain": {
+                  "k": 103,
+                  "n": 339,
+                  "rate": 0.3038,
+                  "ci95": [
+                    0.2573,
+                    0.3548
+                  ]
+                },
+                "macro_f1": 0.8847
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 52,
+                  "n": 339,
+                  "rate": 0.1534,
+                  "ci95": [
+                    0.1189,
+                    0.1956
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 339,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0112
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 50,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0714
+                  ]
+                },
+                "abstain": {
+                  "k": 337,
+                  "n": 339,
+                  "rate": 0.9941,
+                  "ci95": [
+                    0.9787,
+                    0.9984
+                  ]
+                },
+                "macro_f1": 0.0142
+              }
+            },
+            "held_out_groups": [
+              "suffix"
+            ]
+          },
+          {
+            "n_train": 1697,
+            "n_test": 150,
+            "threshold": 0.86,
+            "margin": 0.0,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1697,
+                  "n": 1697,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9977,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 1697,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0023
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 244,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0155
+                  ]
+                },
+                "abstain": {
+                  "k": 244,
+                  "n": 1697,
+                  "rate": 0.1438,
+                  "ci95": [
+                    0.1279,
+                    0.1613
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 48,
+                  "n": 150,
+                  "rate": 0.32,
+                  "ci95": [
+                    0.2506,
+                    0.3983
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 150,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.025
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 39,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0897
+                  ]
+                },
+                "abstain": {
+                  "k": 141,
+                  "n": 150,
+                  "rate": 0.94,
+                  "ci95": [
+                    0.8899,
+                    0.9681
+                  ]
+                },
+                "macro_f1": 0.1067
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 41,
+                  "n": 150,
+                  "rate": 0.2733,
+                  "ci95": [
+                    0.2083,
+                    0.3496
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 150,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.025
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 39,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0897
+                  ]
+                },
+                "abstain": {
+                  "k": 148,
+                  "n": 150,
+                  "rate": 0.9867,
+                  "ci95": [
+                    0.9527,
+                    0.9963
+                  ]
+                },
+                "macro_f1": 0.0304
+              }
+            },
+            "held_out_groups": [
+              "vowels"
+            ]
+          },
+          {
+            "n_train": 1761,
+            "n_test": 86,
+            "threshold": 0.86,
+            "margin": 0.0,
+            "train": {
+              "model": {
+                "accuracy": {
+                  "k": 1761,
+                  "n": 1761,
+                  "rate": 1.0,
+                  "ci95": [
+                    0.9978,
+                    1.0
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 1761,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0022
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 271,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.014
+                  ]
+                },
+                "abstain": {
+                  "k": 271,
+                  "n": 1761,
+                  "rate": 0.1539,
+                  "ci95": [
+                    0.1378,
+                    0.1715
+                  ]
+                },
+                "macro_f1": 1.0
+              }
+            },
+            "test": {
+              "model": {
+                "accuracy": {
+                  "k": 34,
+                  "n": 86,
+                  "rate": 0.3953,
+                  "ci95": [
+                    0.2986,
+                    0.501
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 86,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0428
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 12,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.2425
+                  ]
+                },
+                "abstain": {
+                  "k": 64,
+                  "n": 86,
+                  "rate": 0.7442,
+                  "ci95": [
+                    0.6429,
+                    0.8246
+                  ]
+                },
+                "macro_f1": 0.4054
+              },
+              "baseline_dict_train_fold": {
+                "accuracy": {
+                  "k": 17,
+                  "n": 86,
+                  "rate": 0.1977,
+                  "ci95": [
+                    0.1272,
+                    0.294
+                  ]
+                },
+                "wrong_mapping": {
+                  "k": 0,
+                  "n": 86,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.0428
+                  ]
+                },
+                "unknown_wrong_mapping": {
+                  "k": 0,
+                  "n": 12,
+                  "rate": 0.0,
+                  "ci95": [
+                    0.0,
+                    0.2425
+                  ]
+                },
+                "abstain": {
+                  "k": 81,
+                  "n": 86,
+                  "rate": 0.9419,
+                  "ci95": [
+                    0.871,
+                    0.9749
+                  ]
+                },
+                "macro_f1": 0.0799
+              }
+            },
+            "held_out_groups": [
+              "abbrev"
+            ]
+          }
+        ],
+        "train": {
+          "model": {
+            "accuracy": {
+              "mean": 0.9968,
+              "std": 0.0077,
+              "pooled": {
+                "k": 11242,
+                "n": 11277,
+                "rate": 0.9969,
+                "ci95": [
+                  0.9957,
+                  0.9978
+                ]
+              }
+            },
+            "wrong_mapping": {
+              "mean": 0.0,
+              "std": 0.0,
+              "pooled": {
+                "k": 0,
+                "n": 11277,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0003
+                ]
+              }
+            },
+            "unknown_wrong_mapping": {
+              "mean": 0.0,
+              "std": 0.0,
+              "pooled": {
+                "k": 0,
+                "n": 1748,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0022
+                ]
+              }
+            },
+            "abstain": {
+              "mean": 0.1583,
+              "std": 0.0093,
+              "pooled": {
+                "k": 1783,
+                "n": 11277,
+                "rate": 0.1581,
+                "ci95": [
+                  0.1515,
+                  0.165
+                ]
+              }
+            },
+            "macro_f1": {
+              "mean": 0.9978,
+              "std": 0.0055
+            }
+          }
+        },
+        "test": {
+          "model": {
+            "accuracy": {
+              "mean": 0.6583,
+              "std": 0.2639,
+              "pooled": {
+                "k": 1127,
+                "n": 1652,
+                "rate": 0.6822,
+                "ci95": [
+                  0.6593,
+                  0.7042
+                ]
+              }
+            },
+            "wrong_mapping": {
+              "mean": 0.002,
+              "std": 0.0033,
+              "pooled": {
+                "k": 5,
+                "n": 1652,
+                "rate": 0.003,
+                "ci95": [
+                  0.0013,
+                  0.0071
+                ]
+              }
+            },
+            "unknown_wrong_mapping": {
+              "mean": 0.0029,
+              "std": 0.007,
+              "pooled": {
+                "k": 1,
+                "n": 233,
+                "rate": 0.0043,
+                "ci95": [
+                  0.0008,
+                  0.0239
+                ]
+              }
+            },
+            "abstain": {
+              "mean": 0.4869,
+              "std": 0.29,
+              "pooled": {
+                "k": 752,
+                "n": 1652,
+                "rate": 0.4552,
+                "ci95": [
+                  0.4313,
+                  0.4793
+                ]
+              }
+            },
+            "macro_f1": {
+              "mean": 0.6562,
+              "std": 0.3184
+            }
+          },
+          "baseline_dict_train_fold": {
+            "accuracy": {
+              "mean": 0.5462,
+              "std": 0.3943,
+              "pooled": {
+                "k": 881,
+                "n": 1652,
+                "rate": 0.5333,
+                "ci95": [
+                  0.5092,
+                  0.5572
+                ]
+              }
+            },
+            "wrong_mapping": {
+              "mean": 0.0,
+              "std": 0.0,
+              "pooled": {
+                "k": 0,
+                "n": 1652,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0023
+                ]
+              }
+            },
+            "unknown_wrong_mapping": {
+              "mean": 0.0,
+              "std": 0.0,
+              "pooled": {
+                "k": 0,
+                "n": 233,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0162
+                ]
+              }
+            },
+            "abstain": {
+              "mean": 0.6015,
+              "std": 0.4134,
+              "pooled": {
+                "k": 1004,
+                "n": 1652,
+                "rate": 0.6077,
+                "ci95": [
+                  0.584,
+                  0.631
+                ]
+              }
+            },
+            "macro_f1": {
+              "mean": 0.4685,
+              "std": 0.4621
+            }
+          }
+        }
+      }
+    },
+    "eval": {
+      "n_train_pool": 1701,
+      "threshold": 0.92,
+      "margin": 0.28,
+      "e_exact_strings_also_in_pool": 75,
+      "model": {
+        "accuracy": {
+          "k": 93,
+          "n": 102,
+          "rate": 0.9118,
+          "ci95": [
+            0.8408,
+            0.9529
+          ]
+        },
+        "wrong_mapping": {
+          "k": 0,
+          "n": 102,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0363
+          ]
+        },
+        "unknown_wrong_mapping": {
+          "k": 0,
+          "n": 25,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1332
+          ]
+        },
+        "abstain": {
+          "k": 34,
+          "n": 102,
+          "rate": 0.3333,
+          "ci95": [
+            0.2494,
+            0.4294
+          ]
+        },
+        "macro_f1": 0.8962
+      },
+      "hybrid_dict_then_model": {
+        "accuracy": {
+          "k": 101,
+          "n": 102,
+          "rate": 0.9902,
+          "ci95": [
+            0.9465,
+            0.9983
+          ]
+        },
+        "wrong_mapping": {
+          "k": 0,
+          "n": 102,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0363
+          ]
+        },
+        "unknown_wrong_mapping": {
+          "k": 0,
+          "n": 25,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1332
+          ]
+        },
+        "abstain": {
+          "k": 26,
+          "n": 102,
+          "rate": 0.2549,
+          "ci95": [
+            0.1803,
+            0.3473
+          ]
+        },
+        "macro_f1": 0.9945
+      },
+      "baseline_dict_all_panels": {
+        "accuracy": {
+          "k": 101,
+          "n": 102,
+          "rate": 0.9902,
+          "ci95": [
+            0.9465,
+            0.9983
+          ]
+        },
+        "wrong_mapping": {
+          "k": 0,
+          "n": 102,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0363
+          ]
+        },
+        "unknown_wrong_mapping": {
+          "k": 0,
+          "n": 25,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1332
+          ]
+        },
+        "abstain": {
+          "k": 26,
+          "n": 102,
+          "rate": 0.2549,
+          "ci95": [
+            0.1803,
+            0.3473
+          ]
+        },
+        "macro_f1": 0.9945
+      }
+    }
+  },
+  "pattern_model": {
+    "cv": {
+      "grouping": "GroupKFold, group = exact flag vector (no duplicate input in train and test)",
+      "n_groups": 2893,
+      "folds": [
+        {
+          "n_train": 3212,
+          "n_test": 803,
+          "train": {
+            "model": {
+              "exact_match": {
+                "k": 2890,
+                "n": 3212,
+                "rate": 0.8998,
+                "ci95": [
+                  0.8889,
+                  0.9097
+                ]
+              },
+              "macro_f1": 0.9291,
+              "false_pattern": {
+                "k": 1,
+                "n": 16060,
+                "rate": 0.0001,
+                "ci95": [
+                  0.0,
+                  0.0004
+                ]
+              }
+            }
+          },
+          "test": {
+            "model": {
+              "exact_match": {
+                "k": 727,
+                "n": 803,
+                "rate": 0.9054,
+                "ci95": [
+                  0.8831,
+                  0.9237
+                ]
+              },
+              "macro_f1": 0.9074,
+              "false_pattern": {
+                "k": 1,
+                "n": 4015,
+                "rate": 0.0002,
+                "ci95": [
+                  0.0,
+                  0.0014
+                ]
+              }
+            },
+            "baseline_rule_R3": {
+              "exact_match": {
+                "k": 490,
+                "n": 803,
+                "rate": 0.6102,
+                "ci95": [
+                  0.576,
+                  0.6433
+                ]
+              },
+              "macro_f1": 0.0304,
+              "false_pattern": {
+                "k": 0,
+                "n": 4015,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.001
+                ]
+              }
+            }
+          }
+        },
+        {
+          "n_train": 3212,
+          "n_test": 803,
+          "train": {
+            "model": {
+              "exact_match": {
+                "k": 2904,
+                "n": 3212,
+                "rate": 0.9041,
+                "ci95": [
+                  0.8934,
+                  0.9138
+                ]
+              },
+              "macro_f1": 0.9296,
+              "false_pattern": {
+                "k": 0,
+                "n": 16060,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0002
+                ]
+              }
+            }
+          },
+          "test": {
+            "model": {
+              "exact_match": {
+                "k": 716,
+                "n": 803,
+                "rate": 0.8917,
+                "ci95": [
+                  0.8683,
+                  0.9113
+                ]
+              },
+              "macro_f1": 0.907,
+              "false_pattern": {
+                "k": 4,
+                "n": 4015,
+                "rate": 0.001,
+                "ci95": [
+                  0.0004,
+                  0.0026
+                ]
+              }
+            },
+            "baseline_rule_R3": {
+              "exact_match": {
+                "k": 384,
+                "n": 803,
+                "rate": 0.4782,
+                "ci95": [
+                  0.4438,
+                  0.5128
+                ]
+              },
+              "macro_f1": 0.1856,
+              "false_pattern": {
+                "k": 0,
+                "n": 4015,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.001
+                ]
+              }
+            }
+          }
+        },
+        {
+          "n_train": 3212,
+          "n_test": 803,
+          "train": {
+            "model": {
+              "exact_match": {
+                "k": 2900,
+                "n": 3212,
+                "rate": 0.9029,
+                "ci95": [
+                  0.8921,
+                  0.9126
+                ]
+              },
+              "macro_f1": 0.8387,
+              "false_pattern": {
+                "k": 11,
+                "n": 16060,
+                "rate": 0.0007,
+                "ci95": [
+                  0.0004,
+                  0.0012
+                ]
+              }
+            }
+          },
+          "test": {
+            "model": {
+              "exact_match": {
+                "k": 629,
+                "n": 803,
+                "rate": 0.7833,
+                "ci95": [
+                  0.7535,
+                  0.8104
+                ]
+              },
+              "macro_f1": 0.7752,
+              "false_pattern": {
+                "k": 6,
+                "n": 4015,
+                "rate": 0.0015,
+                "ci95": [
+                  0.0007,
+                  0.0033
+                ]
+              }
+            },
+            "baseline_rule_R3": {
+              "exact_match": {
+                "k": 397,
+                "n": 803,
+                "rate": 0.4944,
+                "ci95": [
+                  0.4599,
+                  0.5289
+                ]
+              },
+              "macro_f1": 0.3028,
+              "false_pattern": {
+                "k": 0,
+                "n": 4015,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.001
+                ]
+              }
+            }
+          }
+        },
+        {
+          "n_train": 3212,
+          "n_test": 803,
+          "train": {
+            "model": {
+              "exact_match": {
+                "k": 2929,
+                "n": 3212,
+                "rate": 0.9119,
+                "ci95": [
+                  0.9016,
+                  0.9212
+                ]
+              },
+              "macro_f1": 0.9338,
+              "false_pattern": {
+                "k": 0,
+                "n": 16060,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0002
+                ]
+              }
+            }
+          },
+          "test": {
+            "model": {
+              "exact_match": {
+                "k": 693,
+                "n": 803,
+                "rate": 0.863,
+                "ci95": [
+                  0.8375,
+                  0.8851
+                ]
+              },
+              "macro_f1": 0.8919,
+              "false_pattern": {
+                "k": 2,
+                "n": 4015,
+                "rate": 0.0005,
+                "ci95": [
+                  0.0001,
+                  0.0018
+                ]
+              }
+            },
+            "baseline_rule_R3": {
+              "exact_match": {
+                "k": 392,
+                "n": 803,
+                "rate": 0.4882,
+                "ci95": [
+                  0.4537,
+                  0.5227
+                ]
+              },
+              "macro_f1": 0.1933,
+              "false_pattern": {
+                "k": 0,
+                "n": 4015,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.001
+                ]
+              }
+            }
+          }
+        },
+        {
+          "n_train": 3212,
+          "n_test": 803,
+          "train": {
+            "model": {
+              "exact_match": {
+                "k": 2899,
+                "n": 3212,
+                "rate": 0.9026,
+                "ci95": [
+                  0.8918,
+                  0.9123
+                ]
+              },
+              "macro_f1": 0.928,
+              "false_pattern": {
+                "k": 3,
+                "n": 16060,
+                "rate": 0.0002,
+                "ci95": [
+                  0.0001,
+                  0.0005
+                ]
+              }
+            }
+          },
+          "test": {
+            "model": {
+              "exact_match": {
+                "k": 725,
+                "n": 803,
+                "rate": 0.9029,
+                "ci95": [
+                  0.8804,
+                  0.9215
+                ]
+              },
+              "macro_f1": 0.9275,
+              "false_pattern": {
+                "k": 2,
+                "n": 4015,
+                "rate": 0.0005,
+                "ci95": [
+                  0.0001,
+                  0.0018
+                ]
+              }
+            },
+            "baseline_rule_R3": {
+              "exact_match": {
+                "k": 395,
+                "n": 803,
+                "rate": 0.4919,
+                "ci95": [
+                  0.4574,
+                  0.5264
+                ]
+              },
+              "macro_f1": 0.1998,
+              "false_pattern": {
+                "k": 0,
+                "n": 4015,
+                "rate": 0.0,
+                "ci95": [
+                  0.0,
+                  0.001
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "train": {
+        "model": {
+          "exact_match": {
+            "mean": 0.9043,
+            "std": 0.0041,
+            "pooled": {
+              "k": 14522,
+              "n": 16060,
+              "rate": 0.9042,
+              "ci95": [
+                0.8996,
+                0.9087
+              ]
+            }
+          },
+          "macro_f1": {
+            "mean": 0.9118,
+            "std": 0.0366
+          },
+          "false_pattern": {
+            "mean": 0.0002,
+            "std": 0.0003,
+            "pooled": {
+              "k": 15,
+              "n": 80300,
+              "rate": 0.0002,
+              "ci95": [
+                0.0001,
+                0.0003
+              ]
+            }
+          }
+        }
+      },
+      "test": {
+        "model": {
+          "exact_match": {
+            "mean": 0.8693,
+            "std": 0.0455,
+            "pooled": {
+              "k": 3490,
+              "n": 4015,
+              "rate": 0.8692,
+              "ci95": [
+                0.8585,
+                0.8793
+              ]
+            }
+          },
+          "macro_f1": {
+            "mean": 0.8818,
+            "std": 0.0545
+          },
+          "false_pattern": {
+            "mean": 0.0007,
+            "std": 0.0005,
+            "pooled": {
+              "k": 15,
+              "n": 20075,
+              "rate": 0.0007,
+              "ci95": [
+                0.0005,
+                0.0012
+              ]
+            }
+          }
+        },
+        "baseline_rule_R3": {
+          "exact_match": {
+            "mean": 0.5126,
+            "std": 0.0491,
+            "pooled": {
+              "k": 2058,
+              "n": 4015,
+              "rate": 0.5126,
+              "ci95": [
+                0.4971,
+                0.528
+              ]
+            }
+          },
+          "macro_f1": {
+            "mean": 0.1824,
+            "std": 0.0872
+          },
+          "false_pattern": {
+            "mean": 0.0,
+            "std": 0.0,
+            "pooled": {
+              "k": 0,
+              "n": 20075,
+              "rate": 0.0,
+              "ci95": [
+                0.0,
+                0.0002
+              ]
+            }
+          }
+        }
+      }
+    },
+    "eval": {
+      "model": {
+        "exact_match": {
+          "k": 27,
+          "n": 30,
+          "rate": 0.9,
+          "ci95": [
+            0.7438,
+            0.9654
+          ]
+        },
+        "macro_f1": 0.88,
+        "false_pattern": {
+          "k": 0,
+          "n": 150,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        }
+      },
+      "baseline_rule_R3": {
+        "exact_match": {
+          "k": 29,
+          "n": 30,
+          "rate": 0.9667,
+          "ci95": [
+            0.8333,
+            0.9941
+          ]
+        },
+        "macro_f1": 0.9333,
+        "false_pattern": {
+          "k": 0,
+          "n": 150,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.025
+          ]
+        }
+      }
+    }
+  },
+  "flag_model": {
+    "cv": {
+      "grouping": "GroupKFold, group = test_id (unseen reference ranges/scales in the test fold); rules_flag_engine is 1.0 by construction because labels are flag_engine output",
+      "folds": [
+        {
+          "n_train": 7200,
+          "n_test": 1800,
+          "held_out_groups": [
+            "AST",
+            "BASO",
+            "IBIL",
+            "MCHC",
+            "PLT",
+            "RBC",
+            "TC"
+          ],
+          "train": {
+            "model": {
+              "accuracy": {
+                "k": 6123,
+                "n": 7200,
+                "rate": 0.8504,
+                "ci95": [
+                  0.842,
+                  0.8585
+                ]
+              },
+              "critical_recall": {
+                "k": 126,
+                "n": 153,
+                "rate": 0.8235,
+                "ci95": [
+                  0.7554,
+                  0.8758
+                ]
+              },
+              "macro_f1": 0.8487
+            }
+          },
+          "test": {
+            "model": {
+              "accuracy": {
+                "k": 1212,
+                "n": 1800,
+                "rate": 0.6733,
+                "ci95": [
+                  0.6513,
+                  0.6946
+                ]
+              },
+              "critical_recall": {
+                "k": 66,
+                "n": 66,
+                "rate": 1.0,
+                "ci95": [
+                  0.945,
+                  1.0
+                ]
+              },
+              "macro_f1": 0.5764
+            },
+            "rules_flag_engine": {
+              "accuracy": {
+                "k": 1800,
+                "n": 1800,
+                "rate": 1.0,
+                "ci95": [
+                  0.9979,
+                  1.0
+                ]
+              },
+              "critical_recall": {
+                "k": 66,
+                "n": 66,
+                "rate": 1.0,
+                "ci95": [
+                  0.945,
+                  1.0
+                ]
+              },
+              "macro_f1": 1.0
+            }
+          }
+        },
+        {
+          "n_train": 7200,
+          "n_test": 1800,
+          "held_out_groups": [
+            "ALT",
+            "AST_ALT",
+            "HBA1C",
+            "MCH",
+            "NONHDL",
+            "PCV",
+            "TBIL"
+          ],
+          "train": {
+            "model": {
+              "accuracy": {
+                "k": 6731,
+                "n": 7200,
+                "rate": 0.9349,
+                "ci95": [
+                  0.9289,
+                  0.9403
+                ]
+              },
+              "critical_recall": {
+                "k": 159,
+                "n": 159,
+                "rate": 1.0,
+                "ci95": [
+                  0.9764,
+                  1.0
+                ]
+              },
+              "macro_f1": 0.9378
+            }
+          },
+          "test": {
+            "model": {
+              "accuracy": {
+                "k": 1332,
+                "n": 1800,
+                "rate": 0.74,
+                "ci95": [
+                  0.7192,
+                  0.7597
+                ]
+              },
+              "critical_recall": {
+                "k": 60,
+                "n": 60,
+                "rate": 1.0,
+                "ci95": [
+                  0.9398,
+                  1.0
+                ]
+              },
+              "macro_f1": 0.7094
+            },
+            "rules_flag_engine": {
+              "accuracy": {
+                "k": 1800,
+                "n": 1800,
+                "rate": 1.0,
+                "ci95": [
+                  0.9979,
+                  1.0
+                ]
+              },
+              "critical_recall": {
+                "k": 60,
+                "n": 60,
+                "rate": 1.0,
+                "ci95": [
+                  0.9398,
+                  1.0
+                ]
+              },
+              "macro_f1": 1.0
+            }
+          }
+        },
+        {
+          "n_train": 7200,
+          "n_test": 1800,
+          "held_out_groups": [
+            "ALP",
+            "GLOB",
+            "HDL",
+            "LYMPH",
+            "NEUT",
+            "T4",
+            "TP",
+            "WBC"
+          ],
+          "train": {
+            "model": {
+              "accuracy": {
+                "k": 6692,
+                "n": 7200,
+                "rate": 0.9294,
+                "ci95": [
+                  0.9233,
+                  0.9351
+                ]
+              },
+              "critical_recall": {
+                "k": 171,
+                "n": 171,
+                "rate": 1.0,
+                "ci95": [
+                  0.978,
+                  1.0
+                ]
+              },
+              "macro_f1": 0.9184
+            }
+          },
+          "test": {
+            "model": {
+              "accuracy": {
+                "k": 1213,
+                "n": 1800,
+                "rate": 0.6739,
+                "ci95": [
+                  0.6519,
+                  0.6952
+                ]
+              },
+              "critical_recall": {
+                "k": 48,
+                "n": 48,
+                "rate": 1.0,
+                "ci95": [
+                  0.9259,
+                  1.0
+                ]
+              },
+              "macro_f1": 0.6812
+            },
+            "rules_flag_engine": {
+              "accuracy": {
+                "k": 1800,
+                "n": 1800,
+                "rate": 1.0,
+                "ci95": [
+                  0.9979,
+                  1.0
+                ]
+              },
+              "critical_recall": {
+                "k": 48,
+                "n": 48,
+                "rate": 1.0,
+                "ci95": [
+                  0.9259,
+                  1.0
+                ]
+              },
+              "macro_f1": 1.0
+            }
+          }
+        },
+        {
+          "n_train": 7200,
+          "n_test": 1800,
+          "held_out_groups": [
+            "ALB",
+            "EOS",
+            "HB",
+            "LDL_HDL",
+            "MONO",
+            "T3",
+            "TG",
+            "VLDL"
+          ],
+          "train": {
+            "model": {
+              "accuracy": {
+                "k": 6885,
+                "n": 7200,
+                "rate": 0.9563,
+                "ci95": [
+                  0.9513,
+                  0.9607
+                ]
+              },
+              "critical_recall": {
+                "k": 174,
+                "n": 174,
+                "rate": 1.0,
+                "ci95": [
+                  0.9784,
+                  1.0
+                ]
+              },
+              "macro_f1": 0.9532
+            }
+          },
+          "test": {
+            "model": {
+              "accuracy": {
+                "k": 1289,
+                "n": 1800,
+                "rate": 0.7161,
+                "ci95": [
+                  0.6948,
+                  0.7365
+                ]
+              },
+              "critical_recall": {
+                "k": 40,
+                "n": 45,
+                "rate": 0.8889,
+                "ci95": [
+                  0.765,
+                  0.9516
+                ]
+              },
+              "macro_f1": 0.7058
+            },
+            "rules_flag_engine": {
+              "accuracy": {
+                "k": 1800,
+                "n": 1800,
+                "rate": 1.0,
+                "ci95": [
+                  0.9979,
+                  1.0
+                ]
+              },
+              "critical_recall": {
+                "k": 45,
+                "n": 45,
+                "rate": 1.0,
+                "ci95": [
+                  0.9213,
+                  1.0
+                ]
+              },
+              "macro_f1": 1.0
+            }
+          }
+        },
+        {
+          "n_train": 7200,
+          "n_test": 1800,
+          "held_out_groups": [
+            "AG",
+            "DBIL",
+            "GGT",
+            "LDL",
+            "MCV",
+            "RDW",
+            "TC_HDL",
+            "TSH"
+          ],
+          "train": {
+            "model": {
+              "accuracy": {
+                "k": 6839,
+                "n": 7200,
+                "rate": 0.9499,
+                "ci95": [
+                  0.9446,
+                  0.9547
+                ]
+              },
+              "critical_recall": {
+                "k": 219,
+                "n": 219,
+                "rate": 1.0,
+                "ci95": [
+                  0.9828,
+                  1.0
+                ]
+              },
+              "macro_f1": 0.945
+            }
+          },
+          "test": {
+            "model": {
+              "accuracy": {
+                "k": 1149,
+                "n": 1800,
+                "rate": 0.6383,
+                "ci95": [
+                  0.6159,
+                  0.6602
+                ]
+              },
+              "critical_recall": {
+                "k": 0,
+                "n": 0,
+                "rate": null,
+                "ci95": null
+              },
+              "macro_f1": 0.6314
+            },
+            "rules_flag_engine": {
+              "accuracy": {
+                "k": 1800,
+                "n": 1800,
+                "rate": 1.0,
+                "ci95": [
+                  0.9979,
+                  1.0
+                ]
+              },
+              "critical_recall": {
+                "k": 0,
+                "n": 0,
+                "rate": null,
+                "ci95": null
+              },
+              "macro_f1": 1.0
+            }
+          }
+        }
+      ],
+      "train": {
+        "model": {
+          "accuracy": {
+            "mean": 0.9242,
+            "std": 0.0382,
+            "pooled": {
+              "k": 33270,
+              "n": 36000,
+              "rate": 0.9242,
+              "ci95": [
+                0.9214,
+                0.9269
+              ]
+            }
+          },
+          "critical_recall": {
+            "mean": 0.9647,
+            "std": 0.0706,
+            "pooled": {
+              "k": 849,
+              "n": 876,
+              "rate": 0.9692,
+              "ci95": [
+                0.9555,
+                0.9787
+              ]
+            }
+          },
+          "macro_f1": {
+            "mean": 0.9206,
+            "std": 0.0378
+          }
+        }
+      },
+      "test": {
+        "model": {
+          "accuracy": {
+            "mean": 0.6883,
+            "std": 0.0357,
+            "pooled": {
+              "k": 6195,
+              "n": 9000,
+              "rate": 0.6883,
+              "ci95": [
+                0.6787,
+                0.6978
+              ]
+            }
+          },
+          "critical_recall": {
+            "mean": 0.9722,
+            "std": 0.0481,
+            "pooled": {
+              "k": 214,
+              "n": 219,
+              "rate": 0.9772,
+              "ci95": [
+                0.9477,
+                0.9902
+              ]
+            }
+          },
+          "macro_f1": {
+            "mean": 0.6608,
+            "std": 0.0506
+          }
+        },
+        "rules_flag_engine": {
+          "accuracy": {
+            "mean": 1.0,
+            "std": 0.0,
+            "pooled": {
+              "k": 9000,
+              "n": 9000,
+              "rate": 1.0,
+              "ci95": [
+                0.9996,
+                1.0
+              ]
+            }
+          },
+          "critical_recall": {
+            "mean": 1.0,
+            "std": 0.0,
+            "pooled": {
+              "k": 219,
+              "n": 219,
+              "rate": 1.0,
+              "ci95": [
+                0.9828,
+                1.0
+              ]
+            }
+          },
+          "macro_f1": {
+            "mean": 1.0,
+            "std": 0.0
+          }
+        }
+      }
+    },
+    "eval": {
+      "model": {
+        "accuracy": {
+          "k": 221,
+          "n": 243,
+          "rate": 0.9095,
+          "ci95": [
+            0.8667,
+            0.9395
+          ]
+        },
+        "critical_recall": {
+          "k": 2,
+          "n": 2,
+          "rate": 1.0,
+          "ci95": [
+            0.3424,
+            1.0
+          ]
+        },
+        "macro_f1": 0.82
+      },
+      "rules_flag_engine": {
+        "accuracy": {
+          "k": 243,
+          "n": 243,
+          "rate": 1.0,
+          "ci95": [
+            0.9844,
+            1.0
+          ]
+        },
+        "critical_recall": {
+          "k": 2,
+          "n": 2,
+          "rate": 1.0,
+          "ci95": [
+            0.3424,
+            1.0
+          ]
+        },
+        "macro_f1": 1.0
+      }
+    }
+  }
+}
