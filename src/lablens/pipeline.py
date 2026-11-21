@@ -22,14 +22,14 @@ from lablens.budget import BudgetExceeded, BudgetGuard
 from lablens.decision import route_next_step
 from lablens.extract import LlmCaller, NoOutput, ProviderUnavailable, Usage, extract_report, version as extract_version
 from lablens.flag_engine import flag_tests
-from lablens.ml.pattern_model import pattern_model
+from lablens.ml.pattern_model import pattern_model as detect_patterns
 from lablens.redact import RedactedDoc, redact_pii
 from lablens.safety import SafetyFailure, safety_check
 from lablens.templates import template_fallback
 from lablens.schemas import (Explanation, Extraction, FlaggedTest, Recommendation,
                              ReportResult, RunMetrics, ValidatedReport)
 from google.adk.workflow import JoinNode
-from lablens.validate import validate as validate_extraction
+from lablens.validate import resolve_names, validate as validate_extraction
 
 PIPELINE_ID = "explain_v1"
 log = logging.getLogger("lablens.pipeline")
@@ -120,8 +120,17 @@ async def extract(node_input: RedactedDoc, ctx: Context):
 
 # ADK strips None values from node outputs (models and dicts), which breaks required-nullable
 # fields such as ExtractedTest.remark, so these nodes hand data over via ctx.state as JSON.
+def normalize_names(node_input: Extraction, ctx: Context) -> Extraction:
+    """(ML) Printed name -> test id: panels.yaml aliases, then the trained matcher, then the
+    LLM's own hint. Matches from the model or the hint are marked "please verify" by validate."""
+    names = resolve_names(node_input)
+    ctx.state["names"] = {raw: list(v) for raw, v in names.items()}
+    return node_input
+
+
 def validate(node_input: Extraction, ctx: Context) -> str:
-    v = validate_extraction(node_input, ctx.state.get("redacted_text", ""))
+    names = {raw: tuple(v) for raw, v in (ctx.state.get("names") or {}).items()}
+    v = validate_extraction(node_input, ctx.state.get("redacted_text", ""), names=names)
     ctx.state["validated"] = v.model_dump(mode="json")
     return "validated"
 
@@ -130,6 +139,12 @@ def flag_engine(node_input: str, ctx: Context) -> str:
     v = ValidatedReport.model_validate(ctx.state["validated"])
     ctx.state["flagged"] = Flagged(tests=flag_tests(v.tests)).model_dump(mode="json")
     return "flagged"
+
+
+def pattern_model(node_input: str, ctx: Context) -> str:
+    """(ML) Abnormal results that occur together, worded neutrally with no condition names."""
+    ctx.state["patterns"] = detect_patterns(_tests(ctx))
+    return "patterns"
 
 
 def _tests(ctx: Context) -> list[FlaggedTest]:
@@ -314,7 +329,7 @@ def finalize(node_input, ctx: Context) -> str:
         report_id=ctx.state["file_sha"][:16], status="partial" if partial else "complete",
         report_date=v.report_date, panels=v.panels, tests=tests,
         unrecognised_tests=v.unrecognised_tests, lab_remarks=v.lab_remarks,
-        patterns=pattern_model(tests),
+        patterns=list(ctx.state.get("patterns") or []),
         explanations=[Explanation.model_validate(e) for e in ctx.state["explanations"]],
         recommendation=rec, low_confidence_tests=v.low_confidence_tests, warnings=warnings,
         metrics=RunMetrics(latency_ms=latency, tokens_in=u.tokens_in,
@@ -334,8 +349,8 @@ workflow = Workflow(
         ("START", input_guard),
         (input_guard, {"OK": redact, "REJECT": reject}),
         (redact, extract),
-        (extract, {"OK": validate, "BUDGET": budget_reject}),
-        (validate, flag_engine, decision),
+        (extract, {"OK": normalize_names, "BUDGET": budget_reject}),
+        (normalize_names, validate, flag_engine, pattern_model, decision),
         (decision, {"LLM": plan_statements, "FALLBACK": fallback}),
         (plan_statements, (render_en, render_hi), join_renders, safety_router),
         (safety_router, {"OK": finalize, "PLAN": plan_statements, "RENDER": render_retry,

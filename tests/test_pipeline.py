@@ -188,3 +188,13 @@ def test_explain_rate_limit_falls_back_to_template(tmp_path, monkeypatch):
     r = asyncio.run(pipeline.run("data/reports/source/D02.pdf", caller=Stub(),
                                  explain_caller=limited, guard=guard))
     assert r.status == "partial" and len(r.tests) == 14 and slept and _no_reserved(guard)
+
+
+def test_ml_steps_run_as_their_own_workflow_nodes(tmp_path):
+    state = {}
+    r = asyncio.run(pipeline.run("data/reports/source/D02.pdf", caller=Stub(), explain_caller=no_live_explain,
+                                 guard=BudgetGuard(tmp_path / "b.sqlite"), state_out=state))
+    assert state["names"] and all(src in ("alias", "model", "hint", None) for _, src in state["names"].values())
+    assert state["patterns"] == r.patterns and r.patterns
+    edges = str(pipeline.workflow.edges)
+    assert "normalize_names" in edges and "pattern_model" in edges

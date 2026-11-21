@@ -109,8 +109,16 @@ def missing_expected(rows: list[ExtractedRow]) -> list[str]:
             for t in spec[p.value]["tests"] if t not in ids]
 
 
-def validate(extraction: Extraction, source_text: str = "") -> ValidatedReport:
-    """source_text: redacted text layer; when present, values not found in it are dropped."""
+def resolve_names(extraction: Extraction) -> dict[str, tuple[str | None, str | None]]:
+    """normalize_names node logic: raw name -> (test_id, source) for every extracted row."""
+    return {r.raw_name: map_test_id(r.raw_name, r.test_id_hint) for r in extraction.tests}
+
+
+def validate(extraction: Extraction, source_text: str = "",
+             names: dict[str, tuple[str | None, str | None]] | None = None) -> ValidatedReport:
+    """source_text: redacted text layer; when present, values not found in it are dropped.
+    names: output of resolve_names (the normalize_names node); computed here when absent."""
+    names = names if names is not None else resolve_names(extraction)
     tests, unrecognised, dropped, low_conf, warnings = [], [], [], [], []
     plaus = {tid: t.get("plausible") for tid, t in reference.load_tests().items()}
     for row in extraction.tests:
@@ -120,7 +128,7 @@ def validate(extraction: Extraction, source_text: str = "") -> ValidatedReport:
         if source_text and not _grounded(row.value_raw, source_text):
             dropped.append(row.raw_name)  # possibly invented: value not in the document
             continue
-        tid, name_source = map_test_id(row.raw_name, row.test_id_hint)
+        tid, name_source = names.get(row.raw_name) or map_test_id(row.raw_name, row.test_id_hint)
         if tid is None:
             unrecognised.append(row.raw_name)
             continue
