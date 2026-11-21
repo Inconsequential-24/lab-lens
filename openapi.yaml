@@ -1,0 +1,609 @@
+openapi: 3.1.0
+info:
+  title: Lab Report Explainer API
+  version: 0.1.0
+  description: >
+    Contract from PLAN.md section 6. JSON in, JSON out. No accounts for the demo;
+    Google sign-in (bearer Google ID token) only for real uploads and opt-in saved
+    history (sections 4.3 and 10). Component schemas mirror src/lablens/schemas.py
+    field-for-field (enforced by tests/test_openapi.py).
+    Limits: per-IP rate limit (5 reports/hour), global daily spend cap of INR 50 (past it only
+    already-processed sample reports are served, otherwise 503 daily_cap_reached), 5 MB, 10 pages, PDF/PNG/JPG checked by content,
+    60 s timeout then deterministic fallback, non-saved results deleted after 24 hours.
+servers:
+  - url: http://localhost:8000
+tags:
+  - name: reports
+  - name: history
+  - name: system
+
+components:
+  securitySchemes:
+    googleIdToken:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Google ID token from Google sign-in. Subject ID is used as user_id; email is not stored.
+
+  headers:
+    X-RateLimit-Limit:
+      description: Requests allowed in the current window.
+      schema: {type: integer}
+    X-RateLimit-Remaining:
+      description: Requests remaining in the current window.
+      schema: {type: integer}
+    X-RateLimit-Reset:
+      description: Seconds until the window resets.
+      schema: {type: integer}
+    Retry-After:
+      description: Seconds to wait before retrying.
+      schema: {type: integer}
+
+  parameters:
+    ReportId:
+      name: report_id
+      in: path
+      required: true
+      schema: {type: string}
+
+  responses:
+    BadRequest:
+      description: Invalid input. See `reason`.
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+          example: {reason: too_many_pages, message: "Reports longer than 10 pages are not supported in the demo."}
+    Unauthorized:
+      description: Missing or invalid Google ID token.
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+          example: {reason: auth_required, message: "Sign in with Google to use this feature."}
+    Forbidden:
+      description: Not allowed. See `reason`.
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+          example: {reason: real_upload_not_enabled, message: "Real reports need sign-in and are not enabled on this server."}
+    NotFound:
+      description: Unknown, expired (past 24 h TTL) or not owned by the caller.
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+          example: {reason: not_found, message: "Report not found or expired."}
+    TooManyRequests:
+      description: Per-IP rate limit reached.
+      headers:
+        Retry-After: {$ref: '#/components/headers/Retry-After'}
+        X-RateLimit-Limit: {$ref: '#/components/headers/X-RateLimit-Limit'}
+        X-RateLimit-Remaining: {$ref: '#/components/headers/X-RateLimit-Remaining'}
+        X-RateLimit-Reset: {$ref: '#/components/headers/X-RateLimit-Reset'}
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+          example: {reason: rate_limited, message: "Too many reports from this address. Try again later."}
+
+    NotImplemented:
+      description: Planned for milestone 12; not available yet.
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+          example: {reason: not_implemented, message: "This endpoint is not available yet."}
+
+  schemas:
+    Error:
+      type: object
+      required: [reason, message]
+      properties:
+        reason:
+          type: string
+          description: Stable machine-readable code.
+          enum:
+            - unsupported_file_type
+            - file_too_large
+            - too_many_pages
+            - zero_pages
+            - encrypted_pdf
+            - corrupted_file
+            - not_a_lab_report
+            - invalid_language
+            - invalid_report_type
+            - consent_required
+            - report_date_required
+            - report_date_invalid
+            - report_date_in_future
+            - report_date_too_old
+            - invalid_overlap_choice
+            - invalid_test_id
+            - auth_required
+            - real_upload_not_enabled
+            - not_found
+            - already_saved
+            - overlap
+            - no_tests_extracted
+            - rate_limited
+            - daily_cap_reached
+            - provider_unavailable
+            - invalid_message
+            - not_implemented
+        message: {type: string}
+        details: {type: object, additionalProperties: true}
+
+    # ---- Mirrors of src/lablens/schemas.py (names and fields must match) ----
+    Flag:
+      type: string
+      enum: [low, normal, high, unknown]
+    Severity:
+      type: string
+      enum: [normal, mild, marked, critical, unknown]
+    Panel:
+      type: string
+      enum: [cbc, lipid, hba1c, thyroid, lft]
+
+    Value:
+      type: object
+      required: [raw, number]
+      properties:
+        raw: {type: string}
+        number: {type: [number, 'null']}
+        comparator: {type: string, enum: ['=', '<', '<=', '>', '>='], default: '='}
+
+    RefRange:
+      type: object
+      required: [raw, low, high, source]
+      properties:
+        raw: {type: string}
+        low: {type: [number, 'null']}
+        high: {type: [number, 'null']}
+        source: {type: string, enum: [report, fallback_table, none]}
+
+    FlaggedTest:
+      type: object
+      required: [raw_name, test_id, panel, value, unit_raw, unit, ref, printed_flag, remark,
+                 page, source_span, confidence, flag, severity, is_critical,
+                 flag_disagrees_with_printed]
+      properties:
+        raw_name: {type: string}
+        test_id: {type: [string, 'null']}
+        panel:
+          oneOf:
+            - {$ref: '#/components/schemas/Panel'}
+            - {type: 'null'}
+        value: {$ref: '#/components/schemas/Value'}
+        unit_raw: {type: [string, 'null']}
+        unit: {type: [string, 'null']}
+        ref: {$ref: '#/components/schemas/RefRange'}
+        printed_flag: {type: [string, 'null']}
+        remark: {type: [string, 'null']}
+        page: {type: integer}
+        source_span: {type: string}
+        confidence: {type: number, minimum: 0, maximum: 1}
+        flag: {$ref: '#/components/schemas/Flag'}
+        severity: {$ref: '#/components/schemas/Severity'}
+        is_critical: {type: boolean}
+        flag_disagrees_with_printed: {type: boolean}
+        warnings: {type: array, items: {type: string}, default: []}
+
+    Citation:
+      type: object
+      required: [kind, id]
+      properties:
+        kind: {type: string, enum: [test, glossary, remark]}
+        id: {type: string}
+
+    Statement:
+      type: object
+      required: [claim_id, text, cites]
+      properties:
+        claim_id: {type: string}
+        text: {type: string}
+        cites:
+          type: array
+          minItems: 1
+          items: {$ref: '#/components/schemas/Citation'}
+
+    Explanation:
+      type: object
+      required: [language, source, urgent_message, summary, statements, disclaimer]
+      properties:
+        language: {type: string, enum: [en, hi]}
+        source: {type: string, enum: [llm, template_fallback]}
+        urgent_message: {type: [string, 'null']}
+        summary: {type: string}
+        statements: {type: array, items: {$ref: '#/components/schemas/Statement'}}
+        disclaimer: {type: string}
+
+    Recommendation:
+      type: object
+      required: [next_step, package_id, urgency, reason_test_ids, rule_id]
+      properties:
+        next_step: {type: string, enum: [follow_up_test_package, doctor_consult, no_action]}
+        package_id: {type: [string, 'null']}
+        urgency: {type: string, enum: [none, routine, soon, urgent]}
+        reason_test_ids: {type: array, items: {type: string}}
+        rule_id: {type: string}
+        note: {type: [string, 'null'], default: null}
+
+    RunMetrics:
+      type: object
+      properties:
+        latency_ms: {type: object, additionalProperties: {type: number}, default: {}}
+        tokens_in: {type: integer, default: 0}
+        tokens_out: {type: integer, default: 0}
+        tokens_cached: {type: integer, default: 0}
+        cost_inr: {type: number, default: 0.0}
+        retries: {type: integer, default: 0}
+        model_versions: {type: object, additionalProperties: {type: string}, default: {}}
+
+    ReportResult:
+      type: object
+      required: [report_id, status, report_date, panels, tests, unrecognised_tests, lab_remarks,
+                 patterns, explanations, recommendation, low_confidence_tests, warnings, metrics]
+      properties:
+        report_id: {type: string}
+        status: {type: string, enum: [complete, partial]}
+        report_date: {type: [string, 'null'], format: date}
+        panels: {type: array, items: {$ref: '#/components/schemas/Panel'}}
+        tests: {type: array, items: {$ref: '#/components/schemas/FlaggedTest'}}
+        unrecognised_tests: {type: array, items: {type: string}}
+        lab_remarks: {type: array, items: {type: string}}
+        patterns: {type: array, items: {type: string}}
+        explanations: {type: array, items: {$ref: '#/components/schemas/Explanation'}}
+        recommendation: {$ref: '#/components/schemas/Recommendation'}
+        low_confidence_tests: {type: array, items: {type: string}}
+        warnings: {type: array, items: {type: string}}
+        metrics: {$ref: '#/components/schemas/RunMetrics'}
+
+    SavedReport:
+      type: object
+      required: [saved_report_id, user_id, report_date, date_source, file_sha256, tests,
+                 consent_notice_version, saved_at]
+      properties:
+        saved_report_id: {type: string}
+        user_id: {type: string, description: Google subject ID, not email.}
+        report_date: {type: string, format: date}
+        date_source: {type: string, enum: [extracted_confirmed, user_entered]}
+        file_sha256: {type: string}
+        tests: {type: array, items: {$ref: '#/components/schemas/FlaggedTest'}}
+        consent_notice_version: {type: string}
+        saved_at: {type: string, format: date-time}
+
+    # ---- API-only shapes (not in schemas.py) ----
+    UploadRequest:
+      type: object
+      required: [file]
+      properties:
+        file:
+          type: string
+          contentMediaType: application/octet-stream
+          description: PDF, PNG or JPG (checked by content), max 5 MB, max 10 pages.
+        language: {type: string, enum: [en, hi, both], default: both}
+        report_type:
+          type: string
+          enum: [synthetic, real]
+          default: synthetic
+          description: "`real` requires a Google ID token and a paid-tier key on the server, else 403."
+
+    SaveRequest:
+      type: object
+      required: [consent, notice_version, report_date]
+      properties:
+        consent: {type: boolean, const: true}
+        notice_version: {type: string}
+        report_date: {type: string, format: date, description: Not in the future, not before 1990.}
+        overlap_choice:
+          type: object
+          additionalProperties: {type: string, enum: [keep_new, keep_existing, keep_both]}
+          description: Keyed by test_id; sent after a 409 overlap.
+
+    OverlapItem:
+      type: object
+      required: [test_id, report_date, existing, new]
+      properties:
+        test_id: {type: string}
+        report_date: {type: string, format: date}
+        existing_saved_report_id: {type: string}
+        existing: {$ref: '#/components/schemas/FlaggedTest'}
+        new: {$ref: '#/components/schemas/FlaggedTest'}
+
+    ConflictError:
+      allOf:
+        - {$ref: '#/components/schemas/Error'}
+        - type: object
+          properties:
+            saved_on: {type: string, format: date, description: Set for already_saved.}
+            overlaps: {type: array, items: {$ref: '#/components/schemas/OverlapItem'}}
+
+    HistoryList:
+      type: object
+      required: [reports]
+      properties:
+        reports: {type: array, items: {$ref: '#/components/schemas/SavedReport'}}
+
+    TrendPoint:
+      type: object
+      required: [report_date, saved_report_id, value, unit, ref, flag, is_critical, different_unit]
+      properties:
+        report_date: {type: string, format: date}
+        saved_report_id: {type: string}
+        value: {$ref: '#/components/schemas/Value'}
+        unit: {type: [string, 'null']}
+        ref: {$ref: '#/components/schemas/RefRange'}
+        flag: {$ref: '#/components/schemas/Flag'}
+        is_critical: {type: boolean}
+        different_unit: {type: boolean, description: True when no exact conversion to the canonical unit exists.}
+
+    TrendResponse:
+      type: object
+      required: [test_id, points]
+      properties:
+        test_id: {type: string}
+        points: {type: array, items: {$ref: '#/components/schemas/TrendPoint'}}
+
+    ChatRequest:
+      type: object
+      required: [message]
+      properties:
+        message: {type: string, minLength: 1, maxLength: 1000}
+
+    ChatResponse:
+      type: object
+      required: [reply, escalation]
+      properties:
+        reply: {type: string}
+        escalation: {type: string, enum: [none, see_doctor, urgent]}
+
+    DemoReport:
+      type: object
+      required: [id, title, panel, category, test_count, pdf_url]
+      properties:
+        id: {type: string, pattern: '^D[0-9]{2}$'}
+        title: {type: string}
+        panel: {$ref: '#/components/schemas/Panel'}
+        category: {type: string, enum: [normal, abnormal, critical, held]}
+        test_count: {type: integer}
+        pdf_url: {type: string, description: Relative URL of the synthetic PDF.}
+
+    DemoList:
+      type: object
+      required: [reports]
+      properties:
+        reports: {type: array, items: {$ref: '#/components/schemas/DemoReport'}}
+
+    Health:
+      type: object
+      required: [status]
+      properties:
+        status: {type: string, enum: [ok]}
+
+paths:
+  /v1/reports:
+    post:
+      tags: [reports]
+      operationId: createReport
+      summary: Upload a report and receive the full result.
+      description: >
+        Anonymous for `report_type=synthetic`. A bearer Google ID token is optional here and
+        required for `report_type=real`. If any critical value was extracted the response is
+        always 200 with the urgent template. Past the daily cap only already-processed sample
+        reports are served (with a warning), otherwise 503 daily_cap_reached.
+      security:
+        - {}
+        - googleIdToken: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema: {$ref: '#/components/schemas/UploadRequest'}
+      responses:
+        '200':
+          description: "status complete, or partial (see warnings)."
+          headers:
+            X-RateLimit-Limit: {$ref: '#/components/headers/X-RateLimit-Limit'}
+            X-RateLimit-Remaining: {$ref: '#/components/headers/X-RateLimit-Remaining'}
+            X-RateLimit-Reset: {$ref: '#/components/headers/X-RateLimit-Reset'}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ReportResult'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '422':
+          description: No test could be extracted after retries.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+              example: {reason: no_tests_extracted, message: "No test results could be read from this file."}
+        '429': {$ref: '#/components/responses/TooManyRequests'}
+        '503':
+          description: "`provider_unavailable` (model provider down and nothing extracted) or `daily_cap_reached`."
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+              example: {reason: provider_unavailable, message: "The service is temporarily unavailable."}
+
+  /v1/reports/{report_id}:
+    get:
+      tags: [reports]
+      operationId: getReport
+      summary: Cached result while its TTL lasts, or a saved one for its owner.
+      security:
+        - {}
+        - googleIdToken: []
+      parameters: [{$ref: '#/components/parameters/ReportId'}]
+      responses:
+        '200':
+          description: Result.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ReportResult'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '429': {$ref: '#/components/responses/TooManyRequests'}
+
+  /v1/reports/{report_id}/save:
+    post:
+      tags: [history]
+      operationId: saveReport
+      summary: Save the structured result to opt-in history (file is not kept).
+      security:
+        - googleIdToken: []
+      parameters: [{$ref: '#/components/parameters/ReportId'}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/SaveRequest'}
+            example: {consent: true, notice_version: "2026-11-v1", report_date: "2026-11-02"}
+      responses:
+        '201':
+          description: Saved.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/SavedReport'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409':
+          description: "`already_saved` (same file SHA-256) or `overlap` (same test, same date)."
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ConflictError'}
+        '429': {$ref: '#/components/responses/TooManyRequests'}
+        '501': {$ref: '#/components/responses/NotImplemented'}
+
+  /v1/history:
+    get:
+      tags: [history]
+      operationId: listHistory
+      security:
+        - googleIdToken: []
+      responses:
+        '200':
+          description: Saved reports for the caller.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/HistoryList'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '429': {$ref: '#/components/responses/TooManyRequests'}
+        '501': {$ref: '#/components/responses/NotImplemented'}
+    delete:
+      tags: [history]
+      operationId: deleteAllHistory
+      summary: Delete all saved reports and withdraw consent.
+      security:
+        - googleIdToken: []
+      responses:
+        '204': {description: Deleted; consent withdrawn.}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '429': {$ref: '#/components/responses/TooManyRequests'}
+        '501': {$ref: '#/components/responses/NotImplemented'}
+
+  /v1/history/{report_id}:
+    delete:
+      tags: [history]
+      operationId: deleteHistoryItem
+      summary: Delete one saved report (path value is the saved_report_id).
+      security:
+        - googleIdToken: []
+      parameters: [{$ref: '#/components/parameters/ReportId'}]
+      responses:
+        '204': {description: Deleted.}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '429': {$ref: '#/components/responses/TooManyRequests'}
+        '501': {$ref: '#/components/responses/NotImplemented'}
+
+  /v1/history/trends:
+    get:
+      tags: [history]
+      operationId: getTrends
+      summary: Dated points for one test across saved reports. Values and ranges only, no interpretation.
+      security:
+        - googleIdToken: []
+      parameters:
+        - name: test_id
+          in: query
+          required: true
+          schema: {type: string}
+      responses:
+        '200':
+          description: Trend points.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/TrendResponse'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '429': {$ref: '#/components/responses/TooManyRequests'}
+        '501': {$ref: '#/components/responses/NotImplemented'}
+
+  /v1/reports/{report_id}/chat:
+    post:
+      tags: [reports]
+      operationId: chatAboutReport
+      summary: Follow-up chat (stretch; not part of the core build).
+      x-stretch: true
+      security:
+        - {}
+        - googleIdToken: []
+      parameters: [{$ref: '#/components/parameters/ReportId'}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ChatRequest'}
+      responses:
+        '200':
+          description: Reply.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ChatResponse'}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '429': {$ref: '#/components/responses/TooManyRequests'}
+        '501': {$ref: '#/components/responses/NotImplemented'}
+
+  /v1/demo/reports:
+    get:
+      tags: [system]
+      operationId: listDemoReports
+      summary: The 15 synthetic source reports for the demo picker (never eval or critical-set files).
+      security: []
+      responses:
+        '200':
+          description: Demo reports.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/DemoList'}
+        '429': {$ref: '#/components/responses/TooManyRequests'}
+
+  /v1/demo/reports/{demo_id}.pdf:
+    get:
+      tags: [system]
+      operationId: getDemoReportPdf
+      summary: Download one synthetic source PDF.
+      security: []
+      parameters:
+        - name: demo_id
+          in: path
+          required: true
+          schema: {type: string, pattern: '^D[0-9]{2}$'}
+      responses:
+        '200':
+          description: PDF.
+          content:
+            application/pdf:
+              schema: {type: string, format: binary}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '429': {$ref: '#/components/responses/TooManyRequests'}
+
+  /healthz:
+    get:
+      tags: [system]
+      operationId: healthz
+      security: []
+      responses:
+        '200':
+          description: Alive.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Health'}
