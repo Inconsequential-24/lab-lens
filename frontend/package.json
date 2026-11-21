@@ -1,0 +1,31 @@
+{
+  "name": "lablens-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "gen:api": "openapi-typescript ../openapi.yaml -o src/api/schema.d.ts",
+    "copy:evals": "node scripts/copy-evals.mjs",
+    "predev": "node scripts/copy-evals.mjs",
+    "dev": "vite",
+    "dev:mock": "VITE_MOCK=1 npm run dev",
+    "prebuild": "node scripts/copy-evals.mjs",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "5.107.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.2.1",
+    "openapi-typescript": "7.13.0",
+    "playwright": "1.65.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.6"
+  }
+}
