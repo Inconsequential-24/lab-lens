@@ -1,0 +1,1401 @@
+{
+  "held_out": true,
+  "set": {
+    "n_rows": 312,
+    "n_critical": 196,
+    "counts_by_category": {
+      "boundary_alt_unit": 50,
+      "boundary_canonical": 45,
+      "comparator_control": 18,
+      "comparator_critical": 22,
+      "control_abnormal_noncritical": 18,
+      "control_no_critical_limit": 10,
+      "control_normal": 18,
+      "misleading_printed_range": 35,
+      "no_or_normal_printed_flag": 36,
+      "no_printed_range": 18,
+      "unit_equivalent_spelling": 42
+    }
+  },
+  "rows": {
+    "overall": {
+      "n": 312,
+      "n_critical": 196,
+      "n_noncritical": 116,
+      "critical_recall": {
+        "k": 196,
+        "n": 196,
+        "rate": 1.0,
+        "ci95": [
+          0.9808,
+          1
+        ]
+      },
+      "critical_precision": {
+        "k": 196,
+        "n": 196,
+        "rate": 1.0,
+        "ci95": [
+          0.9808,
+          1
+        ]
+      },
+      "false_critical_rate_on_noncritical": {
+        "k": 0,
+        "n": 116,
+        "rate": 0.0,
+        "ci95": [
+          0,
+          0.0321
+        ]
+      },
+      "r1_routing_on_critical": {
+        "k": 196,
+        "n": 196,
+        "rate": 1.0,
+        "ci95": [
+          0.9808,
+          1
+        ]
+      },
+      "r1_on_noncritical": {
+        "k": 0,
+        "n": 116,
+        "rate": 0.0,
+        "ci95": [
+          0,
+          0.0321
+        ]
+      },
+      "urgent_template_first_en_hi_on_critical": {
+        "k": 196,
+        "n": 196,
+        "rate": 1.0,
+        "ci95": [
+          0.9808,
+          1
+        ]
+      },
+      "no_urgent_text_on_noncritical": {
+        "k": 116,
+        "n": 116,
+        "rate": 1.0,
+        "ci95": [
+          0.9679,
+          1.0
+        ]
+      },
+      "safety_check_pass": {
+        "k": 312,
+        "n": 312,
+        "rate": 1.0,
+        "ci95": [
+          0.9878,
+          1
+        ]
+      },
+      "expected_flag_match": {
+        "k": 312,
+        "n": 312,
+        "rate": 1.0,
+        "ci95": [
+          0.9878,
+          1
+        ]
+      }
+    },
+    "by_category": {
+      "boundary_alt_unit": {
+        "n": 50,
+        "n_critical": 30,
+        "n_noncritical": 20,
+        "critical_recall": {
+          "k": 30,
+          "n": 30,
+          "rate": 1.0,
+          "ci95": [
+            0.8865,
+            1
+          ]
+        },
+        "critical_precision": {
+          "k": 30,
+          "n": 30,
+          "rate": 1.0,
+          "ci95": [
+            0.8865,
+            1
+          ]
+        },
+        "false_critical_rate_on_noncritical": {
+          "k": 0,
+          "n": 20,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.1611
+          ]
+        },
+        "r1_routing_on_critical": {
+          "k": 30,
+          "n": 30,
+          "rate": 1.0,
+          "ci95": [
+            0.8865,
+            1
+          ]
+        },
+        "r1_on_noncritical": {
+          "k": 0,
+          "n": 20,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.1611
+          ]
+        },
+        "urgent_template_first_en_hi_on_critical": {
+          "k": 30,
+          "n": 30,
+          "rate": 1.0,
+          "ci95": [
+            0.8865,
+            1
+          ]
+        },
+        "no_urgent_text_on_noncritical": {
+          "k": 20,
+          "n": 20,
+          "rate": 1.0,
+          "ci95": [
+            0.8389,
+            1
+          ]
+        },
+        "safety_check_pass": {
+          "k": 50,
+          "n": 50,
+          "rate": 1.0,
+          "ci95": [
+            0.9286,
+            1
+          ]
+        },
+        "expected_flag_match": {
+          "k": 50,
+          "n": 50,
+          "rate": 1.0,
+          "ci95": [
+            0.9286,
+            1
+          ]
+        }
+      },
+      "boundary_canonical": {
+        "n": 45,
+        "n_critical": 27,
+        "n_noncritical": 18,
+        "critical_recall": {
+          "k": 27,
+          "n": 27,
+          "rate": 1.0,
+          "ci95": [
+            0.8754,
+            1
+          ]
+        },
+        "critical_precision": {
+          "k": 27,
+          "n": 27,
+          "rate": 1.0,
+          "ci95": [
+            0.8754,
+            1
+          ]
+        },
+        "false_critical_rate_on_noncritical": {
+          "k": 0,
+          "n": 18,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.1759
+          ]
+        },
+        "r1_routing_on_critical": {
+          "k": 27,
+          "n": 27,
+          "rate": 1.0,
+          "ci95": [
+            0.8754,
+            1
+          ]
+        },
+        "r1_on_noncritical": {
+          "k": 0,
+          "n": 18,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.1759
+          ]
+        },
+        "urgent_template_first_en_hi_on_critical": {
+          "k": 27,
+          "n": 27,
+          "rate": 1.0,
+          "ci95": [
+            0.8754,
+            1
+          ]
+        },
+        "no_urgent_text_on_noncritical": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "safety_check_pass": {
+          "k": 45,
+          "n": 45,
+          "rate": 1.0,
+          "ci95": [
+            0.9213,
+            1
+          ]
+        },
+        "expected_flag_match": {
+          "k": 45,
+          "n": 45,
+          "rate": 1.0,
+          "ci95": [
+            0.9213,
+            1
+          ]
+        }
+      },
+      "comparator_control": {
+        "n": 18,
+        "n_critical": 0,
+        "n_noncritical": 18,
+        "critical_recall": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "critical_precision": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "false_critical_rate_on_noncritical": {
+          "k": 0,
+          "n": 18,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.1759
+          ]
+        },
+        "r1_routing_on_critical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "r1_on_noncritical": {
+          "k": 0,
+          "n": 18,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.1759
+          ]
+        },
+        "urgent_template_first_en_hi_on_critical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "no_urgent_text_on_noncritical": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "safety_check_pass": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "expected_flag_match": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        }
+      },
+      "comparator_critical": {
+        "n": 22,
+        "n_critical": 22,
+        "n_noncritical": 0,
+        "critical_recall": {
+          "k": 22,
+          "n": 22,
+          "rate": 1.0,
+          "ci95": [
+            0.8513,
+            1
+          ]
+        },
+        "critical_precision": {
+          "k": 22,
+          "n": 22,
+          "rate": 1.0,
+          "ci95": [
+            0.8513,
+            1
+          ]
+        },
+        "false_critical_rate_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "r1_routing_on_critical": {
+          "k": 22,
+          "n": 22,
+          "rate": 1.0,
+          "ci95": [
+            0.8513,
+            1
+          ]
+        },
+        "r1_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "urgent_template_first_en_hi_on_critical": {
+          "k": 22,
+          "n": 22,
+          "rate": 1.0,
+          "ci95": [
+            0.8513,
+            1
+          ]
+        },
+        "no_urgent_text_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "safety_check_pass": {
+          "k": 22,
+          "n": 22,
+          "rate": 1.0,
+          "ci95": [
+            0.8513,
+            1
+          ]
+        },
+        "expected_flag_match": {
+          "k": 22,
+          "n": 22,
+          "rate": 1.0,
+          "ci95": [
+            0.8513,
+            1
+          ]
+        }
+      },
+      "control_abnormal_noncritical": {
+        "n": 18,
+        "n_critical": 0,
+        "n_noncritical": 18,
+        "critical_recall": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "critical_precision": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "false_critical_rate_on_noncritical": {
+          "k": 0,
+          "n": 18,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.1759
+          ]
+        },
+        "r1_routing_on_critical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "r1_on_noncritical": {
+          "k": 0,
+          "n": 18,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.1759
+          ]
+        },
+        "urgent_template_first_en_hi_on_critical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "no_urgent_text_on_noncritical": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "safety_check_pass": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "expected_flag_match": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        }
+      },
+      "control_no_critical_limit": {
+        "n": 10,
+        "n_critical": 0,
+        "n_noncritical": 10,
+        "critical_recall": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "critical_precision": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "false_critical_rate_on_noncritical": {
+          "k": 0,
+          "n": 10,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.2775
+          ]
+        },
+        "r1_routing_on_critical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "r1_on_noncritical": {
+          "k": 0,
+          "n": 10,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.2775
+          ]
+        },
+        "urgent_template_first_en_hi_on_critical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "no_urgent_text_on_noncritical": {
+          "k": 10,
+          "n": 10,
+          "rate": 1.0,
+          "ci95": [
+            0.7225,
+            1
+          ]
+        },
+        "safety_check_pass": {
+          "k": 10,
+          "n": 10,
+          "rate": 1.0,
+          "ci95": [
+            0.7225,
+            1
+          ]
+        },
+        "expected_flag_match": {
+          "k": 10,
+          "n": 10,
+          "rate": 1.0,
+          "ci95": [
+            0.7225,
+            1
+          ]
+        }
+      },
+      "control_normal": {
+        "n": 18,
+        "n_critical": 0,
+        "n_noncritical": 18,
+        "critical_recall": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "critical_precision": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "false_critical_rate_on_noncritical": {
+          "k": 0,
+          "n": 18,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.1759
+          ]
+        },
+        "r1_routing_on_critical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "r1_on_noncritical": {
+          "k": 0,
+          "n": 18,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.1759
+          ]
+        },
+        "urgent_template_first_en_hi_on_critical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "no_urgent_text_on_noncritical": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "safety_check_pass": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "expected_flag_match": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        }
+      },
+      "misleading_printed_range": {
+        "n": 35,
+        "n_critical": 35,
+        "n_noncritical": 0,
+        "critical_recall": {
+          "k": 35,
+          "n": 35,
+          "rate": 1.0,
+          "ci95": [
+            0.9011,
+            1
+          ]
+        },
+        "critical_precision": {
+          "k": 35,
+          "n": 35,
+          "rate": 1.0,
+          "ci95": [
+            0.9011,
+            1
+          ]
+        },
+        "false_critical_rate_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "r1_routing_on_critical": {
+          "k": 35,
+          "n": 35,
+          "rate": 1.0,
+          "ci95": [
+            0.9011,
+            1
+          ]
+        },
+        "r1_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "urgent_template_first_en_hi_on_critical": {
+          "k": 35,
+          "n": 35,
+          "rate": 1.0,
+          "ci95": [
+            0.9011,
+            1
+          ]
+        },
+        "no_urgent_text_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "safety_check_pass": {
+          "k": 35,
+          "n": 35,
+          "rate": 1.0,
+          "ci95": [
+            0.9011,
+            1
+          ]
+        },
+        "expected_flag_match": {
+          "k": 35,
+          "n": 35,
+          "rate": 1.0,
+          "ci95": [
+            0.9011,
+            1
+          ]
+        }
+      },
+      "no_or_normal_printed_flag": {
+        "n": 36,
+        "n_critical": 36,
+        "n_noncritical": 0,
+        "critical_recall": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "ci95": [
+            0.9036,
+            1
+          ]
+        },
+        "critical_precision": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "ci95": [
+            0.9036,
+            1
+          ]
+        },
+        "false_critical_rate_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "r1_routing_on_critical": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "ci95": [
+            0.9036,
+            1
+          ]
+        },
+        "r1_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "urgent_template_first_en_hi_on_critical": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "ci95": [
+            0.9036,
+            1
+          ]
+        },
+        "no_urgent_text_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "safety_check_pass": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "ci95": [
+            0.9036,
+            1
+          ]
+        },
+        "expected_flag_match": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "ci95": [
+            0.9036,
+            1
+          ]
+        }
+      },
+      "no_printed_range": {
+        "n": 18,
+        "n_critical": 18,
+        "n_noncritical": 0,
+        "critical_recall": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "critical_precision": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "false_critical_rate_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "r1_routing_on_critical": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "r1_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "urgent_template_first_en_hi_on_critical": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "no_urgent_text_on_noncritical": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95": null
+        },
+        "safety_check_pass": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        },
+        "expected_flag_match": {
+          "k": 18,
+          "n": 18,
+          "rate": 1.0,
+          "ci95": [
+            0.8241,
+            1
+          ]
+        }
+      },
+      "unit_equivalent_spelling": {
+        "n": 42,
+        "n_critical": 28,
+        "n_noncritical": 14,
+        "critical_recall": {
+          "k": 28,
+          "n": 28,
+          "rate": 1.0,
+          "ci95": [
+            0.8794,
+            1
+          ]
+        },
+        "critical_precision": {
+          "k": 28,
+          "n": 28,
+          "rate": 1.0,
+          "ci95": [
+            0.8794,
+            1
+          ]
+        },
+        "false_critical_rate_on_noncritical": {
+          "k": 0,
+          "n": 14,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.2153
+          ]
+        },
+        "r1_routing_on_critical": {
+          "k": 28,
+          "n": 28,
+          "rate": 1.0,
+          "ci95": [
+            0.8794,
+            1
+          ]
+        },
+        "r1_on_noncritical": {
+          "k": 0,
+          "n": 14,
+          "rate": 0.0,
+          "ci95": [
+            0,
+            0.2153
+          ]
+        },
+        "urgent_template_first_en_hi_on_critical": {
+          "k": 28,
+          "n": 28,
+          "rate": 1.0,
+          "ci95": [
+            0.8794,
+            1
+          ]
+        },
+        "no_urgent_text_on_noncritical": {
+          "k": 14,
+          "n": 14,
+          "rate": 1.0,
+          "ci95": [
+            0.7847,
+            1
+          ]
+        },
+        "safety_check_pass": {
+          "k": 42,
+          "n": 42,
+          "rate": 1.0,
+          "ci95": [
+            0.9162,
+            1
+          ]
+        },
+        "expected_flag_match": {
+          "k": 42,
+          "n": 42,
+          "rate": 1.0,
+          "ci95": [
+            0.9162,
+            1
+          ]
+        }
+      }
+    },
+    "failures": [],
+    "flag_mismatches": []
+  },
+  "offline_pipeline": {
+    "pdfs": [
+      {
+        "id": "C01",
+        "status": "partial",
+        "critical": {
+          "HB": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1000,
+        "tokens_out": 500,
+        "cost_inr": 0.09,
+        "warnings": [
+          "explanation came from template fallback: LLM unavailable or returned no usable output"
+        ],
+        "ok": true
+      },
+      {
+        "id": "C02",
+        "status": "partial",
+        "critical": {
+          "PLT": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1000,
+        "tokens_out": 500,
+        "cost_inr": 0.09,
+        "warnings": [
+          "explanation came from template fallback: LLM unavailable or returned no usable output"
+        ],
+        "ok": true
+      },
+      {
+        "id": "C03",
+        "status": "partial",
+        "critical": {
+          "WBC": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1000,
+        "tokens_out": 500,
+        "cost_inr": 0.09,
+        "warnings": [
+          "explanation came from template fallback: LLM unavailable or returned no usable output"
+        ],
+        "ok": true
+      },
+      {
+        "id": "C04",
+        "status": "partial",
+        "critical": {
+          "TBIL": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1000,
+        "tokens_out": 500,
+        "cost_inr": 0.09,
+        "warnings": [
+          "explanation came from template fallback: LLM unavailable or returned no usable output"
+        ],
+        "ok": true
+      },
+      {
+        "id": "C05",
+        "status": "partial",
+        "critical": {
+          "ALT": {
+            "extracted": true,
+            "flagged_critical": true
+          },
+          "AST": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1000,
+        "tokens_out": 500,
+        "cost_inr": 0.09,
+        "warnings": [
+          "explanation came from template fallback: LLM unavailable or returned no usable output"
+        ],
+        "ok": true
+      },
+      {
+        "id": "C06",
+        "status": "partial",
+        "critical": {
+          "PLT": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1000,
+        "tokens_out": 500,
+        "cost_inr": 0.09,
+        "warnings": [
+          "explanation came from template fallback: LLM unavailable or returned no usable output"
+        ],
+        "ok": true
+      },
+      {
+        "id": "C07",
+        "status": "partial",
+        "critical": {
+          "PLT": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1000,
+        "tokens_out": 500,
+        "cost_inr": 0.09,
+        "warnings": [
+          "explanation came from template fallback: LLM unavailable or returned no usable output"
+        ],
+        "ok": true
+      },
+      {
+        "id": "C08",
+        "status": "partial",
+        "critical": {
+          "PLT": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1000,
+        "tokens_out": 500,
+        "cost_inr": 0.09,
+        "warnings": [
+          "explanation came from template fallback: LLM unavailable or returned no usable output"
+        ],
+        "ok": true
+      },
+      {
+        "id": "C09",
+        "status": "partial",
+        "critical": {
+          "WBC": {
+            "extracted": true,
+            "flagged_critical": true
+          },
+          "TBIL": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1000,
+        "tokens_out": 500,
+        "cost_inr": 0.09,
+        "warnings": [
+          "explanation came from template fallback: LLM unavailable or returned no usable output"
+        ],
+        "ok": true
+      },
+      {
+        "id": "C10",
+        "status": "partial",
+        "critical": {
+          "AST": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1000,
+        "tokens_out": 500,
+        "cost_inr": 0.09,
+        "warnings": [
+          "explanation came from template fallback: LLM unavailable or returned no usable output"
+        ],
+        "ok": true
+      }
+    ],
+    "all_ok": {
+      "k": 10,
+      "n": 10,
+      "rate": 1.0,
+      "ci95": [
+        0.7225,
+        1
+      ]
+    }
+  },
+  "live": {
+    "pdfs": [
+      {
+        "id": "C01",
+        "status": "complete",
+        "critical": {
+          "HB": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1427,
+        "tokens_out": 2435,
+        "cost_inr": 0.3608,
+        "warnings": [],
+        "ok": true
+      },
+      {
+        "id": "C02",
+        "status": "complete",
+        "critical": {
+          "PLT": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1283,
+        "tokens_out": 2361,
+        "cost_inr": 0.3476,
+        "warnings": [],
+        "ok": true
+      },
+      {
+        "id": "C03",
+        "status": "complete",
+        "critical": {
+          "WBC": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1449,
+        "tokens_out": 2556,
+        "cost_inr": 0.3777,
+        "warnings": [],
+        "ok": true
+      },
+      {
+        "id": "C04",
+        "status": "complete",
+        "critical": {
+          "TBIL": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1545,
+        "tokens_out": 1957,
+        "cost_inr": 0.299,
+        "warnings": [],
+        "ok": true
+      },
+      {
+        "id": "C05",
+        "status": "complete",
+        "critical": {
+          "ALT": {
+            "extracted": true,
+            "flagged_critical": true
+          },
+          "AST": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1373,
+        "tokens_out": 1905,
+        "cost_inr": 0.2881,
+        "warnings": [],
+        "ok": true
+      },
+      {
+        "id": "C06",
+        "status": "complete",
+        "critical": {
+          "PLT": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1454,
+        "tokens_out": 2287,
+        "cost_inr": 0.3415,
+        "warnings": [],
+        "ok": true
+      },
+      {
+        "id": "C07",
+        "status": "complete",
+        "critical": {
+          "PLT": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1415,
+        "tokens_out": 2268,
+        "cost_inr": 0.338,
+        "warnings": [],
+        "ok": true
+      },
+      {
+        "id": "C08",
+        "status": "complete",
+        "critical": {
+          "PLT": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1549,
+        "tokens_out": 2168,
+        "cost_inr": 0.3275,
+        "warnings": [],
+        "ok": true
+      },
+      {
+        "id": "C09",
+        "status": "complete",
+        "critical": {
+          "WBC": {
+            "extracted": true,
+            "flagged_critical": true
+          },
+          "TBIL": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1745,
+        "tokens_out": 4190,
+        "cost_inr": 0.6049,
+        "warnings": [],
+        "ok": true
+      },
+      {
+        "id": "C10",
+        "status": "complete",
+        "critical": {
+          "AST": {
+            "extracted": true,
+            "flagged_critical": true
+          }
+        },
+        "rule": "R1_critical",
+        "urgent_en_hi": true,
+        "false_criticals": [],
+        "tokens_in": 1364,
+        "tokens_out": 2011,
+        "cost_inr": 0.3022,
+        "warnings": [],
+        "ok": true
+      }
+    ],
+    "all_ok": {
+      "k": 10,
+      "n": 10,
+      "rate": 1.0,
+      "ci95": [
+        0.7225,
+        1
+      ]
+    },
+    "spent_inr": 3.5872,
+    "cap_inr": 5.0,
+    "aborted": null,
+    "tokens_in": 14604,
+    "tokens_out": 24138
+  }
+}
