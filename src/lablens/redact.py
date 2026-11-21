@@ -9,7 +9,7 @@ from functools import lru_cache
 from PIL import Image, ImageDraw
 from pydantic import BaseModel, Field
 
-from lablens.input_guard import MAX_PAGES, MAX_PIXELS, MAX_SIDE, RENDER_SCALE, page_fits
+from lablens.input_guard import MAX_PAGES, MAX_PIXELS, MAX_SIDE, page_fits, render_scale
 
 HEADER_BAND = 0.22  # fraction of page height masked on images (letterhead + patient grid)
 MASK = "[REDACTED]"
@@ -204,7 +204,7 @@ def redact_pii(data: bytes, kind: str, text_layer: str = "", use_ocr: bool = Tru
         pdf = pdfium.PdfDocument(data)
         if len(pdf) > MAX_PAGES or not all(page_fits(*pdf[i].get_size()) for i in range(len(pdf))):
             raise ValueError("page_too_large")  # defence in depth; input_guard rejects first
-        pages = [pdf[i].render(scale=RENDER_SCALE).to_pil() for i in range(len(pdf))]
+        pages = [pdf[i].render(scale=render_scale(*pdf[i].get_size())).to_pil() for i in range(len(pdf))]
     else:
         im = Image.open(io.BytesIO(data))
         if im.width * im.height > MAX_PIXELS or max(im.size) > MAX_SIDE:

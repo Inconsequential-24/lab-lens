@@ -14,7 +14,7 @@ from pydantic import BaseModel, Field
 
 from lablens import cache as cache_mod, config, reference
 from lablens.budget import BudgetGuard
-from lablens.extract import NoOutput, Usage
+from lablens.extract import NoOutput, Usage, with_rate_retry
 from lablens.glossary import glossary_lookup
 from lablens.safety import SafetyFailure
 from lablens.schemas import (Citation, Explanation, Flag, FlaggedTest, Recommendation,
@@ -186,7 +186,7 @@ async def call(node: str, kind: str, payload: dict, feedback: str | None, schema
                cache: cache_mod.ResponseCache | None, guard: BudgetGuard,
                caller: ExplainCaller | None) -> tuple[BaseModel, Usage, str]:
     """Cache (synthetic only) -> budget reservation -> call -> settle. Raises BudgetExceeded
-    or NoOutput; the pipeline turns both into template_fallback."""
+    NoOutput or ProviderUnavailable; the pipeline turns both into template_fallback."""
     caller = caller or gemini_call
     ver = version(node, kind, {"payload": payload, "feedback": feedback}, upstream)
     if cache is not None:
@@ -194,21 +194,26 @@ async def call(node: str, kind: str, payload: dict, feedback: str | None, schema
         if hit is not None:
             return schema.model_validate(hit), Usage(cache_hits=1), ver
     instr, msg = instruction(kind), message(payload, feedback)
-    rid = guard.check((len(instr) + len(msg)) // 3, EST_OUT.get(node, EST_OUT["render"]))
-    settled = False
-    try:
-        out, usage = await caller(node, instr, msg, schema)
-        usage.cost_inr = guard.record(node, usage.tokens_in, usage.tokens_out,
-                                      usage.tokens_thinking, reservation=rid)
-        settled = True
-    except NoOutput as e:
-        guard.record(node, e.usage.tokens_in, e.usage.tokens_out, e.usage.tokens_thinking,
-                     status="no_output", reservation=rid)
-        settled = True
-        raise
-    finally:
-        if not settled:
-            guard.release(rid)
+
+    async def attempt():
+        rid = guard.check((len(instr) + len(msg)) // 3, EST_OUT.get(node, EST_OUT["render"]))
+        settled = False
+        try:
+            out, usage = await caller(node, instr, msg, schema)
+            usage.cost_inr = guard.record(node, usage.tokens_in, usage.tokens_out,
+                                          usage.tokens_thinking, reservation=rid)
+            settled = True
+            return out, usage
+        except NoOutput as e:
+            guard.record(node, e.usage.tokens_in, e.usage.tokens_out, e.usage.tokens_thinking,
+                         status="no_output", reservation=rid)
+            settled = True
+            raise
+        finally:
+            if not settled:
+                guard.release(rid)
+
+    out, usage = await with_rate_retry(attempt)
     log.info("%s tokens in=%d out=%d thinking=%d cached=%d cost_inr=%.4f", node, usage.tokens_in,
              usage.tokens_out, usage.tokens_thinking, usage.tokens_cached, usage.cost_inr)
     if cache is not None:

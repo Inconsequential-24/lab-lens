@@ -8,7 +8,7 @@ info:
     history (sections 4.3 and 10). Component schemas mirror src/lablens/schemas.py
     field-for-field (enforced by tests/test_openapi.py).
     Limits: per-IP rate limit (5 reports/hour), global daily spend cap of INR 50 (past it only
-    already-processed sample reports are served, otherwise 503 daily_cap_reached), 5 MB, 10 pages, PDF/PNG/JPG checked by content,
+    already-processed sample reports are served, otherwise 503 daily_cap_reached), 10 MB, 10 pages, PDF/PNG/JPG checked by content,
     60 s timeout then deterministic fallback, non-saved results deleted after 24 hours.
 servers:
   - url: http://localhost:8000
@@ -276,7 +276,7 @@ components:
         file:
           type: string
           contentMediaType: application/octet-stream
-          description: PDF, PNG or JPG (checked by content), max 5 MB, max 10 pages.
+          description: PDF, PNG or JPG (checked by content), max 10 MB, max 10 pages.
         language: {type: string, enum: [en, hi, both], default: both}
         report_type:
           type: string

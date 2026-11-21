@@ -11,7 +11,7 @@ from pydantic import BaseModel
 
 from lablens.validate import names_by_test, norm_name as _norm
 
-MAX_BYTES = 5 * 1024 * 1024  # PLAN.md section 6
+MAX_BYTES = 10 * 1024 * 1024  # PLAN.md section 6
 MAX_PAGES = 10
 MAX_PIXELS = 40_000_000  # decompression-bomb cap per image or rendered page
 MAX_SIDE = 12_000  # px, either side
@@ -56,10 +56,18 @@ def looks_like_lab_report(text: str) -> bool:
     return hits >= MIN_TEST_HITS and bool(re.search(r"\d", text))
 
 
-def page_fits(w_pt: float, h_pt: float, scale: float = RENDER_SCALE) -> bool:
-    """A PDF page rendered at `scale` stays within the pixel caps."""
-    w, h = abs(w_pt) * scale, abs(h_pt) * scale
-    return w * h <= MAX_PIXELS and max(w, h) <= MAX_SIDE
+MIN_RENDER_SCALE = 0.5  # below this a page is too large to read reliably
+
+
+def render_scale(w_pt: float, h_pt: float) -> float:
+    """Largest scale up to RENDER_SCALE that keeps a rendered page within the pixel caps."""
+    w, h = max(abs(w_pt), 1.0), max(abs(h_pt), 1.0)
+    return min(RENDER_SCALE, (MAX_PIXELS / (w * h)) ** 0.5, MAX_SIDE / max(w, h))
+
+
+def page_fits(w_pt: float, h_pt: float) -> bool:
+    """Large pages are rendered at a smaller scale; only absurdly large ones are refused."""
+    return render_scale(w_pt, h_pt) >= MIN_RENDER_SCALE
 
 
 def _reject(reason: Reason, **kw) -> GuardResult:

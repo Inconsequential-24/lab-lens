@@ -6,11 +6,8 @@ content, file names or tokens. Real uploads stay in process memory (never disk/c
 from __future__ import annotations
 
 import asyncio
-import contextlib
 import logging
-import os
 import secrets
-import tempfile
 import threading
 import time
 from datetime import date, datetime, timedelta, timezone
@@ -31,6 +28,12 @@ from lablens.budget import BudgetGuard
 from lablens.cache import ResponseCache, file_sha256
 
 log = logging.getLogger("lablens.api")
+if not logging.getLogger().handlers:  # uvicorn configures only its own loggers
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s %(message)s")
+DETAIL_MESSAGES = {
+    "image_too_large": "This image's dimensions are too large to read. Please upload a smaller image.",
+    "page_too_large": "A page in this PDF is far larger than a normal document page.",
+}
 MAX_BODY = input_guard.MAX_BYTES + 64 * 1024  # file plus multipart overhead and small fields
 LANGUAGES = {"en", "hi", "both"}
 REPORT_TYPES = {"synthetic", "real"}
@@ -40,7 +43,7 @@ REASON_MAP = {"corrupt_pdf": "corrupted_file", "corrupt_image": "corrupted_file"
               "page_too_large": "file_too_large"}
 MESSAGES = {
     "unsupported_file_type": "Only PDF, PNG or JPG files are supported.",
-    "file_too_large": "Files up to 5 MB (and normal page/image sizes) are supported in the demo.",
+    "file_too_large": "Files up to 10 MB are supported in the demo.",
     "too_many_pages": "Reports longer than 10 pages are not supported in the demo.",
     "zero_pages": "This PDF has no pages.",
     "encrypted_pdf": "Password-protected PDFs are not supported. Please upload an unlocked copy.",
@@ -112,45 +115,6 @@ class ResultStore:
         for k in [k for k, v in self._d.items() if v[0] <= now]:
             del self._d[k]
             self._sha.pop(k, None)
-
-
-@contextlib.contextmanager
-def memory_path(data: bytes):
-    """A filesystem path whose reads come from memory (a FIFO fed by a thread), so the
-    path-based pipeline can process a real upload without its bytes touching disk.
-    Every open() of the path gets one full copy until the context exits."""
-    d = tempfile.mkdtemp(prefix="lablens-")
-    fifo = os.path.join(d, "upload")
-    os.mkfifo(fifo, 0o600)
-    stop = threading.Event()
-
-    def feed():
-        while True:
-            try:
-                fd = os.open(fifo, os.O_WRONLY)
-            except OSError:
-                return
-            try:
-                if stop.is_set():
-                    return
-                with contextlib.suppress(BrokenPipeError):
-                    view = memoryview(data)
-                    while view:
-                        view = view[os.write(fd, view):]
-            finally:
-                os.close(fd)
-
-    t = threading.Thread(target=feed, daemon=True)
-    t.start()
-    try:
-        yield fifo
-    finally:
-        stop.set()
-        with contextlib.suppress(OSError):  # unblock a writer waiting for a reader
-            os.close(os.open(fifo, os.O_RDONLY | os.O_NONBLOCK))
-        t.join(timeout=2)
-        os.unlink(fifo)
-        os.rmdir(d)
 
 
 def _utc_midnight() -> float:
@@ -300,24 +264,23 @@ def create_app(*, cache: ResponseCache | None = None, guard: BudgetGuard | None 
         run_guard = BudgetGuard(guard.path, min(guard.guard_inr,
                                                 guard.spent_inr() + st.daily_cap - today))
 
-        async def go(path: str):
-            return await asyncio.wait_for(pipeline.run(
-                path, real_upload=real, cache=_cache(), guard=run_guard, caller=st.caller,
-                explain_caller=st.explain_caller), timeout=config.REQUEST_TIMEOUT_S)
-
         try:
-            with memory_path(data) as path:
-                out = await go(path)
+            out = await asyncio.wait_for(pipeline.run(
+                data=data, real_upload=real, cache=_cache(), guard=run_guard, caller=st.caller,
+                explain_caller=st.explain_caller), timeout=config.REQUEST_TIMEOUT_S)
         except asyncio.TimeoutError:
             raise ApiError(503, "provider_unavailable", headers) from None
 
         if isinstance(out, pipeline.Rejected):
             if out.reason == "budget_exhausted":
                 raise ApiError(503, "daily_cap_reached", headers)
+            if out.reason == "provider_unavailable":
+                raise ApiError(503, "provider_unavailable", headers)
+            log.info("upload rejected: %s", out.reason)
             reason = REASON_MAP.get(out.reason, out.reason)
             if reason not in MESSAGES:
                 reason = "corrupted_file"
-            raise ApiError(400, reason, headers)
+            raise ApiError(400, reason, headers, message=DETAIL_MESSAGES.get(out.reason))
         result = out.model_dump(mode="json")
         if not result["tests"]:
             raise ApiError(422, "no_tests_extracted", headers,

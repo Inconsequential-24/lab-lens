@@ -7,6 +7,7 @@ import asyncio
 import json
 import logging
 import time
+import uuid
 from pathlib import Path
 
 from google.adk import Context, Event, Runner, Workflow
@@ -19,7 +20,7 @@ from lablens import cache as cache_mod, config, input_guard as guard_mod
 from lablens import explain as ex_mod
 from lablens.budget import BudgetExceeded, BudgetGuard
 from lablens.decision import route_next_step
-from lablens.extract import LlmCaller, NoOutput, Usage, extract_report, version as extract_version
+from lablens.extract import LlmCaller, NoOutput, ProviderUnavailable, Usage, extract_report, version as extract_version
 from lablens.flag_engine import flag_tests
 from lablens.ml.pattern_model import pattern_model
 from lablens.redact import RedactedDoc, redact_pii
@@ -46,12 +47,18 @@ class Flagged(BaseModel):
     tests: list[FlaggedTest]
 
 
+# In-memory uploads for the current runs, keyed per run; bytes never enter session state or disk.
+UPLOADS: dict[str, bytes] = {}
+
+
 def _bytes(ctx: Context) -> bytes:
-    return Path(ctx.state["path"]).read_bytes()
+    key = ctx.state.get("upload_key")
+    return UPLOADS[key] if key else Path(ctx.state["path"]).read_bytes()
 
 
 def input_guard(node_input: dict, ctx: Context):
-    ctx.state["path"] = node_input["path"]
+    ctx.state["path"] = node_input.get("path", "")
+    ctx.state["upload_key"] = node_input.get("upload_key", "")
     ctx.state["real_upload"] = bool(node_input.get("real_upload", False))
     data = _bytes(ctx)
     ctx.state["file_sha"] = cache_mod.file_sha256(data)
@@ -66,7 +73,8 @@ def reject(node_input: guard_mod.GuardResult) -> str:
 
 
 def budget_reject(node_input: str) -> str:
-    return Rejected(reason="budget_exhausted").model_dump_json()
+    reason = node_input if node_input == "provider_unavailable" else "budget_exhausted"
+    return Rejected(reason=reason).model_dump_json()
 
 
 def _add_usage(ctx: Context, node_name: str, usage: Usage) -> None:
@@ -102,6 +110,9 @@ async def extract(node_input: RedactedDoc, ctx: Context):
     except BudgetExceeded as e:
         log.warning("extract refused by budget guard: %s", e)
         return Event(output="budget_exhausted", route="BUDGET")
+    except ProviderUnavailable as e:
+        log.warning("extract: provider unavailable: %s", e)
+        return Event(output="provider_unavailable", route="BUDGET")
     _add_usage(ctx, "extract", usage)
     ctx.state["ms_extract"] = (time.perf_counter() - t0) * 1000
     return Event(output=ext, route="OK")
@@ -153,7 +164,7 @@ def _stop_llm(ctx: Context, node_name: str, e: Exception) -> None:
 
 def _llm_errors() -> tuple[type[Exception], ...]:
     from google.genai import errors
-    return (BudgetExceeded, NoOutput, errors.APIError)
+    return (BudgetExceeded, NoOutput, ProviderUnavailable, errors.APIError)
 
 
 async def _call(ctx: Context, node_name: str, kind: str, payload: dict, fb: str | None,
@@ -335,7 +346,7 @@ workflow = Workflow(
 )
 
 
-async def run(path: str | Path, *, real_upload: bool = False,
+async def run(path: str | Path | None = None, *, data: bytes | None = None, real_upload: bool = False,
               cache: cache_mod.ResponseCache | None = None, guard: BudgetGuard | None = None,
               caller: LlmCaller | None = None,
               explain_caller: ex_mod.ExplainCaller | None = None,
@@ -345,12 +356,20 @@ async def run(path: str | Path, *, real_upload: bool = False,
     RUNTIME.update(cache=cache, guard=guard, caller=caller, explain_caller=explain_caller)
     runner = Runner(node=workflow, app_name="lablens", session_service=InMemorySessionService(),
                     auto_create_session=True)
+    if (path is None) == (data is None):
+        raise ValueError("pass exactly one of path or data")
+    key = uuid.uuid4().hex if data is not None else ""
+    if key:
+        UPLOADS[key] = data
     msg = types.Content(role="user", parts=[types.Part(text=json.dumps(
-        {"path": str(path), "real_upload": real_upload}))])
+        {"path": str(path or ""), "upload_key": key, "real_upload": real_upload}))])
     last = None
-    async for ev in runner.run_async(user_id="u", session_id="s", new_message=msg):
-        if ev.output is not None:
-            last = ev.output
+    try:
+        async for ev in runner.run_async(user_id="u", session_id="s", new_message=msg):
+            if ev.output is not None:
+                last = ev.output
+    finally:
+        UPLOADS.pop(key, None)
     if state_out is not None:
         sess = await runner.session_service.get_session(app_name="lablens", user_id="u",
                                                         session_id="s")

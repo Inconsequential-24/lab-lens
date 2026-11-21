@@ -3,7 +3,8 @@
 # DEMO LIST, MODEL-WRITTEN, not clinician-reviewed; Hindi entries need fluent-reader review.
 # English phrases match case-insensitively at a word start ("diagnos" also matches
 # "diagnosis"). Hindi phrases match as whole words; a trailing "*" makes a Hindi entry a
-# word-start prefix ("घट*" matches "घटा", "घटकर"). Applied to summary, urgent_message and
+# word-start prefix. Direction verbs are listed as explicit intransitive forms
+# ("घटा", "घटकर") so causative/subtraction senses ("घटाकर", "घटाने", "बढ़ाकर") do not match. Applied to summary, urgent_message and
 # statements, never to the fixed disclaimer. banned_patterns are regexes (same scope).
 
 version: "2026-11-21"
@@ -55,10 +56,10 @@ direction:
   low:
     en: ["low", "lower", "less", "below", "decreased", "reduced", "dropped", "fallen",
          "fell", "under the"]
-    hi: ["कम", "नीचे", "घट*", "न्यून"]
+    hi: ["कम", "नीचे", "घटा", "घटी", "घटे", "घटकर", "घटता", "घटती", "घटते", "घटने", "घट", "न्यून"]
   high:
     en: ["high", "higher", "above", "elevated", "raised", "increased", "over the"]
-    hi: ["अधिक", "ज़्यादा", "ज्यादा", "ऊपर", "बढ़*", "बढ*"]
+    hi: ["अधिक", "ज़्यादा", "ज्यादा", "ऊपर", "बढ़ा", "बढ़ी", "बढ़े", "बढ़कर", "बढ़ता", "बढ़ती", "बढ़ते", "बढ़ना", "बढ़ने", "बढ़", "बढा", "बढी", "बढे", "बढकर", "बढता", "बढती", "बढते", "बढना", "बढने", "बढ"]
   # Out of range without a direction: needs at least one low/high test in scope.
   abnormal:
     en: ["outside the range", "out of range", "outside range", "abnormal"]

@@ -2,11 +2,11 @@
 #
 # DEMO TEXT, MODEL-WRITTEN. Not reviewed by a clinician. The Hindi text needs review by a
 # fluent Hindi reader before any real use. Text is deliberately neutral: it says what a test
-# measures and, for low/high, only that many things can affect it. No condition names, no
+# is and why doctors check it, and, for low/high, only that many things can affect it. No condition names, no
 # causes linked to symptoms, no treatment or medication. Direction words in low/high text must
 # stay consistent with the flag (safety_check checks them).
 
-version: "2026-11-21"
+version: "2026-11-21b"
 
 defaults:
   low: &low
@@ -20,273 +20,273 @@ tests:
   HB:
     name_hi: "हीमोग्लोबिन"
     measures:
-      en: "This test measures the protein in red blood cells that carries oxygen."
-      hi: "यह जाँच लाल रक्त कोशिकाओं में मौजूद वह प्रोटीन जो ऑक्सीजन ले जाता है मापती है।"
+      en: "Haemoglobin is a protein inside red blood cells that carries oxygen from your lungs to the rest of your body. Doctors check it to understand how well your blood can carry oxygen."
+      hi: "हीमोग्लोबिन (Haemoglobin) लाल रक्त कोशिकाओं के अंदर का एक प्रोटीन है, जो फेफड़ों से ऑक्सीजन लेकर पूरे शरीर तक पहुँचाता है। डॉक्टर इसे यह समझने के लिए देखते हैं कि आपका खून ऑक्सीजन कितनी अच्छी तरह ले जा पा रहा है।"
     low: *low
     high: *high
   RBC:
     name_hi: "लाल रक्त कोशिकाओं की संख्या"
     measures:
-      en: "This test measures the number of red blood cells in a sample of blood."
-      hi: "यह जाँच खून के एक नमूने में लाल रक्त कोशिकाओं की संख्या मापती है।"
+      en: "Red blood cells are the cells that carry oxygen around your body. This count tells how many of them are in a small amount of blood, and doctors check it as part of a routine look at your blood."
+      hi: "लाल रक्त कोशिकाएँ (RBC) वे कोशिकाएँ हैं जो पूरे शरीर में ऑक्सीजन पहुँचाती हैं। यह गिनती बताती है कि खून की थोड़ी-सी मात्रा में ये कितनी हैं, और डॉक्टर इसे खून की नियमित जाँच के हिस्से के रूप में देखते हैं।"
     low: *low
     high: *high
   PCV:
     name_hi: "पीसीवी"
     measures:
-      en: "This test measures the share of blood volume made up of red blood cells."
-      hi: "यह जाँच खून की मात्रा का वह हिस्सा जो लाल रक्त कोशिकाओं से बना है मापती है।"
+      en: "PCV, also called haematocrit, is the share of your blood that is made up of red blood cells. Doctors look at it together with haemoglobin to understand your red blood cells."
+      hi: "पीसीवी (PCV), जिसे हीमाटोक्रिट भी कहते हैं, आपके खून का वह हिस्सा है जो लाल रक्त कोशिकाओं से बना होता है। डॉक्टर इसे हीमोग्लोबिन के साथ देखकर आपकी लाल रक्त कोशिकाओं को समझते हैं।"
     low: *low
     high: *high
   MCV:
     name_hi: "एमसीवी"
     measures:
-      en: "This test measures the average size of red blood cells."
-      hi: "यह जाँच लाल रक्त कोशिकाओं का औसत आकार मापती है।"
+      en: "MCV is the average size of your red blood cells. Doctors use it to learn more about your red blood cells when reading a blood count."
+      hi: "एमसीवी (MCV) आपकी लाल रक्त कोशिकाओं का औसत आकार है। खून की गिनती की रिपोर्ट पढ़ते समय डॉक्टर इससे लाल रक्त कोशिकाओं के बारे में और जानकारी लेते हैं।"
     low: *low
     high: *high
   MCH:
     name_hi: "एमसीएच"
     measures:
-      en: "This test measures the average amount of hemoglobin in each red blood cell."
-      hi: "यह जाँच हर लाल रक्त कोशिका में हीमोग्लोबिन की औसत मात्रा मापती है।"
+      en: "MCH is the average amount of haemoglobin, the oxygen-carrying protein, inside each red blood cell. Doctors read it alongside the other red blood cell values."
+      hi: "एमसीएच (MCH) हर लाल रक्त कोशिका के अंदर हीमोग्लोबिन (ऑक्सीजन ले जाने वाला प्रोटीन) की औसत मात्रा है। डॉक्टर इसे लाल रक्त कोशिकाओं के दूसरे मानों के साथ पढ़ते हैं।"
     low: *low
     high: *high
   MCHC:
     name_hi: "एमसीएचसी"
     measures:
-      en: "This test measures how concentrated hemoglobin is inside red blood cells."
-      hi: "यह जाँच लाल रक्त कोशिकाओं के अंदर हीमोग्लोबिन की सघनता मापती है।"
+      en: "MCHC shows how tightly packed haemoglobin is inside your red blood cells. Doctors read it alongside the other red blood cell values."
+      hi: "एमसीएचसी (MCHC) बताता है कि लाल रक्त कोशिकाओं के अंदर हीमोग्लोबिन कितना घना भरा है। डॉक्टर इसे लाल रक्त कोशिकाओं के दूसरे मानों के साथ पढ़ते हैं।"
     low: *low
     high: *high
   RDW:
     name_hi: "आरडीडब्ल्यू"
     measures:
-      en: "This test measures how much red blood cells vary in size."
-      hi: "यह जाँच लाल रक्त कोशिकाओं के आकार में कितना अंतर है मापती है।"
+      en: "RDW shows how much your red blood cells vary in size from one another. Doctors use it together with MCV to get a fuller picture of your red blood cells."
+      hi: "आरडीडब्ल्यू (RDW) बताता है कि आपकी लाल रक्त कोशिकाओं के आकार में आपस में कितना अंतर है। डॉक्टर इसे एमसीवी के साथ देखकर लाल रक्त कोशिकाओं की पूरी तस्वीर समझते हैं।"
     low: *low
     high: *high
   WBC:
     name_hi: "श्वेत रक्त कोशिकाओं की संख्या"
     measures:
-      en: "This test measures the number of white blood cells, which are part of the immune system."
-      hi: "यह जाँच श्वेत रक्त कोशिकाओं की संख्या, जो शरीर की रक्षा प्रणाली का हिस्सा हैं मापती है।"
+      en: "White blood cells are part of your body's defence system. This count tells how many of them are in a small amount of blood, and doctors check it as part of a routine look at your blood."
+      hi: "श्वेत रक्त कोशिकाएँ (WBC) शरीर की रक्षा प्रणाली का हिस्सा हैं। यह गिनती बताती है कि खून की थोड़ी-सी मात्रा में ये कितनी हैं, और डॉक्टर इसे खून की नियमित जाँच के हिस्से के रूप में देखते हैं।"
     low: *low
     high: *high
   NEUT:
     name_hi: "न्यूट्रोफिल"
     measures:
-      en: "This test measures the share of white blood cells that are neutrophils."
-      hi: "यह जाँच श्वेत रक्त कोशिकाओं में न्यूट्रोफिल का हिस्सा मापती है।"
+      en: "Neutrophils are the most common kind of white blood cell and are part of your body's defence system. This value shows what share of your white blood cells they make up."
+      hi: "न्यूट्रोफिल (Neutrophils) सबसे आम प्रकार की श्वेत रक्त कोशिकाएँ हैं और शरीर की रक्षा प्रणाली का हिस्सा हैं। यह मान बताता है कि आपकी श्वेत रक्त कोशिकाओं में इनका हिस्सा कितना है।"
     low: *low
     high: *high
   LYMPH:
     name_hi: "लिम्फोसाइट"
     measures:
-      en: "This test measures the share of white blood cells that are lymphocytes."
-      hi: "यह जाँच श्वेत रक्त कोशिकाओं में लिम्फोसाइट का हिस्सा मापती है।"
+      en: "Lymphocytes are one kind of white blood cell and are part of your body's defence system. This value shows what share of your white blood cells they make up."
+      hi: "लिम्फोसाइट (Lymphocytes) एक प्रकार की श्वेत रक्त कोशिकाएँ हैं और शरीर की रक्षा प्रणाली का हिस्सा हैं। यह मान बताता है कि आपकी श्वेत रक्त कोशिकाओं में इनका हिस्सा कितना है।"
     low: *low
     high: *high
   MONO:
     name_hi: "मोनोसाइट"
     measures:
-      en: "This test measures the share of white blood cells that are monocytes."
-      hi: "यह जाँच श्वेत रक्त कोशिकाओं में मोनोसाइट का हिस्सा मापती है।"
+      en: "Monocytes are one kind of white blood cell and are part of your body's defence system. This value shows what share of your white blood cells they make up."
+      hi: "मोनोसाइट (Monocytes) एक प्रकार की श्वेत रक्त कोशिकाएँ हैं और शरीर की रक्षा प्रणाली का हिस्सा हैं। यह मान बताता है कि आपकी श्वेत रक्त कोशिकाओं में इनका हिस्सा कितना है।"
     low: *low
     high: *high
   EOS:
     name_hi: "इओसिनोफिल"
     measures:
-      en: "This test measures the share of white blood cells that are eosinophils."
-      hi: "यह जाँच श्वेत रक्त कोशिकाओं में इओसिनोफिल का हिस्सा मापती है।"
+      en: "Eosinophils are one kind of white blood cell and are part of your body's defence system. This value shows what share of your white blood cells they make up."
+      hi: "इओसिनोफिल (Eosinophils) एक प्रकार की श्वेत रक्त कोशिकाएँ हैं और शरीर की रक्षा प्रणाली का हिस्सा हैं। यह मान बताता है कि आपकी श्वेत रक्त कोशिकाओं में इनका हिस्सा कितना है।"
     low: *low
     high: *high
   BASO:
     name_hi: "बेसोफिल"
     measures:
-      en: "This test measures the share of white blood cells that are basophils."
-      hi: "यह जाँच श्वेत रक्त कोशिकाओं में बेसोफिल का हिस्सा मापती है।"
+      en: "Basophils are a rare kind of white blood cell and are part of your body's defence system. This value shows what share of your white blood cells they make up."
+      hi: "बेसोफिल (Basophils) एक दुर्लभ प्रकार की श्वेत रक्त कोशिकाएँ हैं और शरीर की रक्षा प्रणाली का हिस्सा हैं। यह मान बताता है कि आपकी श्वेत रक्त कोशिकाओं में इनका हिस्सा कितना है।"
     low: *low
     high: *high
   PLT:
     name_hi: "प्लेटलेट"
     measures:
-      en: "This test measures the number of platelets, small cells that help blood clot."
-      hi: "यह जाँच प्लेटलेट की संख्या, छोटी कोशिकाएँ जो खून का थक्का बनने में मदद करती हैं मापती है।"
+      en: "Platelets are tiny cells in your blood that help it clot and stop bleeding after a cut. Doctors check the platelet count as part of a routine look at your blood."
+      hi: "प्लेटलेट (Platelets) खून में मौजूद बहुत छोटी कोशिकाएँ हैं, जो चोट लगने पर खून का थक्का बनाकर खून बहना रोकने में मदद करती हैं। डॉक्टर इनकी गिनती खून की नियमित जाँच के हिस्से के रूप में देखते हैं।"
     low: *low
     high: *high
   TC:
     name_hi: "कुल कोलेस्ट्रॉल"
     measures:
-      en: "This test measures the total amount of cholesterol, a type of fat, in the blood."
-      hi: "यह जाँच खून में कोलेस्ट्रॉल (एक प्रकार की वसा) की कुल मात्रा मापती है।"
+      en: "Cholesterol is a waxy, fat-like substance that your body uses to build cells. Total cholesterol adds up all the kinds carried in your blood, and doctors check it to understand heart and blood vessel health."
+      hi: "कोलेस्ट्रॉल (Cholesterol) एक मोम जैसा, वसा जैसा पदार्थ है जिसका उपयोग शरीर कोशिकाएँ बनाने में करता है। कुल कोलेस्ट्रॉल खून में मौजूद इसके सभी प्रकारों को जोड़कर बनता है, और डॉक्टर इसे दिल और रक्त वाहिकाओं की सेहत समझने के लिए देखते हैं।"
     low: *low
     high: *high
   TG:
     name_hi: "ट्राइग्लिसराइड"
     measures:
-      en: "This test measures the amount of triglycerides, a type of fat, in the blood."
-      hi: "यह जाँच खून में ट्राइग्लिसराइड (एक प्रकार की वसा) की मात्रा मापती है।"
+      en: "Triglycerides are a type of fat in your blood that your body uses for energy. Doctors check them, often with cholesterol, to understand heart and blood vessel health."
+      hi: "ट्राइग्लिसराइड (Triglycerides) खून में मौजूद एक प्रकार की वसा है, जिसे शरीर ऊर्जा के लिए इस्तेमाल करता है। डॉक्टर इसे अक्सर कोलेस्ट्रॉल के साथ, दिल और रक्त वाहिकाओं की सेहत समझने के लिए देखते हैं।"
     low: *low
     high: *high
   HDL:
     name_hi: "एचडीएल कोलेस्ट्रॉल"
     measures:
-      en: "This test measures the amount of HDL cholesterol in the blood."
-      hi: "यह जाँच खून में एचडीएल कोलेस्ट्रॉल की मात्रा मापती है।"
+      en: "HDL is one kind of cholesterol carried in your blood. It is often called 'good' cholesterol because it helps carry extra cholesterol away to the liver. Doctors check it to understand heart and blood vessel health."
+      hi: "एचडीएल (HDL) खून में मौजूद कोलेस्ट्रॉल का एक प्रकार है। इसे अक्सर 'अच्छा' कोलेस्ट्रॉल कहा जाता है, क्योंकि यह अतिरिक्त कोलेस्ट्रॉल को लिवर तक वापस ले जाने में मदद करता है। डॉक्टर इसे दिल और रक्त वाहिकाओं की सेहत समझने के लिए देखते हैं।"
     low: *low
     high: *high
   LDL:
     name_hi: "एलडीएल कोलेस्ट्रॉल"
     measures:
-      en: "This test measures the amount of LDL cholesterol in the blood."
-      hi: "यह जाँच खून में एलडीएल कोलेस्ट्रॉल की मात्रा मापती है।"
+      en: "LDL is one kind of cholesterol carried in your blood. It is often called 'bad' cholesterol because, over time, it can build up in the walls of blood vessels. Doctors check it to understand heart and blood vessel health."
+      hi: "एलडीएल (LDL) खून में मौजूद कोलेस्ट्रॉल का एक प्रकार है। इसे अक्सर 'खराब' कोलेस्ट्रॉल कहा जाता है, क्योंकि समय के साथ यह रक्त वाहिकाओं की दीवारों में जमा हो सकता है। डॉक्टर इसे दिल और रक्त वाहिकाओं की सेहत समझने के लिए देखते हैं।"
     low: *low
     high: *high
   VLDL:
     name_hi: "वीएलडीएल कोलेस्ट्रॉल"
     measures:
-      en: "This test measures the amount of VLDL cholesterol in the blood."
-      hi: "यह जाँच खून में वीएलडीएल कोलेस्ट्रॉल की मात्रा मापती है।"
+      en: "VLDL is one kind of cholesterol carrier in your blood that mostly carries triglycerides, a type of fat. Doctors look at it as part of a full cholesterol profile."
+      hi: "वीएलडीएल (VLDL) खून में कोलेस्ट्रॉल ले जाने वाला एक प्रकार है, जो मुख्य रूप से ट्राइग्लिसराइड (एक प्रकार की वसा) ले जाता है। डॉक्टर इसे पूरी कोलेस्ट्रॉल प्रोफ़ाइल के हिस्से के रूप में देखते हैं।"
     low: *low
     high: *high
   NONHDL:
     name_hi: "नॉन-एचडीएल कोलेस्ट्रॉल"
     measures:
-      en: "This test measures total cholesterol minus HDL cholesterol."
-      hi: "यह जाँच कुल कोलेस्ट्रॉल में से एचडीएल कोलेस्ट्रॉल निकालने पर बची मात्रा मापती है।"
+      en: "Non-HDL cholesterol is your total cholesterol minus the HDL ('good') part. Doctors look at it as one more way to understand heart and blood vessel health."
+      hi: "नॉन-एचडीएल कोलेस्ट्रॉल (Non-HDL) कुल कोलेस्ट्रॉल में से एचडीएल ('अच्छा') हिस्सा हटाने पर बची मात्रा है। डॉक्टर इसे दिल और रक्त वाहिकाओं की सेहत समझने के एक और तरीके के रूप में देखते हैं।"
     low: *low
     high: *high
   TC_HDL:
     name_hi: "टीसी/एचडीएल अनुपात"
     measures:
-      en: "This test measures total cholesterol divided by HDL cholesterol."
-      hi: "यह जाँच कुल कोलेस्ट्रॉल और एचडीएल कोलेस्ट्रॉल का अनुपात मापती है।"
+      en: "This ratio compares your total cholesterol with your HDL ('good') cholesterol. Doctors use it as one more way to read a cholesterol profile."
+      hi: "यह अनुपात (TC/HDL ratio) आपके कुल कोलेस्ट्रॉल की तुलना एचडीएल ('अच्छे') कोलेस्ट्रॉल से करता है। डॉक्टर इसे कोलेस्ट्रॉल प्रोफ़ाइल पढ़ने के एक और तरीके के रूप में इस्तेमाल करते हैं।"
     low: *low
     high: *high
   LDL_HDL:
     name_hi: "एलडीएल/एचडीएल अनुपात"
     measures:
-      en: "This test measures LDL cholesterol divided by HDL cholesterol."
-      hi: "यह जाँच एलडीएल कोलेस्ट्रॉल और एचडीएल कोलेस्ट्रॉल का अनुपात मापती है।"
+      en: "This ratio compares your LDL ('bad') cholesterol with your HDL ('good') cholesterol. Doctors use it as one more way to read a cholesterol profile."
+      hi: "यह अनुपात (LDL/HDL ratio) आपके एलडीएल ('खराब') कोलेस्ट्रॉल की तुलना एचडीएल ('अच्छे') कोलेस्ट्रॉल से करता है। डॉक्टर इसे कोलेस्ट्रॉल प्रोफ़ाइल पढ़ने के एक और तरीके के रूप में इस्तेमाल करते हैं।"
     low: *low
     high: *high
   HBA1C:
     name_hi: "एचबीए1सी"
     measures:
-      en: "This test measures the share of hemoglobin with sugar attached, which reflects average blood sugar over about the past three months."
-      hi: "यह जाँच हीमोग्लोबिन का वह हिस्सा जिससे शुगर जुड़ी होती है; यह पिछले लगभग तीन महीनों की औसत ब्लड शुगर दिखाता है मापती है।"
+      en: "HbA1c shows how much sugar has attached to the haemoglobin in your red blood cells. Because these cells live for about three months, it gives a picture of your average blood sugar over that time. Doctors check it to understand how your body handles sugar."
+      hi: "एचबीए1सी (HbA1c) बताता है कि आपकी लाल रक्त कोशिकाओं के हीमोग्लोबिन से कितनी शुगर जुड़ी हुई है। ये कोशिकाएँ लगभग तीन महीने तक रहती हैं, इसलिए यह उस समय की औसत ब्लड शुगर की तस्वीर देता है। डॉक्टर इसे यह समझने के लिए देखते हैं कि आपका शरीर शुगर को कैसे सँभालता है।"
     low: *low
     high: *high
   EAG:
     name_hi: "अनुमानित औसत ग्लूकोज़"
     measures:
-      en: "This test measures an average blood sugar level calculated from HbA1c."
-      hi: "यह जाँच एचबीए1सी से निकाला गया औसत ब्लड शुगर स्तर मापती है।"
+      en: "Estimated average glucose turns your HbA1c result into an average blood sugar figure, in the same units as a regular sugar test. It helps you and your doctor read HbA1c more easily."
+      hi: "अनुमानित औसत ग्लूकोज़ (eAG) आपके एचबीए1सी परिणाम को औसत ब्लड शुगर के रूप में, आम शुगर जाँच वाली इकाई में बदलकर दिखाता है। इससे आपको और आपके डॉक्टर को एचबीए1सी समझने में आसानी होती है।"
     low: *low
     high: *high
   T3:
     name_hi: "टी3"
     measures:
-      en: "This test measures the amount of the thyroid hormone T3 in the blood."
-      hi: "यह जाँच खून में थायरॉइड हार्मोन टी3 की मात्रा मापती है।"
+      en: "T3 is one of the main hormones made by the thyroid, a small gland in your neck. Thyroid hormones help control how your body uses energy, and doctors check T3 to understand how your thyroid is working."
+      hi: "टी3 (T3) थायरॉइड के मुख्य हार्मोन में से एक है; थायरॉइड गले में मौजूद एक छोटी ग्रंथि है। थायरॉइड हार्मोन यह नियंत्रित करने में मदद करते हैं कि शरीर ऊर्जा का उपयोग कैसे करे, और डॉक्टर टी3 को थायरॉइड के काम को समझने के लिए देखते हैं।"
     low: *low
     high: *high
   T4:
     name_hi: "टी4"
     measures:
-      en: "This test measures the amount of the thyroid hormone T4 in the blood."
-      hi: "यह जाँच खून में थायरॉइड हार्मोन टी4 की मात्रा मापती है।"
+      en: "T4 is the main hormone made by the thyroid, a small gland in your neck. Thyroid hormones help control how your body uses energy, and doctors check T4 to understand how your thyroid is working."
+      hi: "टी4 (T4) थायरॉइड का मुख्य हार्मोन है; थायरॉइड गले में मौजूद एक छोटी ग्रंथि है। थायरॉइड हार्मोन यह नियंत्रित करने में मदद करते हैं कि शरीर ऊर्जा का उपयोग कैसे करे, और डॉक्टर टी4 को थायरॉइड के काम को समझने के लिए देखते हैं।"
     low: *low
     high: *high
   TSH:
     name_hi: "टीएसएच"
     measures:
-      en: "This test measures the hormone that signals the thyroid gland to make its hormones."
-      hi: "यह जाँच वह हार्मोन जो थायरॉइड ग्रंथि को हार्मोन बनाने का संकेत देता है मापती है।"
+      en: "TSH is a hormone made by a small gland in your brain. It tells the thyroid gland in your neck how much thyroid hormone to make. Doctors check it to understand how your thyroid is working."
+      hi: "टीएसएच (TSH) दिमाग में मौजूद एक छोटी ग्रंथि से बनने वाला हार्मोन है। यह गले में मौजूद थायरॉइड ग्रंथि को बताता है कि उसे कितना थायरॉइड हार्मोन बनाना है। डॉक्टर इसे थायरॉइड के काम को समझने के लिए देखते हैं।"
     low: *low
     high: *high
   TBIL:
     name_hi: "कुल बिलीरुबिन"
     measures:
-      en: "This test measures the total amount of bilirubin, a yellow substance made when red blood cells break down."
-      hi: "यह जाँच बिलीरुबिन की कुल मात्रा; यह पीला पदार्थ लाल रक्त कोशिकाओं के टूटने पर बनता है मापती है।"
+      en: "Bilirubin is a yellow substance made when old red blood cells are broken down; the liver then clears it from the body. Total bilirubin adds up all of it in your blood, and doctors check it to understand how your liver is working."
+      hi: "बिलीरुबिन (Bilirubin) एक पीला पदार्थ है जो पुरानी लाल रक्त कोशिकाओं के टूटने पर बनता है, और फिर लिवर इसे शरीर से हटाता है। कुल बिलीरुबिन खून में इसकी पूरी मात्रा है, और डॉक्टर इसे लिवर के काम को समझने के लिए देखते हैं।"
     low: *low
     high: *high
   DBIL:
     name_hi: "डायरेक्ट बिलीरुबिन"
     measures:
-      en: "This test measures the part of bilirubin that has been processed by the liver."
-      hi: "यह जाँच बिलीरुबिन का वह हिस्सा जिसे लिवर प्रोसेस कर चुका है मापती है।"
+      en: "Direct bilirubin is the part of bilirubin that the liver has already processed so the body can clear it. Doctors read it alongside total bilirubin to understand how your liver is working."
+      hi: "डायरेक्ट बिलीरुबिन (Direct bilirubin) बिलीरुबिन का वह हिस्सा है जिसे लिवर पहले ही प्रोसेस कर चुका है, ताकि शरीर उसे निकाल सके। डॉक्टर इसे कुल बिलीरुबिन के साथ पढ़कर लिवर के काम को समझते हैं।"
     low: *low
     high: *high
   IBIL:
     name_hi: "इनडायरेक्ट बिलीरुबिन"
     measures:
-      en: "This test measures the part of bilirubin not yet processed by the liver."
-      hi: "यह जाँच बिलीरुबिन का वह हिस्सा जिसे लिवर ने अभी प्रोसेस नहीं किया है मापती है।"
+      en: "Indirect bilirubin is the part of bilirubin that has yet to be processed by the liver. Doctors read it alongside total and direct bilirubin to understand how your liver is working."
+      hi: "इनडायरेक्ट बिलीरुबिन (Indirect bilirubin) बिलीरुबिन का वह हिस्सा है जिसे लिवर को अभी प्रोसेस करना बाकी है। डॉक्टर इसे कुल और डायरेक्ट बिलीरुबिन के साथ पढ़कर लिवर के काम को समझते हैं।"
     low: *low
     high: *high
   ALT:
     name_hi: "एसजीपीटी"
     measures:
-      en: "This test measures the level of ALT, an enzyme found mainly in the liver."
-      hi: "यह जाँच एएलटी का स्तर; यह एंजाइम मुख्य रूप से लिवर में पाया जाता है मापती है।"
+      en: "ALT, also called SGPT, is an enzyme found mainly in the liver. Doctors check it to understand how your liver is working."
+      hi: "एसजीपीटी (ALT/SGPT) एक एंजाइम है जो मुख्य रूप से लिवर में पाया जाता है। डॉक्टर इसे लिवर के काम को समझने के लिए देखते हैं।"
     low: *low
     high: *high
   AST:
     name_hi: "एसजीओटी"
     measures:
-      en: "This test measures the level of AST, an enzyme found in the liver and other tissues."
-      hi: "यह जाँच एएसटी का स्तर; यह एंजाइम लिवर और शरीर के दूसरे ऊतकों में पाया जाता है मापती है।"
+      en: "AST, also called SGOT, is an enzyme found in the liver and in other parts of the body such as muscles. Doctors check it, often with ALT, to understand how your liver is working."
+      hi: "एसजीओटी (AST/SGOT) एक एंजाइम है जो लिवर में और शरीर के दूसरे हिस्सों, जैसे मांसपेशियों, में पाया जाता है। डॉक्टर इसे अक्सर एसजीपीटी के साथ, लिवर के काम को समझने के लिए देखते हैं।"
     low: *low
     high: *high
   ALP:
     name_hi: "एल्कलाइन फॉस्फेटेज़"
     measures:
-      en: "This test measures the level of ALP, an enzyme found in the liver, bones and other tissues."
-      hi: "यह जाँच एएलपी का स्तर; यह एंजाइम लिवर, हड्डियों और दूसरे ऊतकों में पाया जाता है मापती है।"
+      en: "ALP is an enzyme found in the liver, bones and some other parts of the body. Doctors check it to understand how your liver and bones are working."
+      hi: "एल्कलाइन फॉस्फेटेज़ (ALP) एक एंजाइम है जो लिवर, हड्डियों और शरीर के कुछ दूसरे हिस्सों में पाया जाता है। डॉक्टर इसे लिवर और हड्डियों के काम को समझने के लिए देखते हैं।"
     low: *low
     high: *high
   AST_ALT:
     name_hi: "एएसटी:एएलटी अनुपात"
     measures:
-      en: "This test measures the AST level divided by the ALT level."
-      hi: "यह जाँच एएसटी और एएलटी के स्तर का अनुपात मापती है।"
+      en: "This ratio compares your AST and ALT enzyme levels. Doctors use it as one more way to read a liver test report."
+      hi: "यह अनुपात (AST:ALT ratio) आपके एएसटी और एएलटी एंजाइम के स्तर की तुलना करता है। डॉक्टर इसे लिवर जाँच की रिपोर्ट पढ़ने के एक और तरीके के रूप में इस्तेमाल करते हैं।"
     low: *low
     high: *high
   GGT:
     name_hi: "गामा जीटी"
     measures:
-      en: "This test measures the level of GGT, an enzyme found mainly in the liver."
-      hi: "यह जाँच जीजीटी का स्तर; यह एंजाइम मुख्य रूप से लिवर में पाया जाता है मापती है।"
+      en: "GGT is an enzyme found mainly in the liver. Doctors check it, often with ALP, to understand how your liver is working."
+      hi: "गामा जीटी (GGT) एक एंजाइम है जो मुख्य रूप से लिवर में पाया जाता है। डॉक्टर इसे अक्सर एल्कलाइन फॉस्फेटेज़ के साथ, लिवर के काम को समझने के लिए देखते हैं।"
     low: *low
     high: *high
   TP:
     name_hi: "कुल प्रोटीन"
     measures:
-      en: "This test measures the total amount of protein in the blood."
-      hi: "यह जाँच खून में प्रोटीन की कुल मात्रा मापती है।"
+      en: "Total protein adds up the two main groups of proteins in your blood, albumin and globulin. These proteins help build and repair the body and carry substances around it. Doctors check it to understand your liver and general nutrition."
+      hi: "कुल प्रोटीन (Total protein) खून के दो मुख्य प्रोटीन समूहों, एल्ब्यूमिन और ग्लोब्युलिन, को जोड़कर बनता है। ये प्रोटीन शरीर को बनाने, उसकी मरम्मत करने और पदार्थों को शरीर में पहुँचाने में मदद करते हैं। डॉक्टर इसे लिवर और पोषण की स्थिति समझने के लिए देखते हैं।"
     low: *low
     high: *high
   ALB:
     name_hi: "एल्ब्यूमिन"
     measures:
-      en: "This test measures the amount of albumin, the main protein in blood."
-      hi: "यह जाँच एल्ब्यूमिन की मात्रा, जो खून का मुख्य प्रोटीन है मापती है।"
+      en: "Albumin is the main protein in your blood. It is made by the liver and helps keep fluid inside blood vessels. Doctors check it to understand your liver and general nutrition."
+      hi: "एल्ब्यूमिन (Albumin) खून का मुख्य प्रोटीन है। इसे लिवर बनाता है, और यह तरल को रक्त वाहिकाओं के अंदर रखने में मदद करता है। डॉक्टर इसे लिवर और पोषण की स्थिति समझने के लिए देखते हैं।"
     low: *low
     high: *high
   GLOB:
     name_hi: "ग्लोब्युलिन"
     measures:
-      en: "This test measures the amount of globulin proteins in the blood."
-      hi: "यह जाँच खून में ग्लोब्युलिन प्रोटीन की मात्रा मापती है।"
+      en: "Globulins are a group of blood proteins, some of which are part of your body's defence system. Doctors read the globulin value alongside albumin."
+      hi: "ग्लोब्युलिन (Globulin) खून के प्रोटीन का एक समूह है, जिनमें से कुछ शरीर की रक्षा प्रणाली का हिस्सा हैं। डॉक्टर ग्लोब्युलिन के मान को एल्ब्यूमिन के साथ पढ़ते हैं।"
     low: *low
     high: *high
   AG:
     name_hi: "ए/जी अनुपात"
     measures:
-      en: "This test measures albumin divided by globulin."
-      hi: "यह जाँच एल्ब्यूमिन और ग्लोब्युलिन का अनुपात मापती है।"
+      en: "This ratio compares albumin with globulin, the two main groups of proteins in your blood. Doctors use it as one more way to read a protein test."
+      hi: "यह अनुपात (A/G ratio) खून के दो मुख्य प्रोटीन समूहों, एल्ब्यूमिन और ग्लोब्युलिन, की तुलना करता है। डॉक्टर इसे प्रोटीन जाँच पढ़ने के एक और तरीके के रूप में इस्तेमाल करते हैं।"
     low: *low
     high: *high

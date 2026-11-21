@@ -1,8 +1,10 @@
 """extract (LLM): redacted report -> Extraction, with response cache and budget guard (PLAN.md 4, 8, 9)."""
 from __future__ import annotations
 
+import asyncio
 import base64
 import hashlib
+import re
 import logging
 import secrets
 from functools import lru_cache
@@ -45,6 +47,56 @@ class NoOutput(RuntimeError):
 
 
 LlmCaller = Callable[[RedactedDoc, str | None], Awaitable[tuple[Extraction, Usage]]]
+
+
+class ProviderUnavailable(Exception):
+    """Provider refused the call (429 after retries, or another non-5xx API error)."""
+
+
+RATE_RETRIES = 2          # extra attempts after a 429
+RATE_MAX_WAIT_S = 60.0    # cap on total backoff per call
+RATE_BASE_DELAY_S = 2.0
+_sleep = asyncio.sleep    # monkeypatched in tests
+
+
+def _rate_limited(e: Exception) -> bool:
+    return getattr(e, "code", None) == 429 or getattr(e, "status", None) == "RESOURCE_EXHAUSTED"
+
+
+def _retry_after(e: Exception) -> float | None:
+    """Retry hint from google.rpc.RetryInfo ("retryDelay": "17s") or a Retry-After header."""
+    det = getattr(e, "details", None)
+    if isinstance(det, dict):
+        for d in det.get("error", det).get("details") or []:
+            m = re.fullmatch(r"(\d+(?:\.\d+)?)s", str(d.get("retryDelay", ""))) \
+                if isinstance(d, dict) else None
+            if m:
+                return float(m.group(1))
+    try:
+        return float(e.response.headers.get("retry-after"))  # type: ignore[attr-defined]
+    except (AttributeError, TypeError, ValueError):
+        return None
+
+
+async def with_rate_retry(attempt: Callable[[], Awaitable]):
+    """Run attempt(); retry a 429 up to RATE_RETRIES times honouring retry hints (total wait
+    capped at RATE_MAX_WAIT_S). Other non-5xx API errors, or a 429 after retries, become
+    ProviderUnavailable; ServerError propagates to the node-level retry. Each attempt
+    settles/releases its own budget reservation."""
+    from google.genai import errors
+    waited = 0.0
+    for n in range(RATE_RETRIES + 1):
+        try:
+            return await attempt()
+        except errors.ServerError:
+            raise
+        except errors.APIError as e:
+            delay = min(_retry_after(e) or RATE_BASE_DELAY_S * 2 ** n, RATE_MAX_WAIT_S - waited)
+            if not _rate_limited(e) or n == RATE_RETRIES or delay <= 0:
+                raise ProviderUnavailable(f"{getattr(e, 'code', '?')} {getattr(e, 'status', '')}") from e
+            log.warning("provider rate-limited (429); retry %d in %.1fs", n + 1, delay)
+            await _sleep(delay)
+            waited += delay
 
 
 @lru_cache(maxsize=1)
@@ -134,21 +186,26 @@ async def _one_call(doc: RedactedDoc, hint: str | None, node: str, file_sha: str
         hit = cache.get(file_sha, node, ver, real_upload=real_upload)
         if hit is not None:
             return Extraction.model_validate(hit), Usage(cache_hits=1)
-    rid = guard.check(_estimate_in(doc), EST_OUT)  # raises BudgetExceeded
-    settled = False
-    try:
-        ext, usage = await caller(doc, hint)
-        usage.cost_inr = guard.record(node, usage.tokens_in, usage.tokens_out,
-                                      usage.tokens_thinking, reservation=rid)
-        settled = True
-    except NoOutput as e:
-        guard.record(node, e.usage.tokens_in, e.usage.tokens_out, e.usage.tokens_thinking,
-                     status="no_output", reservation=rid)
-        settled = True
-        raise
-    finally:
-        if not settled:
-            guard.release(rid)  # failed/cancelled request (incl. CancelledError): no usage reported
+
+    async def attempt():
+        rid = guard.check(_estimate_in(doc), EST_OUT)  # raises BudgetExceeded
+        settled = False
+        try:
+            ext, usage = await caller(doc, hint)
+            usage.cost_inr = guard.record(node, usage.tokens_in, usage.tokens_out,
+                                          usage.tokens_thinking, reservation=rid)
+            settled = True
+            return ext, usage
+        except NoOutput as e:
+            guard.record(node, e.usage.tokens_in, e.usage.tokens_out, e.usage.tokens_thinking,
+                         status="no_output", reservation=rid)
+            settled = True
+            raise
+        finally:
+            if not settled:
+                guard.release(rid)  # failed/cancelled request (incl. CancelledError/429)
+
+    ext, usage = await with_rate_retry(attempt)
     log.info("%s tokens in=%d out=%d thinking=%d cached=%d cost_inr=%.4f", node, usage.tokens_in,
              usage.tokens_out, usage.tokens_thinking, usage.tokens_cached, usage.cost_inr)
     if cache is not None:

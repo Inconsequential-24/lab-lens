@@ -86,3 +86,16 @@ def test_pdf_page_too_large():
     w.write(buf)
     assert g.check(buf.getvalue()).reason == "page_too_large"
     assert g.page_fits(595, 842)
+
+
+def test_large_but_reasonable_pages_are_scaled_not_rejected():
+    from lablens.input_guard import page_fits, render_scale
+    assert page_fits(595, 842)                     # A4
+    assert page_fits(2384, 3370) and render_scale(2384, 3370) == 2  # A0 fits at full scale
+    assert page_fits(6000, 8000) and render_scale(6000, 8000) < 2   # very large: rendered smaller
+    assert not page_fits(14400, 14400)             # absurd page still refused
+
+
+def test_ten_megabyte_limit():
+    from lablens import input_guard as g
+    assert g.MAX_BYTES == 10 * 1024 * 1024

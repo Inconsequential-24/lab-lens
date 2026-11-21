@@ -177,3 +177,24 @@ def test_thousands_separators_grounded():
     set_text(exps, "en", 0, "Your PLT is 1,20,000 /cumm, below the range of 150000 to 410000 /cumm.")
     assert not any(f.code == "ungrounded_number" and f.language == "en"
                    for f in safety_check(exps, tests, rec))
+
+
+def _nonhdl():
+    t = flag_tests([make("NONHDL", "190", 190, None, 130, "mg/dL")])
+    rec = route_next_step(t)
+    return template_fallback(t, rec), t, rec
+
+
+def test_hindi_subtraction_sense_is_not_low_direction():
+    exps, tests, rec = _nonhdl()
+    set_text(exps, "hi", 0, "नॉन-एचडीएल कोलेस्ट्रॉल कुल कोलेस्ट्रॉल में से एचडीएल कोलेस्ट्रॉल को "
+             "घटाकर निकाला जाता है; आपका मान 190 mg/dL है, जो सीमा 130 mg/dL से अधिक है।")
+    assert not any(f.code == "wrong_direction" for f in safety_check(exps, tests, rec))
+
+
+def test_hindi_genuine_wrong_direction_still_fails():
+    hb = flag_tests([make("HB", "17.0", 17.0, 12.0, 15.0)])
+    rec = route_next_step(hb)
+    exps = template_fallback(hb, rec)
+    set_text(exps, "hi", 0, "आपका हीमोग्लोबिन घटा हुआ है।")
+    assert ("wrong_direction", "render", "hi") in codes(safety_check(exps, hb, rec))

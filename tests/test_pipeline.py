@@ -123,3 +123,68 @@ def test_report_delimiter_is_random_and_unclosable():
 def test_extract_node_retry_capped():
     rc = pipeline.extract.retry_config
     assert rc.max_attempts == 2 and rc.exceptions == ["ServerError"]
+
+
+def _rate_err(delay="7s"):
+    from google.genai import errors
+    return errors.ClientError(429, {"error": {"code": 429, "status": "RESOURCE_EXHAUSTED",
+                                              "message": "quota", "details": [
+        {"@type": "type.googleapis.com/google.rpc.RetryInfo", "retryDelay": delay}]}})
+
+
+def _no_reserved(guard):
+    import sqlite3
+    with sqlite3.connect(guard.path) as c:
+        return c.execute("SELECT COUNT(*) FROM spend WHERE status='reserved'").fetchone()[0] == 0
+
+
+def _fake_sleep(monkeypatch):
+    from lablens import extract as ex
+    slept = []
+
+    async def sleep(s):
+        slept.append(s)
+    monkeypatch.setattr(ex, "_sleep", sleep)
+    return slept
+
+
+def test_rate_limit_retried_then_succeeds(tmp_path, monkeypatch):
+    slept, stub = _fake_sleep(monkeypatch), Stub()
+    fails = [_rate_err("7s")]
+
+    async def flaky(doc, hint):
+        if fails:
+            raise fails.pop()
+        return await stub(doc, hint)
+
+    guard = BudgetGuard(tmp_path / "b.sqlite")
+    ext, _ = asyncio.run(extract_report(RedactedDoc(kind="text", text="Hemoglobin 13.0"), "sha",
+                                        real_upload=False, guard=guard, caller=flaky))
+    assert ext.tests and slept == [7.0] and _no_reserved(guard)
+
+
+def test_rate_limit_exhausted_gives_provider_unavailable(tmp_path, monkeypatch):
+    slept, calls = _fake_sleep(monkeypatch), []
+
+    async def limited(doc, hint):
+        calls.append(1)
+        raise _rate_err("50s")
+
+    guard = BudgetGuard(tmp_path / "b.sqlite")
+    r = asyncio.run(pipeline.run("data/reports/source/D02.pdf", caller=limited,
+                                 explain_caller=no_live_explain, guard=guard))
+    assert r.status == "rejected" and r.reason == "provider_unavailable"
+    assert len(calls) == 3 and slept == [50.0, 10.0]  # total wait capped at 60 s
+    assert _no_reserved(guard)
+
+
+def test_explain_rate_limit_falls_back_to_template(tmp_path, monkeypatch):
+    slept = _fake_sleep(monkeypatch)
+
+    async def limited(node, instr, msg, schema):
+        raise _rate_err("1s")
+
+    guard = BudgetGuard(tmp_path / "b.sqlite")
+    r = asyncio.run(pipeline.run("data/reports/source/D02.pdf", caller=Stub(),
+                                 explain_caller=limited, guard=guard))
+    assert r.status == "partial" and len(r.tests) == 14 and slept and _no_reserved(guard)

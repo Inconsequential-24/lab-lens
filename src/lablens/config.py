@@ -29,7 +29,7 @@ PROMPT_PREFIX_ORDER = ("system_rules", "safety_rules", "schema", "glossary", "fe
 
 # Public demo API limits (PLAN.md section 6).
 DAILY_CAP_INR = _float("LABLENS_DAILY_CAP_INR", 50.0)  # global LLM spend per UTC day
-RATE_LIMIT_REPORTS_PER_HOUR = int(_float("LABLENS_RATE_LIMIT_PER_HOUR", 5))  # per IP, POST /v1/reports
+RATE_LIMIT_REPORTS_PER_HOUR = int(_float("LABLENS_RATE_LIMIT_PER_HOUR", 30))  # per IP, POST /v1/reports
 RATE_LIMIT_READS_PER_MINUTE = int(_float("LABLENS_RATE_LIMIT_READS_PER_MINUTE", 60))  # per IP, other endpoints
 REQUEST_TIMEOUT_S = _float("LABLENS_REQUEST_TIMEOUT_S", 60.0)
 SYNTHETIC_RESULT_TTL_S = 24 * 3600  # results deleted after 24 h (section 6)

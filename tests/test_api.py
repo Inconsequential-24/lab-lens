@@ -8,6 +8,7 @@ import pytest
 import yaml
 from fastapi.testclient import TestClient
 
+from lablens import config
 from lablens.api.app import CAP_WARNING, create_app
 from lablens.api.limits import TokenBucket
 from lablens.budget import BudgetGuard
@@ -72,7 +73,8 @@ def test_synthetic_happy_path_and_get(make, tmp_path, caplog):
     assert r.status_code == 200, r.text
     body = r.json()
     assert body["tests"] and {e["language"] for e in body["explanations"]} == {"en"}
-    assert r.headers["X-RateLimit-Limit"] == "5" and r.headers["X-RateLimit-Remaining"] == "4"
+    limit = str(config.RATE_LIMIT_REPORTS_PER_HOUR)
+    assert r.headers["X-RateLimit-Limit"] == limit and r.headers["X-RateLimit-Remaining"] == str(int(limit) - 1)
     assert cache_rows(tmp_path) > 0  # synthetic results use the response cache
     g = c.get(f"/v1/reports/{body['report_id']}")
     assert g.status_code == 200 and g.json()["report_id"] == body["report_id"]
@@ -91,7 +93,7 @@ def test_bad_file_400(make, data, reason):
 
 
 def test_too_large_400(make):
-    r = post(make(), b"%PDF" + b"0" * (5 * 1024 * 1024))
+    r = post(make(), b"%PDF" + b"0" * (10 * 1024 * 1024))
     assert r.status_code == 400 and r.json()["reason"] == "file_too_large"
 
 
@@ -190,3 +192,31 @@ def test_routes_match_contract(make):
         path = path.replace("{demo_id}.pdf", "{name}")
         for method in ops:
             assert (path, method) in routes, (method, path)
+
+
+def test_rate_limited_provider_is_503(tmp_path, monkeypatch):
+    from google.genai import errors
+    from lablens import extract as ex
+
+    async def no_sleep(s):
+        return None
+    monkeypatch.setattr(ex, "_sleep", no_sleep)
+
+    async def limited(doc, hint):
+        raise errors.ClientError(429, {"error": {"code": 429, "status": "RESOURCE_EXHAUSTED"}})
+
+    app = create_app(cache=ResponseCache(tmp_path / "responses.sqlite"),
+                     guard=BudgetGuard(tmp_path / "budget.sqlite"), caller=limited,
+                     explain_caller=no_live_explain, verifier=Verifier(), paid_tier=False,
+                     frontend_dist=tmp_path / "nodist")
+    r = post(TestClient(app), D02.read_bytes())
+    assert r.status_code == 503 and r.json()["reason"] == "provider_unavailable"
+
+
+def test_large_upload_is_read_exactly_once(make):
+    # Regression: the old FIFO hand-off could deliver the upload twice (or forever) to the pipeline.
+    big = D02.read_bytes() + b" " * (7 * 1024 * 1024)
+    r = post(make(), big, report_type="synthetic")
+    assert r.status_code == 200, r.json()
+    from lablens import pipeline
+    assert pipeline.UPLOADS == {}
