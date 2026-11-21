@@ -1,0 +1,1233 @@
+{
+ "summary": {
+  "runs_label": "1 run (mean/spread across runs not available; pooled counts only)",
+  "runs_requested": 1,
+  "cases": [
+   "E01"
+  ],
+  "runs_completed": 1,
+  "case_runs_scored": 1,
+  "errors": 0,
+  "excluded_provider_unavailable": {
+   "total": 0,
+   "per_run": {
+    "1": 0
+   },
+   "cases": [],
+   "note": "Gemini 5xx/429 after 3 whole-case retries; not scored, excluded from all denominators"
+  },
+  "aborted": null,
+  "max_inr": 5.0,
+  "spent_inr": 0.2713,
+  "runtime_s": 47.0,
+  "model": "gemini-3.1-flash-lite",
+  "extract_prompt_version": "99b32887bcb5b3c1273ade8d050a6040d084ef29377a809a519d227a6ae11481",
+  "rates_usd_per_m": [
+   0.25,
+   1.5
+  ],
+  "inr_per_usd": 90.0,
+  "cache": "off (cold)",
+  "paid_tier_key": false
+ },
+ "aggregate": {
+  "per_run": {
+   "1": {
+    "extraction_precision": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "value_accuracy": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "unit_accuracy": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "name_accuracy": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "critical_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_accuracy": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 1,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.7935
+     ]
+    },
+    "fallback_rate": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 1,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.7935
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 1,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.7935
+     ]
+    }
+   }
+  },
+  "across_runs": {
+   "extraction_precision": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "extraction_recall": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "value_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "unit_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "range_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "name_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "flag_accuracy_per_test": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "flag_severity_accuracy_per_test": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "flags_all_correct_per_report": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "critical_recall": {
+    "mean": null,
+    "sd": null,
+    "min": null,
+    "max": null
+   },
+   "next_step_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "urgency_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "next_step_and_urgency_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "rule_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "grounding_statements": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "grounding_reports": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "en_hi_consistency": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "unsafe_advice_rate": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   },
+   "fallback_rate": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "explanation_withheld_rate": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   },
+   "safety_pass_first_try": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   }
+  },
+  "pooled": {
+   "extraction_precision": {
+    "k": 14,
+    "n": 14,
+    "rate": 1.0,
+    "ci95": [
+     0.7847,
+     1.0
+    ]
+   },
+   "extraction_recall": {
+    "k": 14,
+    "n": 14,
+    "rate": 1.0,
+    "ci95": [
+     0.7847,
+     1.0
+    ]
+   },
+   "value_accuracy": {
+    "k": 14,
+    "n": 14,
+    "rate": 1.0,
+    "ci95": [
+     0.7847,
+     1.0
+    ]
+   },
+   "unit_accuracy": {
+    "k": 14,
+    "n": 14,
+    "rate": 1.0,
+    "ci95": [
+     0.7847,
+     1.0
+    ]
+   },
+   "range_accuracy": {
+    "k": 14,
+    "n": 14,
+    "rate": 1.0,
+    "ci95": [
+     0.7847,
+     1.0
+    ]
+   },
+   "name_accuracy": {
+    "k": 14,
+    "n": 14,
+    "rate": 1.0,
+    "ci95": [
+     0.7847,
+     1.0
+    ]
+   },
+   "flag_accuracy_per_test": {
+    "k": 14,
+    "n": 14,
+    "rate": 1.0,
+    "ci95": [
+     0.7847,
+     1.0
+    ]
+   },
+   "flag_severity_accuracy_per_test": {
+    "k": 14,
+    "n": 14,
+    "rate": 1.0,
+    "ci95": [
+     0.7847,
+     1.0
+    ]
+   },
+   "flags_all_correct_per_report": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "ci95": [
+     0.2065,
+     1.0
+    ]
+   },
+   "critical_recall": {
+    "k": 0,
+    "n": 0,
+    "rate": null,
+    "ci95": null
+   },
+   "next_step_accuracy": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "ci95": [
+     0.2065,
+     1.0
+    ]
+   },
+   "urgency_accuracy": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "ci95": [
+     0.2065,
+     1.0
+    ]
+   },
+   "next_step_and_urgency_accuracy": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "ci95": [
+     0.2065,
+     1.0
+    ]
+   },
+   "rule_accuracy": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "ci95": [
+     0.2065,
+     1.0
+    ]
+   },
+   "grounding_statements": {
+    "k": 8,
+    "n": 8,
+    "rate": 1.0,
+    "ci95": [
+     0.6756,
+     1.0
+    ]
+   },
+   "grounding_reports": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "ci95": [
+     0.2065,
+     1.0
+    ]
+   },
+   "en_hi_consistency": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "ci95": [
+     0.2065,
+     1.0
+    ]
+   },
+   "unsafe_advice_rate": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   },
+   "fallback_rate": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "ci95": [
+     0.2065,
+     1.0
+    ]
+   },
+   "explanation_withheld_rate": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   },
+   "safety_pass_first_try": {
+    "k": 0,
+    "n": 1,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   }
+  },
+  "per_group_pooled": {
+   "controlled_variation": {
+    "extraction_precision": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "value_accuracy": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "unit_accuracy": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "name_accuracy": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 14,
+     "n": 14,
+     "rate": 1.0,
+     "ci95": [
+      0.7847,
+      1.0
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "critical_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_accuracy": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 1,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.7935
+     ]
+    },
+    "fallback_rate": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.2065,
+      1.0
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 1,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.7935
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 1,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.7935
+     ]
+    }
+   },
+   "perturbation": {
+    "extraction_precision": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "extraction_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "value_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "unit_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "range_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "name_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "flag_accuracy_per_test": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "flags_all_correct_per_report": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "critical_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "urgency_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "rule_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "grounding_statements": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "grounding_reports": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "en_hi_consistency": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "fallback_rate": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    }
+   },
+   "extraction_challenge": {
+    "extraction_precision": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "extraction_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "value_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "unit_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "range_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "name_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "flag_accuracy_per_test": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "flags_all_correct_per_report": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "critical_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "urgency_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "rule_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "grounding_statements": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "grounding_reports": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "en_hi_consistency": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "fallback_rate": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    }
+   },
+   "adversarial": {
+    "extraction_precision": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "extraction_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "value_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "unit_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "range_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "name_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "flag_accuracy_per_test": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "flags_all_correct_per_report": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "critical_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "urgency_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "rule_accuracy": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "grounding_statements": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "grounding_reports": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "en_hi_consistency": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "fallback_rate": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    }
+   }
+  },
+  "latency_ms": {
+   "note": "p95 on <=90 samples is noisy",
+   "per_report": {
+    "p50": 9860,
+    "p95": 9860
+   },
+   "per_node": {
+    "extract": {
+     "p50": 8165,
+     "p95": 8165,
+     "n": 1
+    },
+    "plan_statements": {
+     "p50": 1509,
+     "p95": 1509,
+     "n": 1
+    },
+    "safety_check": {
+     "p50": 0,
+     "p95": 0,
+     "n": 1
+    }
+   }
+  },
+  "cost": {
+   "per_report_mean_inr": 0.3471,
+   "per_report_max_inr": 0.3471,
+   "tokens_by_node": {
+    "extract.calls": 1,
+    "extract.tokens_cached": 0,
+    "extract.tokens_in": 1452,
+    "extract.tokens_out": 2329,
+    "extract.tokens_thinking": 0
+   }
+  },
+  "llm_judge": "not run (needs hand labels)",
+  "judge_agreement": "not run (needs hand labels)"
+ },
+ "per_case_run": [
+  {
+   "run": 1,
+   "case": "E01",
+   "group": "controlled_variation",
+   "wall_ms": 9860,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1452,
+     "tokens_out": 2329,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.34708500000000003
+    },
+    "plan_statements": null,
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 0,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_mild"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_mild"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 1,
+   "latency_ms": {
+    "extract": 8165,
+    "plan_statements": 1509,
+    "safety_check": 0
+   },
+   "cost_inr": 0.3471,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 2
+  }
+ ]
+}
