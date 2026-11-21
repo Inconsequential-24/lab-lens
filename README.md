@@ -3,6 +3,9 @@
 > **DRAFT.** Sections marked `TODO` are not measured yet. Numbers below come from the JSON files
 > in `evals/` and from `models/*.card.json`, not from memory.
 
+**Live demo:** https://lablens.64-20-56-251.sslip.io (synthetic reports only; real uploads are
+switched off on this deployment).
+
 ## What it is, and what it is not
 
 LabLens reads an Indian-style lab report (PDF or image) and explains it in plain English and
@@ -138,7 +141,6 @@ Read these carefully:
 - TODO: full 30-case eval results (extraction, flags, next step on `E01-E30`).
 - TODO: LLM explanation results (`evals/explain_dev.py` output, safety-check pass rate).
 - TODO: Hindi human review by a fluent reader. Hindi text is model-written and unreviewed.
-- TODO: deployment URL.
 - TODO: total LLM spend. Spend so far is tracked in the budget ledger (`cache/budget.sqlite`);
   the figure is added here once final. Planned cap: INR 500 total.
 

@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.git
+.venv
+.claude
+cache
+**/__pycache__
+**/.pytest_cache
+**/.DS_Store
+frontend/node_modules
+frontend/dist
+data/reports/eval
+data/critical_set
+docs
+spikes
+tests

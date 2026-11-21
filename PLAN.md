@@ -431,7 +431,7 @@ saved history (sections 4.3 and 10).
 Because the deployed link is public and every call spends LLM budget, the demo has:
 - a per-IP rate limit (e.g. 5 reports per hour) and a global daily spend cap (₹50 per day, `LABLENS_DAILY_CAP_INR`); past the cap the
   API serves only cached sample reports and says so;
-- input limits: 5 MB, 10 pages, PDF/PNG/JPG checked by content not extension, encrypted PDFs
+- input limits: 10 MB, 10 pages, PDF/PNG/JPG checked by content not extension, encrypted PDFs
   rejected with a clear message;
 - a request timeout of 60 s, after which the deterministic fallback result is returned;
 - results stored without personal fields and deleted after 24 hours.
@@ -439,7 +439,7 @@ Because the deployed link is public and every call spends LLM budget, the demo h
 ### `POST /v1/reports`
 Upload a report and receive the full result.
 
-Request: `multipart/form-data`, field `file` (PDF, PNG or JPG, max 5 MB), optional `language`
+Request: `multipart/form-data`, field `file` (PDF, PNG or JPG, max 10 MB), optional `language`
 (`en`, `hi` or `both`, default `both`).
 
 Response `200`:
