@@ -162,7 +162,7 @@ the 15 source reports only, never on the eval cases (section 7).
 | any marked, or 3+ abnormal tests | doctor_consult | soon |
 | a defined pattern matches a package in `packages.yaml` | follow_up_test_package | routine |
 | any mild | doctor_consult | routine |
-| any row unreadable or range missing, and all else normal | no_action, with a "please verify" note | none |
+| any row unreadable, or range missing with no fallback range, and all else normal | no_action, with a "please verify" note | none |
 
 Notes on the table: tests with no reference range at all (eAG) are informational and never
 trigger the "please verify" row. When a printed flag says abnormal but the value is in range,
@@ -775,7 +775,7 @@ Every row below becomes at least one unit test or eval case.
 | Missing unit | Inferred only if the panel's canonical unit is unambiguous and the value is plausible in it; otherwise flag `unknown` |
 | Value and range in different units | Converted via `units.yaml`; if no conversion, flag `unknown` and warn |
 | One-sided or multi-tier range ("Desirable < 200, Borderline 200-239") | Normal bound parsed; tier labels not repeated if they name a condition |
-| Missing range | Fallback table only for adult tests with no age or sex dependence; otherwise flag `unknown` |
+| Missing range | Fallback table only for adult tests with no age or sex dependence, flagged against it with the warning "range not printed; standard range used"; otherwise flag `unknown` and "please verify" |
 | Age or sex-dependent test with no printed range (Hb, creatinine) | No fallback; flag `unknown` and say the lab range is needed |
 | Paediatric or pregnancy report | Trust printed ranges only; no fallback table; noted as out of scope |
 | Duplicate test on the report | Both kept with page refs; if values differ, warn and use the more severe for routing |

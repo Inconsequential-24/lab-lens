@@ -21,7 +21,3 @@ cache/
 
 # Local assistant settings
 .claude/settings.local.json
-
-# Private real-world check: real reports, labels and results never leave this machine.
-private/*
-!private/README.md
