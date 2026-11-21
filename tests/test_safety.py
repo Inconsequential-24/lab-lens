@@ -198,3 +198,28 @@ def test_hindi_genuine_wrong_direction_still_fails():
     exps = template_fallback(hb, rec)
     set_text(exps, "hi", 0, "आपका हीमोग्लोबिन घटा हुआ है।")
     assert ("wrong_direction", "render", "hi") in codes(safety_check(exps, hb, rec))
+
+
+@pytest.mark.parametrize("lang,text", [
+    ("en", "Your Hemoglobin is 10.2 g/dL, below the normal range of 12 to 15 g/dL."),
+    ("en", "Your Hemoglobin is 10.2 g/dL, lower than the normal range of 12 to 15 g/dL."),
+    ("hi", "आपका Hemoglobin 10.2 g/dL है, जो सामान्य सीमा 12 से 15 g/dL से कम है।"),
+])
+def test_normal_range_wording_is_not_reassurance(lang, text):
+    exps, tests, rec = base()
+    set_text(exps, lang, 0, text)
+    fails = safety_check(exps, tests, rec)
+    assert not any(f.code == "reassurance_against_flag" for f in fails), fails
+
+
+@pytest.mark.parametrize("lang,text", [
+    ("en", "Your Hemoglobin is 10.2 g/dL, within the normal range."),
+    ("en", "Your Hemoglobin is 10.2 g/dL, which is normal."),
+    ("hi", "आपका Hemoglobin 10.2 g/dL है, जो सामान्य सीमा के भीतर है।"),
+    ("hi", "आपका Hemoglobin 10.2 g/dL है, जो सामान्य है।"),
+])
+def test_real_reassurance_on_abnormal_test_still_fails(lang, text):
+    exps, tests, rec = base()
+    set_text(exps, lang, 0, text)
+    fails = safety_check(exps, tests, rec)
+    assert any(f.code == "reassurance_against_flag" for f in fails), fails

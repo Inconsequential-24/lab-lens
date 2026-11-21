@@ -71,3 +71,7 @@ def test_completeness_and_bad_range():
 def test_report_date_out_of_range_rejected():
     v = validate(Extraction(tests=[], report_date="1985-01-01"))
     assert v.report_date is None and v.warnings
+
+
+def test_sgot_sgpt_ratio_is_a_trusted_alias():
+    assert map_test_id("SGOT/SGPT") == ("AST_ALT", "alias")

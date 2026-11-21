@@ -365,7 +365,7 @@ tests:
     method: IFCC (AMP buffer)
   AST_ALT:
     name: "AST:ALT Ratio"
-    aliases: [SGOT/SGPT Ratio, AST/ALT Ratio, De Ritis Ratio]
+    aliases: [SGOT/SGPT Ratio, SGOT/SGPT, AST/ALT Ratio, AST:ALT, De Ritis Ratio]
     loinc: "1916-6"
     unit: ""
     decimals: 2

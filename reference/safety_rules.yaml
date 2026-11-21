@@ -69,9 +69,11 @@ direction:
     en: ["within", "normal", "fine", "healthy", "okay"]
     hi: ["भीतर", "सामान्य", "ठीक"]
   # Fixed phrases removed before direction checks ("one or more" is not "high").
+  # "Normal range" names the reference range, not a reassurance; "within the normal range"
+  # still fails on an abnormal test because "within" / "भीतर" remain after removal.
   ignore:
-    en: ["one or more"]
-    hi: ["एक या अधिक"]
+    en: ["one or more", "normal range", "normal ranges", "normal reference range", "normal limit", "normal limits"]
+    hi: ["एक या अधिक", "सामान्य सीमा", "सामान्य सीमाओं", "सामान्य दायरे", "सामान्य दायरा"]
   # Negators: any negated direction/reassurance phrase on an abnormal test fails.
   negation:
     en: ["not", "no", "never", "isn't", "aren't", "wasn't", "n't"]

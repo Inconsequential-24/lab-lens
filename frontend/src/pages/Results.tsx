@@ -18,6 +18,27 @@ export default function Results({ reportId, real }: { reportId: string; real: bo
 }
 
 const testLabel = (x: FlaggedTest) => x.raw_name;
+
+// "Partial" covers several different situations; say which ones apply instead of one vague line.
+function PartialNotice({ r }: { r: ReportResult }) {
+  const t = useT();
+  const names = (ids: string[]) =>
+    ids.map((id) => r.tests.find((x) => x.test_id === id)?.raw_name ?? id).join(", ");
+  const has = (prefix: string) => r.warnings.some((w) => w.startsWith(prefix));
+  const reasons: string[] = [];
+  if (r.low_confidence_tests.length) reasons.push(`${t("partial_verify")} ${names(r.low_confidence_tests)}`);
+  if (r.unrecognised_tests.length) reasons.push(`${t("partial_unsupported")} ${r.unrecognised_tests.join(", ")}`);
+  if (r.warnings.some((w) => /row\(s\) dropped/.test(w))) reasons.push(t("partial_dropped"));
+  if (has("expected tests not found")) reasons.push(t("partial_missing"));
+  if (has("explanation came from template fallback")) reasons.push(t("partial_fallback"));
+  if (!reasons.length) return null;
+  return (
+    <div className="notice">
+      <p>{t("partial_title")}</p>
+      <ul>{reasons.map((x) => <li key={x}>{x}</li>)}</ul>
+    </div>
+  );
+}
 const rowId = (i: number) => `row-${i}`;
 
 function ResultView({ r, real }: { r: ReportResult; real: boolean }) {
@@ -56,7 +77,7 @@ function ResultView({ r, real }: { r: ReportResult; real: boolean }) {
         {rec.note && <p className="fine">{rec.note}</p>}
       </section>
 
-      {r.status === "partial" && <p className="notice">{t("partial")}</p>}
+      {r.status === "partial" && <PartialNotice r={r} />}
 
       <section aria-labelledby="tests-h">
         <h1 id="tests-h" className="serif-h2">{t("results_title")}</h1>
