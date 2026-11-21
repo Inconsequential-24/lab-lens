@@ -113,7 +113,7 @@ repository or any evaluation. No real patient data is stored here. Regenerate wi
 `pip install -r requirements-data.txt` and `scripts/generate_reports.py` /
 `scripts/generate_critical_set.py`.
 
-## Results so far (before the full 30-case eval)
+## Results
 
 These are partial. No script has yet scored the 30 frozen eval cases end to end. Intervals are 95%
 Wilson intervals from the results files.
@@ -149,7 +149,6 @@ Read these carefully:
 
 ### TODO: results still to come
 
-- TODO: full 30-case eval results (extraction, flags, next step on `E01-E30`).
 - TODO: LLM explanation results (`evals/explain_dev.py` output, safety-check pass rate).
 - TODO: total LLM spend. Spend so far is tracked in the budget ledger (`cache/budget.sqlite`);
   the figure is added here once final. Planned cap: INR 500 total.
@@ -178,7 +177,6 @@ Read these carefully:
 - Only the synthetic reports have been evaluated; real-world scans and layouts are untested.
 - Redaction is pattern-based; a bare name that appears after the first test row may not be masked
   unless a label or honorific is present.
-- The frozen 30-case set has no end-to-end scoring script yet.
 
 ## Licence and attribution
 
