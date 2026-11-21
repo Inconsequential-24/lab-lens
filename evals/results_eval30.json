@@ -1,0 +1,4572 @@
+{
+ "summary": {
+  "runs_label": "1 run (mean/spread across runs not available; pooled counts only)",
+  "runs_requested": 1,
+  "cases": [
+   "E01",
+   "E02",
+   "E03",
+   "E04",
+   "E05",
+   "E06",
+   "E07",
+   "E08",
+   "E09",
+   "E10",
+   "E11",
+   "E12",
+   "E13",
+   "E14",
+   "E15",
+   "E16",
+   "E17",
+   "E18",
+   "E19",
+   "E20",
+   "E21",
+   "E22",
+   "E23",
+   "E24",
+   "E25",
+   "E26",
+   "E27",
+   "E28",
+   "E29",
+   "E30"
+  ],
+  "runs_completed": 1,
+  "case_runs_scored": 30,
+  "errors": 0,
+  "excluded_provider_unavailable": {
+   "total": 0,
+   "per_run": {
+    "1": 0
+   },
+   "cases": [],
+   "note": "Gemini 5xx/429 after 3 whole-case retries; not scored, excluded from all denominators"
+  },
+  "aborted": null,
+  "max_inr": 80.0,
+  "spent_inr": 13.8245,
+  "runtime_s": 1111.8,
+  "model": "gemini-3.1-flash-lite",
+  "extract_prompt_version": "99b32887bcb5b3c1273ade8d050a6040d084ef29377a809a519d227a6ae11481",
+  "rates_usd_per_m": [
+   0.25,
+   1.5
+  ],
+  "inr_per_usd": 90.0,
+  "cache": "off (cold)",
+  "paid_tier_key": false
+ },
+ "aggregate": {
+  "per_run": {
+   "1": {
+    "extraction_precision": {
+     "k": 252,
+     "n": 252,
+     "rate": 1.0,
+     "ci95": [
+      0.985,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 252,
+     "n": 252,
+     "rate": 1.0,
+     "ci95": [
+      0.985,
+      1.0
+     ]
+    },
+    "value_accuracy": {
+     "k": 252,
+     "n": 252,
+     "rate": 1.0,
+     "ci95": [
+      0.985,
+      1.0
+     ]
+    },
+    "unit_accuracy": {
+     "k": 252,
+     "n": 252,
+     "rate": 1.0,
+     "ci95": [
+      0.985,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 251,
+     "n": 252,
+     "rate": 0.996,
+     "ci95": [
+      0.9779,
+      0.9993
+     ]
+    },
+    "name_accuracy": {
+     "k": 252,
+     "n": 252,
+     "rate": 1.0,
+     "ci95": [
+      0.985,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 252,
+     "n": 252,
+     "rate": 1.0,
+     "ci95": [
+      0.985,
+      1.0
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 252,
+     "n": 252,
+     "rate": 1.0,
+     "ci95": [
+      0.985,
+      1.0
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "critical_recall": {
+     "k": 2,
+     "n": 2,
+     "rate": 1.0,
+     "ci95": [
+      0.3424,
+      1.0
+     ]
+    },
+    "next_step_accuracy": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 192,
+     "n": 192,
+     "rate": 1.0,
+     "ci95": [
+      0.9804,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 30,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1135
+     ]
+    },
+    "fallback_rate": {
+     "k": 0,
+     "n": 30,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1135
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 30,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1135
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 30,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1135
+     ]
+    }
+   }
+  },
+  "across_runs": {
+   "extraction_precision": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "extraction_recall": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "value_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "unit_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "range_accuracy": {
+    "mean": 0.996,
+    "sd": 0.0,
+    "min": 0.996,
+    "max": 0.996
+   },
+   "name_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "flag_accuracy_per_test": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "flag_severity_accuracy_per_test": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "flags_all_correct_per_report": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "critical_recall": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "next_step_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "urgency_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "next_step_and_urgency_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "rule_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "grounding_statements": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "grounding_reports": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "en_hi_consistency": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "unsafe_advice_rate": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   },
+   "fallback_rate": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   },
+   "explanation_withheld_rate": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   },
+   "safety_pass_first_try": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   }
+  },
+  "pooled": {
+   "extraction_precision": {
+    "k": 252,
+    "n": 252,
+    "rate": 1.0,
+    "ci95": [
+     0.985,
+     1.0
+    ]
+   },
+   "extraction_recall": {
+    "k": 252,
+    "n": 252,
+    "rate": 1.0,
+    "ci95": [
+     0.985,
+     1.0
+    ]
+   },
+   "value_accuracy": {
+    "k": 252,
+    "n": 252,
+    "rate": 1.0,
+    "ci95": [
+     0.985,
+     1.0
+    ]
+   },
+   "unit_accuracy": {
+    "k": 252,
+    "n": 252,
+    "rate": 1.0,
+    "ci95": [
+     0.985,
+     1.0
+    ]
+   },
+   "range_accuracy": {
+    "k": 251,
+    "n": 252,
+    "rate": 0.996,
+    "ci95": [
+     0.9779,
+     0.9993
+    ]
+   },
+   "name_accuracy": {
+    "k": 252,
+    "n": 252,
+    "rate": 1.0,
+    "ci95": [
+     0.985,
+     1.0
+    ]
+   },
+   "flag_accuracy_per_test": {
+    "k": 252,
+    "n": 252,
+    "rate": 1.0,
+    "ci95": [
+     0.985,
+     1.0
+    ]
+   },
+   "flag_severity_accuracy_per_test": {
+    "k": 252,
+    "n": 252,
+    "rate": 1.0,
+    "ci95": [
+     0.985,
+     1.0
+    ]
+   },
+   "flags_all_correct_per_report": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "critical_recall": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "ci95": [
+     0.3424,
+     1.0
+    ]
+   },
+   "next_step_accuracy": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "urgency_accuracy": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "next_step_and_urgency_accuracy": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "rule_accuracy": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "grounding_statements": {
+    "k": 192,
+    "n": 192,
+    "rate": 1.0,
+    "ci95": [
+     0.9804,
+     1.0
+    ]
+   },
+   "grounding_reports": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "en_hi_consistency": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "unsafe_advice_rate": {
+    "k": 0,
+    "n": 30,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.1135
+    ]
+   },
+   "fallback_rate": {
+    "k": 0,
+    "n": 30,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.1135
+    ]
+   },
+   "explanation_withheld_rate": {
+    "k": 0,
+    "n": 30,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.1135
+    ]
+   },
+   "safety_pass_first_try": {
+    "k": 0,
+    "n": 30,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.1135
+    ]
+   }
+  },
+  "per_group_pooled": {
+   "controlled_variation": {
+    "extraction_precision": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "value_accuracy": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "unit_accuracy": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "name_accuracy": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "critical_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_accuracy": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 10,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.2775
+     ]
+    },
+    "fallback_rate": {
+     "k": 0,
+     "n": 10,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.2775
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 10,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.2775
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 10,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.2775
+     ]
+    }
+   },
+   "perturbation": {
+    "extraction_precision": {
+     "k": 84,
+     "n": 84,
+     "rate": 1.0,
+     "ci95": [
+      0.9563,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 84,
+     "n": 84,
+     "rate": 1.0,
+     "ci95": [
+      0.9563,
+      1.0
+     ]
+    },
+    "value_accuracy": {
+     "k": 84,
+     "n": 84,
+     "rate": 1.0,
+     "ci95": [
+      0.9563,
+      1.0
+     ]
+    },
+    "unit_accuracy": {
+     "k": 84,
+     "n": 84,
+     "rate": 1.0,
+     "ci95": [
+      0.9563,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 84,
+     "n": 84,
+     "rate": 1.0,
+     "ci95": [
+      0.9563,
+      1.0
+     ]
+    },
+    "name_accuracy": {
+     "k": 84,
+     "n": 84,
+     "rate": 1.0,
+     "ci95": [
+      0.9563,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 84,
+     "n": 84,
+     "rate": 1.0,
+     "ci95": [
+      0.9563,
+      1.0
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 84,
+     "n": 84,
+     "rate": 1.0,
+     "ci95": [
+      0.9563,
+      1.0
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "critical_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_accuracy": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 48,
+     "n": 48,
+     "rate": 1.0,
+     "ci95": [
+      0.9259,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3244
+     ]
+    },
+    "fallback_rate": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3244
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3244
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3244
+     ]
+    }
+   },
+   "extraction_challenge": {
+    "extraction_precision": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "value_accuracy": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "unit_accuracy": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 51,
+     "n": 52,
+     "rate": 0.9808,
+     "ci95": [
+      0.8988,
+      0.9966
+     ]
+    },
+    "name_accuracy": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "critical_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 36,
+     "n": 36,
+     "rate": 1.0,
+     "ci95": [
+      0.9036,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    },
+    "fallback_rate": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    }
+   },
+   "adversarial": {
+    "extraction_precision": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "value_accuracy": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "unit_accuracy": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "name_accuracy": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "critical_recall": {
+     "k": 2,
+     "n": 2,
+     "rate": 1.0,
+     "ci95": [
+      0.3424,
+      1.0
+     ]
+    },
+    "next_step_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 56,
+     "n": 56,
+     "rate": 1.0,
+     "ci95": [
+      0.9358,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    },
+    "fallback_rate": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    }
+   }
+  },
+  "latency_ms": {
+   "note": "p95 on <=90 samples is noisy",
+   "per_report": {
+    "p50": 10017,
+    "p95": 23666
+   },
+   "per_node": {
+    "extract": {
+     "p50": 4090,
+     "p95": 8981,
+     "n": 30
+    },
+    "plan_statements": {
+     "p50": 2582,
+     "p95": 8261,
+     "n": 30
+    },
+    "render_en": {
+     "p50": 2053,
+     "p95": 4491,
+     "n": 30
+    },
+    "render_hi": {
+     "p50": 2165,
+     "p95": 5566,
+     "n": 30
+    },
+    "safety_check": {
+     "p50": 5,
+     "p95": 15,
+     "n": 30
+    }
+   }
+  },
+  "cost": {
+   "per_report_mean_inr": 0.4608,
+   "per_report_max_inr": 1.065,
+   "tokens_by_node": {
+    "extract.calls": 32,
+    "extract.tokens_cached": 0,
+    "extract.tokens_in": 47028,
+    "extract.tokens_out": 46195,
+    "extract.tokens_thinking": 0,
+    "plan_statements.calls": 30,
+    "plan_statements.tokens_cached": 0,
+    "plan_statements.tokens_in": 51622,
+    "plan_statements.tokens_out": 13273,
+    "plan_statements.tokens_thinking": 0,
+    "render_en.calls": 32,
+    "render_en.tokens_cached": 0,
+    "render_en.tokens_in": 43828,
+    "render_en.tokens_out": 5765,
+    "render_en.tokens_thinking": 0,
+    "render_hi.calls": 30,
+    "render_hi.tokens_cached": 0,
+    "render_hi.tokens_in": 42525,
+    "render_hi.tokens_out": 6337,
+    "render_hi.tokens_thinking": 0
+   }
+  },
+  "llm_judge": "not run (needs hand labels)",
+  "judge_agreement": "not run (needs hand labels)"
+ },
+ "per_case_run": [
+  {
+   "run": 1,
+   "case": "E01",
+   "group": "controlled_variation",
+   "wall_ms": 12656,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1450,
+     "tokens_out": 2320,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.345825
+    },
+    "plan_statements": {
+     "tokens_in": 1777,
+     "tokens_out": 639,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.12624749999999998
+    },
+    "render_en": {
+     "tokens_in": 1449,
+     "tokens_out": 226,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0631125
+    },
+    "render_hi": {
+     "tokens_in": 1517,
+     "tokens_out": 253,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0682875
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 0,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_mild"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_mild"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 6384,
+    "plan_statements": 3458,
+    "render_en": 2241,
+    "render_hi": 2523,
+    "safety_check": 15
+   },
+   "cost_inr": 0.6035,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E02",
+   "group": "controlled_variation",
+   "wall_ms": 10017,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1249,
+     "tokens_out": 1173,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.18645749999999997
+    },
+    "plan_statements": {
+     "tokens_in": 1950,
+     "tokens_out": 659,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.13284
+    },
+    "render_en": {
+     "tokens_in": 1451,
+     "tokens_out": 329,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0770625
+    },
+    "render_hi": {
+     "tokens_in": 1503,
+     "tokens_out": 371,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0839025
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 7,
+    "critical_gt": 0,
+    "pred_rows": 7,
+    "tp": 7,
+    "value_ok": 7,
+    "unit_ok": 7,
+    "range_ok": 7,
+    "name_ok": 7,
+    "flag_ok": 7,
+    "flag_sev_ok": 7,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 12,
+    "grounded_statements": 12,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 4238,
+    "plan_statements": 2950,
+    "render_en": 2745,
+    "render_hi": 2165,
+    "safety_check": 9
+   },
+   "cost_inr": 0.4803,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E03",
+   "group": "controlled_variation",
+   "wall_ms": 9496,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1428,
+     "tokens_out": 1314,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.20952
+    },
+    "plan_statements": {
+     "tokens_in": 1543,
+     "tokens_out": 238,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0668475
+    },
+    "render_en": {
+     "tokens_in": 1266,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.037665
+    },
+    "render_hi": {
+     "tokens_in": 1325,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0392625
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 8,
+    "critical_gt": 0,
+    "pred_rows": 8,
+    "tp": 8,
+    "value_ok": 8,
+    "unit_ok": 8,
+    "range_ok": 8,
+    "name_ok": 8,
+    "flag_ok": 8,
+    "flag_sev_ok": 8,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 4090,
+    "plan_statements": 2435,
+    "render_en": 2907,
+    "render_hi": 2614,
+    "safety_check": 3
+   },
+   "cost_inr": 0.3533,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E04",
+   "group": "controlled_variation",
+   "wall_ms": 7958,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1181,
+     "tokens_out": 373,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.07692750000000001
+    },
+    "plan_statements": {
+     "tokens_in": 1760,
+     "tokens_out": 302,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.08037
+    },
+    "render_en": {
+     "tokens_in": 1322,
+     "tokens_out": 188,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.055125
+    },
+    "render_hi": {
+     "tokens_in": 1336,
+     "tokens_out": 207,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.058005
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 2,
+    "critical_gt": 0,
+    "pred_rows": 2,
+    "tp": 2,
+    "value_ok": 2,
+    "unit_ok": 2,
+    "range_ok": 2,
+    "name_ok": 2,
+    "flag_ok": 2,
+    "flag_sev_ok": 2,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 6,
+    "grounded_statements": 6,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 2168,
+    "plan_statements": 2547,
+    "render_en": 1971,
+    "render_hi": 3156,
+    "safety_check": 5
+   },
+   "cost_inr": 0.2704,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E05",
+   "group": "controlled_variation",
+   "wall_ms": 5696,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1133,
+     "tokens_out": 401,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0796275
+    },
+    "plan_statements": {
+     "tokens_in": 1517,
+     "tokens_out": 81,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0450675
+    },
+    "render_en": {
+     "tokens_in": 1226,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.036765
+    },
+    "render_hi": {
+     "tokens_in": 1240,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.03735
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 2,
+    "critical_gt": 0,
+    "pred_rows": 2,
+    "tp": 2,
+    "value_ok": 2,
+    "unit_ok": 2,
+    "range_ok": 2,
+    "name_ok": 2,
+    "flag_ok": 2,
+    "flag_sev_ok": 2,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 2072,
+    "plan_statements": 1279,
+    "render_en": 2060,
+    "render_hi": 1945,
+    "safety_check": 2
+   },
+   "cost_inr": 0.1988,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E06",
+   "group": "controlled_variation",
+   "wall_ms": 5789,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1335,
+     "tokens_out": 366,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.07944749999999999
+    },
+    "plan_statements": {
+     "tokens_in": 1519,
+     "tokens_out": 81,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0451125
+    },
+    "render_en": {
+     "tokens_in": 1222,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.036675
+    },
+    "render_hi": {
+     "tokens_in": 1230,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.037125
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 2,
+    "critical_gt": 0,
+    "pred_rows": 2,
+    "tp": 2,
+    "value_ok": 2,
+    "unit_ok": 2,
+    "range_ok": 2,
+    "name_ok": 2,
+    "flag_ok": 2,
+    "flag_sev_ok": 2,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 2565,
+    "plan_statements": 998,
+    "render_en": 1287,
+    "render_hi": 2152,
+    "safety_check": 2
+   },
+   "cost_inr": 0.1984,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E07",
+   "group": "controlled_variation",
+   "wall_ms": 6373,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1179,
+     "tokens_out": 611,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.10901250000000001
+    },
+    "plan_statements": {
+     "tokens_in": 1523,
+     "tokens_out": 125,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.051142499999999994
+    },
+    "render_en": {
+     "tokens_in": 1235,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0372375
+    },
+    "render_hi": {
+     "tokens_in": 1244,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.03744
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 2983,
+    "plan_statements": 1581,
+    "render_en": 1745,
+    "render_hi": 1736,
+    "safety_check": 3
+   },
+   "cost_inr": 0.2348,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E08",
+   "group": "controlled_variation",
+   "wall_ms": 8051,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1318,
+     "tokens_out": 597,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.11025
+    },
+    "plan_statements": {
+     "tokens_in": 1749,
+     "tokens_out": 401,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0934875
+    },
+    "render_en": {
+     "tokens_in": 1374,
+     "tokens_out": 243,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06372
+    },
+    "render_hi": {
+     "tokens_in": 1385,
+     "tokens_out": 270,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06761249999999999
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 2735,
+    "plan_statements": 2582,
+    "render_en": 2397,
+    "render_hi": 2675,
+    "safety_check": 6
+   },
+   "cost_inr": 0.3351,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E09",
+   "group": "controlled_variation",
+   "wall_ms": 10312,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1550,
+     "tokens_out": 2038,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.31000500000000003
+    },
+    "plan_statements": {
+     "tokens_in": 1755,
+     "tokens_out": 596,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.1199475
+    },
+    "render_en": {
+     "tokens_in": 1447,
+     "tokens_out": 236,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0644175
+    },
+    "render_hi": {
+     "tokens_in": 1523,
+     "tokens_out": 275,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0713925
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 12,
+    "critical_gt": 0,
+    "pred_rows": 12,
+    "tp": 12,
+    "value_ok": 12,
+    "unit_ok": 12,
+    "range_ok": 12,
+    "name_ok": 12,
+    "flag_ok": 12,
+    "flag_sev_ok": 12,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 5173,
+    "plan_statements": 3001,
+    "render_en": 2053,
+    "render_hi": 1762,
+    "safety_check": 7
+   },
+   "cost_inr": 0.5658,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E10",
+   "group": "controlled_variation",
+   "wall_ms": 9664,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1552,
+     "tokens_out": 1846,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.28413
+    },
+    "plan_statements": {
+     "tokens_in": 1557,
+     "tokens_out": 327,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0791775
+    },
+    "render_en": {
+     "tokens_in": 1306,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.038835
+    },
+    "render_hi": {
+     "tokens_in": 1384,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.04059
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 12,
+    "critical_gt": 0,
+    "pred_rows": 12,
+    "tp": 12,
+    "value_ok": 12,
+    "unit_ok": 12,
+    "range_ok": 12,
+    "name_ok": 12,
+    "flag_ok": 12,
+    "flag_sev_ok": 12,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 5491,
+    "plan_statements": 2048,
+    "render_en": 1919,
+    "render_hi": 2055,
+    "safety_check": 3
+   },
+   "cost_inr": 0.4427,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E11",
+   "group": "perturbation",
+   "wall_ms": 17049,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1866,
+     "tokens_out": 2155,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.33291
+    },
+    "plan_statements": {
+     "tokens_in": 1560,
+     "tokens_out": 376,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.08585999999999999
+    },
+    "render_en": {
+     "tokens_in": 2670,
+     "tokens_out": 134,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 2,
+     "cache_hits": 0,
+     "cost_inr": 0.07816500000000001
+    },
+    "render_hi": {
+     "tokens_in": 1383,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0405675
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 0,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 5,
+   "latency_ms": {
+    "extract": 7361,
+    "plan_statements": 2184,
+    "render_en": 3053,
+    "render_hi": 1862,
+    "safety_check": 6
+   },
+   "cost_inr": 0.5375,
+   "retries": 1,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    [
+     "render:en:wrong_direction"
+    ],
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E12",
+   "group": "perturbation",
+   "wall_ms": 15554,
+   "tokens": {
+    "extract": {
+     "tokens_in": 2281,
+     "tokens_out": 3995,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.5906475
+    },
+    "plan_statements": {
+     "tokens_in": 1807,
+     "tokens_out": 905,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.16283250000000002
+    },
+    "render_en": {
+     "tokens_in": 1560,
+     "tokens_out": 224,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06534
+    },
+    "render_hi": {
+     "tokens_in": 1707,
+     "tokens_out": 259,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.07337250000000001
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 26,
+    "critical_gt": 0,
+    "pred_rows": 26,
+    "tp": 26,
+    "value_ok": 26,
+    "unit_ok": 26,
+    "range_ok": 26,
+    "name_ok": 26,
+    "flag_ok": 26,
+    "flag_sev_ok": 26,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 8981,
+    "plan_statements": 3526,
+    "render_en": 2935,
+    "render_hi": 1776,
+    "safety_check": 7
+   },
+   "cost_inr": 0.8922,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E13",
+   "group": "perturbation",
+   "wall_ms": 17554,
+   "tokens": {
+    "extract": {
+     "tokens_in": 3760,
+     "tokens_out": 2238,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 2,
+     "cache_hits": 0,
+     "cost_inr": 0.38673
+    },
+    "plan_statements": {
+     "tokens_in": 1953,
+     "tokens_out": 643,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.13074750000000002
+    },
+    "render_en": {
+     "tokens_in": 1438,
+     "tokens_out": 302,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.073125
+    },
+    "render_hi": {
+     "tokens_in": 1486,
+     "tokens_out": 354,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.08122499999999999
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 7,
+    "critical_gt": 0,
+    "pred_rows": 7,
+    "tp": 7,
+    "value_ok": 7,
+    "unit_ok": 7,
+    "range_ok": 7,
+    "name_ok": 7,
+    "flag_ok": 7,
+    "flag_sev_ok": 7,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 12,
+    "grounded_statements": 12,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 5,
+   "latency_ms": {
+    "extract": 8663,
+    "plan_statements": 3322,
+    "render_en": 2033,
+    "render_hi": 2469,
+    "safety_check": 17
+   },
+   "cost_inr": 0.6718,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E14",
+   "group": "perturbation",
+   "wall_ms": 9204,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1864,
+     "tokens_out": 352,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.08946000000000001
+    },
+    "plan_statements": {
+     "tokens_in": 1513,
+     "tokens_out": 81,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0449775
+    },
+    "render_en": {
+     "tokens_in": 1224,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.03672
+    },
+    "render_hi": {
+     "tokens_in": 1238,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.037305
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 2,
+    "critical_gt": 0,
+    "pred_rows": 2,
+    "tp": 2,
+    "value_ok": 2,
+    "unit_ok": 2,
+    "range_ok": 2,
+    "name_ok": 2,
+    "flag_ok": 2,
+    "flag_sev_ok": 2,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 4056,
+    "plan_statements": 1617,
+    "render_en": 1701,
+    "render_hi": 1626,
+    "safety_check": 2
+   },
+   "cost_inr": 0.2085,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E15",
+   "group": "perturbation",
+   "wall_ms": 10403,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1121,
+     "tokens_out": 1187,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.1854675
+    },
+    "plan_statements": {
+     "tokens_in": 1536,
+     "tokens_out": 214,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06345
+    },
+    "render_en": {
+     "tokens_in": 1255,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0374175
+    },
+    "render_hi": {
+     "tokens_in": 1303,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.038767499999999996
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 7,
+    "critical_gt": 0,
+    "pred_rows": 7,
+    "tp": 7,
+    "value_ok": 7,
+    "unit_ok": 7,
+    "range_ok": 7,
+    "name_ok": 7,
+    "flag_ok": 7,
+    "flag_sev_ok": 7,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 3633,
+    "plan_statements": 2203,
+    "render_en": 4491,
+    "render_hi": 1862,
+    "safety_check": 3
+   },
+   "cost_inr": 0.3251,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E16",
+   "group": "perturbation",
+   "wall_ms": 10161,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1866,
+     "tokens_out": 563,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.11799000000000001
+    },
+    "plan_statements": {
+     "tokens_in": 1521,
+     "tokens_out": 125,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0510975
+    },
+    "render_en": {
+     "tokens_in": 1237,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0370125
+    },
+    "render_hi": {
+     "tokens_in": 1246,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.037485
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 4011,
+    "plan_statements": 2214,
+    "render_en": 2051,
+    "render_hi": 1305,
+    "safety_check": 2
+   },
+   "cost_inr": 0.2436,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E17",
+   "group": "perturbation",
+   "wall_ms": 14740,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1364,
+     "tokens_out": 1998,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.30041999999999996
+    },
+    "plan_statements": {
+     "tokens_in": 1738,
+     "tokens_out": 568,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.11578500000000001
+    },
+    "render_en": {
+     "tokens_in": 1424,
+     "tokens_out": 231,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.063225
+    },
+    "render_hi": {
+     "tokens_in": 1502,
+     "tokens_out": 268,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.069975
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 11,
+    "critical_gt": 0,
+    "pred_rows": 11,
+    "tp": 11,
+    "value_ok": 11,
+    "unit_ok": 11,
+    "range_ok": 11,
+    "name_ok": 11,
+    "flag_ok": 11,
+    "flag_sev_ok": 11,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 6285,
+    "plan_statements": 2811,
+    "render_en": 1657,
+    "render_hi": 5566,
+    "safety_check": 7
+   },
+   "cost_inr": 0.5494,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E18",
+   "group": "perturbation",
+   "wall_ms": 14715,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1868,
+     "tokens_out": 2178,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.33605999999999997
+    },
+    "plan_statements": {
+     "tokens_in": 1988,
+     "tokens_out": 832,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.15705
+    },
+    "render_en": {
+     "tokens_in": 1527,
+     "tokens_out": 326,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0783675
+    },
+    "render_hi": {
+     "tokens_in": 1599,
+     "tokens_out": 357,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0841725
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 0,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 12,
+    "grounded_statements": 12,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 6540,
+    "plan_statements": 2937,
+    "render_en": 2603,
+    "render_hi": 2597,
+    "safety_check": 9
+   },
+   "cost_inr": 0.6556,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E19",
+   "group": "extraction_challenge",
+   "wall_ms": 10904,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1424,
+     "tokens_out": 2481,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.36697500000000005
+    },
+    "plan_statements": {
+     "tokens_in": 1773,
+     "tokens_out": 632,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.1252125
+    },
+    "render_en": {
+     "tokens_in": 1439,
+     "tokens_out": 222,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0623475
+    },
+    "render_hi": {
+     "tokens_in": 1511,
+     "tokens_out": 252,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06801750000000001
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 0,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_mild"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_mild"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 5904,
+    "plan_statements": 3155,
+    "render_en": 1750,
+    "render_hi": 1743,
+    "safety_check": 5
+   },
+   "cost_inr": 0.6226,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E20",
+   "group": "extraction_challenge",
+   "wall_ms": 6639,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1181,
+     "tokens_out": 618,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.1100025
+    },
+    "plan_statements": {
+     "tokens_in": 1525,
+     "tokens_out": 125,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.051187500000000004
+    },
+    "render_en": {
+     "tokens_in": 1233,
+     "tokens_out": 72,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0374625
+    },
+    "render_hi": {
+     "tokens_in": 1248,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.03753
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 2813,
+    "plan_statements": 1758,
+    "render_en": 2005,
+    "render_hi": 1601,
+    "safety_check": 3
+   },
+   "cost_inr": 0.2362,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E21",
+   "group": "extraction_challenge",
+   "wall_ms": 8161,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1088,
+     "tokens_out": 633,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.10993499999999999
+    },
+    "plan_statements": {
+     "tokens_in": 1965,
+     "tokens_out": 597,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.1248075
+    },
+    "render_en": {
+     "tokens_in": 1459,
+     "tokens_out": 340,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.07872749999999999
+    },
+    "render_hi": {
+     "tokens_in": 1464,
+     "tokens_out": 378,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.08397
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 12,
+    "grounded_statements": 12,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 2662,
+    "plan_statements": 2610,
+    "render_en": 2804,
+    "render_hi": 2796,
+    "safety_check": 7
+   },
+   "cost_inr": 0.3974,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E22",
+   "group": "extraction_challenge",
+   "wall_ms": 15429,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1356,
+     "tokens_out": 1872,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.28323
+    },
+    "plan_statements": {
+     "tokens_in": 1548,
+     "tokens_out": 303,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.075735
+    },
+    "render_en": {
+     "tokens_in": 1293,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0382725
+    },
+    "render_hi": {
+     "tokens_in": 1369,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.040252500000000004
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 11,
+    "critical_gt": 0,
+    "pred_rows": 11,
+    "tp": 11,
+    "value_ok": 11,
+    "unit_ok": 11,
+    "range_ok": 10,
+    "name_ok": 11,
+    "flag_ok": 11,
+    "flag_sev_ok": 11,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [
+     {
+      "test_id": "ALB",
+      "value_ok": true,
+      "unit_ok": true,
+      "range_ok": false,
+      "gt": [
+       "4.30",
+       "g/dL",
+       "-"
+      ],
+      "pred": [
+       "4.30",
+       "g/dL",
+       ""
+      ]
+     }
+    ],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 4609,
+    "plan_statements": 1885,
+    "render_en": 1747,
+    "render_hi": 8854,
+    "safety_check": 3
+   },
+   "cost_inr": 0.4375,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E23",
+   "group": "extraction_challenge",
+   "wall_ms": 516703,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1270,
+     "tokens_out": 2424,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.35581500000000005
+    },
+    "plan_statements": {
+     "tokens_in": 1661,
+     "tokens_out": 429,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0952875
+    },
+    "render_en": {
+     "tokens_in": 2742,
+     "tokens_out": 217,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 2,
+     "cache_hits": 0,
+     "cost_inr": 0.09099000000000002
+    },
+    "render_hi": {
+     "tokens_in": 1422,
+     "tokens_out": 120,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.048194999999999995
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 0,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 4,
+    "grounded_statements": 4,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R5_verify"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R5_verify"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 5,
+   "latency_ms": {
+    "extract": 6031,
+    "plan_statements": 501765,
+    "render_en": 5109,
+    "render_hi": 5066,
+    "safety_check": 10
+   },
+   "cost_inr": 0.5903,
+   "retries": 1,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    [
+     "render:en:wrong_direction"
+    ],
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E24",
+   "group": "extraction_challenge",
+   "wall_ms": 9908,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1363,
+     "tokens_out": 1248,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.19914749999999998
+    },
+    "plan_statements": {
+     "tokens_in": 1746,
+     "tokens_out": 486,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.104895
+    },
+    "render_en": {
+     "tokens_in": 1397,
+     "tokens_out": 238,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0635625
+    },
+    "render_hi": {
+     "tokens_in": 1447,
+     "tokens_out": 328,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0768375
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 7,
+    "critical_gt": 0,
+    "pred_rows": 7,
+    "tp": 7,
+    "value_ok": 7,
+    "unit_ok": 7,
+    "range_ok": 7,
+    "name_ok": 7,
+    "flag_ok": 7,
+    "flag_sev_ok": 7,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "partial",
+    "warnings": [
+     "SERUM CHOLESTEROL, TOTAL: test name matched by the model, please verify"
+    ]
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 3686,
+    "plan_statements": 3277,
+    "render_en": 2153,
+    "render_hi": 2646,
+    "safety_check": 6
+   },
+   "cost_inr": 0.4444,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E25",
+   "group": "adversarial",
+   "wall_ms": 16126,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1421,
+     "tokens_out": 2436,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.3608325
+    },
+    "plan_statements": {
+     "tokens_in": 2199,
+     "tokens_out": 999,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.18434250000000002
+    },
+    "render_en": {
+     "tokens_in": 1628,
+     "tokens_out": 445,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.096705
+    },
+    "render_hi": {
+     "tokens_in": 1692,
+     "tokens_out": 500,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.10557
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 1,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 1,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 16,
+    "grounded_statements": 16,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "urgent",
+     "rule": "R1_critical"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "urgent",
+     "rule": "R1_critical"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 7073,
+    "plan_statements": 5471,
+    "render_en": 2456,
+    "render_hi": 3463,
+    "safety_check": 10
+   },
+   "cost_inr": 0.7474,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E26",
+   "group": "adversarial",
+   "wall_ms": 23666,
+   "tokens": {
+    "extract": {
+     "tokens_in": 3754,
+     "tokens_out": 4497,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 2,
+     "cache_hits": 0,
+     "cost_inr": 0.69156
+    },
+    "plan_statements": {
+     "tokens_in": 2192,
+     "tokens_out": 976,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.18108
+    },
+    "render_en": {
+     "tokens_in": 1598,
+     "tokens_out": 421,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.09279
+    },
+    "render_hi": {
+     "tokens_in": 1666,
+     "tokens_out": 460,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.099585
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 1,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 1,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 16,
+    "grounded_statements": 16,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "urgent",
+     "rule": "R1_critical"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "urgent",
+     "rule": "R1_critical"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 5,
+   "latency_ms": {
+    "extract": 13929,
+    "plan_statements": 3963,
+    "render_en": 2624,
+    "render_hi": 2333,
+    "safety_check": 10
+   },
+   "cost_inr": 1.065,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E27",
+   "group": "adversarial",
+   "wall_ms": 7724,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1179,
+     "tokens_out": 373,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.07688249999999999
+    },
+    "plan_statements": {
+     "tokens_in": 1748,
+     "tokens_out": 316,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.08199000000000001
+    },
+    "render_en": {
+     "tokens_in": 1336,
+     "tokens_out": 202,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.05733
+    },
+    "render_hi": {
+     "tokens_in": 1352,
+     "tokens_out": 244,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06336
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 2,
+    "critical_gt": 0,
+    "pred_rows": 2,
+    "tp": 2,
+    "value_ok": 2,
+    "unit_ok": 2,
+    "range_ok": 2,
+    "name_ok": 2,
+    "flag_ok": 2,
+    "flag_sev_ok": 2,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 6,
+    "grounded_statements": 6,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 2692,
+    "plan_statements": 2904,
+    "render_en": 2056,
+    "render_hi": 2052,
+    "safety_check": 5
+   },
+   "cost_inr": 0.2796,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E28",
+   "group": "adversarial",
+   "wall_ms": 8258,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1125,
+     "tokens_out": 1191,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.18609750000000003
+    },
+    "plan_statements": {
+     "tokens_in": 1538,
+     "tokens_out": 301,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.07524
+    },
+    "render_en": {
+     "tokens_in": 1298,
+     "tokens_out": 123,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.045810000000000003
+    },
+    "render_hi": {
+     "tokens_in": 1350,
+     "tokens_out": 174,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.053864999999999996
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 7,
+    "critical_gt": 0,
+    "pred_rows": 7,
+    "tp": 7,
+    "value_ok": 7,
+    "unit_ok": 7,
+    "range_ok": 7,
+    "name_ok": 7,
+    "flag_ok": 7,
+    "flag_sev_ok": 7,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 4,
+    "grounded_statements": 4,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_printed_flag"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_printed_flag"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 3402,
+    "plan_statements": 1734,
+    "render_en": 2027,
+    "render_hi": 3043,
+    "safety_check": 4
+   },
+   "cost_inr": 0.361,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E29",
+   "group": "adversarial",
+   "wall_ms": 17591,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1392,
+     "tokens_out": 1926,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.29133
+    },
+    "plan_statements": {
+     "tokens_in": 1938,
+     "tokens_out": 791,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.15039
+    },
+    "render_en": {
+     "tokens_in": 1539,
+     "tokens_out": 362,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0834975
+    },
+    "render_hi": {
+     "tokens_in": 1607,
+     "tokens_out": 427,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0938025
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 11,
+    "critical_gt": 0,
+    "pred_rows": 11,
+    "tp": 11,
+    "value_ok": 11,
+    "unit_ok": 11,
+    "range_ok": 11,
+    "name_ok": 11,
+    "flag_ok": 11,
+    "flag_sev_ok": 11,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 12,
+    "grounded_statements": 12,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 6463,
+    "plan_statements": 8261,
+    "render_en": 1680,
+    "render_hi": 2772,
+    "safety_check": 9
+   },
+   "cost_inr": 0.619,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E30",
+   "group": "adversarial",
+   "wall_ms": 5946,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1110,
+     "tokens_out": 791,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.13176
+    },
+    "plan_statements": {
+     "tokens_in": 1523,
+     "tokens_out": 125,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.051142499999999994
+    },
+    "render_en": {
+     "tokens_in": 1233,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.036922500000000004
+    },
+    "render_hi": {
+     "tokens_in": 1246,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.037485
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "partial",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 2610,
+    "plan_statements": 1444,
+    "render_en": 1278,
+    "render_hi": 1815,
+    "safety_check": 3
+   },
+   "cost_inr": 0.2573,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  }
+ ]
+}

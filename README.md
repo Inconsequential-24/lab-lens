@@ -1,7 +1,7 @@
 # LabLens: Lab Report Explainer
 
-> **DRAFT.** Sections marked `TODO` are not measured yet. Numbers below come from the JSON files
-> in `evals/` and from `models/*.card.json`, not from memory.
+> Numbers below come from the JSON files in `evals/` and from `models/*.card.json`, not from
+> memory.
 
 **Live demo:** https://lablens.64-20-56-251.sslip.io (synthetic reports only; real uploads are
 switched off on this deployment).
@@ -115,8 +115,34 @@ repository or any evaluation. No real patient data is stored here. Regenerate wi
 
 ## Results
 
-These are partial. No script has yet scored the 30 frozen eval cases end to end. Intervals are 95%
-Wilson intervals from the results files.
+Intervals are 95% Wilson intervals from the results files.
+
+### The 30 frozen eval cases, end to end (1 run, live Gemini)
+
+From `evals/results_eval30.json` / `.md`, produced by `python evals/run.py --runs 1`.
+
+| What | Result |
+|---|---|
+| Extraction recall / precision | 252 / 252 rows each (interval 0.985 to 1.0) |
+| Value, unit, name accuracy | 252 / 252 each |
+| Range accuracy | 251 / 252 (99.6%) |
+| Flags all correct, per report | 30 / 30 (interval 0.886 to 1.0) |
+| Next step and urgency | 30 / 30 |
+| Critical recall | 2 / 2 (interval 0.34 to 1.0, uninformative; see the held-out set below) |
+| Explanation statements grounded in cited tests | 192 / 192 |
+| English / Hindi consistency | 30 / 30 |
+| Unsafe advice | 0 / 30 (interval 0 to 0.113) |
+| Fallback to template text | 0 / 30 |
+| Latency per report | p50 10.0 s, p95 23.7 s |
+| Spend for the run | about INR 13.82 |
+
+This is one run, not three, so run-to-run variation is not measured. An earlier run on
+2026-11-21 (`evals/results_eval30_2026-11-21.json`) had the same flags and next steps, but 70% of
+its reports fell back to template text because Gemini returned 503 (overloaded) errors on a
+free-tier key; this run used a different key and saw no 503s. The explanation checks are rule-based; no LLM judge
+or human rating of explanation quality has been run.
+
+### Other evaluations
 
 | What | Result | Source |
 |---|---|---|
@@ -147,11 +173,10 @@ Read these carefully:
   optimistic.** The held-out name set was inspected once after the first run and the name model's
   features changed, so it is slightly less blind than intended.
 
-### TODO: results still to come
+### Spend
 
-- TODO: LLM explanation results (`evals/explain_dev.py` output, safety-check pass rate).
-- TODO: total LLM spend. Spend so far is tracked in the budget ledger (`cache/budget.sqlite`);
-  the figure is added here once final. Planned cap: INR 500 total.
+Total LLM spend recorded in the local budget ledger (`cache/budget.sqlite`) so far: about
+INR 45.60, against a planned cap of INR 500.
 
 ## Privacy and safety
 

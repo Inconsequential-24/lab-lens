@@ -1,0 +1,4282 @@
+{
+ "summary": {
+  "runs_label": "1 run (mean/spread across runs not available; pooled counts only)",
+  "runs_requested": 1,
+  "cases": [
+   "E01",
+   "E02",
+   "E03",
+   "E04",
+   "E05",
+   "E06",
+   "E07",
+   "E08",
+   "E09",
+   "E10",
+   "E11",
+   "E12",
+   "E13",
+   "E14",
+   "E15",
+   "E16",
+   "E17",
+   "E18",
+   "E19",
+   "E20",
+   "E21",
+   "E22",
+   "E23",
+   "E24",
+   "E25",
+   "E26",
+   "E27",
+   "E28",
+   "E29",
+   "E30"
+  ],
+  "runs_completed": 1,
+  "case_runs_scored": 30,
+  "errors": 0,
+  "excluded_provider_unavailable": {
+   "total": 0,
+   "per_run": {
+    "1": 0
+   },
+   "cases": [],
+   "note": "Gemini 5xx/429 after 3 whole-case retries; not scored, excluded from all denominators"
+  },
+  "aborted": null,
+  "max_inr": 80.0,
+  "spent_inr": 12.1575,
+  "runtime_s": 2531.7,
+  "model": "gemini-3.1-flash-lite",
+  "extract_prompt_version": "99b32887bcb5b3c1273ade8d050a6040d084ef29377a809a519d227a6ae11481",
+  "rates_usd_per_m": [
+   0.25,
+   1.5
+  ],
+  "inr_per_usd": 90.0,
+  "cache": "off (cold)",
+  "paid_tier_key": false
+ },
+ "aggregate": {
+  "per_run": {
+   "1": {
+    "extraction_precision": {
+     "k": 251,
+     "n": 251,
+     "rate": 1.0,
+     "ci95": [
+      0.9849,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 251,
+     "n": 252,
+     "rate": 0.996,
+     "ci95": [
+      0.9779,
+      0.9993
+     ]
+    },
+    "value_accuracy": {
+     "k": 250,
+     "n": 251,
+     "rate": 0.996,
+     "ci95": [
+      0.9778,
+      0.9993
+     ]
+    },
+    "unit_accuracy": {
+     "k": 251,
+     "n": 251,
+     "rate": 1.0,
+     "ci95": [
+      0.9849,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 249,
+     "n": 251,
+     "rate": 0.992,
+     "ci95": [
+      0.9714,
+      0.9978
+     ]
+    },
+    "name_accuracy": {
+     "k": 251,
+     "n": 251,
+     "rate": 1.0,
+     "ci95": [
+      0.9849,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 251,
+     "n": 252,
+     "rate": 0.996,
+     "ci95": [
+      0.9779,
+      0.9993
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 251,
+     "n": 252,
+     "rate": 0.996,
+     "ci95": [
+      0.9779,
+      0.9993
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 29,
+     "n": 30,
+     "rate": 0.9667,
+     "ci95": [
+      0.8333,
+      0.9941
+     ]
+    },
+    "critical_recall": {
+     "k": 2,
+     "n": 2,
+     "rate": 1.0,
+     "ci95": [
+      0.3424,
+      1.0
+     ]
+    },
+    "next_step_accuracy": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 190,
+     "n": 190,
+     "rate": 1.0,
+     "ci95": [
+      0.9802,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 30,
+     "n": 30,
+     "rate": 1.0,
+     "ci95": [
+      0.8865,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 30,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1135
+     ]
+    },
+    "fallback_rate": {
+     "k": 21,
+     "n": 30,
+     "rate": 0.7,
+     "ci95": [
+      0.5212,
+      0.8334
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 30,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1135
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 30,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1135
+     ]
+    }
+   }
+  },
+  "across_runs": {
+   "extraction_precision": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "extraction_recall": {
+    "mean": 0.996,
+    "sd": 0.0,
+    "min": 0.996,
+    "max": 0.996
+   },
+   "value_accuracy": {
+    "mean": 0.996,
+    "sd": 0.0,
+    "min": 0.996,
+    "max": 0.996
+   },
+   "unit_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "range_accuracy": {
+    "mean": 0.992,
+    "sd": 0.0,
+    "min": 0.992,
+    "max": 0.992
+   },
+   "name_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "flag_accuracy_per_test": {
+    "mean": 0.996,
+    "sd": 0.0,
+    "min": 0.996,
+    "max": 0.996
+   },
+   "flag_severity_accuracy_per_test": {
+    "mean": 0.996,
+    "sd": 0.0,
+    "min": 0.996,
+    "max": 0.996
+   },
+   "flags_all_correct_per_report": {
+    "mean": 0.9667,
+    "sd": 0.0,
+    "min": 0.9667,
+    "max": 0.9667
+   },
+   "critical_recall": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "next_step_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "urgency_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "next_step_and_urgency_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "rule_accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "grounding_statements": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "grounding_reports": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "en_hi_consistency": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "unsafe_advice_rate": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   },
+   "fallback_rate": {
+    "mean": 0.7,
+    "sd": 0.0,
+    "min": 0.7,
+    "max": 0.7
+   },
+   "explanation_withheld_rate": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   },
+   "safety_pass_first_try": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   }
+  },
+  "pooled": {
+   "extraction_precision": {
+    "k": 251,
+    "n": 251,
+    "rate": 1.0,
+    "ci95": [
+     0.9849,
+     1.0
+    ]
+   },
+   "extraction_recall": {
+    "k": 251,
+    "n": 252,
+    "rate": 0.996,
+    "ci95": [
+     0.9779,
+     0.9993
+    ]
+   },
+   "value_accuracy": {
+    "k": 250,
+    "n": 251,
+    "rate": 0.996,
+    "ci95": [
+     0.9778,
+     0.9993
+    ]
+   },
+   "unit_accuracy": {
+    "k": 251,
+    "n": 251,
+    "rate": 1.0,
+    "ci95": [
+     0.9849,
+     1.0
+    ]
+   },
+   "range_accuracy": {
+    "k": 249,
+    "n": 251,
+    "rate": 0.992,
+    "ci95": [
+     0.9714,
+     0.9978
+    ]
+   },
+   "name_accuracy": {
+    "k": 251,
+    "n": 251,
+    "rate": 1.0,
+    "ci95": [
+     0.9849,
+     1.0
+    ]
+   },
+   "flag_accuracy_per_test": {
+    "k": 251,
+    "n": 252,
+    "rate": 0.996,
+    "ci95": [
+     0.9779,
+     0.9993
+    ]
+   },
+   "flag_severity_accuracy_per_test": {
+    "k": 251,
+    "n": 252,
+    "rate": 0.996,
+    "ci95": [
+     0.9779,
+     0.9993
+    ]
+   },
+   "flags_all_correct_per_report": {
+    "k": 29,
+    "n": 30,
+    "rate": 0.9667,
+    "ci95": [
+     0.8333,
+     0.9941
+    ]
+   },
+   "critical_recall": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "ci95": [
+     0.3424,
+     1.0
+    ]
+   },
+   "next_step_accuracy": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "urgency_accuracy": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "next_step_and_urgency_accuracy": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "rule_accuracy": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "grounding_statements": {
+    "k": 190,
+    "n": 190,
+    "rate": 1.0,
+    "ci95": [
+     0.9802,
+     1.0
+    ]
+   },
+   "grounding_reports": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "en_hi_consistency": {
+    "k": 30,
+    "n": 30,
+    "rate": 1.0,
+    "ci95": [
+     0.8865,
+     1.0
+    ]
+   },
+   "unsafe_advice_rate": {
+    "k": 0,
+    "n": 30,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.1135
+    ]
+   },
+   "fallback_rate": {
+    "k": 21,
+    "n": 30,
+    "rate": 0.7,
+    "ci95": [
+     0.5212,
+     0.8334
+    ]
+   },
+   "explanation_withheld_rate": {
+    "k": 0,
+    "n": 30,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.1135
+    ]
+   },
+   "safety_pass_first_try": {
+    "k": 0,
+    "n": 30,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.1135
+    ]
+   }
+  },
+  "per_group_pooled": {
+   "controlled_variation": {
+    "extraction_precision": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "value_accuracy": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "unit_accuracy": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "name_accuracy": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 65,
+     "n": 65,
+     "rate": 1.0,
+     "ci95": [
+      0.9442,
+      1.0
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "critical_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_accuracy": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 10,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.2775
+     ]
+    },
+    "fallback_rate": {
+     "k": 10,
+     "n": 10,
+     "rate": 1.0,
+     "ci95": [
+      0.7225,
+      1.0
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 10,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.2775
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 10,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.2775
+     ]
+    }
+   },
+   "perturbation": {
+    "extraction_precision": {
+     "k": 83,
+     "n": 83,
+     "rate": 1.0,
+     "ci95": [
+      0.9558,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 83,
+     "n": 84,
+     "rate": 0.9881,
+     "ci95": [
+      0.9356,
+      0.9979
+     ]
+    },
+    "value_accuracy": {
+     "k": 82,
+     "n": 83,
+     "rate": 0.988,
+     "ci95": [
+      0.9349,
+      0.9979
+     ]
+    },
+    "unit_accuracy": {
+     "k": 83,
+     "n": 83,
+     "rate": 1.0,
+     "ci95": [
+      0.9558,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 82,
+     "n": 83,
+     "rate": 0.988,
+     "ci95": [
+      0.9349,
+      0.9979
+     ]
+    },
+    "name_accuracy": {
+     "k": 83,
+     "n": 83,
+     "rate": 1.0,
+     "ci95": [
+      0.9558,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 83,
+     "n": 84,
+     "rate": 0.9881,
+     "ci95": [
+      0.9356,
+      0.9979
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 83,
+     "n": 84,
+     "rate": 0.9881,
+     "ci95": [
+      0.9356,
+      0.9979
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 7,
+     "n": 8,
+     "rate": 0.875,
+     "ci95": [
+      0.5291,
+      0.9776
+     ]
+    },
+    "critical_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_accuracy": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 48,
+     "n": 48,
+     "rate": 1.0,
+     "ci95": [
+      0.9259,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 8,
+     "n": 8,
+     "rate": 1.0,
+     "ci95": [
+      0.6756,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3244
+     ]
+    },
+    "fallback_rate": {
+     "k": 4,
+     "n": 8,
+     "rate": 0.5,
+     "ci95": [
+      0.2152,
+      0.7848
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3244
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3244
+     ]
+    }
+   },
+   "extraction_challenge": {
+    "extraction_precision": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "value_accuracy": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "unit_accuracy": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 51,
+     "n": 52,
+     "rate": 0.9808,
+     "ci95": [
+      0.8988,
+      0.9966
+     ]
+    },
+    "name_accuracy": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 52,
+     "n": 52,
+     "rate": 1.0,
+     "ci95": [
+      0.9312,
+      1.0
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "critical_recall": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "ci95": null
+    },
+    "next_step_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 34,
+     "n": 34,
+     "rate": 1.0,
+     "ci95": [
+      0.8985,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    },
+    "fallback_rate": {
+     "k": 3,
+     "n": 6,
+     "rate": 0.5,
+     "ci95": [
+      0.1876,
+      0.8124
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    }
+   },
+   "adversarial": {
+    "extraction_precision": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "extraction_recall": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "value_accuracy": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "unit_accuracy": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "range_accuracy": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "name_accuracy": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "flag_accuracy_per_test": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "flag_severity_accuracy_per_test": {
+     "k": 51,
+     "n": 51,
+     "rate": 1.0,
+     "ci95": [
+      0.93,
+      1.0
+     ]
+    },
+    "flags_all_correct_per_report": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "critical_recall": {
+     "k": 2,
+     "n": 2,
+     "rate": 1.0,
+     "ci95": [
+      0.3424,
+      1.0
+     ]
+    },
+    "next_step_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "urgency_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "next_step_and_urgency_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "rule_accuracy": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "grounding_statements": {
+     "k": 56,
+     "n": 56,
+     "rate": 1.0,
+     "ci95": [
+      0.9358,
+      1.0
+     ]
+    },
+    "grounding_reports": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "en_hi_consistency": {
+     "k": 6,
+     "n": 6,
+     "rate": 1.0,
+     "ci95": [
+      0.6097,
+      1.0
+     ]
+    },
+    "unsafe_advice_rate": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    },
+    "fallback_rate": {
+     "k": 4,
+     "n": 6,
+     "rate": 0.6667,
+     "ci95": [
+      0.3,
+      0.9032
+     ]
+    },
+    "explanation_withheld_rate": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    },
+    "safety_pass_first_try": {
+     "k": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903
+     ]
+    }
+   }
+  },
+  "latency_ms": {
+   "note": "p95 on <=90 samples is noisy",
+   "per_report": {
+    "p50": 24322,
+    "p95": 267699
+   },
+   "per_node": {
+    "extract": {
+     "p50": 6610,
+     "p95": 118512,
+     "n": 30
+    },
+    "plan_statements": {
+     "p50": 3396,
+     "p95": 65333,
+     "n": 30
+    },
+    "render_en": {
+     "p50": 5591,
+     "p95": 62147,
+     "n": 23
+    },
+    "render_hi": {
+     "p50": 4664,
+     "p95": 31492,
+     "n": 23
+    },
+    "safety_check": {
+     "p50": 0,
+     "p95": 8,
+     "n": 30
+    }
+   }
+  },
+  "cost": {
+   "per_report_mean_inr": 0.3761,
+   "per_report_max_inr": 0.8953,
+   "tokens_by_node": {
+    "extract.calls": 32,
+    "extract.tokens_cached": 0,
+    "extract.tokens_in": 47026,
+    "extract.tokens_out": 45941,
+    "extract.tokens_thinking": 0,
+    "plan_statements.calls": 23,
+    "plan_statements.tokens_cached": 0,
+    "plan_statements.tokens_in": 39582,
+    "plan_statements.tokens_out": 10043,
+    "plan_statements.tokens_thinking": 0,
+    "render_en.calls": 16,
+    "render_en.tokens_cached": 0,
+    "render_en.tokens_in": 21935,
+    "render_en.tokens_out": 2813,
+    "render_en.tokens_thinking": 0,
+    "render_hi.calls": 16,
+    "render_hi.tokens_cached": 0,
+    "render_hi.tokens_in": 22584,
+    "render_hi.tokens_out": 2934,
+    "render_hi.tokens_thinking": 0
+   }
+  },
+  "llm_judge": "not run (needs hand labels)",
+  "judge_agreement": "not run (needs hand labels)"
+ },
+ "per_case_run": [
+  {
+   "run": 1,
+   "case": "E01",
+   "group": "controlled_variation",
+   "wall_ms": 143314,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1452,
+     "tokens_out": 2544,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.37611000000000006
+    },
+    "plan_statements": {
+     "tokens_in": 1773,
+     "tokens_out": 638,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.1260225
+    },
+    "render_en": null,
+    "render_hi": {
+     "tokens_in": 1516,
+     "tokens_out": 252,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06813
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 0,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_mild"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_mild"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 3,
+   "latency_ms": {
+    "extract": 11934,
+    "plan_statements": 101141,
+    "render_en": 30056,
+    "render_hi": 17418,
+    "safety_check": 0
+   },
+   "cost_inr": 0.5703,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E02",
+   "group": "controlled_variation",
+   "wall_ms": 272455,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1247,
+     "tokens_out": 1140,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.18195750000000002
+    },
+    "plan_statements": {
+     "tokens_in": 1940,
+     "tokens_out": 659,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.132615
+    },
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 7,
+    "critical_gt": 0,
+    "pred_rows": 7,
+    "tp": 7,
+    "value_ok": 7,
+    "unit_ok": 7,
+    "range_ok": 7,
+    "name_ok": 7,
+    "flag_ok": 7,
+    "flag_sev_ok": 7,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 12,
+    "grounded_statements": 12,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 2,
+   "latency_ms": {
+    "extract": 210209,
+    "plan_statements": 28099,
+    "render_en": 4522,
+    "render_hi": 31492,
+    "safety_check": 0
+   },
+   "cost_inr": 0.3146,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 3
+  },
+  {
+   "run": 1,
+   "case": "E03",
+   "group": "controlled_variation",
+   "wall_ms": 73663,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1428,
+     "tokens_out": 1314,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.20952
+    },
+    "plan_statements": {
+     "tokens_in": 1541,
+     "tokens_out": 238,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0668025
+    },
+    "render_en": null,
+    "render_hi": {
+     "tokens_in": 1323,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0392175
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 8,
+    "critical_gt": 0,
+    "pred_rows": 8,
+    "tp": 8,
+    "value_ok": 8,
+    "unit_ok": 8,
+    "range_ok": 8,
+    "name_ok": 8,
+    "flag_ok": 8,
+    "flag_sev_ok": 8,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 3,
+   "latency_ms": {
+    "extract": 27040,
+    "plan_statements": 37049,
+    "render_en": 5591,
+    "render_hi": 9489,
+    "safety_check": 0
+   },
+   "cost_inr": 0.3155,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 2
+  },
+  {
+   "run": 1,
+   "case": "E04",
+   "group": "controlled_variation",
+   "wall_ms": 267699,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1179,
+     "tokens_out": 366,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0759375
+    },
+    "plan_statements": {
+     "tokens_in": 1760,
+     "tokens_out": 302,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.08037
+    },
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 2,
+    "critical_gt": 0,
+    "pred_rows": 2,
+    "tp": 2,
+    "value_ok": 2,
+    "unit_ok": 2,
+    "range_ok": 2,
+    "name_ok": 2,
+    "flag_ok": 2,
+    "flag_sev_ok": 2,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 6,
+    "grounded_statements": 6,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 2,
+   "latency_ms": {
+    "extract": 2004,
+    "plan_statements": 8404,
+    "render_en": 257217,
+    "render_hi": 6380,
+    "safety_check": 0
+   },
+   "cost_inr": 0.1563,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 3
+  },
+  {
+   "run": 1,
+   "case": "E05",
+   "group": "controlled_variation",
+   "wall_ms": 18736,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1135,
+     "tokens_out": 407,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0804825
+    },
+    "plan_statements": {
+     "tokens_in": 1517,
+     "tokens_out": 81,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0450675
+    },
+    "render_en": null,
+    "render_hi": {
+     "tokens_in": 1236,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.03726
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 2,
+    "critical_gt": 0,
+    "pred_rows": 2,
+    "tp": 2,
+    "value_ok": 2,
+    "unit_ok": 2,
+    "range_ok": 2,
+    "name_ok": 2,
+    "flag_ok": 2,
+    "flag_sev_ok": 2,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 3,
+   "latency_ms": {
+    "extract": 2502,
+    "plan_statements": 3396,
+    "render_en": 12786,
+    "render_hi": 1992,
+    "safety_check": 0
+   },
+   "cost_inr": 0.1628,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E06",
+   "group": "controlled_variation",
+   "wall_ms": 18427,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1333,
+     "tokens_out": 358,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0783225
+    },
+    "plan_statements": null,
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 2,
+    "critical_gt": 0,
+    "pred_rows": 2,
+    "tp": 2,
+    "value_ok": 2,
+    "unit_ok": 2,
+    "range_ok": 2,
+    "name_ok": 2,
+    "flag_ok": 2,
+    "flag_sev_ok": 2,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 1,
+   "latency_ms": {
+    "extract": 2739,
+    "plan_statements": 11660,
+    "safety_check": 0
+   },
+   "cost_inr": 0.0783,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 2
+  },
+  {
+   "run": 1,
+   "case": "E07",
+   "group": "controlled_variation",
+   "wall_ms": 15215,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1185,
+     "tokens_out": 602,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.1079325
+    },
+    "plan_statements": null,
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 1,
+   "latency_ms": {
+    "extract": 3939,
+    "plan_statements": 3699,
+    "safety_check": 0
+   },
+   "cost_inr": 0.1079,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E08",
+   "group": "controlled_variation",
+   "wall_ms": 9447,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1314,
+     "tokens_out": 597,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.11016000000000001
+    },
+    "plan_statements": {
+     "tokens_in": 1751,
+     "tokens_out": 408,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.09447749999999999
+    },
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 2,
+   "latency_ms": {
+    "extract": 2449,
+    "plan_statements": 2584,
+    "render_en": 2519,
+    "render_hi": 4352,
+    "safety_check": 0
+   },
+   "cost_inr": 0.2046,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 2
+  },
+  {
+   "run": 1,
+   "case": "E09",
+   "group": "controlled_variation",
+   "wall_ms": 14201,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1548,
+     "tokens_out": 2038,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.30996
+    },
+    "plan_statements": {
+     "tokens_in": 1753,
+     "tokens_out": 574,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.11693250000000001
+    },
+    "render_en": null,
+    "render_hi": {
+     "tokens_in": 1497,
+     "tokens_out": 244,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0666225
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 12,
+    "critical_gt": 0,
+    "pred_rows": 12,
+    "tp": 12,
+    "value_ok": 12,
+    "unit_ok": 12,
+    "range_ok": 12,
+    "name_ok": 12,
+    "flag_ok": 12,
+    "flag_sev_ok": 12,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 3,
+   "latency_ms": {
+    "extract": 5200,
+    "plan_statements": 2579,
+    "render_en": 2533,
+    "render_hi": 1840,
+    "safety_check": 0
+   },
+   "cost_inr": 0.4935,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 3
+  },
+  {
+   "run": 1,
+   "case": "E10",
+   "group": "controlled_variation",
+   "wall_ms": 29195,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1550,
+     "tokens_out": 2035,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.3096
+    },
+    "plan_statements": null,
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 12,
+    "critical_gt": 0,
+    "pred_rows": 12,
+    "tp": 12,
+    "value_ok": 12,
+    "unit_ok": 12,
+    "range_ok": 12,
+    "name_ok": 12,
+    "flag_ok": 12,
+    "flag_sev_ok": 12,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 1,
+   "latency_ms": {
+    "extract": 5065,
+    "plan_statements": 19169,
+    "safety_check": 0
+   },
+   "cost_inr": 0.3096,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 3
+  },
+  {
+   "run": 1,
+   "case": "E11",
+   "group": "perturbation",
+   "wall_ms": 130348,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1864,
+     "tokens_out": 2155,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.332865
+    },
+    "plan_statements": {
+     "tokens_in": 1562,
+     "tokens_out": 376,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.08590500000000001
+    },
+    "render_en": null,
+    "render_hi": {
+     "tokens_in": 1391,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0407475
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 0,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 3,
+   "latency_ms": {
+    "extract": 118512,
+    "plan_statements": 6918,
+    "render_en": 2833,
+    "render_hi": 1557,
+    "safety_check": 0
+   },
+   "cost_inr": 0.4595,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E12",
+   "group": "perturbation",
+   "wall_ms": 45950,
+   "tokens": {
+    "extract": {
+     "tokens_in": 2283,
+     "tokens_out": 3986,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.5894775
+    },
+    "plan_statements": {
+     "tokens_in": 1807,
+     "tokens_out": 916,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.16431749999999998
+    },
+    "render_en": {
+     "tokens_in": 1571,
+     "tokens_out": 234,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06693750000000001
+    },
+    "render_hi": {
+     "tokens_in": 1720,
+     "tokens_out": 266,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.07461
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 26,
+    "critical_gt": 0,
+    "pred_rows": 26,
+    "tp": 26,
+    "value_ok": 26,
+    "unit_ok": 26,
+    "range_ok": 26,
+    "name_ok": 26,
+    "flag_ok": 26,
+    "flag_sev_ok": 26,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 24793,
+    "plan_statements": 2857,
+    "render_en": 18211,
+    "render_hi": 7453,
+    "safety_check": 8
+   },
+   "cost_inr": 0.8953,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E13",
+   "group": "perturbation",
+   "wall_ms": 51264,
+   "tokens": {
+    "extract": {
+     "tokens_in": 3758,
+     "tokens_out": 1931,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 2,
+     "cache_hits": 0,
+     "cost_inr": 0.34524
+    },
+    "plan_statements": {
+     "tokens_in": 1948,
+     "tokens_out": 620,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.12753
+    },
+    "render_en": {
+     "tokens_in": 1427,
+     "tokens_out": 299,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0724725
+    },
+    "render_hi": {
+     "tokens_in": 1468,
+     "tokens_out": 339,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.078795
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 7,
+    "critical_gt": 0,
+    "pred_rows": 6,
+    "tp": 6,
+    "value_ok": 5,
+    "unit_ok": 6,
+    "range_ok": 5,
+    "name_ok": 6,
+    "flag_ok": 6,
+    "flag_sev_ok": 6,
+    "report_flags_ok": 0,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 12,
+    "grounded_statements": 12,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "missed_rows": [
+     "TC"
+    ],
+    "field_errors": [
+     {
+      "test_id": "TG",
+      "value_ok": false,
+      "unit_ok": true,
+      "range_ok": false,
+      "gt": [
+       "140",
+       "mg/dL",
+       "<150"
+      ],
+      "pred": [
+       "196",
+       "mg/dL",
+       "<200"
+      ]
+     }
+    ],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "partial",
+    "warnings": [
+     "expected tests not found: Total Cholesterol"
+    ]
+   },
+   "calls": 5,
+   "latency_ms": {
+    "extract": 14425,
+    "plan_statements": 2333,
+    "render_en": 1671,
+    "render_hi": 2532,
+    "safety_check": 6
+   },
+   "cost_inr": 0.624,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E14",
+   "group": "perturbation",
+   "wall_ms": 18679,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1866,
+     "tokens_out": 352,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.089505
+    },
+    "plan_statements": {
+     "tokens_in": 1513,
+     "tokens_out": 81,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0449775
+    },
+    "render_en": {
+     "tokens_in": 1224,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.03672
+    },
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 2,
+    "critical_gt": 0,
+    "pred_rows": 2,
+    "tp": 2,
+    "value_ok": 2,
+    "unit_ok": 2,
+    "range_ok": 2,
+    "name_ok": 2,
+    "flag_ok": 2,
+    "flag_sev_ok": 2,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 3,
+   "latency_ms": {
+    "extract": 5996,
+    "plan_statements": 1216,
+    "render_en": 4617,
+    "render_hi": 10570,
+    "safety_check": 0
+   },
+   "cost_inr": 0.1712,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E15",
+   "group": "perturbation",
+   "wall_ms": 11436,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1123,
+     "tokens_out": 1154,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.1810575
+    },
+    "plan_statements": {
+     "tokens_in": 1536,
+     "tokens_out": 214,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06345
+    },
+    "render_en": {
+     "tokens_in": 1255,
+     "tokens_out": 68,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0374175
+    },
+    "render_hi": {
+     "tokens_in": 1309,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0389025
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 7,
+    "critical_gt": 0,
+    "pred_rows": 7,
+    "tp": 7,
+    "value_ok": 7,
+    "unit_ok": 7,
+    "range_ok": 7,
+    "name_ok": 7,
+    "flag_ok": 7,
+    "flag_sev_ok": 7,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 4593,
+    "plan_statements": 2121,
+    "render_en": 1406,
+    "render_hi": 4664,
+    "safety_check": 3
+   },
+   "cost_inr": 0.3208,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E16",
+   "group": "perturbation",
+   "wall_ms": 10562,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1868,
+     "tokens_out": 611,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.124515
+    },
+    "plan_statements": {
+     "tokens_in": 1523,
+     "tokens_out": 125,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.051142499999999994
+    },
+    "render_en": {
+     "tokens_in": 1235,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0372375
+    },
+    "render_hi": {
+     "tokens_in": 1242,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.037395000000000005
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 4940,
+    "plan_statements": 1573,
+    "render_en": 1285,
+    "render_hi": 3110,
+    "safety_check": 2
+   },
+   "cost_inr": 0.2503,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E17",
+   "group": "perturbation",
+   "wall_ms": 12240,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1358,
+     "tokens_out": 1998,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.300285
+    },
+    "plan_statements": null,
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 11,
+    "critical_gt": 0,
+    "pred_rows": 11,
+    "tp": 11,
+    "value_ok": 11,
+    "unit_ok": 11,
+    "range_ok": 11,
+    "name_ok": 11,
+    "flag_ok": 11,
+    "flag_sev_ok": 11,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 1,
+   "latency_ms": {
+    "extract": 5420,
+    "plan_statements": 2434,
+    "safety_check": 0
+   },
+   "cost_inr": 0.3003,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E18",
+   "group": "perturbation",
+   "wall_ms": 65479,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1864,
+     "tokens_out": 2169,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.334755
+    },
+    "plan_statements": {
+     "tokens_in": 1984,
+     "tokens_out": 832,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.15696000000000002
+    },
+    "render_en": null,
+    "render_hi": {
+     "tokens_in": 1595,
+     "tokens_out": 357,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.08408249999999999
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 0,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 12,
+    "grounded_statements": 12,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 3,
+   "latency_ms": {
+    "extract": 37771,
+    "plan_statements": 20244,
+    "render_en": 3116,
+    "render_hi": 6112,
+    "safety_check": 0
+   },
+   "cost_inr": 0.5758,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E19",
+   "group": "extraction_challenge",
+   "wall_ms": 19722,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1432,
+     "tokens_out": 2511,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.37120499999999995
+    },
+    "plan_statements": {
+     "tokens_in": 1775,
+     "tokens_out": 632,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.1252575
+    },
+    "render_en": {
+     "tokens_in": 1447,
+     "tokens_out": 226,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0630675
+    },
+    "render_hi": {
+     "tokens_in": 1509,
+     "tokens_out": 252,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06797249999999999
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 0,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_mild"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_mild"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 8636,
+    "plan_statements": 6353,
+    "render_en": 4665,
+    "render_hi": 3816,
+    "safety_check": 6
+   },
+   "cost_inr": 0.6275,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E20",
+   "group": "extraction_challenge",
+   "wall_ms": 24322,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1177,
+     "tokens_out": 618,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.1099125
+    },
+    "plan_statements": {
+     "tokens_in": 1525,
+     "tokens_out": 125,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.051187500000000004
+    },
+    "render_en": {
+     "tokens_in": 1235,
+     "tokens_out": 66,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0366975
+    },
+    "render_hi": {
+     "tokens_in": 1244,
+     "tokens_out": 70,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.03744
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 6610,
+    "plan_statements": 1971,
+    "render_en": 1830,
+    "render_hi": 7411,
+    "safety_check": 3
+   },
+   "cost_inr": 0.2352,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E21",
+   "group": "extraction_challenge",
+   "wall_ms": 133177,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1086,
+     "tokens_out": 612,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.107055
+    },
+    "plan_statements": {
+     "tokens_in": 1961,
+     "tokens_out": 597,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.12471750000000001
+    },
+    "render_en": {
+     "tokens_in": 1455,
+     "tokens_out": 344,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0791775
+    },
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 12,
+    "grounded_statements": 12,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 3,
+   "latency_ms": {
+    "extract": 83824,
+    "plan_statements": 2380,
+    "render_en": 7938,
+    "render_hi": 46898,
+    "safety_check": 0
+   },
+   "cost_inr": 0.311,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E22",
+   "group": "extraction_challenge",
+   "wall_ms": 21179,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1354,
+     "tokens_out": 1828,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.27724499999999996
+    },
+    "plan_statements": null,
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 11,
+    "critical_gt": 0,
+    "pred_rows": 11,
+    "tp": 11,
+    "value_ok": 11,
+    "unit_ok": 11,
+    "range_ok": 10,
+    "name_ok": 11,
+    "flag_ok": 11,
+    "flag_sev_ok": 11,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [
+     {
+      "test_id": "ALB",
+      "value_ok": true,
+      "unit_ok": true,
+      "range_ok": false,
+      "gt": [
+       "4.30",
+       "g/dL",
+       "-"
+      ],
+      "pred": [
+       "4.30",
+       "g/dL",
+       ""
+      ]
+     }
+    ],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 1,
+   "latency_ms": {
+    "extract": 6947,
+    "plan_statements": 14171,
+    "safety_check": 0
+   },
+   "cost_inr": 0.2772,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E23",
+   "group": "extraction_challenge",
+   "wall_ms": 30724,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1274,
+     "tokens_out": 2426,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.356175
+    },
+    "plan_statements": {
+     "tokens_in": 1661,
+     "tokens_out": 429,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.0952875
+    },
+    "render_en": {
+     "tokens_in": 4128,
+     "tokens_out": 325,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 3,
+     "cache_hits": 0,
+     "cost_inr": 0.136755
+    },
+    "render_hi": {
+     "tokens_in": 1420,
+     "tokens_out": 119,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.048015
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 0,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R5_verify"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R5_verify"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: safety_check failed after render retries (wrong_direction)"
+    ]
+   },
+   "calls": 6,
+   "latency_ms": {
+    "extract": 6634,
+    "plan_statements": 2425,
+    "render_en": 16757,
+    "render_hi": 10807,
+    "safety_check": 12
+   },
+   "cost_inr": 0.6362,
+   "retries": 2,
+   "fallback_reason": "safety_check failed after render retries (wrong_direction)",
+   "safety_codes_per_round": [
+    [
+     "render:en:wrong_direction"
+    ],
+    [
+     "render:en:wrong_direction"
+    ],
+    [
+     "render:en:wrong_direction"
+    ]
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E24",
+   "group": "extraction_challenge",
+   "wall_ms": 29885,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1359,
+     "tokens_out": 1248,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.19905750000000003
+    },
+    "plan_statements": {
+     "tokens_in": 1746,
+     "tokens_out": 461,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.10152000000000001
+    },
+    "render_en": {
+     "tokens_in": 1370,
+     "tokens_out": 218,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.060254999999999996
+    },
+    "render_hi": {
+     "tokens_in": 1416,
+     "tokens_out": 248,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.06534
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 7,
+    "critical_gt": 0,
+    "pred_rows": 7,
+    "tp": 7,
+    "value_ok": 7,
+    "unit_ok": 7,
+    "range_ok": 7,
+    "name_ok": 7,
+    "flag_ok": 7,
+    "flag_sev_ok": 7,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 8,
+    "grounded_statements": 8,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "expected": {
+     "next_step": "follow_up_test_package",
+     "urgency": "routine",
+     "rule": "R3_package"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "partial",
+    "warnings": [
+     "SERUM CHOLESTEROL, TOTAL: test name matched by the model, please verify"
+    ]
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 16587,
+    "plan_statements": 3280,
+    "render_en": 9963,
+    "render_hi": 4084,
+    "safety_check": 5
+   },
+   "cost_inr": 0.4262,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E25",
+   "group": "adversarial",
+   "wall_ms": 46907,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1425,
+     "tokens_out": 2400,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.35606249999999995
+    },
+    "plan_statements": {
+     "tokens_in": 2197,
+     "tokens_out": 993,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.18348750000000003
+    },
+    "render_en": {
+     "tokens_in": 1622,
+     "tokens_out": 439,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.09576000000000001
+    },
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 1,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 1,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 16,
+    "grounded_statements": 16,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "urgent",
+     "rule": "R1_critical"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "urgent",
+     "rule": "R1_critical"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 3,
+   "latency_ms": {
+    "extract": 7384,
+    "plan_statements": 6382,
+    "render_en": 33058,
+    "render_hi": 2268,
+    "safety_check": 0
+   },
+   "cost_inr": 0.6353,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 2
+  },
+  {
+   "run": 1,
+   "case": "E26",
+   "group": "adversarial",
+   "wall_ms": 20714,
+   "tokens": {
+    "extract": {
+     "tokens_in": 3754,
+     "tokens_out": 4249,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 2,
+     "cache_hits": 0,
+     "cost_inr": 0.65808
+    },
+    "plan_statements": null,
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 14,
+    "critical_gt": 1,
+    "pred_rows": 14,
+    "tp": 14,
+    "value_ok": 14,
+    "unit_ok": 14,
+    "range_ok": 14,
+    "name_ok": 14,
+    "flag_ok": 14,
+    "flag_sev_ok": 14,
+    "report_flags_ok": 1,
+    "critical_found": 1,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 16,
+    "grounded_statements": 16,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "urgent",
+     "rule": "R1_critical"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "urgent",
+     "rule": "R1_critical"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 2,
+   "latency_ms": {
+    "extract": 17528,
+    "plan_statements": 1666,
+    "safety_check": 0
+   },
+   "cost_inr": 0.6581,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E27",
+   "group": "adversarial",
+   "wall_ms": 20663,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1181,
+     "tokens_out": 373,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.07692750000000001
+    },
+    "plan_statements": {
+     "tokens_in": 1748,
+     "tokens_out": 316,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.08199000000000001
+    },
+    "render_en": {
+     "tokens_in": 1334,
+     "tokens_out": 202,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.057285
+    },
+    "render_hi": {
+     "tokens_in": 1348,
+     "tokens_out": 241,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.062865
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 2,
+    "critical_gt": 0,
+    "pred_rows": 2,
+    "tp": 2,
+    "value_ok": 2,
+    "unit_ok": 2,
+    "range_ok": 2,
+    "name_ok": 2,
+    "flag_ok": 2,
+    "flag_sev_ok": 2,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 6,
+    "grounded_statements": 6,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 4,
+   "latency_ms": {
+    "extract": 3242,
+    "plan_statements": 4676,
+    "render_en": 12690,
+    "render_hi": 3119,
+    "safety_check": 4
+   },
+   "cost_inr": 0.2791,
+   "retries": 0,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E28",
+   "group": "adversarial",
+   "wall_ms": 133340,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1125,
+     "tokens_out": 1191,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.18609750000000003
+    },
+    "plan_statements": {
+     "tokens_in": 1536,
+     "tokens_out": 301,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.075195
+    },
+    "render_en": {
+     "tokens_in": 2632,
+     "tokens_out": 254,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 2,
+     "cache_hits": 0,
+     "cost_inr": 0.09351000000000001
+    },
+    "render_hi": {
+     "tokens_in": 1350,
+     "tokens_out": 196,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.056835000000000004
+    }
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 7,
+    "critical_gt": 0,
+    "pred_rows": 7,
+    "tp": 7,
+    "value_ok": 7,
+    "unit_ok": 7,
+    "range_ok": 7,
+    "name_ok": 7,
+    "flag_ok": 7,
+    "flag_sev_ok": 7,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 4,
+    "grounded_statements": 4,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 0,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_printed_flag"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "routine",
+     "rule": "R4_printed_flag"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "llm"
+    ],
+    "status": "complete",
+    "warnings": []
+   },
+   "calls": 5,
+   "latency_ms": {
+    "extract": 5787,
+    "plan_statements": 65333,
+    "render_en": 62147,
+    "render_hi": 10344,
+    "safety_check": 7
+   },
+   "cost_inr": 0.4116,
+   "retries": 1,
+   "fallback_reason": null,
+   "safety_codes_per_round": [
+    [
+     "render:en:wrong_direction"
+    ],
+    []
+   ],
+   "attempts": 1
+  },
+  {
+   "run": 1,
+   "case": "E29",
+   "group": "adversarial",
+   "wall_ms": 9970,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1392,
+     "tokens_out": 1918,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.29025
+    },
+    "plan_statements": null,
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 11,
+    "critical_gt": 0,
+    "pred_rows": 11,
+    "tp": 11,
+    "value_ok": 11,
+    "unit_ok": 11,
+    "range_ok": 11,
+    "name_ok": 11,
+    "flag_ok": 11,
+    "flag_sev_ok": 11,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 12,
+    "grounded_statements": 12,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "expected": {
+     "next_step": "doctor_consult",
+     "urgency": "soon",
+     "rule": "R2_marked"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 1,
+   "latency_ms": {
+    "extract": 7761,
+    "plan_statements": 2130,
+    "safety_check": 0
+   },
+   "cost_inr": 0.2903,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 2
+  },
+  {
+   "run": 1,
+   "case": "E30",
+   "group": "adversarial",
+   "wall_ms": 24802,
+   "tokens": {
+    "extract": {
+     "tokens_in": 1112,
+     "tokens_out": 810,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.13437
+    },
+    "plan_statements": {
+     "tokens_in": 1525,
+     "tokens_out": 125,
+     "tokens_thinking": 0,
+     "tokens_cached": 0,
+     "calls": 1,
+     "cache_hits": 0,
+     "cost_inr": 0.051187500000000004
+    },
+    "render_en": null,
+    "render_hi": null
+   },
+   "score": {
+    "reports": 1,
+    "gt_rows": 3,
+    "critical_gt": 0,
+    "pred_rows": 3,
+    "tp": 3,
+    "value_ok": 3,
+    "unit_ok": 3,
+    "range_ok": 3,
+    "name_ok": 3,
+    "flag_ok": 3,
+    "flag_sev_ok": 3,
+    "report_flags_ok": 1,
+    "critical_found": 0,
+    "next_step_ok": 1,
+    "urgency_ok": 1,
+    "next_urg_ok": 1,
+    "rule_ok": 1,
+    "statements": 2,
+    "grounded_statements": 2,
+    "shown_reports": 1,
+    "grounded_reports": 1,
+    "consistent_reports": 1,
+    "unsafe_reports": 0,
+    "fallback_reports": 1,
+    "withheld_reports": 0,
+    "got": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "expected": {
+     "next_step": "no_action",
+     "urgency": "none",
+     "rule": "R6_normal"
+    },
+    "missed_rows": [],
+    "field_errors": [],
+    "flag_errors": [],
+    "final_safety_codes": [],
+    "explanation_source": [
+     "template_fallback"
+    ],
+    "status": "partial",
+    "warnings": [
+     "explanation came from template fallback: LLM unavailable or returned no usable output"
+    ]
+   },
+   "calls": 2,
+   "latency_ms": {
+    "extract": 3850,
+    "plan_statements": 4434,
+    "render_en": 9419,
+    "render_hi": 2719,
+    "safety_check": 0
+   },
+   "cost_inr": 0.1856,
+   "retries": 0,
+   "fallback_reason": "LLM unavailable or returned no usable output",
+   "safety_codes_per_round": [],
+   "attempts": 1
+  }
+ ]
+}
