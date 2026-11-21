@@ -105,7 +105,7 @@ const hi: Dict = {
   save_sign_in: "सेव करने के लिए साइन इन ज़रूरी है, जो इस डेमो में अभी उपलब्ध नहीं है। कुछ भी सेव नहीं हुआ है।",
 };
 
-// Consent wording from PLAN.md section 10 (notice version 2026-11-v1). Hindi needs a fluent reader's check.
+// Consent wording from PLAN.md section 10 (notice version 2026-11-v1).
 export const consent = {
   en: { title: "Save this report to my history", body: "If you tick this box, we will save the test results from this report (test names, values, units, reference ranges, flags and the report date) to your account, so you can see your past reports and how your results change. We do not save the file you uploaded or your name. You can delete one report or all of your saved reports at any time from My history. If you don't tick this box, your report is deleted within 60 minutes. Ticking this box is optional and does not change the explanation you receive." },
   hi: { title: "यह रिपोर्ट मेरी हिस्ट्री में सेव करें", body: "अगर आप यह बॉक्स टिक करते हैं, तो हम इस रिपोर्ट के जाँच परिणाम (जाँच के नाम, मान, यूनिट, संदर्भ सीमा, फ़्लैग और रिपोर्ट की तारीख़) आपके अकाउंट में सेव करेंगे, ताकि आप अपनी पिछली रिपोर्ट और अपने परिणामों में बदलाव देख सकें। हम आपकी अपलोड की गई फ़ाइल या आपका नाम सेव नहीं करते। आप मेरी हिस्ट्री में जाकर कभी भी एक रिपोर्ट या अपनी सभी सेव की गई रिपोर्ट डिलीट कर सकते हैं। अगर आप यह बॉक्स टिक नहीं करते, तो आपकी रिपोर्ट 60 मिनट के भीतर डिलीट हो जाती है। यह बॉक्स टिक करना ज़रूरी नहीं है और इससे आपको मिलने वाली व्याख्या नहीं बदलती।" },

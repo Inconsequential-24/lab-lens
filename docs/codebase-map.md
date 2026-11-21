@@ -125,7 +125,7 @@ Caveat: ML models were trained on names and flag sets derived from these generat
 | [panels.yaml](../reference/panels.yaml) | Tests: aliases, canonical units, fallback ranges, criticals, plausible limits, alt units |
 | [unit_conversions.yaml](../reference/unit_conversions.yaml) | Extra printed-unit conversions (printed = canonical x factor) |
 | [packages.yaml](../reference/packages.yaml) | Follow-up test packages for rule R3 |
-| [glossary.yaml](../reference/glossary.yaml) | Per-test plain-language EN/HI text (model-written; Hindi needs review) |
+| [glossary.yaml](../reference/glossary.yaml) | Per-test plain-language EN/HI text (model-written; Hindi reviewed by the author) |
 | [safety_rules.yaml](../reference/safety_rules.yaml) | Banned phrases and direction words for `safety_check` |
 
 [models/](../models): `normalize_names`, `pattern_model`, `flag_model`, each `.joblib` with a `.card.json`. `load_model` ([ml/__init__.py:19-30](../src/lablens/ml/__init__.py#L19-L30)) refuses to load if the card is missing or its `sha256` differs (joblib is pickle).

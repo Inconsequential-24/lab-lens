@@ -1,7 +1,7 @@
 # Plain-language glossary used by glossary_lookup and template_fallback (PLAN.md section 4).
 #
-# DEMO TEXT, MODEL-WRITTEN. Not reviewed by a clinician. The Hindi text needs review by a
-# fluent Hindi reader before any real use. Text is deliberately neutral: it says what a test
+# DEMO TEXT, MODEL-WRITTEN. Not reviewed by a clinician. The Hindi text was reviewed by hand
+# by the author on 2026-11-21. Text is deliberately neutral: it says what a test
 # is and why doctors check it, and, for low/high, only that many things can affect it. No condition names, no
 # causes linked to symptoms, no treatment or medication. Direction words in low/high text must
 # stay consistent with the flag (safety_check checks them).

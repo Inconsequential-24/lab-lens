@@ -28,8 +28,8 @@ How AI tools were used in this project, and what I did myself.
   plan. Independent review passes found and fixed real issues, including: a critical-value
   check that ignored units, safety-check bypasses, PII leaks in redaction, and a race in the
   budget guard. Tests and evals were run before results were relied on.
-- Hindi text (explanations and the consent notice) is model-written and needs review by a
-  fluent reader before any real use.
+- Hindi text (explanations, glossary, interface text and the consent notice) was model-written;
+  I reviewed it by hand on 2026-11-21. It is not reviewed by a clinician.
 
 ## Data
 - All 30 evaluation reports are synthetic. Real lab reports were used only as format

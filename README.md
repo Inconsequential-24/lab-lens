@@ -151,7 +151,6 @@ Read these carefully:
 
 - TODO: full 30-case eval results (extraction, flags, next step on `E01-E30`).
 - TODO: LLM explanation results (`evals/explain_dev.py` output, safety-check pass rate).
-- TODO: Hindi human review by a fluent reader. Hindi text is model-written and unreviewed.
 - TODO: total LLM spend. Spend so far is tracked in the budget ledger (`cache/budget.sqlite`);
   the figure is added here once final. Planned cap: INR 500 total.
 
@@ -173,7 +172,9 @@ Read these carefully:
 
 ## Limitations
 
-- Reference ranges, critical limits and Hindi text are not clinician-reviewed.
+- Reference ranges, critical limits and Hindi text are not clinician-reviewed. The Hindi text was
+  model-written and then reviewed by hand by the author; automatic checks cover only numbers,
+  units, citations and direction words.
 - Only the synthetic reports have been evaluated; real-world scans and layouts are untested.
 - Redaction is pattern-based; a bare name that appears after the first test row may not be masked
   unless a label or honorific is present.

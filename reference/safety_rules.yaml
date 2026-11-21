@@ -1,6 +1,6 @@
 # Rules for safety_check (PLAN.md section 4, "Safety rules").
 #
-# DEMO LIST, MODEL-WRITTEN, not clinician-reviewed; Hindi entries need fluent-reader review.
+# DEMO LIST, MODEL-WRITTEN, not clinician-reviewed; Hindi entries reviewed by hand by the author.
 # English phrases match case-insensitively at a word start ("diagnos" also matches
 # "diagnosis"). Hindi phrases match as whole words; a trailing "*" makes a Hindi entry a
 # word-start prefix. Direction verbs are listed as explicit intransitive forms

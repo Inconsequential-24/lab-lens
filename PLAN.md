@@ -764,7 +764,8 @@ real is kept unless the user explicitly asks.
 > सकते हैं। अगर आप यह बॉक्स टिक नहीं करते, तो आपकी रिपोर्ट 60 मिनट के भीतर डिलीट हो जाती है।
 > यह बॉक्स टिक करना ज़रूरी नहीं है और इससे आपको मिलने वाली व्याख्या नहीं बदलती।
 
-The Hindi text needs a fluent reader's check before release.
+The Hindi text was model-written and then reviewed by hand by the author (2026-11-21). It is
+not clinician-reviewed.
 
 **Legal note.** India's DPDP Rules, 2025 were notified on 14 November 2025 and require notices
 in simple language that describe the data, the purpose and how to withdraw consent. Their
