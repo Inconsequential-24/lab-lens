@@ -1,0 +1,27 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Local caches and scratch
+cache/
+*.sqlite
+*.sqlite3
+
+# Derived dataset statistics: commit only with the CC-BY-SA-4.0 attribution kept inside
+# reference/nidaankosha_stats.json
+# Raw NidaanKosha downloads must never be committed (real, de-identified patient data)
+*.parquet
+
+# Local assistant settings
+.claude/settings.local.json
+
+# Private real-world check: real reports, labels and results never leave this machine.
+private/*
+!private/README.md
