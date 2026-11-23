@@ -1,0 +1,1605 @@
+{
+ "text": {
+  "per_doc": [
+   {
+    "id": "N01",
+    "method": "baseline",
+    "tags": [
+     "normal",
+     "header"
+    ],
+    "pii": 8,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "N01",
+    "method": "allowlist",
+    "tags": [
+     "normal",
+     "header"
+    ],
+    "pii": 8,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "N01",
+    "method": "allowlist_strict",
+    "tags": [
+     "normal",
+     "header"
+    ],
+    "pii": 8,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "N02",
+    "method": "baseline",
+    "tags": [
+     "normal",
+     "header"
+    ],
+    "pii": 6,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "N02",
+    "method": "allowlist",
+    "tags": [
+     "normal",
+     "header"
+    ],
+    "pii": 6,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "N02",
+    "method": "allowlist_strict",
+    "tags": [
+     "normal",
+     "header"
+    ],
+    "pii": 6,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "N03",
+    "method": "baseline",
+    "tags": [
+     "normal",
+     "header",
+     "two_panels"
+    ],
+    "pii": 5,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 5,
+    "rows_kept": 5,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "N03",
+    "method": "allowlist",
+    "tags": [
+     "normal",
+     "header",
+     "two_panels"
+    ],
+    "pii": 5,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 5,
+    "rows_kept": 5,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "N03",
+    "method": "allowlist_strict",
+    "tags": [
+     "normal",
+     "header",
+     "two_panels"
+    ],
+    "pii": 5,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 5,
+    "rows_kept": 5,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "N04",
+    "method": "baseline",
+    "tags": [
+     "normal",
+     "header",
+     "minimal"
+    ],
+    "pii": 1,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "N04",
+    "method": "allowlist",
+    "tags": [
+     "normal",
+     "header",
+     "minimal"
+    ],
+    "pii": 1,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "N04",
+    "method": "allowlist_strict",
+    "tags": [
+     "normal",
+     "header",
+     "minimal"
+    ],
+    "pii": 1,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P01",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "footer"
+    ],
+    "pii": 3,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P01",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "footer"
+    ],
+    "pii": 3,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P01",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "footer"
+    ],
+    "pii": 3,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P02",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "between_tables"
+    ],
+    "pii": 5,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 14,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P02",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "between_tables"
+    ],
+    "pii": 5,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 14,
+    "rows_kept": 14,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P02",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "between_tables"
+    ],
+    "pii": 5,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 14,
+    "rows_kept": 14,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P03",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "mid_table"
+    ],
+    "pii": 2,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 12,
+    "rows_kept": 12,
+    "fields": {
+     "age": false,
+     "sex": false,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P03",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "mid_table"
+    ],
+    "pii": 2,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 12,
+    "rows_kept": 12,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P03",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "mid_table"
+    ],
+    "pii": 2,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 12,
+    "rows_kept": 12,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P04",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "side_box"
+    ],
+    "pii": 4,
+    "leaked": [
+     "name",
+     "address"
+    ],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P04",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "side_box"
+    ],
+    "pii": 4,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P04",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "side_box"
+    ],
+    "pii": 4,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P05",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "multipage",
+     "footer"
+    ],
+    "pii": 6,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 31,
+    "rows_kept": 31,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P05",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "multipage",
+     "footer"
+    ],
+    "pii": 6,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 31,
+    "rows_kept": 31,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P05",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "multipage",
+     "footer"
+    ],
+    "pii": 6,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 31,
+    "rows_kept": 25,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P06",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "free_text",
+     "name_unlabelled"
+    ],
+    "pii": 1,
+    "leaked": [
+     "name"
+    ],
+    "partial_name": 0,
+    "rows": 5,
+    "rows_kept": 5,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P06",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "free_text",
+     "name_unlabelled"
+    ],
+    "pii": 1,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 5,
+    "rows_kept": 5,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P06",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "free_text",
+     "name_unlabelled"
+    ],
+    "pii": 1,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 5,
+    "rows_kept": 5,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P07",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "free_text",
+     "address_unlabelled"
+    ],
+    "pii": 3,
+    "leaked": [
+     "address",
+     "address"
+    ],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P07",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "free_text",
+     "address_unlabelled"
+    ],
+    "pii": 3,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P07",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "free_text",
+     "address_unlabelled"
+    ],
+    "pii": 3,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P08",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "free_text",
+     "remarks"
+    ],
+    "pii": 3,
+    "leaked": [
+     "name"
+    ],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P08",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "free_text",
+     "remarks"
+    ],
+    "pii": 3,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P08",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "free_text",
+     "remarks"
+    ],
+    "pii": 3,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P09",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "tokens"
+    ],
+    "pii": 5,
+    "leaked": [
+     "url"
+    ],
+    "partial_name": 0,
+    "rows": 3,
+    "rows_kept": 3,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P09",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "tokens"
+    ],
+    "pii": 5,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 3,
+    "rows_kept": 3,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P09",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "tokens"
+    ],
+    "pii": 5,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 3,
+    "rows_kept": 3,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P10",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "ids",
+     "dob"
+    ],
+    "pii": 5,
+    "leaked": [
+     "dob",
+     "id",
+     "id",
+     "id"
+    ],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P10",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "ids",
+     "dob"
+    ],
+    "pii": 5,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P10",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "ids",
+     "dob"
+    ],
+    "pii": 5,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P11",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "phone_formats"
+    ],
+    "pii": 7,
+    "leaked": [
+     "phone",
+     "phone",
+     "phone"
+    ],
+    "partial_name": 0,
+    "rows": 2,
+    "rows_kept": 2,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P11",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "phone_formats"
+    ],
+    "pii": 7,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 2,
+    "rows_kept": 2,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P11",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "phone_formats"
+    ],
+    "pii": 7,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 2,
+    "rows_kept": 2,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P12",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "hindi"
+    ],
+    "pii": 3,
+    "leaked": [
+     "name",
+     "address"
+    ],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P12",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "hindi"
+    ],
+    "pii": 3,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P12",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "hindi"
+    ],
+    "pii": 3,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P13",
+    "method": "baseline",
+    "tags": [
+     "adversarial",
+     "in_row"
+    ],
+    "pii": 4,
+    "leaked": [
+     "name",
+     "name"
+    ],
+    "partial_name": 0,
+    "rows": 4,
+    "rows_kept": 4,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P13",
+    "method": "allowlist",
+    "tags": [
+     "adversarial",
+     "in_row"
+    ],
+    "pii": 4,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 4,
+    "rows_kept": 4,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P13",
+    "method": "allowlist_strict",
+    "tags": [
+     "adversarial",
+     "in_row"
+    ],
+    "pii": 4,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 4,
+    "rows_kept": 3,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P14",
+    "method": "baseline",
+    "tags": [
+     "placement",
+     "after_signature"
+    ],
+    "pii": 2,
+    "leaked": [
+     "name",
+     "address"
+    ],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P14",
+    "method": "allowlist",
+    "tags": [
+     "placement",
+     "after_signature"
+    ],
+    "pii": 2,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P14",
+    "method": "allowlist_strict",
+    "tags": [
+     "placement",
+     "after_signature"
+    ],
+    "pii": 2,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P15",
+    "method": "baseline",
+    "tags": [
+     "retention",
+     "unknown_tests"
+    ],
+    "pii": 6,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 0,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P15",
+    "method": "allowlist",
+    "tags": [
+     "retention",
+     "unknown_tests"
+    ],
+    "pii": 6,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 6,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P15",
+    "method": "allowlist_strict",
+    "tags": [
+     "retention",
+     "unknown_tests"
+    ],
+    "pii": 6,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 6,
+    "rows_kept": 0,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P16",
+    "method": "baseline",
+    "tags": [
+     "retention",
+     "wrapped_rows"
+    ],
+    "pii": 4,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 2,
+    "rows_kept": 2,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": false
+    }
+   },
+   {
+    "id": "P16",
+    "method": "allowlist",
+    "tags": [
+     "retention",
+     "wrapped_rows"
+    ],
+    "pii": 4,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 2,
+    "rows_kept": 2,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "P16",
+    "method": "allowlist_strict",
+    "tags": [
+     "retention",
+     "wrapped_rows"
+    ],
+    "pii": 4,
+    "leaked": [],
+    "partial_name": 0,
+    "rows": 2,
+    "rows_kept": 0,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   }
+  ],
+  "agg": {
+   "baseline": {
+    "pii": 83,
+    "leaks": 20,
+    "partial": 0,
+    "docs": 20,
+    "docs_leaky": 10,
+    "rows": 156,
+    "rows_kept": 144,
+    "rows_known": 141,
+    "rows_known_kept": 135,
+    "ms": 39.002162986434996,
+    "field_age": 19,
+    "field_sex": 19,
+    "field_report_date": 0,
+    "type_name_n": 17,
+    "type_name_leak": 7,
+    "type_id_n": 12,
+    "type_id_leak": 3,
+    "type_doctor_n": 7,
+    "type_doctor_leak": 0,
+    "type_phone_n": 20,
+    "type_phone_leak": 3,
+    "type_email_n": 2,
+    "type_email_leak": 0,
+    "type_address_n": 21,
+    "type_address_leak": 5,
+    "type_url_n": 3,
+    "type_url_leak": 1,
+    "type_dob_n": 1,
+    "type_dob_leak": 1
+   },
+   "allowlist": {
+    "pii": 83,
+    "leaks": 0,
+    "partial": 0,
+    "docs": 20,
+    "docs_leaky": 0,
+    "rows": 156,
+    "rows_kept": 156,
+    "rows_known": 141,
+    "rows_known_kept": 141,
+    "ms": 11.511413962580264,
+    "mislabelled": 0,
+    "field_age": 20,
+    "field_sex": 20,
+    "field_report_date": 20,
+    "type_name_n": 17,
+    "type_name_leak": 0,
+    "type_id_n": 12,
+    "type_id_leak": 0,
+    "type_doctor_n": 7,
+    "type_doctor_leak": 0,
+    "type_phone_n": 20,
+    "type_phone_leak": 0,
+    "type_email_n": 2,
+    "type_email_leak": 0,
+    "type_address_n": 21,
+    "type_address_leak": 0,
+    "type_url_n": 3,
+    "type_url_leak": 0,
+    "type_dob_n": 1,
+    "type_dob_leak": 0
+   },
+   "allowlist_strict": {
+    "pii": 83,
+    "leaks": 0,
+    "partial": 0,
+    "docs": 20,
+    "docs_leaky": 0,
+    "rows": 156,
+    "rows_kept": 141,
+    "rows_known": 141,
+    "rows_known_kept": 141,
+    "ms": 12.516331014921889,
+    "mislabelled": 0,
+    "field_age": 20,
+    "field_sex": 20,
+    "field_report_date": 20,
+    "type_name_n": 17,
+    "type_name_leak": 0,
+    "type_id_n": 12,
+    "type_id_leak": 0,
+    "type_doctor_n": 7,
+    "type_doctor_leak": 0,
+    "type_phone_n": 20,
+    "type_phone_leak": 0,
+    "type_email_n": 2,
+    "type_email_leak": 0,
+    "type_address_n": 21,
+    "type_address_leak": 0,
+    "type_url_n": 3,
+    "type_url_leak": 0,
+    "type_dob_n": 1,
+    "type_dob_leak": 0
+   }
+  }
+ },
+ "images": {
+  "per_doc": [
+   {
+    "id": "I01",
+    "method": "baseline",
+    "pii": 8,
+    "pixel_leaked": [
+     "address"
+    ],
+    "ocr_leaked": [
+     "address"
+    ],
+    "rows_ceiling": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": false,
+     "sex": false,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I01",
+    "method": "allowlist",
+    "pii": 8,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I01",
+    "method": "allowlist_strict",
+    "pii": 8,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I02",
+    "method": "baseline",
+    "pii": 5,
+    "pixel_leaked": [
+     "address",
+     "address"
+    ],
+    "ocr_leaked": [
+     "address",
+     "address"
+    ],
+    "rows_ceiling": 14,
+    "rows_kept": 6,
+    "fields": {
+     "age": false,
+     "sex": false,
+     "report_date": false
+    }
+   },
+   {
+    "id": "I02",
+    "method": "allowlist",
+    "pii": 5,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 14,
+    "rows_kept": 14,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I02",
+    "method": "allowlist_strict",
+    "pii": 5,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 14,
+    "rows_kept": 14,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I03",
+    "method": "baseline",
+    "pii": 4,
+    "pixel_leaked": [
+     "name",
+     "address",
+     "address"
+    ],
+    "ocr_leaked": [
+     "name",
+     "address",
+     "address"
+    ],
+    "rows_ceiling": 7,
+    "rows_kept": 3,
+    "fields": {
+     "age": false,
+     "sex": false,
+     "report_date": false
+    }
+   },
+   {
+    "id": "I03",
+    "method": "allowlist",
+    "pii": 4,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 7,
+    "rows_kept": 7,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I03",
+    "method": "allowlist_strict",
+    "pii": 4,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 7,
+    "rows_kept": 7,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I04",
+    "method": "baseline",
+    "pii": 3,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 8,
+    "rows_kept": 4,
+    "fields": {
+     "age": false,
+     "sex": false,
+     "report_date": false
+    }
+   },
+   {
+    "id": "I04",
+    "method": "allowlist",
+    "pii": 3,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I04",
+    "method": "allowlist_strict",
+    "pii": 3,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 8,
+    "rows_kept": 8,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I05",
+    "method": "baseline",
+    "pii": 3,
+    "pixel_leaked": [
+     "address",
+     "address",
+     "address"
+    ],
+    "ocr_leaked": [
+     "address",
+     "address",
+     "address"
+    ],
+    "rows_ceiling": 8,
+    "rows_kept": 4,
+    "fields": {
+     "age": false,
+     "sex": false,
+     "report_date": false
+    }
+   },
+   {
+    "id": "I05",
+    "method": "allowlist",
+    "pii": 3,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 8,
+    "rows_kept": 7,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I05",
+    "method": "allowlist_strict",
+    "pii": 3,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 8,
+    "rows_kept": 7,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I06",
+    "method": "baseline",
+    "pii": 6,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 31,
+    "rows_kept": 25,
+    "fields": {
+     "age": false,
+     "sex": false,
+     "report_date": false
+    }
+   },
+   {
+    "id": "I06",
+    "method": "allowlist",
+    "pii": 6,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 31,
+    "rows_kept": 29,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I06",
+    "method": "allowlist_strict",
+    "pii": 6,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 31,
+    "rows_kept": 23,
+    "fields": {
+     "age": true,
+     "sex": true,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I07",
+    "method": "baseline",
+    "pii": 2,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 12,
+    "rows_kept": 7,
+    "fields": {
+     "age": false,
+     "sex": false,
+     "report_date": false
+    }
+   },
+   {
+    "id": "I07",
+    "method": "allowlist",
+    "pii": 2,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 12,
+    "rows_kept": 12,
+    "fields": {
+     "age": false,
+     "sex": false,
+     "report_date": true
+    }
+   },
+   {
+    "id": "I07",
+    "method": "allowlist_strict",
+    "pii": 2,
+    "pixel_leaked": [],
+    "ocr_leaked": [],
+    "rows_ceiling": 12,
+    "rows_kept": 12,
+    "fields": {
+     "age": false,
+     "sex": false,
+     "report_date": true
+    }
+   }
+  ],
+  "agg": {
+   "baseline": {
+    "pii": 31,
+    "pixel_leaks": 9,
+    "ocr_leaks": 9,
+    "ocr_readable_pii": 31,
+    "docs": 7,
+    "docs_leaky": 4,
+    "rows_ceiling": 88,
+    "rows_kept": 57,
+    "rows": 89,
+    "ms": 14415.31300698989,
+    "field_age": 0,
+    "field_sex": 0,
+    "field_report_date": 1
+   },
+   "allowlist": {
+    "pii": 31,
+    "pixel_leaks": 0,
+    "ocr_leaks": 0,
+    "ocr_readable_pii": 31,
+    "docs": 7,
+    "docs_leaky": 0,
+    "rows_ceiling": 88,
+    "rows_kept": 85,
+    "rows": 89,
+    "ms": 19423.29546601104,
+    "field_age": 6,
+    "field_sex": 6,
+    "field_report_date": 7
+   },
+   "allowlist_strict": {
+    "pii": 31,
+    "pixel_leaks": 0,
+    "ocr_leaks": 0,
+    "ocr_readable_pii": 31,
+    "docs": 7,
+    "docs_leaky": 0,
+    "rows_ceiling": 88,
+    "rows_kept": 79,
+    "rows": 89,
+    "ms": 20656.995926008676,
+    "field_age": 6,
+    "field_sex": 6,
+    "field_report_date": 7
+   }
+  }
+ }
+}

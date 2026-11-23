@@ -1,0 +1,4 @@
+[32m[INFO] 2026-11-23 07:15:45,757 [RapidOCR] base.py:23: Using engine_name: onnxruntime[0m
+onnxruntime cpuid_info warning: Unknown CPU vendor. cpuinfo_vendor value: 0
+[32m[INFO] 2026-11-23 07:15:45,795 [RapidOCR] download_file.py:60: File exists and is valid: /sessions/rcw-018ktpq7qwazqwnrsi4tmwew/.local/lib/python3.10/site-packages/rapidocr/models/PP-OCRv6_det_small.onnx[0m
+[32m[INFO] 2026-11-23 07:15:45,796 [RapidOCR] main.py:63: Using /sessions/rcw-018ktpq7qwazqwnrsi4tmwew/.local/lib/python3.10/site-packages/rapidocr/models/PP-OCRv6_det_small.onnx[0m

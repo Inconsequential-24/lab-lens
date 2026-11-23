@@ -1,0 +1,2846 @@
+[
+ {
+  "id": "N01",
+  "kind": "pdf",
+  "files": [
+   "N01.pdf"
+  ],
+  "desc": "Standard layout: full patient block above one table",
+  "tags": [
+   "normal",
+   "header"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Kavita Menon",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "UH3909064",
+    "page": 1
+   },
+   {
+    "type": "doctor",
+    "needle": "Dr. S. Rangarajan",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "99091 30960",
+    "page": 1
+   },
+   {
+    "type": "email",
+    "needle": "kavita.menon@mailbox.example",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Flat 402, Shanti Residency",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Sector 21, Near City Mall",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Pune, Maharashtra 411038",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "34",
+   "sex": "F",
+   "report_date": "25/10/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "N02",
+  "kind": "pdf",
+  "files": [
+   "N02.pdf"
+  ],
+  "desc": "Lipid profile, UHID and +91 mobile in header",
+  "tags": [
+   "normal",
+   "header"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Arjun Deshpande",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "UH7331974",
+    "page": 1
+   },
+   {
+    "type": "doctor",
+    "needle": "Dr. Meera Joshi",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "92455 80691",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "12/B, Lotus Heights, MG Road",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Bengaluru 560001",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "TOTAL CHOLESTEROL",
+    "value": "182",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TRIGLYCERIDES",
+    "value": "121",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "HDL CHOLESTEROL",
+    "value": "54",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "LDL CHOLESTEROL - DIRECT",
+    "value": "96",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "VLDL CHOLESTEROL",
+    "value": "24",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "NON-HDL CHOLESTEROL",
+    "value": "128",
+    "unit": "mg/dL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "41",
+   "sex": "M",
+   "report_date": "27/09/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "N03",
+  "kind": "pdf",
+  "files": [
+   "N03.pdf"
+  ],
+  "desc": "Two panels back to back, header block",
+  "tags": [
+   "normal",
+   "header",
+   "two_panels"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Farhan Qureshi",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "UH2238863",
+    "page": 1
+   },
+   {
+    "type": "doctor",
+    "needle": "Dr. A. Khanna",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "94045 13855",
+    "page": 1
+   },
+   {
+    "type": "email",
+    "needle": "farhan.qureshi@mailbox.example",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "GLYCOSYLATED HEMOGLOBIN (HbA1c)",
+    "value": "5.4",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "ESTIMATED AVERAGE GLUCOSE (eAG)",
+    "value": "108",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL T3 (TRIIODOTHYRONINE)",
+    "value": "1.2",
+    "unit": "ng/mL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL T4 (THYROXINE)",
+    "value": "8.9",
+    "unit": "µg/dL",
+    "page": 1
+   },
+   {
+    "name": "TSH (THYROID STIMULATING HORMONE)",
+    "value": "2.31",
+    "unit": "µIU/mL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "29",
+   "sex": "M",
+   "report_date": "13/12/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "N04",
+  "kind": "pdf",
+  "files": [
+   "N04.pdf"
+  ],
+  "desc": "Minimal header: name and age only",
+  "tags": [
+   "normal",
+   "header",
+   "minimal"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Ananya Iyer",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "BILIRUBIN - TOTAL",
+    "value": "0.7",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "SGPT (ALT)",
+    "value": "22",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "SGOT (AST)",
+    "value": "24",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "ALKALINE PHOSPHATASE",
+    "value": "78",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "TOTAL PROTEIN",
+    "value": "7.2",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "ALBUMIN",
+    "value": "4.4",
+    "unit": "g/dL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "26",
+   "sex": "F",
+   "report_date": "04/07/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P01",
+  "kind": "pdf",
+  "files": [
+   "P01.pdf"
+  ],
+  "desc": "PII only in the footer under the table",
+  "tags": [
+   "placement",
+   "footer"
+  ],
+  "pii": [
+   {
+    "type": "phone",
+    "needle": "98645 96628",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Door No 5, 3rd Cross, Indiranagar",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Chennai 600020",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "52",
+   "sex": "M",
+   "report_date": "10/06/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P02",
+  "kind": "pdf",
+  "files": [
+   "P02.pdf"
+  ],
+  "desc": "PII box between two separate result tables",
+  "tags": [
+   "placement",
+   "between_tables"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Sunita Pillai",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "95459 16609",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Flat 402, Shanti Residency",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Sector 21, Near City Mall",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Pune, Maharashtra 411038",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL CHOLESTEROL",
+    "value": "182",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TRIGLYCERIDES",
+    "value": "121",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "HDL CHOLESTEROL",
+    "value": "54",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "LDL CHOLESTEROL - DIRECT",
+    "value": "96",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "VLDL CHOLESTEROL",
+    "value": "24",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "NON-HDL CHOLESTEROL",
+    "value": "128",
+    "unit": "mg/dL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "47",
+   "sex": "F",
+   "report_date": "02/01/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P03",
+  "kind": "pdf",
+  "files": [
+   "P03.pdf"
+  ],
+  "desc": "Patient banner repeated mid-table (continuation header)",
+  "tags": [
+   "placement",
+   "mid_table"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Imran Sheikh",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "UH9006203",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "BILIRUBIN - TOTAL",
+    "value": "0.7",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "SGPT (ALT)",
+    "value": "22",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "SGOT (AST)",
+    "value": "24",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "ALKALINE PHOSPHATASE",
+    "value": "78",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "TOTAL PROTEIN",
+    "value": "7.2",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "ALBUMIN",
+    "value": "4.4",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL CHOLESTEROL",
+    "value": "182",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TRIGLYCERIDES",
+    "value": "121",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "HDL CHOLESTEROL",
+    "value": "54",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "LDL CHOLESTEROL - DIRECT",
+    "value": "96",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "VLDL CHOLESTEROL",
+    "value": "24",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "NON-HDL CHOLESTEROL",
+    "value": "128",
+    "unit": "mg/dL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "38",
+   "sex": "M",
+   "report_date": "27/10/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P04",
+  "kind": "pdf",
+  "files": [
+   "P04.pdf"
+  ],
+  "desc": "Side box in the right margin next to the table",
+  "tags": [
+   "placement",
+   "side_box"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Neha Kulkarni",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "96270 63707",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "H.No. 7-1-23, Ameerpet",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Hyderabad - 500016",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "31",
+   "sex": "F",
+   "report_date": "19/02/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P05",
+  "kind": "pdf",
+  "files": [
+   "P05.pdf"
+  ],
+  "desc": "Multi-page: running patient header on every page, address in last footer",
+  "tags": [
+   "placement",
+   "multipage",
+   "footer"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Gurpreet Sandhu",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "97866 61570",
+    "page": 1
+   },
+   {
+    "type": "name",
+    "needle": "Gurpreet Sandhu",
+    "page": 2
+   },
+   {
+    "type": "phone",
+    "needle": "97866 61570",
+    "page": 2
+   },
+   {
+    "type": "address",
+    "needle": "C-14, Green Park Extension",
+    "page": 2
+   },
+   {
+    "type": "address",
+    "needle": "New Delhi 110016",
+    "page": 2
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL CHOLESTEROL",
+    "value": "182",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TRIGLYCERIDES",
+    "value": "121",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "HDL CHOLESTEROL",
+    "value": "54",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "LDL CHOLESTEROL - DIRECT",
+    "value": "96",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "VLDL CHOLESTEROL",
+    "value": "24",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "NON-HDL CHOLESTEROL",
+    "value": "128",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "BILIRUBIN - TOTAL",
+    "value": "0.7",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "SGPT (ALT)",
+    "value": "22",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "SGOT (AST)",
+    "value": "24",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "ALKALINE PHOSPHATASE",
+    "value": "78",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "TOTAL PROTEIN",
+    "value": "7.2",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "ALBUMIN",
+    "value": "4.4",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL T3 (TRIIODOTHYRONINE)",
+    "value": "1.2",
+    "unit": "ng/mL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL T4 (THYROXINE)",
+    "value": "8.9",
+    "unit": "µg/dL",
+    "page": 1
+   },
+   {
+    "name": "TSH (THYROID STIMULATING HORMONE)",
+    "value": "2.31",
+    "unit": "µIU/mL",
+    "page": 1
+   },
+   {
+    "name": "GLYCOSYLATED HEMOGLOBIN (HbA1c)",
+    "value": "5.4",
+    "unit": "%",
+    "page": 2
+   },
+   {
+    "name": "ESTIMATED AVERAGE GLUCOSE (eAG)",
+    "value": "108",
+    "unit": "mg/dL",
+    "page": 2
+   },
+   {
+    "name": "VITAMIN D, 25-HYDROXY",
+    "value": "34.5",
+    "unit": "ng/mL",
+    "page": 2
+   },
+   {
+    "name": "SERUM CREATININE",
+    "value": "0.8",
+    "unit": "mg/dL",
+    "page": 2
+   },
+   {
+    "name": "FASTING GLUCOSE",
+    "value": "92",
+    "unit": "mg/dL",
+    "page": 2
+   },
+   {
+    "name": "BLOOD UREA",
+    "value": "27",
+    "unit": "mg/dL",
+    "page": 2
+   },
+   {
+    "name": "URIC ACID",
+    "value": "4.1",
+    "unit": "mg/dL",
+    "page": 2
+   },
+   {
+    "name": "C-REACTIVE PROTEIN (CRP)",
+    "value": "2.2",
+    "unit": "mg/L",
+    "page": 2
+   }
+  ],
+  "fields": {
+   "age": "45",
+   "sex": "M",
+   "report_date": "17/06/2026"
+  },
+  "pages": 2
+ },
+ {
+  "id": "P06",
+  "kind": "pdf",
+  "files": [
+   "P06.pdf"
+  ],
+  "desc": "Unlabelled name inside a sentence between panels",
+  "tags": [
+   "placement",
+   "free_text",
+   "name_unlabelled"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Lakshmi Narayanan",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "GLYCOSYLATED HEMOGLOBIN (HbA1c)",
+    "value": "5.4",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "ESTIMATED AVERAGE GLUCOSE (eAG)",
+    "value": "108",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL T3 (TRIIODOTHYRONINE)",
+    "value": "1.2",
+    "unit": "ng/mL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL T4 (THYROXINE)",
+    "value": "8.9",
+    "unit": "µg/dL",
+    "page": 1
+   },
+   {
+    "name": "TSH (THYROID STIMULATING HORMONE)",
+    "value": "2.31",
+    "unit": "µIU/mL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "58",
+   "sex": "F",
+   "report_date": "18/09/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P07",
+  "kind": "pdf",
+  "files": [
+   "P07.pdf"
+  ],
+  "desc": "Unlabelled postal address paragraph between tables",
+  "tags": [
+   "placement",
+   "free_text",
+   "address_unlabelled"
+  ],
+  "pii": [
+   {
+    "type": "address",
+    "needle": "Flat 402, Shanti Residency",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Sector 21, Near City Mall",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "Pune, Maharashtra 411038",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "TOTAL CHOLESTEROL",
+    "value": "182",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TRIGLYCERIDES",
+    "value": "121",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "HDL CHOLESTEROL",
+    "value": "54",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "LDL CHOLESTEROL - DIRECT",
+    "value": "96",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "VLDL CHOLESTEROL",
+    "value": "24",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "NON-HDL CHOLESTEROL",
+    "value": "128",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "GLYCOSYLATED HEMOGLOBIN (HbA1c)",
+    "value": "5.4",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "ESTIMATED AVERAGE GLUCOSE (eAG)",
+    "value": "108",
+    "unit": "mg/dL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "34",
+   "sex": "F",
+   "report_date": "10/03/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P08",
+  "kind": "pdf",
+  "files": [
+   "P08.pdf"
+  ],
+  "desc": "Free-text clinical remark with name, doctor and a phone number",
+  "tags": [
+   "placement",
+   "free_text",
+   "remarks"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Arjun Deshpande",
+    "page": 1
+   },
+   {
+    "type": "doctor",
+    "needle": "Dr. Meera Joshi",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "94638 45115",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "41",
+   "sex": "M",
+   "report_date": "16/11/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P09",
+  "kind": "pdf",
+  "files": [
+   "P09.pdf"
+  ],
+  "desc": "URL, QR text, barcode and sample numbers after the table",
+  "tags": [
+   "placement",
+   "tokens"
+  ],
+  "pii": [
+   {
+    "type": "url",
+    "needle": "www.samplelabs.example/r/AB12CD34EF",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "8830012345678",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "SMP-2026-0099817",
+    "page": 1
+   },
+   {
+    "type": "url",
+    "needle": "@samplelabs_india",
+    "page": 1
+   },
+   {
+    "type": "url",
+    "needle": "https://samplelabs.example/portal",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "TOTAL T3 (TRIIODOTHYRONINE)",
+    "value": "1.2",
+    "unit": "ng/mL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL T4 (THYROXINE)",
+    "value": "8.9",
+    "unit": "µg/dL",
+    "page": 1
+   },
+   {
+    "name": "TSH (THYROID STIMULATING HORMONE)",
+    "value": "2.31",
+    "unit": "µIU/mL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "29",
+   "sex": "M",
+   "report_date": "26/07/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P10",
+  "kind": "pdf",
+  "files": [
+   "P10.pdf"
+  ],
+  "desc": "DOB in the age line; Aadhaar, ABHA and policy numbers in the footer",
+  "tags": [
+   "placement",
+   "ids",
+   "dob"
+  ],
+  "pii": [
+   {
+    "type": "dob",
+    "needle": "03-04-1992",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "4821 7733 0915",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "91-4417-8820-3356",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "PLC-77310088",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "55012349",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "BILIRUBIN - TOTAL",
+    "value": "0.7",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "SGPT (ALT)",
+    "value": "22",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "SGOT (AST)",
+    "value": "24",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "ALKALINE PHOSPHATASE",
+    "value": "78",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "TOTAL PROTEIN",
+    "value": "7.2",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "ALBUMIN",
+    "value": "4.4",
+    "unit": "g/dL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "26",
+   "sex": "F",
+   "report_date": "25/09/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P11",
+  "kind": "pdf",
+  "files": [
+   "P11.pdf"
+  ],
+  "desc": "Phone number formats zoo (STD, brackets, spaces, +91, 0-prefix, extension)",
+  "tags": [
+   "placement",
+   "phone_formats"
+  ],
+  "pii": [
+   {
+    "type": "phone",
+    "needle": "(022) 2345 6789",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "080-4123-9876",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "98765-43210",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "09812345670",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "98123 45671",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "9876501234",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "011 2654 1122",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "GLYCOSYLATED HEMOGLOBIN (HbA1c)",
+    "value": "5.4",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "ESTIMATED AVERAGE GLUCOSE (eAG)",
+    "value": "108",
+    "unit": "mg/dL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "52",
+   "sex": "M",
+   "report_date": "21/12/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P12",
+  "kind": "pdf",
+  "files": [
+   "P12.pdf"
+  ],
+  "desc": "Hindi labels and Devanagari name/address (text layer, unshaped)",
+  "tags": [
+   "placement",
+   "hindi"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "कविता मेनन",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "फ्लैट 402, शांति रेजिडेंसी, पुणे",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "9876512345",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "47",
+   "sex": "F",
+   "report_date": "27/07/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P13",
+  "kind": "pdf",
+  "files": [
+   "P13.pdf"
+  ],
+  "desc": "Adversarial: PII hidden inside result rows and a name+age line",
+  "tags": [
+   "adversarial",
+   "in_row"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Imran Sheikh",
+    "page": 1
+   },
+   {
+    "type": "doctor",
+    "needle": "Dr. A. Khanna",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "98012 79257",
+    "page": 1
+   },
+   {
+    "type": "name",
+    "needle": "Imran Sheikh",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN (patient Imran Sheikh)",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "SERUM CREATININE c/o Dr. A. Khanna",
+    "value": "0.8",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT 98012 79257",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "38",
+   "sex": "M",
+   "report_date": "22/02/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P14",
+  "kind": "pdf",
+  "files": [
+   "P14.pdf"
+  ],
+  "desc": "Clean letterhead; patient name and address only after the signatures",
+  "tags": [
+   "placement",
+   "after_signature"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Neha Kulkarni",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "H.No. 7-1-23, Ameerpet",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "TOTAL CHOLESTEROL",
+    "value": "182",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TRIGLYCERIDES",
+    "value": "121",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "HDL CHOLESTEROL",
+    "value": "54",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "LDL CHOLESTEROL - DIRECT",
+    "value": "96",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "VLDL CHOLESTEROL",
+    "value": "24",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "NON-HDL CHOLESTEROL",
+    "value": "128",
+    "unit": "mg/dL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "31",
+   "sex": "F",
+   "report_date": "11/03/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P15",
+  "kind": "pdf",
+  "files": [
+   "P15.pdf"
+  ],
+  "desc": "Tests outside the known vocabulary (measures retention cost of an allow-list)",
+  "tags": [
+   "retention",
+   "unknown_tests"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Gurpreet Sandhu",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "UH8309180",
+    "page": 1
+   },
+   {
+    "type": "doctor",
+    "needle": "Dr. S. Rangarajan",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "94043 80789",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "C-14, Green Park Extension",
+    "page": 1
+   },
+   {
+    "type": "address",
+    "needle": "New Delhi 110016",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "VITAMIN D, 25-HYDROXY",
+    "value": "34.5",
+    "unit": "ng/mL",
+    "page": 1
+   },
+   {
+    "name": "SERUM CREATININE",
+    "value": "0.8",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "FASTING GLUCOSE",
+    "value": "92",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "BLOOD UREA",
+    "value": "27",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "URIC ACID",
+    "value": "4.1",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "C-REACTIVE PROTEIN (CRP)",
+    "value": "2.2",
+    "unit": "mg/L",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "45",
+   "sex": "M",
+   "report_date": "11/07/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "P16",
+  "kind": "pdf",
+  "files": [
+   "P16.pdf"
+  ],
+  "desc": "Long test names that wrap onto two lines",
+  "tags": [
+   "retention",
+   "wrapped_rows"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Lakshmi Narayanan",
+    "page": 1
+   },
+   {
+    "type": "id",
+    "needle": "UH1296185",
+    "page": 1
+   },
+   {
+    "type": "doctor",
+    "needle": "Dr. Meera Joshi",
+    "page": 1
+   },
+   {
+    "type": "phone",
+    "needle": "94447 99086",
+    "page": 1
+   }
+  ],
+  "rows": [
+   {
+    "name": "MEAN CORPUSCULAR HEMOGLOBIN CONCENTRATION",
+    "value": "32.9",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "RED CELL DISTRIBUTION WIDTH - COEFFICIENT OF VARIATION",
+    "value": "12.8",
+    "unit": "%",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "58",
+   "sex": "F",
+   "report_date": "10/11/2026"
+  },
+  "pages": 1
+ },
+ {
+  "id": "I01",
+  "kind": "image",
+  "files": [
+   "I01_p1.png"
+  ],
+  "desc": "Standard layout: full patient block above one table | scan: dpi=150 rot=0.0 blur=0.0 jpeg=0 noise=False",
+  "tags": [
+   "normal",
+   "header",
+   "scan"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Kavita Menon",
+    "page": 1,
+    "bbox": [
+     266.27083333333337,
+     154.08291666666685,
+     393.64583333333337,
+     174.91625000000022
+    ]
+   },
+   {
+    "type": "id",
+    "needle": "UH3909064",
+    "page": 1,
+    "bbox": [
+     151.625,
+     216.58291666666685,
+     262.79166666666674,
+     237.41625000000022
+    ]
+   },
+   {
+    "type": "doctor",
+    "needle": "Dr. S. Rangarajan",
+    "page": 1,
+    "bbox": [
+     209.54166666666674,
+     247.83291666666685,
+     376.2708333333334,
+     268.6662500000002
+    ]
+   },
+   {
+    "type": "phone",
+    "needle": "99091 30960",
+    "page": 1,
+    "bbox": [
+     203.18750000000006,
+     279.08291666666685,
+     324.81250000000006,
+     299.9162500000002
+    ]
+   },
+   {
+    "type": "email",
+    "needle": "kavita.menon@mailbox.example",
+    "page": 1,
+    "bbox": [
+     152.79166666666669,
+     310.33291666666685,
+     454.1250000000001,
+     331.1662500000002
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "Flat 402, Shanti Residency",
+    "page": 1,
+    "bbox": [
+     177.125,
+     341.58291666666685,
+     426.08333333333337,
+     362.4162500000002
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "Sector 21, Near City Mall",
+    "page": 1,
+    "bbox": [
+     141.25,
+     372.83291666666685,
+     372.79166666666674,
+     393.6662500000002
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "Pune, Maharashtra 411038",
+    "page": 1,
+    "bbox": [
+     141.25,
+     404.0829166666669,
+     393.7083333333335,
+     424.9162500000002
+    ]
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "34",
+   "sex": "F",
+   "report_date": "25/10/2026"
+  },
+  "pages": 1,
+  "source_pdf": "N01"
+ },
+ {
+  "id": "I02",
+  "kind": "image",
+  "files": [
+   "I02_p1.png"
+  ],
+  "desc": "PII box between two separate result tables | scan: dpi=150 rot=1.6 blur=0.9 jpeg=70 noise=False",
+  "tags": [
+   "placement",
+   "between_tables",
+   "scan"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Sunita Pillai",
+    "page": 1,
+    "bbox": [
+     148.71519693957384,
+     609.9475148488824,
+     258.0877985998735,
+     633.811530593305
+    ]
+   },
+   {
+    "type": "phone",
+    "needle": "95459 16609",
+    "page": 1,
+    "bbox": [
+     155.3771567326274,
+     640.6664538242806,
+     277.53643778115156,
+     664.8876338640421
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "Flat 402, Shanti Residency",
+    "page": 1,
+    "bbox": [
+     171.30633530053424,
+     667.9283449052167,
+     420.74930433086354,
+     695.7048802757794
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "Sector 21, Near City Mall",
+    "page": 1,
+    "bbox": [
+     136.31787363357307,
+     700.6541516638713,
+     368.3509664936162,
+     727.9443851599983
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "Pune, Maharashtra 411038",
+    "page": 1,
+    "bbox": [
+     137.19042484368458,
+     731.3079401489143,
+     390.1320292766552,
+     759.1822012550094
+    ]
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL CHOLESTEROL",
+    "value": "182",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TRIGLYCERIDES",
+    "value": "121",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "HDL CHOLESTEROL",
+    "value": "54",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "LDL CHOLESTEROL - DIRECT",
+    "value": "96",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "VLDL CHOLESTEROL",
+    "value": "24",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "NON-HDL CHOLESTEROL",
+    "value": "128",
+    "unit": "mg/dL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "47",
+   "sex": "F",
+   "report_date": "02/01/2026"
+  },
+  "pages": 1,
+  "source_pdf": "P02"
+ },
+ {
+  "id": "I03",
+  "kind": "image",
+  "files": [
+   "I03_p1.png"
+  ],
+  "desc": "Side box in the right margin next to the table | scan: dpi=150 rot=-1.2 blur=0.0 jpeg=60 noise=True",
+  "tags": [
+   "placement",
+   "side_box",
+   "scan"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Neha Kulkarni",
+    "page": 1,
+    "bbox": [
+     1040.6547377079594,
+     417.74389717763063,
+     1132.5233955928297,
+     434.24200876595614
+    ]
+   },
+   {
+    "type": "phone",
+    "needle": "96270 63707",
+    "page": 1,
+    "bbox": [
+     1060.4266147219366,
+     441.07975273335813,
+     1145.8508529512421,
+     457.44287297351883
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "H.No. 7-1-23, Ameerpet",
+    "page": 1,
+    "bbox": [
+     1039.694876796639,
+     463.567178503561,
+     1194.7684197649346,
+     481.38924369888764
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "Hyderabad - 500016",
+    "page": 1,
+    "bbox": [
+     1039.2149463409787,
+     486.47881916652625,
+     1172.4328669932297,
+     503.84307433719437
+    ]
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "31",
+   "sex": "F",
+   "report_date": "19/02/2026"
+  },
+  "pages": 1,
+  "source_pdf": "P04"
+ },
+ {
+  "id": "I04",
+  "kind": "image",
+  "files": [
+   "I04_p1.png"
+  ],
+  "desc": "PII only in the footer under the table | scan: dpi=120 rot=0.0 blur=0.7 jpeg=50 noise=True",
+  "tags": [
+   "placement",
+   "footer",
+   "scan"
+  ],
+  "pii": [
+   {
+    "type": "phone",
+    "needle": "98645 96628",
+    "page": 1,
+    "bbox": [
+     292.7066666666667,
+     1292.5763333333337,
+     370.54666666666685,
+     1305.9096666666667
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "Door No 5, 3rd Cross, Indiranagar",
+    "page": 1,
+    "bbox": [
+     206.00000000000006,
+     1309.243,
+     410.52000000000004,
+     1322.5763333333334
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "Chennai 600020",
+    "page": 1,
+    "bbox": [
+     414.2266666666667,
+     1309.243,
+     512.0666666666667,
+     1322.5763333333334
+    ]
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "52",
+   "sex": "M",
+   "report_date": "10/06/2026"
+  },
+  "pages": 1,
+  "source_pdf": "P01"
+ },
+ {
+  "id": "I05",
+  "kind": "image",
+  "files": [
+   "I05_p1.png"
+  ],
+  "desc": "Unlabelled postal address paragraph between tables | scan: dpi=130 rot=2.2 blur=0.6 jpeg=55 noise=False",
+  "tags": [
+   "placement",
+   "free_text",
+   "address_unlabelled",
+   "scan"
+  ],
+  "pii": [
+   {
+    "type": "address",
+    "needle": "Flat 402, Shanti Residency",
+    "page": 1,
+    "bbox": [
+     60.90422016730817,
+     466.53516544474303,
+     277.2021862541523,
+     492.86011552124904
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "Sector 21, Near City Mall",
+    "page": 1,
+    "bbox": [
+     61.94388999676183,
+     494.17797874914623,
+     263.1585375064523,
+     519.9234861740367
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "Pune, Maharashtra 411038",
+    "page": 1,
+    "bbox": [
+     62.9835598262155,
+     520.5454637294197,
+     282.3126234261718,
+     546.9868568268244
+    ]
+   }
+  ],
+  "rows": [
+   {
+    "name": "TOTAL CHOLESTEROL",
+    "value": "182",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TRIGLYCERIDES",
+    "value": "121",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "HDL CHOLESTEROL",
+    "value": "54",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "LDL CHOLESTEROL - DIRECT",
+    "value": "96",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "VLDL CHOLESTEROL",
+    "value": "24",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "NON-HDL CHOLESTEROL",
+    "value": "128",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "GLYCOSYLATED HEMOGLOBIN (HbA1c)",
+    "value": "5.4",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "ESTIMATED AVERAGE GLUCOSE (eAG)",
+    "value": "108",
+    "unit": "mg/dL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "34",
+   "sex": "F",
+   "report_date": "10/03/2026"
+  },
+  "pages": 1,
+  "source_pdf": "P07"
+ },
+ {
+  "id": "I06",
+  "kind": "image",
+  "files": [
+   "I06_p1.png",
+   "I06_p2.png"
+  ],
+  "desc": "Multi-page: running patient header on every page, address in last footer | scan: dpi=130 rot=0.8 blur=0.5 jpeg=65 noise=False",
+  "tags": [
+   "placement",
+   "multipage",
+   "footer",
+   "scan"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Gurpreet Sandhu",
+    "page": 1,
+    "bbox": [
+     115.91507220555611,
+     95.53777161679432,
+     226.9092808124325,
+     111.52786419688493
+    ]
+   },
+   {
+    "type": "phone",
+    "needle": "97866 61570",
+    "page": 1,
+    "bbox": [
+     264.447259138725,
+     93.83340826279482,
+     348.96738191824846,
+     109.45382884810601
+    ]
+   },
+   {
+    "type": "name",
+    "needle": "Gurpreet Sandhu",
+    "page": 2,
+    "bbox": [
+     115.91507220555611,
+     95.53777161679432,
+     226.9092808124325,
+     111.52786419688493
+    ]
+   },
+   {
+    "type": "phone",
+    "needle": "97866 61570",
+    "page": 2,
+    "bbox": [
+     264.447259138725,
+     93.83340826279482,
+     348.96738191824846,
+     109.45382884810601
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "C-14, Green Park Extension",
+    "page": 2,
+    "bbox": [
+     129.55267421791712,
+     496.99451533913486,
+     314.3796851976406,
+     514.0155753154679
+    ]
+   },
+   {
+    "type": "address",
+    "needle": "New Delhi 110016",
+    "page": 2,
+    "bbox": [
+     318.193173394708,
+     495.29075701295005,
+     436.39445719408275,
+     511.38148588621846
+    ]
+   }
+  ],
+  "rows": [
+   {
+    "name": "HEMOGLOBIN",
+    "value": "13.1",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL RBC COUNT",
+    "value": "4.35",
+    "unit": "10^6/µL",
+    "page": 1
+   },
+   {
+    "name": "PACKED CELL VOLUME (PCV)",
+    "value": "40.2",
+    "unit": "%",
+    "page": 1
+   },
+   {
+    "name": "MCV",
+    "value": "92.4",
+    "unit": "fL",
+    "page": 1
+   },
+   {
+    "name": "MCH",
+    "value": "30.1",
+    "unit": "pg",
+    "page": 1
+   },
+   {
+    "name": "MCHC",
+    "value": "32.6",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL LEUCOCYTE COUNT (TLC)",
+    "value": "6.80",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "PLATELET COUNT",
+    "value": "251",
+    "unit": "10^3/µL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL CHOLESTEROL",
+    "value": "182",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TRIGLYCERIDES",
+    "value": "121",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "HDL CHOLESTEROL",
+    "value": "54",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "LDL CHOLESTEROL - DIRECT",
+    "value": "96",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "VLDL CHOLESTEROL",
+    "value": "24",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "NON-HDL CHOLESTEROL",
+    "value": "128",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "BILIRUBIN - TOTAL",
+    "value": "0.7",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "SGPT (ALT)",
+    "value": "22",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "SGOT (AST)",
+    "value": "24",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "ALKALINE PHOSPHATASE",
+    "value": "78",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "TOTAL PROTEIN",
+    "value": "7.2",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "ALBUMIN",
+    "value": "4.4",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL T3 (TRIIODOTHYRONINE)",
+    "value": "1.2",
+    "unit": "ng/mL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL T4 (THYROXINE)",
+    "value": "8.9",
+    "unit": "µg/dL",
+    "page": 1
+   },
+   {
+    "name": "TSH (THYROID STIMULATING HORMONE)",
+    "value": "2.31",
+    "unit": "µIU/mL",
+    "page": 1
+   },
+   {
+    "name": "GLYCOSYLATED HEMOGLOBIN (HbA1c)",
+    "value": "5.4",
+    "unit": "%",
+    "page": 2
+   },
+   {
+    "name": "ESTIMATED AVERAGE GLUCOSE (eAG)",
+    "value": "108",
+    "unit": "mg/dL",
+    "page": 2
+   },
+   {
+    "name": "VITAMIN D, 25-HYDROXY",
+    "value": "34.5",
+    "unit": "ng/mL",
+    "page": 2
+   },
+   {
+    "name": "SERUM CREATININE",
+    "value": "0.8",
+    "unit": "mg/dL",
+    "page": 2
+   },
+   {
+    "name": "FASTING GLUCOSE",
+    "value": "92",
+    "unit": "mg/dL",
+    "page": 2
+   },
+   {
+    "name": "BLOOD UREA",
+    "value": "27",
+    "unit": "mg/dL",
+    "page": 2
+   },
+   {
+    "name": "URIC ACID",
+    "value": "4.1",
+    "unit": "mg/dL",
+    "page": 2
+   },
+   {
+    "name": "C-REACTIVE PROTEIN (CRP)",
+    "value": "2.2",
+    "unit": "mg/L",
+    "page": 2
+   }
+  ],
+  "fields": {
+   "age": "45",
+   "sex": "M",
+   "report_date": "17/06/2026"
+  },
+  "pages": 2,
+  "source_pdf": "P05"
+ },
+ {
+  "id": "I07",
+  "kind": "image",
+  "files": [
+   "I07_p1.png"
+  ],
+  "desc": "Patient banner repeated mid-table (continuation header) | scan: dpi=150 rot=0.0 blur=0.0 jpeg=0 noise=False",
+  "tags": [
+   "placement",
+   "mid_table",
+   "scan"
+  ],
+  "pii": [
+   {
+    "type": "name",
+    "needle": "Imran Sheikh",
+    "page": 1,
+    "bbox": [
+     152.12708333333336,
+     434.90166666666687,
+     262.58333333333337,
+     453.65166666666687
+    ]
+   },
+   {
+    "type": "id",
+    "needle": "UH9006203",
+    "page": 1,
+    "bbox": [
+     363.00833333333344,
+     434.90166666666687,
+     463.0583333333332,
+     453.65166666666687
+    ]
+   }
+  ],
+  "rows": [
+   {
+    "name": "BILIRUBIN - TOTAL",
+    "value": "0.7",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "SGPT (ALT)",
+    "value": "22",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "SGOT (AST)",
+    "value": "24",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "ALKALINE PHOSPHATASE",
+    "value": "78",
+    "unit": "U/L",
+    "page": 1
+   },
+   {
+    "name": "TOTAL PROTEIN",
+    "value": "7.2",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "ALBUMIN",
+    "value": "4.4",
+    "unit": "g/dL",
+    "page": 1
+   },
+   {
+    "name": "TOTAL CHOLESTEROL",
+    "value": "182",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "TRIGLYCERIDES",
+    "value": "121",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "HDL CHOLESTEROL",
+    "value": "54",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "LDL CHOLESTEROL - DIRECT",
+    "value": "96",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "VLDL CHOLESTEROL",
+    "value": "24",
+    "unit": "mg/dL",
+    "page": 1
+   },
+   {
+    "name": "NON-HDL CHOLESTEROL",
+    "value": "128",
+    "unit": "mg/dL",
+    "page": 1
+   }
+  ],
+  "fields": {
+   "age": "38",
+   "sex": "M",
+   "report_date": "27/10/2026"
+  },
+  "pages": 1,
+  "source_pdf": "P03"
+ }
+]
